@@ -1,0 +1,6 @@
+[report]
+include =
+    src/hpe/*
+omit =
+    */test*
+    */upgrades/*

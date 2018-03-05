@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" meta_type="Plone Catalog Tool">
+
+  <index name="peroid_indexer" meta_type="FieldIndex">
+    <indexed_attr value="peroid_indexer" />
+  </index>
+  <column value="peroid_indexer"/>
+
+
+
+</object>

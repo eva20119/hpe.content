@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="hpe.billing">
+<body>
+
+
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core"
+                    tal:define="toc context/table_of_contents|nothing;">
+<?python
+    from plone import api
+    abs_url = api.portal.get().absolute_url()
+    url = '%s/update_profile' % abs_url
+?>
+<form action="${url}" method="POST">
+    HPE 員工編號<input type="text" value="${view/user_id}" name="user_id"/>
+    HPE Email<input type="text" value="${view/user_email}" name="user_email"/>
+    中文姓名<input type="text" value="${view/user_ch_name}" name="user_ch_name" />
+    英文姓名<input type="text" value="${view/user_en_name}" name="user_en_name" />
+    辦公室電話<input type="text" value="${view/user_officephone}" name="user_officephone" />
+    聯絡手機<input type="text" value="${view/user_cellphone}" name="user_cellphone" />
+    HPE工作地點	<select name="user_location" data-location="${view/user_location}" id="location">
+                    <option value="南港">南港</option>
+                    <option value="台中">台中</option>
+                    <option value="高雄">高雄</option>
+               </select>
+    <br/>
+    <input type="submit" value="儲存"/>
+</form>
+<script>
+$(document).ready(function(){
+    $('#location').val($('#location').data('location'));
+})
+</script>
+</metal:content-core>
+</metal:content-core>
+
+</body>
+</html>

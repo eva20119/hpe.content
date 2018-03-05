@@ -1,0 +1,76 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="hpe.content">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="hpe.content.interfaces.IHpeContentLayer"
+      />
+
+  <!-- Publish static files -->
+  <plone:static
+      name="hpe.content"
+      type="plone"
+      directory="static"
+      />
+  <browser:page
+      name='bicycle_picture_view'
+      for='*'
+      class='.views.BicyclePictureView'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='upload_bicycle_picture'
+      for='*'
+      class='.views.UploadBicyclePicture'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='reservation'
+      for='*'
+      class='.views.Reservation'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='update_reservation'
+      for='*'
+      class='.views.UpdateReservation'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='reservation_status'
+      for='*'
+      class='.views.ReservationStatus'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='user_profile'
+      for='*'
+      class='.views.UserProfile'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='update_profile'
+      for='*'
+      class='.views.UpdateProfile'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='cancel_reservation'
+      for='*'
+      class='.views.CancelReservation'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+</configure>

@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="hpe.billing">
+<body>
+
+
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core"
+                    tal:define="toc context/table_of_contents|nothing;">
+<form action="upload_bicycle_picture" method="post">
+    <select name="event">
+        <option tal:repeat="event view/eventList" value="${event}">${event}</option>
+    </select>
+    <select name="place">
+        <option tal:repeat="place view/placeList" value="${place}">${place}</option>
+    </select>
+
+    <input type="file" name="image" class="image" >
+    <img id="img" height="150">
+    <input type="submit" value="送出"/>
+    <textarea name="b64_image" id="b64_image" cols="30" rows="10" style='visibility: hidden'></textarea>
+</form>
+
+<script>
+$(document).ready(function(){
+    $('.image').change(function (e) { 
+        if (this.files && this.files[0]) {
+            var FR = new FileReader();
+            
+            FR.addEventListener("load", function(e) {
+                $("#img").attr('src', e.target.result);
+                $('#b64_image').val(e.target.result);
+            }); 
+            
+            FR.readAsDataURL( this.files[0] );
+        }
+    });
+})
+</script>
+</metal:content-core>
+</metal:content-core>
+
+</body>
+</html>

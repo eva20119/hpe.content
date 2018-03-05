@@ -1,0 +1,111 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="hpe.billing">
+<body>
+
+
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core"
+                    tal:define="toc context/table_of_contents|nothing;">
+<style>
+.enable{
+    background-color:green;
+    color:white;
+}
+.disabled{
+    background-color:red;
+    color:white;
+}
+.not_open{
+    background-color:grey;
+    color:grey;
+}
+</style>
+<tal:reservation_success condition="view/aleard_reservation">
+    <?python
+        from plone import api
+        abs_url = api.portal.get().absolute_url()
+    ?>
+    <h1>
+        ${view/user_reservation_msg}
+    </h1>
+    <h3>請您注意以下事項:</h3>
+    <ul>
+        <li>若臨時無法出席，請盡早至系統取消預約，避免資源浪費</li>
+        <li>事前填妥 諮詢紀錄單 當日提供給醫生，避免影響你的諮詢時間</li>
+        <li>可視個人意願，攜帶個人健康報告提供給醫生參考</li>
+        <li>若同仁候補成功，系統會自動發信告知</li>
+        <li>預約完成請準時出席，避免影響其他同仁的洽談時間</li>
+    </ul>
+    <form action="${abs_url}/cancel_reservation" method="post">
+        <button>取消預約</button>
+    </form>
+</tal:reservation_success>
+
+<table tal:condition="not:view/aleard_reservation">
+    <tr>
+        <th>Date</th>
+        <th>Peroid1</th>
+        <th>Peroid2</th>
+        <th>Peroid3</th>
+        <th>Peroid4</th>
+        <th>Peroid5</th>
+        <th>Peroid6</th>
+        <th>Alternate</th>
+    </tr>
+    <tr tal:repeat="item view/reservationList">
+            <td>${python:item['startDate']}</td>
+            <tal:repeat repeat="list python:item['timeList']">
+                <td tal:attributes="class python:list[1]" 
+                    data-startDate="${python:item['startDate']}">${python:list[0]}</td>
+            </tal:repeat>
+            <td tal:attributes="class python:item['alternate']" 
+                data-startDate="${python:item['startDate']}">${python:item['alternateMsg']}</td>
+    </tr>
+</table>
+<script>
+    $(document).ready(function(){
+        $('.enable').click(function(e){
+            if(confirm('確定要預約嘛') == true){
+                start_date = $(this).data()['startdate']
+                
+                if($(this).text() == '開放候補'){
+                    peroid = 'alternate'
+                    time = '候補'
+                }else{
+                    peroid = $(this)[0].className.split('enable ')[1]  //enable後面要有空格否則會錯
+                    time = $(this).text()
+                }
+
+                data = {
+                    'start_date': start_date,
+                    'peroid': peroid,
+                    'time': time
+                }
+                url = document.location.href.replace('reservation', 'update_reservation')
+
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    data: data,
+                    success: function (response) {
+                        if (response == 'success'){
+                            document.location.reload()
+                        }else if(response =='error'){
+                            alert('請重新整理，預約失敗')
+                        }
+                    }
+                });
+            }
+        })
+    })
+</script>
+</metal:content-core>
+</metal:content-core>
+
+</body>
+</html>
