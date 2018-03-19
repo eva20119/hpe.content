@@ -1,0 +1,42 @@
+.page_featured {
+	background-image: url('../../img/Square-Book.jpg');
+}
+.page_featured .page_description_over {
+	opacity: 0;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+.pf-item-1 {
+	padding-top: 150px;
+	padding-bottom: 150px;
+	background-image: url('../../img/grange-pattern.png');
+	background-position: 0 0;
+	background-repeat: repeat;
+}
+.pf-item-2 {
+	margin-top: 0px;
+	padding-top: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	padding-left: 30px;
+	background-color: #a5afb1;
+	color:#fff;
+	text-align:center;
+}
+.pf-item-3 {
+	padding-top: 200px;
+	padding-bottom: 0px;
+	background-color: #a5afb1;
+}
+.pf-item-4 {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-color: #a5afb1;
+}
+.pf-item-prev {
+	background-image: url('../../img/another-bag.jpg');
+}
+.pf-item-next {
+	background-image: url('../../img/Coffe-cup.jpg');
+}

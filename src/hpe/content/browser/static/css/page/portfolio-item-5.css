@@ -1,0 +1,33 @@
+.page_featured {
+	background-image: url('../../img/Coffe-cup.jpg');
+}
+.page_featured .page_description_over {
+	opacity: 0;
+}
+
+.pf-item-1 {
+	background: #ded68b url('../../img/cafe1.jpg');
+}
+.pf-item-2 {
+	background-image: url('../../img/cafe-bg.jpg');
+	background-position: 0 0;
+	background-repeat: repeat;
+}
+.pf-item-2 .oi_icon_sub_titile {
+	color:#0a0a0a;
+}
+.pf-item-3 {
+	background-image: url('../../img/cafe5.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+.pf-item-prev {
+	background-image: url('../../img/Square-Book.jpg');
+}
+.pf-item-next {
+	background-image: url('../../img/the-book.jpg');
+}

@@ -1,0 +1,40 @@
+.page_featured {
+	background-image:url('../../img/brickdesign-carbone-seta-6x25-amb-living-ambient-b.jpg')
+}
+.page_featured .page_description_over {
+	background: #000;
+	opacity:0.7;
+}
+.dark_bg .page_featured h1 {
+	color:#0091E4;
+}
+.blog-1 .blogpost_image_holder {
+	background-image:url('../../img/business1.jpg');
+}
+.blog-2 .blogpost_image_holder {
+	background-image:url('../../img/business.jpg');
+}
+.blog-3 .blogpost_image_holder {
+	background-image:url('../../img/np.jpg');
+}
+.blog-4 .blogpost_image_holder {
+	background-image:url('../../img/v4.jpg');
+}
+.blog-5 .blogpost_image_holder {
+	background-image:url('../../img/art2.jpg');
+}
+.blog-6 .blogpost_image_holder {
+	background-image:url('../../img/book.jpg');
+}
+.blog-7 .blogpost_image_holder {
+	background-image:url('../../img/blog2.jpg');
+}
+.blog-8 .blogpost_image_holder {
+	background-image:url('../../img/blog3.jpg');
+}
+.blog-9 .blogpost_image_holder {
+	background-image:url('../../img/blog6.jpg');
+}
+.blog-10 .blogpost_image_holder {
+	background-image:url('../../img/blog1.jpg');
+}

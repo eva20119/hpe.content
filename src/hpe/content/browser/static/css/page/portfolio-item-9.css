@@ -1,0 +1,57 @@
+.page_featured {
+	background-image: url('../../img/Wine-Package-Box-Mockup-vol-1.jpg')
+}
+.page_featured .page_description_over {
+	opacity: 0;
+}
+.oi_heading_border span {
+	text-align:left;
+	width:100px;
+	border-top:1px dotted #a5a5a5;
+	background-color:transparent;
+}
+.mb-30 {
+	margin-bottom:30px;
+}
+.oi_vc_text_grey {
+	background-color:#f9f9f9;
+}
+.oi_heading_icon {
+	font-size:40px;
+	line-height:40px;
+	color:#000;
+}
+.pf-item-1 {
+	padding-top: 200px;
+	padding-bottom: 200px;
+	background: #fafafa url(../../img/blog2.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.pf-item-1-1 .oi_custom_heading_holder + .oi_custom_heading_holder {
+	margin-top:10px;
+}
+.pf-item-1-1 .oi_icon_sub_titile {
+	color:#666666;
+}
+.pf-item-2 {
+	margin-top: 60px;
+	margin-bottom: 40px;
+}
+.pf-item-2 .text_column {
+	margin-bottom: -20px;
+	border-bottom-width: 0px;
+	padding-bottom: 0px;
+}
+.pf-item-2 .oi_heading_border span {
+	text-align:center;
+	width:100px;
+	border-top:1px solid #e8e8e8;
+}
+.pf-item-prev {
+	background-image: url('../../img/Paper-Wrap-Wine-Bottle-Mockup.jpg');
+}
+.pf-item-next {
+	background-image: url('../../img/Daily-News-Folded-Mockup.jpg');
+}

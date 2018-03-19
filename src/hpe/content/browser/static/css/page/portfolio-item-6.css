@@ -1,0 +1,58 @@
+.page_featured {
+	background-image: url('../../img/the-book.jpg');
+}
+.page_featured .page_description_over {
+	background: #000;
+	opacity:0.7;
+}
+.oi_heading_border span {
+	text-align:center;
+	width:40px;
+	border-top:2px solid #dd3333;
+}
+.pf-item-1 {
+	padding-top: 200px;
+	padding-bottom: 200px;
+	background-image: url('../../img/book.jpg');
+}
+.pf-item-1 .oi_icon_sub_titile {
+	color:#0a0a0a;
+}
+.oi_vc_button {
+	display:inline-block;
+	font-size:16px;
+	line-heigth:16px;
+	color:#000000;
+	background-color:#ffffff;
+	padding:10px 20px;
+	border-width:1;
+	order-style:solid;
+	order-color:#ffffff;
+	border-radius:3px;
+}
+.pf-item-2 {
+	padding-top: 200px;
+	padding-bottom: 200px;
+	background-color: #f6f6f6;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.pf-item-2 .oi_icon_sub_titile {
+	color:#0a0a0a;
+}
+.mb-100 {
+	margin-bottom: 100px;
+}
+.mb-80 {
+	margin-top: 80px;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+.pf-item-prev {
+	background-image: url('../../img/Coffe-cup.jpg');
+}
+.pf-item-next {
+	background-image: url('../../img/The-Faric-bag.jpg');
+}

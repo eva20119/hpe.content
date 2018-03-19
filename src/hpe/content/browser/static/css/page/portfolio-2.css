@@ -1,0 +1,87 @@
+.page_featured {
+	background-image:url('../../img/gordon-theme.jpg');
+}
+.page_featured .page_description_over {
+	background: #000;
+	opacity:0.7;
+}
+
+.potfolio_container_holder {
+	margin:0;
+}
+
+.pfolio-1 .st_sf_vc_potrfolio {
+	background:url('../../img/craft_bear.jpg');
+}
+.pfolio-1 .st_sf_vc_port_mask {
+	background:rgba(255,248,95,0.9);
+	color:#000;
+}
+.pfolio-1 .st_sf_sub_legend,
+.pfolio-1 .st_sf_vc_port_cat,
+.pfolio-2 .st_sf_sub_legend,
+.pfolio-2 .st_sf_vc_port_cat,
+.pfolio-4 .st_sf_sub_legend,
+.pfolio-4 .st_sf_vc_port_cat,
+.pfolio-5 .st_sf_sub_legend,
+.pfolio-5 .st_sf_vc_port_cat,
+.pfolio-6 .st_sf_sub_legend,
+.pfolio-6 .st_sf_vc_port_cat {
+	color:#000;
+}
+.pfolio-1 .st_sf_vc_sep,
+.pfolio-2 .st_sf_vc_sep,
+.pfolio-4 .st_sf_vc_sep {
+	background-color:#000;
+}
+
+.pfolio-2 .st_sf_vc_potrfolio {
+	background:url('../../img/Paper-Bag-packaging-Mockup-psd.jpg');
+}
+.pfolio-2 .st_sf_vc_port_mask {
+	background:rgba(193,203,168,0.9);
+	color:#000;
+}
+
+.pfolio-3 .st_sf_vc_potrfolio {
+	background:url('../../img/Fabric-Bag-Mockup.jpg');
+}
+.pfolio-3 .st_sf_vc_port_mask {
+	background:rgba(159,227,214,0.9);
+	color:#fff;
+}
+.pfolio-3 .st_sf_sub_legend,
+.pfolio-3 .st_sf_vc_port_cat {
+	color:#fff;
+}
+.pfolio-3 .st_sf_vc_sep {
+	background-color:#fff;
+}
+
+.pfolio-4 .st_sf_vc_potrfolio {
+	background:url('../../img/another-bag.jpg');
+}
+.pfolio-4 .st_sf_vc_port_mask {
+	background:rgba(210,199,171,0.9);
+	color:#000;
+}
+
+.pfolio-5 .st_sf_vc_potrfolio {
+	background:url('../../img/Square-Book.jpg');
+}
+.pfolio-5 .st_sf_vc_port_mask {
+	background:#9D9CA1;
+	color:#000;
+}
+
+.pfolio-6 .st_sf_vc_potrfolio {
+	background:url('../../img/Coffe-cup.jpg');
+}
+.pfolio-6 .st_sf_vc_port_mask {
+	background:#DED68B;
+	color:#000;
+}
+
+.st_sf_load_more_holder {
+	padding:0 !important;
+}

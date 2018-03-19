@@ -1,0 +1,66 @@
+.page_featured {
+	background-image: url('../../img/Daily-News-Folded-Mockup.jpg')
+}
+.page_featured .page_description_over {
+	 background:#fff;
+	 opacity:0.8;
+}
+.oi_heading_border span {
+	text-align:left;
+	width:20px;
+	border-top:3px solid #dd9933;
+}
+.mb-40 {
+	margin-bottom:40px;
+}
+.mb-100 {
+	margin-bottom:100px;
+}
+.pf-item-1 {
+	padding-top: 200px;
+	padding-bottom: 200px;
+	background: #f1f1f1 url(../../img/pattern2.png);
+	background-position: 0 0;
+	background-repeat: repeat;
+}
+.pf-item-1 .oi_heading_border {
+	height:3px;
+}
+.pf-item-2 {
+	margin-bottom: 0px;
+	background-image: url(../../img/Daily-News-Folded-Mockup.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.pf-item-3 {
+	margin-bottom: 0px;
+	padding-top: 200px;
+	padding-bottom: 200px;
+	background-image: url(../../img/grange-pattern.png);
+	background-position: 0 0;
+	background-repeat: repeat;
+}
+.pf-item-3-1 {
+	padding-top: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	padding-left: 30px;
+	background-color: #000000;
+}
+.pf-item-3-1 .oi_vc_heading .oi_icon_titile,
+.pf-item-3-1 .oi_vc_heading .oi_icon_sub_titile,
+.pf-item-3-1 .text-column {
+	color:#fff;
+}
+.pf-item-3-1 .oi_heading_border span {
+	text-align:center;
+	width:100px;
+	border-top:1px solid #cccccc;
+}
+.pf-item-prev {
+	background-image: url('../../img/Wine-Package-Box-Mockup-vol-1.jpg');
+}
+.pf-item-next {
+	background-image: url('../../img/port1.jpg');
+}

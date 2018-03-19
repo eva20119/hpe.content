@@ -1,0 +1,148 @@
+.main-1 {
+	background-image:url(../../img/bicycle-in-blue-room-PZHAAMS.jpg);
+	background-color: #1e73be;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+}
+.main-1-1 {
+    white-space: nowrap;
+    font-size: 18px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #fff;
+    font-family: Open Sans;
+    text-align: center;
+	margin-bottom:30px;
+}
+.main-1-2 {
+	white-space: nowrap;
+    font-size: 106px;
+    line-height: 106px;
+    font-weight: 800;
+    color: #fff;
+    font-family: Dosis;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+    text-align: center;
+}
+.main-1-2:after {
+	content:'';
+	display:block;
+	background-color:#fff;
+	height:10px;
+	width:100px;
+	margin:50px auto 0;
+}
+.main-1-3 {
+	background-color:#fff;
+}
+#serviceSlide {
+	margin-bottom:50px;
+}
+
+.main-2 {
+	background-color:#fff;
+}
+.main-2 .oi_custom_heading_holder {
+	margin-bottom:60px;
+}
+.main-3 {
+	background: #ffffff url(../../img/blanket-on-the-couch-PADZCQ9.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.main-4 {
+	background: #f4e9f1 url(../../img/Space_Patterns_jpg.jpg);
+	background-position: 0 0;
+	background-repeat: repeat;
+}
+.main-4-1 {
+	background-image: url(../../img/handz_lineart_final.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.main-4-2 {
+	background-color: transparent;
+}
+.main-5 {
+	background-color:#fff;
+}
+.main-5 .oi_next_image_shortcode,
+.main-5 .oi_current_image_shortcode {
+	background-image:url(../../img/craft_bear.jpg);
+}
+.main-6 {
+	background: #ffffff url(../../img/two-lamps-in-a-room-P3ZFFFE.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.main-6-1 {
+	background-color:#ffffff;
+}
+.main-6-1>.oi_vc_text_span>h2>span {
+	color: #0091e4;
+}
+.list-service {
+	background-color:rgba(0,0,0,0.7)
+}
+.list-service .oi_custom_heading_holder + .oi_custom_heading_holder {
+	margin-top:40px;
+}
+.list-service .oi_heading_icon {
+	font-size:40px;
+	line-height:40px;
+}
+.list-service .oi_icon_titile {
+	color:#fff;
+}
+.list-service .oi_heading_border span {
+	width:100px;
+	border-top:1px dotted #a5a5a5;
+}
+.main-7 {
+	background-color: #f8f7f2 !important;
+}
+.main-7-1 {
+	background-color:#f8f7f2
+}
+.main-7-1 .oi_custom_heading_holder {
+	margin-bottom:60px;
+}
+.main-7-1 .oi_icon_sub_titile {
+	color:#666;
+}
+@media (min-width: 0px) and (max-width: 1000px) {
+	.oi_vc_text.item_height_x2 {
+		margin-bottom: 20px;
+	}
+	#achivements, #testimoniials {
+		padding: 60px 0;
+		margin-bottom: 60px;
+	}
+	#portfolio {
+		margin-top: 40px;
+	}
+	.ult-btn span{
+		margin-bottom: 30px;
+	}
+	.main-1-1 {
+		font-size:16px;
+	}
+	.main-1-2 {
+		font-size: 47px;
+		line-height: 47px;
+	}
+	.main-1-2 span {
+		font-size: 63px;
+		line-height:94px;
+
+	}
+}

@@ -11,7 +11,26 @@
 <metal:content-core fill-slot="content-core">
 <metal:content-core define-macro="content-core"
                     tal:define="toc context/table_of_contents|nothing;">
+<style>
+.enable{
+    background-color:green;
+    color:white;
+}
+.disabled{
+    background-color:red;
+    color:white;
+    position: relative;
+}
+.enable>input{
+    display: none;
+}
+.disabled>input{
+    right: 0;
+    position: absolute;
+}
 
+</style>
+<button class="btn_cancle">取消預約</button>
 <table>
     <tr>
         <th>Date</th>
@@ -25,11 +44,110 @@
     </tr>
     <tr tal:repeat="list view/reservationList">
         <td>${python:list['startDate']}</td>
-        <td tal:repeat="time python:list['timeList']">${time}</td>
-        <td>${python:list['alternate']}</td>
+        <td tal:repeat="time python:list['timeList']"
+            tal:attributes="class python:time[2]">
+            <span class="time">${python:time[0]}</span>
+            <span>${python:time[1]}</span>
+            <input type="checkbox" tal:attributes="class python:time[3]" 
+                   class="select_peroid" value="${python:'%s,%s' %(list['startDate'],time[1])}"/></td>
+        <td>
+            <tal:alternate condition="python:list['condition_alternate']">
+                <select class="alternate_name">
+                    <option tal:repeat="alternate python:list['alternate']" value="${alternate}">${alternate}</option>
+                </select>
+                <select class="peroid">
+                    <option tal:repeat="peroid python:list['peroidList']" value="${peroid}" >${peroid}</option>
+                </select>
+                <button class="btn_send" value="${python:list['startDateTime']}">送出</button>
+                <button class="btn_clean">清空候補名單</button>
+            </tal:alternate>
+        </td>
     </tr>
 </table>
 
+<script>
+$(document).ready(function () {
+    $('.btn_send').click(function (e) {
+        name = $(this).parent().find('select.alternate_name').val()
+        peroid = $(this).parent().find('select.peroid').val()
+        start_date = $(this).val()
+        index = peroid.split('peroid')[1]
+        time = $(this).parent().parent().find('span.time')[index-1].innerText
+
+        data = {
+            'name': name,
+            'peroid': peroid,
+            'start_date': start_date,
+            'time': time
+        }
+        url = location.href.replace('reservation_status', 'update_alternate')
+        $.ajax({
+            type: "post",
+            url: url,
+            data: data,
+            success: function (response) {
+                if (response == 'success'){
+                    document.location.reload()
+                }else{
+                    alert('請重新整理，候補錯誤')
+                }
+            }
+        });
+    });
+    $('.btn_cancle').click(function(){
+        if(confirm('確定要預約嘛') == true){
+            peroidList = []
+            $('input:checked').each(function(){
+                val = $(this).val()
+                peroidList.push(val)
+            })
+            data = {
+                'peroidList': peroidList,
+                'action': 'peroid'
+            }
+            url = location.href.replace('reservation_status', 'manager_cancel_reservation')
+            $.ajax({
+                type: "post",
+                url: url,
+                data: data,
+                success: function (response) {
+                    if (response == 'success'){
+                        document.location.reload()
+                    }else{
+                        alert('請重新整理，候補錯誤')
+                    }
+                }
+            });
+        }
+    })
+    $('.btn_clean').click(function(){
+        if(confirm('確定要清空候補名單嘛') == true){
+            alternateList = []
+            $(this).parent().find('select.alternate_name>option').each(function(){
+                val = $(this).val()
+                alternateList.push(val)
+            })
+            data = {
+                'alternateList': alternateList,
+                'action': 'alternate'
+            }
+            url = location.href.replace('reservation_status', 'manager_cancel_reservation')
+            $.ajax({
+                type: "post",
+                url: url,
+                data: data,
+                success: function (response) {
+                    if (response == 'success'){
+                        document.location.reload()
+                    }else{
+                        alert('請重新整理，候補錯誤')
+                    }
+                }
+            });
+        }
+    })
+});
+</script>
 
 </metal:content-core>
 </metal:content-core>

@@ -1,0 +1,77 @@
+.page_featured {
+	background-image:url('../../img/office-932926_1920.jpg');
+}
+.page_featured .page_description_over {
+	background: #fff;
+	opacity:0.7;
+}
+.page_featured .page_description p {
+	color:#000;
+}
+.serv-1,
+.serv-2 {
+	margin-top: 100px;
+}
+.serv-1 .oi_icon_sub_titile {
+	color:#666;
+}
+.serv-2 {
+	margin-bottom:100px;
+}
+.serv-2 .oi_heading_icon {
+	font-size:34px;
+	line-height:34px;
+	color:#000000;
+}
+.serv-2 .oi_heading_border span {
+	width:100px;
+	background-color:#e8e8e8;
+}
+.serv-2 .oi_vc_button {
+	display:inline-block;
+	font-size:12px;
+	line-heigth:12px;
+	color:#ffffff;
+	background-color:#000000;
+	padding:10px 15px;
+	border-width:0px;
+	border-style:solid;
+	border-color:#1dc6df;
+	border-radius:3px;
+}
+.serv-2 .oi_icon_titile {
+	color:#222;
+}
+.serv-2 .oi_icon_sub_titile {
+	color:#666;
+}
+
+.serv-3 {
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background: #f1f1f1 url(../../img/moneybg.jpg);
+	background-position: 0 0;
+	background-repeat: repeat;
+	border-top-color: #f1f1f1;
+	border-top-style: solid;
+	border-bottom-color: #f1f1f1;
+	border-bottom-style: solid;
+	color:#000;
+}
+.serv-4 {
+	margin-top:40px;
+	margin-bottom:40px;
+}
+.serv-4 .oi_heading_border span {
+	text-align:center;
+	width:130px;
+	border-top:1px dotted #d1d1d1;
+}
+.serv-4 .oi_icon_sub_titile {
+	color:#666;
+}
+.serv-5 {
+	margin-bottom: 100px
+}

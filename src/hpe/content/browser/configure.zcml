@@ -17,6 +17,28 @@
       type="plone"
       directory="static"
       />
+
+  <browser:page
+      name='cover'
+      for='*'
+      class='.views.Cover'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='eat_blog'
+      for='*'
+      class='.views.EatBlog'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='mind_gas_station'
+      for='*'
+      class='.views.MindGasStation'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
   <browser:page
       name='bicycle_picture_view'
       for='*'
@@ -53,7 +75,7 @@
       permission='zope2.View'
       />
   <browser:page
-      name='user_profile'
+      name='profile'
       for='*'
       class='.views.UserProfile'
       layer='hpe.content.interfaces.IHpeContentLayer'
@@ -70,6 +92,97 @@
       name='cancel_reservation'
       for='*'
       class='.views.CancelReservation'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='update_alternate'
+      for='*'
+      class='.views.UpdateAlternate'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='manager_cancel_reservation'
+      for='*'
+      class='.views.ManagerCancelReservation'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='test_pressure'
+      for='*'
+      class='.pressure.TestPressure'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='calculate_pressure'
+      for='*'
+      class='.pressure.CalculatePressure'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='publicize_pressure'
+      for='*'
+      class='.pressure.PublicizePressure'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='total_pressure_result'
+      for='*'
+      class='.pressure.TotalPressureResult'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='login'
+      for='*'
+      class='.views.Login'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='upload'
+      for='*'
+      class='.views.Upload'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='create_user'
+      for='*'
+      class='.pressure.Create'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='update_activity'
+      for='*'
+      class='.activity.UpdateActivity'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='event_handl'
+      for='plone.app.contenttypes.interfaces.IEvent'
+      class='.activity.EventHandl'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='cancel_activity'
+      for='*'
+      class='.activity.CancelActivity'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='log'
+      for='*'
+      class='.views.Log'
       layer='hpe.content.interfaces.IHpeContentLayer'
       permission='zope2.View'
       />

@@ -1,0 +1,125 @@
+.page_featured {
+	background-image: url('../../img/another-bag.jpg')
+}
+.page_featured .page_description_over {
+	opacity: 0;
+}
+.oi_page_holder {
+	background-color: #f6f6f6;
+}
+.mb-20 {
+	margin-bottom:20px;
+}
+.pfitem-1 {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background: #efefef url(../../img/g-bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.pfitem-1-1 {
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	background-color: #ffffff;
+}
+.pfitem-1-1 .oi_heading_icon {
+	font-size:24px;
+	line-height:24px;
+	color:#000000;
+}
+.pfitem-1-1 .oi_heading_border span {
+	text-align:center;
+	width:100px;
+	background-color:#ccc;
+
+}
+.pfitem-2 {
+	margin-top: 0px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: #f9f9f9;
+}
+.pfitem-3 {
+	background: #f1f1f1 url(../../img/pattern1.jpg);
+	background-position: 0 0;
+	background-repeat: repeat;
+}
+.pfitem-3-1 {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.pfitem-3 .oi_icon_sub_titile {
+	color:#0a0a0a;
+}
+.pfitem-4 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: #f6f6f6;
+	background-position: 0 0;
+	background-repeat: repeat;
+}
+.pfitem-4-1 {
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+}
+.pfitem-4-1 .oi_heading_icon,
+.pfitem-5 .oi_heading_icon,
+.pfitem-5-1 .oi_heading_icon {
+	font-size:34px;
+	line-height:34px;
+	color:#000000;
+}
+.pfitem-4-1 .oi_icon_titile {
+	color:#222222;
+}
+.pfitem-4-1 .oi_icon_sub_titile {
+	color:#000000;
+}
+.pfitem-4-1 .oi_heading_border span {
+	text-align:center;
+	width:100px;
+	border-top:1px solid #e8e8e8;
+}
+
+.pfitem-5 {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	border-left-color: #e83b23;
+	border-left-style: ridge;
+	border-right-color: #e83b23;
+	border-right-style: ridge;
+	border-top-color: #e83b23;
+	border-top-style: ridge;
+	border-bottom-color: #e83b23;
+	border-bottom-style: ridge;
+}
+.pfitem-5 .oi_heading_border span,
+.pfitem-5-1 .oi_heading_border span {
+	text-align:center;
+	width:100px;
+	border-top:1px solid #e8e8e8;
+}
+.pfitem-5-1 {
+	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+}
+.pf-item-prev {
+	background-image: url('../../img/Fabric-Bag-Mockup.jpg');
+}
+.pf-item-next {
+	background-image: url('../../img/Square-Book.jpg');
+}

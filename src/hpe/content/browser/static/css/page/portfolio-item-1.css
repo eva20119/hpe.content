@@ -1,0 +1,44 @@
+.page_featured {
+	background-image:url('../../img/Paper-Bag-packaging-Mockup-psd.jpg')
+}
+.page_featured .page_description_over {
+	opacity:0;
+}
+.oi_page_holder {
+	padding-top:35px;
+	background-color: #f6f6f6;
+}
+.pf-item .oi_heading_icon {
+	font-size:24px;
+	line-height:24px;
+	color:#000000
+}
+.pf-item .oi_heading_border span {
+	text-align:center;
+	width:100px;
+	border-top:1px solid #000000;
+}
+
+.pf-item-1 {
+	padding-bottom: 60px;
+	background-color: #f6f6f6;
+}
+.pf-item-2 {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.pf-item-3 {
+	border: 1px dotted #000000;
+	padding:40px;
+}
+.pf-item-author {
+	padding: 4px 7px;
+	color: #fff;
+	background: #82876f;
+}
+.pf-item-prev {
+	background-image:url('../../img/craft_bear.jpg');
+}
+.pf-item-next {
+	background-image:url('../../img/Fabric-Bag-Mockup.jpg');
+}

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>2018 HPE Wellness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-layout.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" >
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/contact-form.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/vc.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/wocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal-default-theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/elegant-font/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/linecons/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/lightcase/lightcase.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/shop.css" type="text/css" media="all" />
+<script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="++plone++hpe.content/js/html5min.js"></script>
+<![endif]-->
+<style>
+td, table, th{
+    border: 0;
+}
+table{
+    table-layout: fixed;
+    border-collapse: collapse;
+    word-wrap: break-word;
+    width:100%;
+}
+label{
+    margin: 0;
+}
+.question{
+    border:1px solid rgba(0,0,0,.1)
+}
+</style>
+</head>
+
+<body class="woocommerce-cart woocommerce-page woo_active standard_page dark_bg half_screen_fi have_featured_image products_per_row_3">
+<?python
+    from plone import api
+    abs_url = api.portal.get().absolute_url()
+    is_anonymous = api.user.is_anonymous()
+?>
+<div class="preload"></div>
+<div class="header">
+    <div class="logo_holder">
+    	<a href="${abs_url}/index"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" />
+       	</a>
+    </div>
+    
+    <!-- .site-header-social-menu --> 
+</div>
+<div class="page_featured">
+    <div class="page_description_over"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <div class="page_description">
+                    <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/041_w.png"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
+<div class="shoping_cart_icon">
+
+  <!-- 未登入 -->
+  <a class="my_shop_icon" href="${abs_url}/user_login" style="margin-right:20px"
+    tal:condition="is_anonymous">會員登入</a>
+  <!-- 未登入 -->
+
+  <!-- 已登入 -->
+  <p style="display:inline" tal:condition="not: is_anonymous">Hi~您已登入/</p>
+  <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px" 
+    tal:condition="not: is_anonymous">登出</a>
+  <!-- 已登入 -->
+
+  <a class="my_account_icon" href="${abs_url}/reservation" title="預約家庭醫師"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
+  <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
+  <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
+  <!-- 未登入 -->
+  <select name="" id="" tal:condition="is_anonymous">
+    <option value="">中文Ch</option>
+    <option value="">英文En</option>
+  </select>
+  <!-- 未登入 -->
+  <span class="shop_cart_full"></span> 
+</div>
+<div class="menu_holder">
+  <div class="inner_holder">
+    <div class="text-logo">
+      <h3 class="logo_name">HPE Wellness</h3>
+      <p class="logo_description">每個角落都是你的運動場，<br>Wellness 在每個改變的起點等你，<br>2018，Fighting</p>
+    </div>
+    
+    <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
+      <div class="menu-primary-menu-container">
+        <ul class="primary-menu">
+          <li class="current-menu-item current_page_item"><a href="${abs_url}/index"><span style="font-family:微軟正黑體">回首頁</span></a></li>
+          <li ><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span></a></li>
+          <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">過勞量表</span></a></li>
+          <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">肌力動次動</span></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">防癌你我他</span></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">樂活單車騎</span></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">流感防護罩</span></a></li>
+            <div class="vc_team_member_image_holder">
+              <div class="oi_team_cont_holder">
+              </div>
+            </div>
+        </ul>
+      </div>
+    </nav>
+    <!-- .main-navigation -->
+    <div class="menu_footer">
+      <nav aria-label="Footer Menu">
+        <div class="menu-social-menu-container">
+          <ul class="footer-menu">
+          <!-- .
+            <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            -->
+          </ul>
+        </div>
+      </nav>
+      <!-- .social-navigation -->
+      <p style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+
+</div>
+<div class="overlay"></div>
+<div id="primary" class="content-area">
+    <main id="main" class="site-main">
+        <div class="container">
+            <div class="entry-content" >
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 style="font-family:微軟正黑體">疲勞指數評估測驗該釋壓了嗎</h3><br>
+                  </div>
+                </div>
+                <form action="calculate_pressure" method="post" class="woocommerce-cart-form">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table  style="font-family:微軟正黑體">
+                                <tr>
+                                    <td style="width:80px;"></td>
+                                    <td style="width:200px;"></td>
+                                </tr>
+                                <tr>
+                                    <th> 一、個人疲勞</th>
+                                </tr>
+                                <tr class="question">
+                                    <td> 1.你總覺得疲勞嘛?</td>
+                                    <td>
+                                        <label><input type="radio" value="100" name="answer1_1" required/>總是</label>
+                                        <label><input type="radio" value="75" name="answer1_1" required/>常常</label>
+                                        <label><input type="radio" value="50" name="answer1_1" required/>有時候</label>
+                                        <label><input type="radio" value="25" name="answer1_1" required/>不常</label>
+                                        <label><input type="radio" value="0" name="answer1_1" required/>從未或幾乎從未</label>
+                                    </td>
+                                </tr>
+                                <tr class="question">
+                                    <td >2.你常覺得身體上體力透支嗎?</td>
+                                    <td>
+                                        <label><input type="radio" value="100" name="answer1_2" required/>總是</label>
+                                        <label><input type="radio" value="75" name="answer1_2" required/>常常</label>
+                                        <label><input type="radio" value="50" name="answer1_2" required/>有時候</label>
+                                        <label><input type="radio" value="25" name="answer1_2" required/>不常</label>
+                                        <label><input type="radio" value="0" name="answer1_2" required/>從未或幾乎從未</label>
+                                    </td>
+                                </tr>
+                                <tr class="question">
+                                    <td >3.你常覺得情緒上心力交瘁嗎?</td>
+                                    <td>
+                                        <label><input type="radio" value="100" name="answer1_3" required/>總是</label>
+                                        <label><input type="radio" value="75" name="answer1_3" required/>常常</label>
+                                        <label><input type="radio" value="50" name="answer1_3" required/>有時候</label>
+                                        <label><input type="radio" value="25" name="answer1_3" required/>不常</label>
+                                        <label><input type="radio" value="0" name="answer1_3" required/>從未或幾乎從未</label>
+                                    </td>
+                                </tr>
+                                <tr class="question">
+                                    <td >4.你常會覺得，「我快要撐不下去了」嗎?</td>
+                                    <td>
+                                        <label><input type="radio" value="100" name="answer1_4" required/>總是</label>
+                                        <label><input type="radio" value="75" name="answer1_4" required/>常常</label>
+                                        <label><input type="radio" value="50" name="answer1_4" required/>有時候</label>
+                                        <label><input type="radio" value="25" name="answer1_4" required/>不常</label>
+                                        <label><input type="radio" value="0" name="answer1_4" required/>從未或幾乎從未</label>
+                                    </td>
+                                </tr>
+                                <tr class="question">
+                                    <td >5.你常覺得精疲力竭嗎?</td>
+                                    <td>
+                                            <label><input type="radio" value="100" name="answer1_5" required/>總是</label>
+                                            <label><input type="radio" value="75" name="answer1_5" required/>常常</label>
+                                            <label><input type="radio" value="50" name="answer1_5" required/>有時候</label>
+                                            <label><input type="radio" value="25" name="answer1_5" required/>不常</label>
+                                            <label><input type="radio" value="0" name="answer1_5" required/>從未或幾乎從未</label>
+                                    </td>
+                                </tr>
+                                <tr class="question">
+                                    <td >6.你常常覺得虛弱，好像快要生病了嗎?</td>
+                                    <td>
+                                            <label><input type="radio" value="100" name="answer1_6" required/>總是</label>
+                                            <label><input type="radio" value="75" name="answer1_6" required/>常常</label>
+                                            <label><input type="radio" value="50" name="answer1_6" required/>有時候</label>
+                                            <label><input type="radio" value="25" name="answer1_6" required/>不常</label>
+                                            <label><input type="radio" value="0" name="answer1_6" required/>從未或幾乎從未</label>
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table style="font-family:微軟正黑體">
+                                <tr>
+                                    <td style="width:100px;"></td>
+                                    <td style="width:200px;"></td>
+                                </tr>
+                                <tr>
+                                    <td> 二、工作疲勞</td>
+                                </tr>
+                                <tr class="question">
+                                    <td >1.你的工作會令人情緒上心力交瘁嗎？</td>
+                                    <td>
+                                            <label><input type="radio" value="100" name="answer2_1" required/>總是</label>
+                                            <label><input type="radio" value="75" name="answer2_1" required/>常常</label>
+                                            <label><input type="radio" value="50" name="answer2_1" required/>有時候</label>
+                                            <label><input type="radio" value="25" name="answer2_1" required/>不常</label>
+                                            <label><input type="radio" value="0" name="answer2_1" required/>從未或幾乎從未</label>
+                                    </td>
+                                </tr>
+                                <tr class="question">
+                                    <td >2.你的工作會讓你覺得快要累垮了嗎?</td>
+                                    <td>
+                                            <label><input type="radio" value="100" name="answer2_2" required/>總是</label>
+                                            <label><input type="radio" value="75" name="answer2_2" required/>常常</label>
+                                            <label><input type="radio" value="50" name="answer2_2" required/>有時候</label>
+                                            <label><input type="radio" value="25" name="answer2_2" required/>不常</label>
+                                            <label><input type="radio" value="0" name="answer2_2" required/>從未或幾乎從未</label>
+                                    </td>
+                                </tr>
+                                <tr class="question">
+                                    <td >3.你的工作會讓你覺得挫折嗎?</td>
+                                    <td>
+                                            <label><input type="radio" value="100" name="answer2_3" required/>總是</label>
+                                            <label><input type="radio" value="75" name="answer2_3" required/>常常</label>
+                                            <label><input type="radio" value="50" name="answer2_3" required/>有時候</label>
+                                            <label><input type="radio" value="25" name="answer2_3" required/>不常</label>
+                                            <label><input type="radio" value="0" name="answer2_3" required/>從未或幾乎從未</label>
+                                    </td>
+                                </tr>
+                                <tr class="question">
+                                    <td >4.工作一整天之後，你覺得精疲力竭嗎?</td>
+                                    <td>
+                                            <label><input type="radio" value="100" name="answer2_4" required/>總是</label>
+                                            <label><input type="radio" value="75" name="answer2_4" required/>常常</label>
+                                            <label><input type="radio" value="50" name="answer2_4" required/>有時候</label>
+                                            <label><input type="radio" value="25" name="answer2_4" required/>不常</label>
+                                            <label><input type="radio" value="0" name="answer2_4" required/>從未或幾乎從未</label>
+                                    </td>
+                                </tr>
+                                <tr class="question">
+                                    <td >5.上班之前只要想到又要工作一整天，你就覺得沒力嗎?</td>
+                                    <td>
+                                            <label><input type="radio" value="100" name="answer2_5" required/>總是</label>
+                                            <label><input type="radio" value="75" name="answer2_5" required/>常常</label>
+                                            <label><input type="radio" value="50" name="answer2_5" required/>有時候</label>
+                                            <label><input type="radio" value="25" name="answer2_5" required/>不常</label>
+                                            <label><input type="radio" value="0" name="answer2_5" required/>從未或幾乎從未</label>
+                                    </td>
+                                </tr>
+                                <tr class="question">
+                                    <td >6.上班時你會覺得每一刻都很難熬嗎?</td>
+                                    <td>
+                                            <label><input type="radio" value="100" name="answer2_6" required/>總是</label>
+                                            <label><input type="radio" value="75" name="answer2_6" required/>常常</label>
+                                            <label><input type="radio" value="50" name="answer2_6" required/>有時候</label>
+                                            <label><input type="radio" value="25" name="answer2_6" required/>不常</label>
+                                            <label><input type="radio" value="0" name="answer2_6" required/>從未或幾乎從未</label>
+                                    </td>
+                                </tr>
+                                <tr class="question">
+                                    <td >7.不工作的時候，你有足夠的精力陪朋友或家人嗎?</td>
+                                    <td>
+                                            <label><input type="radio" value="0" name="answer2_7" required/>總是</label>
+                                            <label><input type="radio" value="25" name="answer2_7" required/>常常</label>
+                                            <label><input type="radio" value="50" name="answer2_7" required/>有時候</label>
+                                            <label><input type="radio" value="75" name="answer2_7" required/>不常</label>
+                                            <label><input type="radio" value="100" name="answer2_7" required/>從未或幾乎從未</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row" style="justify-content:center;margin-bottom:20px" >
+                        <input type="submit" value="送出" class="button" 
+                            style="width:200px;font-size:20px;background-color:#00B388 !important;color:white"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- .site-main --> 
+    
+</div>
+<!-- .content-area -->
+
+<div class="bottom_line">
+    <div class="row">
+        <div class="col-md-12">
+             <p align="center" style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+      </div>
+        
+  </div>
+</div>
+<script type="text/javascript" src="++plone++hpe.content/js/popper.min.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/contact-form.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/remodal.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/core.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/widget.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/mouse.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/slider.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-ui-touch-punch.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/accounting.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/price-slider.min.js"></script>
+</body>
+</html>

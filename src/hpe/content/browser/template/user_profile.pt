@@ -1,43 +1,300 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+<!DOCTYPE html>
+<html lang="en-US" class="no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
     xmlns:tal="http://xml.zope.org/namespaces/tal"
     xmlns:metal="http://xml.zope.org/namespaces/metal"
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     lang="en"
-    metal:use-macro="context/main_template/macros/master"
     i18n:domain="hpe.billing">
-<body>
+<head>
+<title>2018 HPE Wellness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-layout.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" >
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/contact-form.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/vc.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/wocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal-default-theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/elegant-font/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/linecons/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/lightcase/lightcase.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/33shop.css" type="text/css" media="all" />
+<script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="++plone++hpe.content/js/html5min.js"></script>
+<![endif]-->
+<style>
+.product-remove>p{
+    display:inline;
+}
+.product-remove>input{
+    display:inline;
+    width:90%;
+    font-size:22px;
+}
+</style>
+</head>
 
-
-<metal:content-core fill-slot="content-core">
-<metal:content-core define-macro="content-core"
-                    tal:define="toc context/table_of_contents|nothing;">
+<body class="woocommerce-cart woocommerce-page woo_active standard_page dark_bg half_screen_fi have_featured_image products_per_row_3">
 <?python
     from plone import api
     abs_url = api.portal.get().absolute_url()
-    url = '%s/update_profile' % abs_url
+    is_anonymous = api.user.is_anonymous()
 ?>
-<form action="${url}" method="POST">
-    HPE 員工編號<input type="text" value="${view/user_id}" name="user_id"/>
-    HPE Email<input type="text" value="${view/user_email}" name="user_email"/>
-    中文姓名<input type="text" value="${view/user_ch_name}" name="user_ch_name" />
-    英文姓名<input type="text" value="${view/user_en_name}" name="user_en_name" />
-    辦公室電話<input type="text" value="${view/user_officephone}" name="user_officephone" />
-    聯絡手機<input type="text" value="${view/user_cellphone}" name="user_cellphone" />
-    HPE工作地點	<select name="user_location" data-location="${view/user_location}" id="location">
-                    <option value="南港">南港</option>
-                    <option value="台中">台中</option>
-                    <option value="高雄">高雄</option>
-               </select>
-    <br/>
-    <input type="submit" value="儲存"/>
-</form>
-<script>
-$(document).ready(function(){
-    $('#location').val($('#location').data('location'));
-})
-</script>
-</metal:content-core>
-</metal:content-core>
+
+<div class="preload"></div>
+<div class="header">
+    <div class="logo_holder">
+    	<a href="${abs_url}/index"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" />
+       	</a>
+    </div>
+    
+    <!-- .site-header-social-menu --> 
+</div>
+<div class="page_featured">
+    <div class="page_description_over"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <div class="page_description">
+          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/ppp.png"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
+<div class="shoping_cart_icon">
+
+  <!-- 未登入 -->
+  <a class="my_shop_icon" href="${abs_url}/user_login" style="margin-right:20px"
+    tal:condition="is_anonymous">會員登入</a>
+  <!-- 未登入 -->
+
+  <!-- 已登入 -->
+  <p style="display:inline" tal:condition="not: is_anonymous">Hi~您已登入/</p>
+  <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px" 
+    tal:condition="not: is_anonymous">登出</a>
+  <!-- 已登入 -->
+
+  <a class="my_account_icon" href="${abs_url}/reservation" title="預約家庭醫師"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
+  <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
+  <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
+  <!-- 未登入 -->
+  <select name="" id="" tal:condition="is_anonymous">
+    <option value="">中文Ch</option>
+    <option value="">英文En</option>
+  </select>
+  <!-- 未登入 -->
+  <span class="shop_cart_full"></span> 
+</div>
+<div class="menu_holder">
+  <div class="inner_holder">
+    <div class="text-logo">
+      <h3 class="logo_name">HPE Wellness</h3>
+      <p class="logo_description">每個角落都是你的運動場，<br>Wellness 在每個改變的起點等你，<br>2018，Fighting</p>
+    </div>
+    
+    <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
+      <div class="menu-primary-menu-container">
+        <ul class="primary-menu">
+          <li class="current-menu-item current_page_item"><a href="${abs_url}/index"><span style="font-family:微軟正黑體">回首頁</span></a></li>
+          <li ><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span></a></li>
+          <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">過勞量表</span></a></li>
+          <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">肌力動次動</span></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">防癌你我他</span></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">樂活單車騎</span></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">流感防護罩</span></a></li>
+            <div class="vc_team_member_image_holder">
+              <div class="oi_team_cont_holder">
+              </div>
+            </div>
+        </ul>
+      </div>
+    </nav>
+    <!-- .main-navigation -->
+    <div class="menu_footer">
+      <nav aria-label="Footer Menu">
+        <div class="menu-social-menu-container">
+          <ul class="footer-menu">
+          <!-- .
+            <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            -->
+          </ul>
+        </div>
+      </nav>
+      <!-- .social-navigation -->
+      <p style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+
+</div>
+<div class="overlay"></div>
+<div id="primary" class="content-area">
+    <main id="main" class="site-main">
+        <div class="container">
+            <div class="entry-content" >
+                <div class="row">
+                    <div class="col-md-5">
+                        <h3 style="font-family:微軟正黑體">我的資料</h3>
+                        <p style="font-family:微軟正黑體">請確認並補齊基本資料，加速您未來報名活動的速度喔，<BR>謝謝~~</p>
+                    </div>
+                    <div class="col-md-5">
+                        <h3 style="font-family:微軟正黑體">Taiwan Wellness Total Steps XXX</h3>
+                        <p style="font-family:微軟正黑體"><a href="#">>> Global Wellness Challenge Steps Login</a></p>
+                    </div>
+                    <div class="col-md-2">
+                        <h3 align="CENTER" style="font-family:微軟正黑體">專屬條碼</h3>
+                        <p align="CENTER" style="font-family:微軟正黑體"><img src="${view/picture_data}" width="120" height="120"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="woocommerce">
+                            <?python
+                                from plone import api
+                                abs_url = api.portal.get().absolute_url()
+                                url = '%s/update_profile' % abs_url
+                            ?>
+                            <form class="woocommerce-cart-form" method="post" action="${url}">
+                                <table width="100%" class="shop_table shop_table_responsive cart">
+                                    <!--DWLayoutTable-->
+                                    <thead style="font-family:微軟正黑體">
+                                        <tr>
+                                            <th width="12%" height="42" class="code"><div align="center">HPE 員工編號</div></th>
+                                            <th width="16%" class="mail"><div align="center">HPE Email</div></th>
+                                            <th width="12%" class="ch_name"><div align="center">中文姓名</div></th>
+                                            <th width="12%" class="en_name"><div align="center">英文姓名</div></th>
+                                            <th width="12%" class="tel"><div align="center">辦公室電話</div></th>
+                                            <th width="12%" class="phone"><div align="center">聯絡手機</div></th>
+                                            <th width="12%" class="add"><div align="center">HPE 工作地點</div></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體">
+                                            <td class="product-name" data-title="HPE 員工編號"><div align="center">${view/user_id}</div></td>
+                                            <td class="product-price" data-title="HPE Email"><div align="center">${view/user_email}</div></td>
+                                            <td class="product-quantity" data-title="中文姓名"><div align="center">${view/user_ch_name}</div></td>
+                                            <td class="product-subtotal" data-title="英文姓名"><div align="center"><span class="product-quantity">${view/user_en_name}</span></div></td>
+                                            <td class="product-subtotal" data-title="辦公室電話"><div align="center"><span class="product-quantity">${view/user_officephone}</span></div></td>
+                                            <td class="product-subtotal" data-title="聯絡手機"><div align="center"><span class="product-quantity">${view/user_cellphone}</span></div></td>
+                                            <td class="product-subtotal" data-title="HPE 工作地點"><div align="center"><span class="product-quantity">${view/user_location}</span></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div align="center"><span class="product-subtotal"><span class="actions">
+                                <input type="submit" class="button" name="update_cart3" value="Save" />
+                                </span> 　<span class="actions"> <span class="product-quantity"></span></span></span><span class="actions">
+                                <input type="submit" class="button" name="update_cart4" value="Refresh" />
+                                </span></div>
+                            </form>
+                            
+                      </div>
+                    </div>
+                </div><BR>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3><span style="font-family:微軟正黑體">報名活動列表</span></h3>
+                        <div class="row">
+                    <div class="col-md-12">
+                        <div class="woocommerce">
+                            <form class="woocommerce-cart-form" method="post">
+                                <table width="100%" class="shop_table shop_table_responsive cart">
+                                    <thead style="font-family:微軟正黑體">
+                                        <tr>
+                                            <th width="25%" height="42" class="product-name"><div align="center">活動日期</div></th>
+                                            <th width="25%" class="product-price"><div align="center"><span class="product-quantity">活動名稱</span></div></th>
+                                          <th width="25%" class="product-quantity"><div align="center">對應步數</div></th>
+                                            <th width="25%" valign="top" class="product-subtotal"><div align="center">狀態</div></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體"
+                                            tal:repeat="data view/data">
+                                            <td height="50" valign="top" class="product-name" data-title="活動日期">
+                                                <div align="center">${python:data['activity_date']}</div>
+                                            </td>
+                                            <td valign="top" class="product-price" data-title="活動名稱">
+                                                <div align="center">${python:data['category']}</div>
+                                            </td>
+                                            <td valign="top" class="product-quantity" data-title="對應步數">
+                                                <div align="center">${python:data['step']}</div>
+                                            </td>
+                                            <td valign="top" class="product-subtotal" data-title="狀　　態">
+                                                <!-- 活動未開始 -->
+                                                <div align="center" tal:condition="python:data['condition_1']">
+                                                    <span class="actions">
+                                                        <input type="submit" class="button" name="update_cart2" value="已報名" />
+                                                    </span>  　
+                                                    <span class="actions">
+                                                        <span class="product-quantity">
+                                                            <a href="${abs_url}/cancel_activity?activity_date=${python:data['activity_date']}&category=${python:data['category']}" >取消報名</a>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <!-- 活動未開始 -->
+                                                <!-- 以完成 -->
+                                                <div align="center" tal:condition="python:data['condition_2']">
+                                                    <span class="actions" style="background-color:#3D84A8;color:white;padding:10px;border-radius:4px">以完成</span>　
+                                                </div>
+                                                <!-- 以完成 -->
+                                                <!-- 活動未完成 -->
+                                                <div align="center" tal:condition="python:data['condition_3']">
+                                                    <span class="actions" style="background-color:#B83B5E;color:white;padding:10px;border-radius:4px">活動未完成</span>  　
+                                                </div>
+                                                <!-- 活動未完成 -->
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                          </form><br><br>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+    </main>
+    <!-- .site-main --> 
+    
+</div>
+<!-- .content-area -->
+
+<div class="bottom_line">
+    <div class="row">
+        <div class="col-md-12">
+             <p align="center" style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+      </div>
+        
+    </div>
+</div>
+<script type="text/javascript" src="++plone++hpe.content/js/popper.min.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/contact-form.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/remodal.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/core.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/widget.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/mouse.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/slider.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-ui-touch-punch.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/accounting.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/price-slider.min.js"></script>
+
 
 </body>
 </html>

@@ -1,0 +1,35 @@
+.page_featured {
+	background-image: url('../../img/Paper-Wrap-Wine-Bottle-Mockup.jpg')
+}
+.page_featured .page_description_over {
+	opacity: 0;
+}
+.oi_heading_border span {
+	text-align: left;
+	width: 100px;
+	border-top: 1px dotted #a5a5a5;
+	background-color: transparent;
+}
+.oi_page_holder {
+	background: url('../../img/wine-bg.jpg');
+}
+.oi_icon_sub_titile {
+	color:#666;
+}
+.oi_heading_border .span {
+	text-align:center;
+	width:100px;
+	border-top:1px solid #cccccc;
+}
+.mb-100 {
+	padding-top: 100px;
+}
+.mb-40 {
+	margin-bottom: 40px;
+}
+.pf-item-prev {
+	background-image: url('../../img/The-Faric-bag.jpg');
+}
+.pf-item-next {
+	background-image: url('../../img/Wine-Package-Box-Mockup-vol-1.jpg');
+}

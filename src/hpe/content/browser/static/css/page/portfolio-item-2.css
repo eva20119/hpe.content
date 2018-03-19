@@ -1,0 +1,63 @@
+.page_featured {
+	background-image:url('../../img/Fabric-Bag-Mockup.jpg')
+}
+.page_featured  .page_description_over {
+	opacity:0;
+}
+
+.pfitem-1 {
+	background-image: url(../../img/bag1-1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.pfitem-1 .oi_vc_text {
+	background-color:transparent;
+}
+.pfitem-1 .oi_heading_border span {
+	text-align:left;
+	width:100px;
+	border-top:1px solid #b5eae0;
+}
+.pfitem-2 {
+	background-image: url(../../img/1800381.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.pfitem-2 .oi_icon_titile {
+	color:#fff;
+}
+.pfitem-2 .oi_icon_sub_titile {
+	color:#ddd;
+}
+.pfitem-2 .oi_heading_border span {
+	text-align:center;
+	width:100px;
+	border-top:1px solid #ffffff;
+}
+.pfitem-2 .pftext {
+	padding-right: 60px;
+	padding-left: 60px;
+	color:#fff;
+	text-align:center;
+}
+
+.pfitem-3 {
+	background-image: url(../../img/bag1-2.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.pfitem-4 {
+	background-image: url(../../img/bag1-end.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.pf-item-prev {
+	background-image:url('../../img/Paper-Bag-packaging-Mockup-psd.jpg');
+}
+.pf-item-next {
+	background-image:url('../../img/another-bag.jpg');
+}

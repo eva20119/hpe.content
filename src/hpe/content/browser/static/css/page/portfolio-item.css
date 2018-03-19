@@ -1,0 +1,39 @@
+.page_featured {
+	background-image:url('../../img/craft_bear.jpg');
+}
+.page_featured .page_description_over {
+	opacity:0;
+}
+.oi_page_holder {
+	padding-top:35px;
+	background-color: #efefef;
+}
+.pf-item .oi_heading_icon {
+	font-size:24px;
+	line-height:24px;
+	color:#000000
+}
+.pf-item .oi_heading_border span {
+	text-align:center;
+	width:100px;
+	border-top:1px solid #000000;
+}
+.pf-item-1 {
+	padding-top: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	padding-left: 30px;
+	background-color: #ffffff;
+}
+
+.pf-item-2 .oi_heading_border span {
+	width:100px;
+	border-top:1px solid #e8e8e8;
+}
+.pf-item-2 .oi_heading_icon {
+	font-size:34px;
+	line-height:34px;
+}
+.oi_np_holder {
+	background-image:url('../../img/Paper-Bag-packaging-Mockup-psd.jpg')
+}

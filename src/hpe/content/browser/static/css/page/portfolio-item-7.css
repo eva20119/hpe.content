@@ -1,0 +1,29 @@
+.page_featured {
+	background-image: url('../../img/The-Faric-bag.jpg')
+}
+.page_featured .page_description_over {
+	opacity: 0;
+}
+.oi_heading_border {
+	height:3px;
+}
+.oi_heading_border span {
+	text-align:left;
+	width:20px;
+	border-top:3px solid #dd9933;
+}
+.oi_page_holder {
+	background: #E2E2E2;
+}
+.mb-100 {
+	margin-bottom: 100px;
+}
+.fs-50 {
+	font-size:50px;
+}
+.pf-item-prev {
+	background-image: url('../../img/the-book.jpg');
+}
+.pf-item-next {
+	background-image: url('../../img/Paper-Wrap-Wine-Bottle-Mockup.jpg');
+}

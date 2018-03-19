@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>My account &#8211; Gravity</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-layout.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" >
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/contact-form.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/vc.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/wocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal-default-theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/elegant-font/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/linecons/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/lightcase/lightcase.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/account.css" type="text/css" media="all" />
+<script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="++plone++hpe.content/js/html5min.js"></script>
+<![endif]-->
+</head>
+
+<body class="woocommerce woocommerce-page woo_active standard_page dark_bg half_screen_fi have_featured_image not_logged_in woocommerce_enable_myaccount_registration_no">
+<?python
+    from plone import api
+    abs_url = api.portal.get().absolute_url()
+?>
+<div class="preload"></div>
+<div class="header">
+  <div class="logo_holder"> <a href="${abs_url}/index.html"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a> </div>
+  <!-- .social-nav
+  <div class="contacts">
+    <p><span class="hide_mobile mr-5">93 Worth St, New York, NY</span> Call Us Now: (+003) 132-456-4789</p>
+  </div>
+  <div id="site-header-social-menu" class="social-navigation">
+    <nav id="social-navigation" class="social-navigation" aria-label="Social Menu">
+      <div class="menu-social-menu-container">
+        <ul id="menu-social-menu" class="social-menu">
+          <li><a href="${abs_url}http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="${abs_url}http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="${abs_url}http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="${abs_url}https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+          <li><a href="${abs_url}https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+   cial-navigation --> 
+  <!-- </div> -->
+  <!-- .site-header-social-menu --> 
+</div>
+<div class="page_featured">
+  <div class="page_description_over"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center">
+        <div class="page_description">
+          <h1 style="font-family:微軟正黑體">會員專區</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
+<div class="shoping_cart_icon">
+<a class="my_account_icon" href="${abs_url}/reservation.html" title="預約家庭醫師"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
+<a class="my_shop_icon" href="${abs_url}/upload.html" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
+<a class="my_shop_icon" href="${abs_url}/profile.html" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
+<!-- <a class="my_shop_icon" href="${abs_url}cart.html" title="menbers">會員登出 </a>　 -->
+</div>
+<div class="menu_holder">
+  <div class="inner_holder">
+    <div class="text-logo">
+      <h3 class="logo_name">2018 HPE Wellness</h3>
+      <p class="logo_description">每個角落都是你的運動場，<br>Wellness 在每個改變的起點等你，<br>2018，Fighting</p>
+    </div>
+    
+    <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
+      <div class="menu-primary-menu-container">
+        <ul class="primary-menu">
+          <li class="current-menu-item current_page_item"><a><span style="font-family:微軟正黑體">回首頁</span></a></li>
+          <li><a href="${abs_url}/mind_gas_station.html"><span style="font-family:微軟正黑體">心靈加油站</span></a></li>
+          <li><a href="${abs_url}/publicize_pressure.html"><span style="font-family:微軟正黑體">過勞量表</span></a></li>
+          <li><a href="${abs_url}/eat_blog.html"><span style="font-family:微軟正黑體">食在有道理</span></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">肌力動次動</span></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">防癌你我他</span></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">樂活單車騎</span></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">流感防護罩</span></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- .main-navigation -->
+    <div class="menu_footer">
+      <nav aria-label="Footer Menu">
+        <div class="menu-social-menu-container">
+          <ul class="footer-menu">
+          <!-- .
+            <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            -->
+          </ul>
+        </div>
+      </nav>
+      <!-- .social-navigation -->
+      <p style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+
+</div>
+<div class="overlay"></div>
+<div id="primary" class="content-area">
+  <main id="main" class="site-main">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="hide_if_not_logged_in" >
+                  
+              </div>
+              <div class="woocommerce">
+                <h2>Sign In</h2>
+                <form class="woocommerce-form woocommerce-form-login login" method="post" id="login_form" action="${abs_url}/login_form">
+                    <div id="login-form">
+                        <input type="hidden" name="came_from" value="">
+                        <input type="hidden" name="next">
+                        <input type="hidden" name="ajax_load">
+                        <input type="hidden" name="ajax_include_head">
+                        <input type="hidden" name="target">
+                        <input type="hidden" name="mail_password_url">
+                        <input type="hidden" name="join_url">
+                        <input type="hidden" name="form.submitted" value="1">
+                        <input type="hidden" name="js_enabled" id="js_enabled" value="0">
+                        <input type="hidden" name="cookies_enabled" id="cookies_enabled" value="">
+                        <input type="hidden" name="login_name" id="login_name" value="">
+                        <input type="hidden" name="pwd_empty" id="pwd_empty" value="0">
+
+                        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide" style="font-family:微軟正黑體">
+                          <label for="__ac_name"> HPE Email address :<span class="required">*</span></label>
+                          <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" size="15" name="__ac_name" id="__ac_name"  value="" />
+                        </p>
+                        
+                    </div>
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide" style="font-family:微軟正黑體">
+                      <label for="__ac_password">HPE員工編號 (HPE EID): <span class="required">*</span></label>
+                      <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" size="15" name="__ac_password" id="__ac_password" />
+                    </p>
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide" style="font-family:微軟正黑體">
+                        <label for="password">選擇語系 Select language : <span class="required">*</span></label>
+                        <select name="language" style="border:1px solid #ccc;padding:5px 0;background-color:white">
+                          <option value="chinese">中文Ch</option>
+                          <option value="english">英文En</option>
+                        </select>
+                      </p>
+                    <input type="submit" class="woocommerce-Button button context" name="submit" value="登入" />
+                    
+                </form>
+                <p class="woocommerce-LostPassword lost_password" style="font-family:微軟正黑體">瀏覽網站 ＆上傳照片建議使用個人手機與網路，避免網域限制影響上傳狀況!<BR>Due to Domain Restrictions, we recommend that you browse or upload photos on your phone via the Internet.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+  </main>
+  <!-- .site-main --> 
+  
+</div>
+<!-- .content-area -->
+
+<div class="bottom_line">
+  <div class="row">
+    <div class="col-md-12">
+      <p>此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+    
+  </div>
+</div>
+<script type="text/javascript" src="++plone++hpe.content/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/popper.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/contact-form.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/remodal.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/core.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/widget.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/mouse.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/slider.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-ui-touch-punch.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/accounting.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/price-slider.min.js"></script>
+</body>
+</html>

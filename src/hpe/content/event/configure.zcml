@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="hpe.content">
+
+    <subscriber
+        for="Products.PlonePAS.events.IUserInitialLoginInEvent"
+        handler=".event.firstLogin"
+    />
+    <subscriber
+        for="Products.PlonePAS.events.IUserLoggedInEvent"
+        handler=".event.userLogin"
+    />
+    <subscriber
+        for="Products.PlonePAS.events.IUserLoggedOutEvent"
+        handler=".event.userLogout"
+    />
+
+</configure>

@@ -82,7 +82,7 @@ class IReservation(Interface):
         title=_(u'Peroid6 Reservation Name'),
         required=False,
     )
-    alternate = schema.TextLine(
+    alternate = schema.Text(
         title=_(u'Alternate Name'),
         required=False,
     )

@@ -1,0 +1,18 @@
+.page_featured {
+	background-image: url('../../img/port1.jpg')
+}
+.page_featured .page_description_over {
+	opacity: 0;
+}
+.oi_heading_border span {
+	text-align: center;
+	width: 40px;
+	border-top: 1px solid #0a0a0a;
+}
+.pf-item-1 {
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+.oi_np_holder {
+	background-image:url('../../img/Daily-News-Folded-Mockup.jpg');
+}

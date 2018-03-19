@@ -1,0 +1,223 @@
+h3.logo_name {
+	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-size: 32px;
+	font-weight: 900;
+	font-style: normal;
+	letter-spacing: 2px;
+	line-height: 32px;
+	text-align: inherit;
+	text-transform: none;
+	color: #000000;
+}
+p.logo_description {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 22px;
+	text-align: inherit;
+	text-transform: none;
+	color: #999;
+}
+ul.primary-menu >li> a {
+	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-size: 36px;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 54px;
+	text-transform: uppercase;
+}
+ul.primary-menu li a {
+	color: #999999;
+}
+ul.primary-menu li a:hover {
+	color: #00B388;
+}
+ul.primary-menu li a:active, ul.primary-menu li.current-menu-item a, ul.primary-menu li.current-menu-parent > a, body:not(.single-portfolio) ul.primary-menu > li.current_page_parent > a, .primary-menu > li.current-menu-item > a, .primary-menu > li.current-menu-parent > a {
+	color: #000000;
+}
+.primary-menu > li.current-menu-item > a::before, .primary-menu > li.current-menu-parent > a::before, body:not(.single-portfolio) .primary-menu > li.current_page_parent > a::before {
+	border-bottom-color: #000000;
+}
+.shoping_cart_icon a:hover i, a:hover, .page_title, .oi_c_title a:hover, .entry-header h3 a:hover, .enty-meta > span a:hover, #sidebar .widget a:hover, #sidebar-left .widget a:hover, .footer a:hover, .footer a, #pp-nav .active span, .social-menu a:hover, .social-menu a:hover i, .social-menu a:hover .fa, .oi_testimonial_content_holder h3:before, .oi_testimonial_content_holder h3:after {
+	color: #ED1E79;
+}
+.page_title::after, .site-header-menu ul.primary-menu > li.current-menu-item > a, .site-header-menu ul.primary-menu > li.current_page_parent > a, .site-header-menu ul.primary-menu > li.current-menu-parent > a {
+	border-bottom-color: #0086df;
+}
+#pp-nav .active span {
+	border-color: #0086df !important;
+}
+#pp-nav .active span, input[type="submit"]:hover, .sticky.blog_article_holder {
+	background: #0086df !important;
+}
+body {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 30px;
+	text-align: left;
+	text-transform: none;
+	color: #fff;
+}
+h1 {
+	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-size: 34px;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 1.3;
+	color: #000000;
+}
+h2, .woocommerce-Tabs-panel.woocommerce-Tabs-panel--reviews.panel.entry-content.wc-tab .comment-reply-title {
+	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-size: 28px;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 1.3;
+	color: #000000;
+}
+h3, .woocommerce-lost-password label[for=user_login] {
+	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-size: 28px;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 1.3;
+	color: #ED1E79;
+}
+h4 {
+	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 1.3;
+	color: #000000;
+}
+h5 {
+	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 1.3;
+	color: #000000;
+}
+h6 {
+	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 1.3;
+	color: #000000;
+}
+.mb-30 {
+	margin-bottom:30px;
+}
+.mb-60 {
+	margin-bottom:60px;
+}
+.mr-60 {
+	margin-right:60px;
+}
+.oi_highlight {
+	background-color:#000;
+	color:#fff;
+	padding:2px;
+}
+
+.page_featured {
+	background-image:url(../../img/crew_re.jpg);
+}
+.page_featured .page_description_over {
+	background: #000;
+	opacity:0.5;
+}
+
+.list-service {
+	background-color:#f9f9f9;
+}
+.list-service .oi_custom_heading_holder + .oi_custom_heading_holder {
+	margin-top:40px;
+}
+.list-service .oi_heading_icon {
+	font-size:40px;
+	line-height:40px;
+	color:#000;
+}
+.list-service .oi_icon_sub_titile {
+	color:#666;
+}
+.list-service .oi_heading_border span {
+	width:100px;
+	border-top:1px dotted #a5a5a5;
+}
+.oi_heading_border span {
+	width:100px;
+	border-top:1px solid #e8e8e8;
+}
+.oi_icon_sub_titile {
+	color:#fff;
+}
+.about-1 {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+.about-1-1 {
+	margin-bottom: -20px;
+}
+.nav-tabs {
+	border:none;
+}
+.nav-tabs .nav-link {
+	border-radius:0 !important;
+	border:1px solid #f0f0f0;
+    color: #666;
+	padding:14px 20px;
+	background-color: #EBEBEB;
+	transition: background .2s ease-in-out,color .2s ease-in-out,border .2s ease-in-out;
+}
+.nav-tabs .nav-link:hover{
+	background-color:#dcdcdc;
+}
+.nav-tabs .nav-link + .nav-link {
+	margin-left:1px;
+}
+.nav-tabs .nav-link.active {
+    background-color: #f8f8f8;
+	border-color: #f0f0f0 #f0f0f0 transparent;
+}
+.nav-tabs .nav-link span {
+	margin-left:14px;
+}
+.tab-content>.tab-pane {
+	padding:14px 20px;
+	border:1px solid #f0f0f0;
+    background-color: #f8f8f8;
+}
+.about-2 {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.about-2 .oi_icon_titile {
+	color:#222;
+}
+.about-2-1 {
+	background-image: url(../../img/handz_lineart_final.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.about-2-1 .oi_vc_text {
+	background-color:transparent;
+}
+.about-3 .oi_vc_text {
+
+}
+.about-3-1 .oi_vc_text {
+	background-color:transparent;
+}
+.about-3-1 {
+	background: #ffee00 url(../../img/hardcore.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
