@@ -28,8 +28,14 @@ class Login(BrowserView):
 class Upload(BrowserView):
     template = ViewPageTemplateFile('template/upload.pt')
     def __call__(self):
+        request = self.request
+        # 暫且先轉到首頁
+        abs_url = api.portal.get().absolute_url()
+        request.response.redirect(abs_url)
+        return  
+        
         if api.user.is_anonymous():
-            self.request.response.redirect('%s/user_login'%api.portal.get().absolute_url())
+            request.response.redirect('%s/user_login'%abs_url)
             return
         event_brain = api.content.find(portal_type="EventList")
         place_brain = api.content.find(portal_type="PlaceList")
@@ -96,7 +102,8 @@ class EatBlog(BrowserView):
         self.condition_4 = False
         for item in result:
             tmp = dict(item)
-            if tmp['activity_date'] == '2018-04-10 09:30':
+            # if tmp['activity_date'] == '2018-04-10 09:30':
+            if tmp['activity_date'] == '2018-03-21 10:00':
                 self.condition_1 = True
             elif tmp['activity_date'] == '2018-04-12 09:30':
                 self.condition_2 = True
@@ -136,6 +143,7 @@ class MindGasStation(BrowserView):
                 })
             self.data = data
         return self.template()
+
 
 class BicyclePictureView(BrowserView):
     template = ViewPageTemplateFile("template/BicyclePictureView.pt")
@@ -339,7 +347,12 @@ class ReservationStatus(BrowserView):
     def __call__(self):
         brains = api.content.find(portal_type='Reservation')
         reservationList = []
-        
+        roles = api.user.get_current().getRoles()
+        abs_url = api.portal.get().absolute_url()
+        if 'Manager' not in roles:
+            api.portal.show_message('您沒有權限', self.request, 'error')            
+            self.request.response.redirect(abs_url)
+            return
         for item in brains:
             obj = item.getObject()
             title = obj.title
@@ -448,6 +461,14 @@ class UserProfile(BrowserView):
                 'condition_3': condition_3,
             })
         self.data = sorted(data)
+
+        execStr = """SELECT SUM(step) as sum_step FROM `activity` WHERE user='{}' AND is_first=1 
+            AND is_end=1""".format(user_email)
+        result = execSql.execSql(execStr)
+        sum_step = dict(result[0])['sum_step']
+        if not sum_step:
+            sum_step = 0
+        self.sum_step = sum_step 
         return self.template()
 
 
@@ -457,20 +478,14 @@ class UpdateProfile(BrowserView):
         request = self.request
         user_ch_name = request.get('user_ch_name')
         user_en_name = request.get('user_en_name')
-        user_email = request.get('user_email')
-        user_code = request.get('user_code')
-        user_phone = request.get('user_phone')
-        user_branch = request.get('user_branch')
+        user_officephone = request.get('user_officephone')
         user_location = request.get('user_location')
         user_cellphone = request.get('user_cellphone')
 
-        user_name = api.user.get_current().getUserName()
-        user = api.user.get(user_name)
-        user_officephone = '%s-%s#%s' %(user_code, user_phone, user_branch)
+        user = api.user.get_current()
         user.setMemberProperties(mapping={
-                                            'ch_name': user_ch_name,
+                                            'fullname': user_ch_name,
                                             'en_name': user_en_name,
-                                            'email': user_email,
                                             'officephone': user_officephone,
                                             'location': user_location,
                                             'cellphone': user_cellphone,

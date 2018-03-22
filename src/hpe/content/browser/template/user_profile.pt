@@ -38,6 +38,20 @@
     width:90%;
     font-size:22px;
 }
+td>input{
+    text-align: center;
+    color: #777;
+    font-size: 16px !important;
+}
+td>select{
+    width: 100%;
+    height: 27px;
+    border: 0;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    color: #777;
+    padding-left: 35px;
+}
 </style>
 </head>
 
@@ -151,7 +165,7 @@
                         <p style="font-family:微軟正黑體">請確認並補齊基本資料，加速您未來報名活動的速度喔，<BR>謝謝~~</p>
                     </div>
                     <div class="col-md-5">
-                        <h3 style="font-family:微軟正黑體">Taiwan Wellness Total Steps XXX</h3>
+                        <h3 style="font-family:微軟正黑體">Taiwan Wellness Total Steps ${view/sum_step}</h3>
                         <p style="font-family:微軟正黑體"><a href="#">>> Global Wellness Challenge Steps Login</a></p>
                     </div>
                     <div class="col-md-2">
@@ -183,13 +197,32 @@
                                     </thead>
                                     <tbody>
                                         <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體">
-                                            <td class="product-name" data-title="HPE 員工編號"><div align="center">${view/user_id}</div></td>
-                                            <td class="product-price" data-title="HPE Email"><div align="center">${view/user_email}</div></td>
-                                            <td class="product-quantity" data-title="中文姓名"><div align="center">${view/user_ch_name}</div></td>
-                                            <td class="product-subtotal" data-title="英文姓名"><div align="center"><span class="product-quantity">${view/user_en_name}</span></div></td>
-                                            <td class="product-subtotal" data-title="辦公室電話"><div align="center"><span class="product-quantity">${view/user_officephone}</span></div></td>
-                                            <td class="product-subtotal" data-title="聯絡手機"><div align="center"><span class="product-quantity">${view/user_cellphone}</span></div></td>
-                                            <td class="product-subtotal" data-title="HPE 工作地點"><div align="center"><span class="product-quantity">${view/user_location}</span></div></td>
+                                            <td class="product-name" data-title="HPE 員工編號">
+                                                <div align="center">${view/user_id}</div>
+                                            </td>
+                                            <td class="product-price" data-title="HPE Email">
+                                                <div align="center">${view/user_email}</div>
+                                            </td>
+                                            <td class="product-quantity" data-title="中文姓名">
+                                                <input type="text" name="user_ch_name" value="${view/user_ch_name}"/>
+                                            </td>
+                                            <td class="product-subtotal" data-title="英文姓名">
+                                                <input type="text" name="user_en_name" value="${view/user_en_name}"/>
+                                            </td>
+                                            <td class="product-subtotal" data-title="辦公室電話">
+                                                <input type="text" name="user_officephone" value="${view/user_officephone}"/>
+                                            </td>
+                                            <td class="product-subtotal" data-title="聯絡手機">
+                                                <input type="text" name="user_cellphone" value="${view/user_cellphone}"/>
+                                            </td>
+                                            <td class="product-subtotal" data-title="HPE 工作地點">
+                                                <select name="user_location" id="user_location" 
+                                                        data-location="${view/user_location}">
+                                                    <option value="台北">台北</option>
+                                                    <option value="台中">台中</option>
+                                                    <option value="高雄">高雄</option>
+                                                </select>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -239,7 +272,8 @@
                                                     </span>  　
                                                     <span class="actions">
                                                         <span class="product-quantity">
-                                                            <a href="${abs_url}/cancel_activity?activity_date=${python:data['activity_date']}&category=${python:data['category']}" >取消報名</a>
+                                                            <a href="${abs_url}/cancel_activity?activity_date=${python:data['activity_date']}&category=${python:data['category']}" 
+                                                               onclick="return confirm('確定要取消報名?')">取消報名</a>
                                                         </span>
                                                     </span>
                                                 </div>
@@ -294,7 +328,13 @@
 <script type="text/javascript" src="++plone++hpe.content/js/jquery-ui-touch-punch.min.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/accounting.min.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/price-slider.min.js"></script>
-
+<script>
+var $jq = jQuery.noConflict();
+$jq(function () {
+    loc = $jq('#user_location').data('location')
+    $jq('#user_location').val(loc)
+});
+</script>
 
 </body>
 </html>

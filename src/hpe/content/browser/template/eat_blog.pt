@@ -178,14 +178,17 @@ input[type="checkbox"]:checked + label span {
                   <p align="center" class="mb-30"><img src="++plone++hpe.content/img/042_p1.png" width="259" height="259"></p>
                   <h3 align="center" class="oi_icon_titile style1" style="font-family: 微軟正黑體; color: #008f45;">晨間綠拿鐵</h3>
                   <br>
-                  <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 40px;">09:30-10:30</p>
+                  <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 40px;">10:00-10:30</p>
+                  <!-- <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 40px;">09:30-10:30</p> -->
                   <div class="oi_heading_border oi_border_position_center"><span></span></div>
                   <p class="oi_icon_sub_titile style22" style="font-family: 微軟正黑體; text-align: center;">鳳梨、蘋果、芭樂、核桃、杏仁、腰果、南瓜籽、葵瓜子、葡萄乾、活化好水</p>
                   <div class="oi_heading_border oi_border_position_center"><span></span></div>
                   <br>
                   <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 48px;">
-                    <input type="checkbox" id="checkbox1" name="2018-04-10 09:30" data-checked="${view/condition_1}"/>
-                    <label for="checkbox1"><span></span>4/10</label>
+                    <!-- <input type="checkbox" id="checkbox1" name="2018-04-10 09:30" data-checked="${view/condition_1}"/>
+                    <label for="checkbox1"><span></span>4/10</label> -->
+                    <input type="checkbox" id="checkbox1" name="2018-03-21 10:00" data-checked="${view/condition_1}"/>
+                    <label for="checkbox1"><span></span>3/21</label>
                     <input type="checkbox" id="checkbox2" name="2018-04-12 09:30" data-checked="${view/condition_2}"/>
                     <label for="checkbox2"><span></span>4/12</label>
                   </p>
@@ -322,6 +325,9 @@ $jq(document).ready(function(){
       data: data,
       success: function (response) {
         if(response == 'success'){
+           alert(`【報名資料已送出】確認收到您的報名資料
+請到”我的資料”確認聯絡方式無誤，保障您收到活動通知的權益
+每場次名額有限，活動採事先報名，活動開始後30分鐘若報名者未進行報到，剩餘名額將開放現場報名`)
           location.reload() 
         }
       }

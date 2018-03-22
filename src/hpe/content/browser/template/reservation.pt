@@ -38,28 +38,34 @@ body {
 </style>
 <style>
 body {
-    background: -webkit-linear-gradient(#8fd3f4,#84eab8);
-    background: -o-linear-gradient(#8fd3f4,#84eab8);
-    background: -moz-linear-gradient(#8fd3f4,#84eab8);
-    background: linear-gradient(#8fd3f4,#84eab8);
+  background: -webkit-linear-gradient(#8fd3f4,#84eab8);
+  background: -o-linear-gradient(#8fd3f4,#84eab8);
+  background: -moz-linear-gradient(#8fd3f4,#84eab8);
+  background: linear-gradient(#8fd3f4,#84eab8);
 }
 .enable{
-    background-color:green;
-    color:white;
+  background-color: #00B388 ;
+  color:white;
+  text-align: center;
 }
 .disabled{
-    background-color:red;
-    color:white;
+  background-color: #FF8D6D ;
+  color:white;
+  text-align: center;
 }
 .not_open{
-    background-color:grey;
-    color:grey;
+  background-color:grey;
+  color:grey;
+  text-align: center;
 }
 .table_th{
-    background-color:#48466D;
+  background-color: #614767;
+}
+.table_th>th{
+  text-align: center;  
 }
 .table_date{
-    background-color:#364F6B;
+  background-color:#425563 ;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>

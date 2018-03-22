@@ -51,7 +51,7 @@ class IPlaceList(Interface):
 
 class IReservation(Interface):
     title = schema.TextLine(
-        title=_(u'Doctor Name'),
+        title=_(u'Title'),
         required=False
     )
     date = schema.Datetime(

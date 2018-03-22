@@ -8,7 +8,7 @@
   <!-- Basic properties -->
   <property
       i18n:translate=""
-      name="title">Reservation</property>
+      name="title">預約時間</property>
   <property
       i18n:translate=""
       name="description"></property>

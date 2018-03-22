@@ -159,7 +159,7 @@
 </div>
 <div class="overlay"></div>
 <!-- 未登入 -->
-<div id="primary" class="content-area" tal:condition="is_anonymous">
+<div id="primary" class="content-area">
   <main id="main" class="site-main">
     <div>
       <div class="entry-content" id="pagepiling">
@@ -170,23 +170,8 @@
             </a>
           </div>
         </div>
-       </div>
-     </div>
-  </main>
-  <!-- .site-main --> 
-</div>
-<!-- 未登入 -->
-
-<!-- 登入 -->
-<div id="primary" class="content-area" tal:condition="not: is_anonymous">
-  <main id="main" class="site-main">
-    <div>
-      <div class="entry-content" id="pagepiling">
-        <div id="home" class="ppslide no-gutters bubbles full-height main-1">
-          <div class="main-1-1"> </div>
-          <div class="main-1-2"><img src="++plone++hpe.content/img/ww.png" width="100%"/></div>
-        </div>
-        <div id="servicess" class="ppslide light_bg full-height align-items-center d-flex main-1-3">
+        <div id="servicess" class="ppslide light_bg full-height align-items-center d-flex main-1-3"
+            tal:condition="not: is_anonymous">
           <div class="container">
             <div class="vc_column-inner">
               <div class="row">
@@ -196,91 +181,59 @@
                       <h1 class="oi_icon_titile">2018 HPE Wellness</h1>
                       <div class="oi_heading_border oi_border_position_center"> <span></span> </div>
                       <p class="oi_icon_sub_titile" style="font-family:微軟正黑體">每個角落都是你的運動場，<br>
-                          Wellness 在每個改變的起點等你，<br>
-                          2018，Fighting!
-                          </p>
+                      Wellness 在每個改變的起點等你，<br>
+                      2018，Fighting!
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div id="serviceSlide" class="owl-carousel owl-loaded owl-drag" style="font-family:微軟正黑體">
-                <div class="owl-stage-outer">
-                  <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: 0s; width: 3040px;">
-                    <div class="owl-item active" style="width: 350px; margin-right: 30px;">
-                      <div class="item-service main-1-s1" style="background-image:url(framework/img/04-1.jpg)">
-                        <h2 class="item-serv-title" style="font-family:微軟正黑體">心靈加油站</h2>
-                        <div class="item-serv-descr">
-                          <strong><a href="04-1.html">工作生活心靈灌溉站</a></strong>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="owl-item active" style="width: 350px; margin-right: 30px;">
-                      <div class="item-service main-1-s1" style="background-image:url(framework/img/04-0.jpg)">
-                        <h2 class="item-serv-title" style="font-family:微軟正黑體">邀你醫同來</h2>
-                        <div class="item-serv-descr">
-                          <strong><a href="reservation.html">專業醫師駐點醫療諮詢</a></strong>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="owl-item active" style="width: 350px; margin-right: 30px;">
-                      <div class="item-service main-1-s2" style="background-image:url(framework/img/04-00.jpg)">
-                        <h2 class="item-serv-title" style="font-family:微軟正黑體">該釋壓了嗎</h2>
-                        <div class="item-serv-descr">
-                          <strong><a href="04-2.html">疲勞指數評估測驗</a></strong>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="owl-item" style="width: 350px; margin-right: 30px;">
-                      <div class="item-service main-1-s3" style="background-image:url(framework/img/04-3.jpg)">
-                        <h2 class="item-serv-title" style="font-family:微軟正黑體">04月</h2>
-                        <div class="item-serv-descr">
-                          <strong><a href="04-3.html">食在有道理</a></strong>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="owl-item" style="width: 350px; margin-right: 30px;">
-                      <div class="item-service main-1-s4">
-                        <h2 class="item-serv-title" style="font-family:微軟正黑體">05月</h2>
-                        <div class="item-serv-descr"> 
-                          <strong><a href="#">肌力動次動</a></strong>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="owl-item" style="width: 350px; margin-right: 30px;">
-                      <div class="item-service main-1-s4">
-                        <h2 class="item-serv-title" style="font-family:微軟正黑體">06月</h2>
-                        <div class="item-serv-descr"> 
-                          <strong><a href="#">防癌你我他</a></strong>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="owl-item" style="width: 350px; margin-right: 30px;">
-                      <div class="item-service main-1-s5">
-                        <h2 class="item-serv-title" style="font-family:微軟正黑體">07.08月</h2>
-                        <div class="item-serv-descr"> 
-                          <strong><a href="#">樂活騎單車</a></strong>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="owl-item" style="width: 350px; margin-right: 30px;">
-                      <div class="item-service main-1-s5">
-                        <h2 class="item-serv-title" style="font-family:微軟正黑體">10月</h2>
-                        <div class="item-serv-descr"> 
-                          <strong><a href="#">流感防護罩</a></strong>
-                        </div>
-                    </div>
-                  </div>
+              <div id="serviceSlide" class="owl-carousel" style="font-family:微軟正黑體">
+                <div class="item-service main-1-s1" style="background-image:url(++plone++hpe.content/img/04-1.jpg)">
+                  <h2 class="item-serv-title" style="font-family:微軟正黑體">心靈加油站</h2>
+                  <div class="item-serv-descr"> <strong><a href="mind_gas_station">工作生活心靈灌溉站</a></strong></div>
+                </div>
+                <div class="item-service main-1-s1" style="background-image:url(++plone++hpe.content/img/04-0.jpg)">
+                  <h2 class="item-serv-title" style="font-family:微軟正黑體">邀你醫同來</h2>
+                  <div class="item-serv-descr"> <strong><a href="reservation">專業醫師駐點醫療諮詢</a></strong></div>
+                </div>
+                <div class="item-service main-1-s2" style="background-image:url(++plone++hpe.content/img/04-00.jpg)">
+                  <h2 class="item-serv-title" style="font-family:微軟正黑體">該釋壓了嗎</h2>
+                  <div class="item-serv-descr"> <strong><a href="publicize_pressure">疲勞指數評估測驗</a></strong></div>
+                </div>
+                <div class="item-service main-1-s3" style="background-image:url(++plone++hpe.content/img/04-3.jpg)">
+                  <h2 class="item-serv-title" style="font-family:微軟正黑體">04月</h2>
+                  <div class="item-serv-descr"> <strong><a href="eat_blog">食在有道理</a></strong></div>
+                </div>
+                <div class="item-service main-1-s4">
+                  <h2 class="item-serv-title" style="font-family:微軟正黑體">05月</h2>
+                  <div class="item-serv-descr"> <strong><a href="#">肌力動次動</a></strong></div>
+                </div>
+                <div class="item-service main-1-s4">
+                  <h2 class="item-serv-title" style="font-family:微軟正黑體">06月</h2>
+                  <div class="item-serv-descr"> <strong><a href="#">防癌你我他</a></strong></div>
+                </div>
+                <div class="item-service main-1-s5">
+                  <h2 class="item-serv-title" style="font-family:微軟正黑體">07.08月</h2>
+                  <div class="item-serv-descr"> <strong><a href="#">樂活騎單車</a></strong></div>
+                </div>
+                <div class="item-service main-1-s5">
+                  <h2 class="item-serv-title" style="font-family:微軟正黑體">10月</h2>
+                  <div class="item-serv-descr"> <strong><a href="#">流感防護罩</a></strong></div>
+                </div>
               </div>
-            </div>
+              </div>
           </div>
         </div>
-      </div>
-    </div>
+       </div>
+     </div>
   </main>
   <!-- .site-main --> 
-  
 </div>
+<!-- 未登入 -->
+
 <!-- 登入 -->
+
 
 <script src="++plone++hpe.content/js/contact-form.js"></script> 
 <script src="++plone++hpe.content/js/jquery.waitforimages.js"></script> 
