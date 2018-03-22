@@ -63,6 +63,8 @@
     <element value="upload"/><!--上傳-->
     <element value="eat_blog"/><!--食在有道理-->
     <element value="mind_gas_station"/><!--食在有道理-->
+    <element value="en_cover"/><!--食在有道理-->
+
   </property>
 
   <!-- Method aliases -->

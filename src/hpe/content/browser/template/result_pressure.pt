@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="++plone++hpe.content/css/elegant-font/style.css" type="text/css" media="all" />
 <link rel="stylesheet" href="++plone++hpe.content/css/linecons/style.css" type="text/css" media="all" />
 <link rel="stylesheet" href="++plone++hpe.content/lightcase/lightcase.css" type="text/css" media="all" />
-<link rel="stylesheet" href="++plone++hpe.content/css/page/shop.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/shop_042.css" type="text/css" media="all" />
 <script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
 <script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
 <!--[if lt IE 9]>
@@ -36,6 +36,7 @@
     from plone import api
     abs_url = api.portal.get().absolute_url()
     is_anonymous = api.user.is_anonymous()
+    user_name = api.user.get_current().getProperty('fullname')
 ?>
 <div class="preload"></div>
 <div class="header">
@@ -67,7 +68,7 @@
   <!-- 未登入 -->
 
   <!-- 已登入 -->
-  <p style="display:inline" tal:condition="not: is_anonymous">Hi~您已登入/</p>
+  <p style="display:inline" tal:condition="not: is_anonymous">Hi~${user_name}/</p>
   <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px" 
     tal:condition="not: is_anonymous">登出</a>
   <!-- 已登入 -->
@@ -93,14 +94,15 @@
     <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
       <div class="menu-primary-menu-container">
         <ul class="primary-menu">
-          <li class="current-menu-item current_page_item"><a href="${abs_url}/index"><span style="font-family:微軟正黑體">回首頁</span></a></li>
-          <li ><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span></a></li>
-          <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">過勞量表</span></a></li>
-          <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">肌力動次動</span></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">防癌你我他</span></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">樂活單車騎</span></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">流感防護罩</span></a></li>
+	    <li><a href="${abs_url}"><span style="font-family:微軟正黑體">回首頁</span></a></li>
+            <li><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+            <li><a href="${abs_url}/reservation"><span style="font-family:微軟正黑體">邀你醫同來</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+            <li class="current-menu-item current_page_item"><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">該釋壓了嗎</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+            <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
+            <li><a href="singin"><span style="font-family:微軟正黑體">肌力動次動</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
+            <li><a href="singin"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
+            <li><a href="singin"><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
+            <li><a href="singin"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
             <div class="vc_team_member_image_holder">
               <div class="oi_team_cont_holder">
               </div>
@@ -183,8 +185,7 @@
                                 ．詢問 HPE 護理師 Sophie Liu / 02-2652 4003 / <a href="mailto:sophie.liu@hpe.com">sophie.liu@hpe.com</a><br>       
                                 ．<a href="reservation.html">預約醫師諮詢 </a><br>
                                 ．EAP專線諮詢：Local 02-2377 0993 / International +65-6494 0040 / <a href="mailto:wlc@humandynamic.com">wlc@humandynamic.com </a><br>
-                                ．職業傷病診治中心診治</p>
-
+				．<a href="https://www.osha.gov.tw/1106/1176/1185/1189/2627/" target="_blank">職業傷病診治中心</a>診治</p>
                             </div>
                             </div>
                         </div>

@@ -186,4 +186,11 @@
       layer='hpe.content.interfaces.IHpeContentLayer'
       permission='zope2.View'
       />
+  <browser:page
+      name='en_cover'
+      for='*'
+      class='.english_vies.EnCover'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
 </configure>

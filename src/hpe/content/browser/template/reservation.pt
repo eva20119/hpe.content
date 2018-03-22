@@ -63,9 +63,11 @@ body {
 }
 .table_th>th{
   text-align: center;  
+  color: white ;
 }
 .table_date{
   background-color:#425563 ;
+  color: white;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
@@ -75,6 +77,7 @@ body {
     from plone import api
     abs_url = api.portal.get().absolute_url()
     is_anonymous = api.user.is_anonymous()
+    user_name = api.user.get_current().getProperty('fullname')
 ?>
 <div class="preload"></div>
 <div class="header">
@@ -104,7 +107,7 @@ body {
   <!-- 未登入 -->
 
   <!-- 已登入 -->
-  <p style="display:inline" tal:condition="not: is_anonymous">Hi~您已登入/</p>
+  <p style="display:inline" tal:condition="not: is_anonymous">Hi~${user_name}/</p>
   <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px" 
     tal:condition="not: is_anonymous">登出</a>
   <!-- 已登入 -->
@@ -113,7 +116,7 @@ body {
   <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
   <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
   <!-- 未登入 -->
-  <select name="" id="" tal:condition="is_anonymous">
+  <select name="" id="" >
     <option value="">中文Ch</option>
     <option value="">英文En</option>
   </select>
@@ -123,21 +126,23 @@ body {
 <div class="menu_holder">
   <div class="inner_holder">
     <div class="text-logo">
-      <h3 class="logo_name">HPE Wellness</h3>
-      <p class="logo_description">每個角落都是你的運動場，<br>Wellness 在每個改變的起點等你，<br>2018，Fighting</p>
+      <h3 class="logo_name">2018 HPE Wellness</h3>
+      <p class="logo_description">每個角落都是你的運動場，<br>
+        Wellness 在每個改變的起點等你，<br>
+        2018，Fighting</p>
     </div>
-    
     <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
       <div class="menu-primary-menu-container">
         <ul class="primary-menu">
-          <li class="current-menu-item current_page_item"><a href="${abs_url}/index"><span style="font-family:微軟正黑體">回首頁</span></a></li>
-          <li ><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span></a></li>
-          <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">過勞量表</span></a></li>
-          <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">肌力動次動</span></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">防癌你我他</span></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">樂活單車騎</span></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">流感防護罩</span></a></li>
+	    <li><a href="${abs_url}"><span style="font-family:微軟正黑體">回首頁</span></a></li>
+            <li><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+            <li class="current-menu-item current_page_item"><a href="${abs_url}/reservation"><span style="font-family:微軟正黑體;color:#00B388">邀你醫同來</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+            <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">該釋壓了嗎</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+            <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
+            <li><a href="singin"><span style="font-family:微軟正黑體">肌力動次動</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
+            <li><a href="singin"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
+            <li><a href="singin"><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
+            <li><a href="singin"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
             <div class="vc_team_member_image_holder">
               <div class="oi_team_cont_holder">
               </div>
@@ -146,7 +151,7 @@ body {
       </div>
     </nav>
     <!-- .main-navigation -->
-   <div class="menu_footer">
+   <div class="menu_footer" style="color:#777">
       <nav aria-label="Footer Menu">
         <div class="menu-social-menu-container">
           <ul class="footer-menu">
@@ -160,8 +165,14 @@ body {
           </ul>
         </div>
       </nav>
+      
       <!-- .social-navigation -->
-      <p style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+      <p style="font-family:微軟正黑體;color:#777;font-size:16px">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+<div class="extra_holder">
+    <div class="inner_holder">
+     
     </div>
   </div>
 </div>
@@ -278,19 +289,19 @@ body {
                 <table tal:condition="not:view/already_reservation" style="margin-top:15px">
                     <tr class="table_th">
                         <th style="width:105px">Date</th>
-                        <th>Peroid1</th>
-                        <th>Peroid2</th>
-                        <th>Peroid3</th>
-                        <th>Peroid4</th>
-                        <th>Peroid5</th>
-                        <th>Peroid6</th>
-                        <th>Alternate</th>
+                        <th style="width:105px">Peroid1</th>
+                        <th style="width:105px">Peroid2</th>
+                        <th style="width:105px">Peroid3</th>
+                        <th style="width:105px">Peroid4</th>
+                        <th style="width:105px">Peroid5</th>
+                        <th style="width:105px">Peroid6</th>
+                        <th style="width:105px">Alternate</th>
                     </tr>
                     <tr tal:repeat="item view/reservationList">
                             <td class="table_date">${python:item['startDate']}</td>
                             <tal:repeat repeat="list python:item['timeList']">
-                                <td tal:attributes="class python:list[1]" 
-                                    data-startDate="${python:item['startDate']}">${python:list[0]}</td>
+                                <td tal:attributes="class python:list[2]" 
+                                    data-startDate="${python:item['startDate']}">${python:list[0]}~${python:list[1]}</td>
                             </tal:repeat>
                             <td tal:attributes="class python:item['alternate']" 
                                 data-startDate="${python:item['startDate']}">${python:item['alternateMsg']}</td>

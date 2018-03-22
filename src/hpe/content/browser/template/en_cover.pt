@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>2018 HPE Wellness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="++plone++hpe.content/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/contact-form.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal-default-theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/elegant-font/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/linecons/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/lightcase/lightcase.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/tipso.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/animate.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/owl.carousel.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/jquery.pagepiling.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/siliconfolio.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/vc.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/wocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/main.css" type="text/css" media="all" />
+<script src="++plone++hpe.content/js/jquery.js"></script>
+<script src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
+<!--[if lt IE 9]>
+<script src="framework/js/html5min.js"></script>
+<![endif]-->
+<script src="++plone++hpe.content/js/jquery.pagepiling.min.js"></script>
+</head>
+
+<body class="home woo_active raw_scroller">
+<div class="preload"></div>
+<div class="header">
+  <div class="logo_holder"> <a href="index2_en.html"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a> </div>
+  <!-- .social-naviga
+  <div id="site-header-social-menu" class="social-navigation">
+    <nav id="social-navigation" class="social-navigation" aria-label="Social Menu">
+      <div class="menu-social-menu-container">
+        <ul id="menu-social-menu" class="social-menu">
+          <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+          <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+   ial-navigation --> 
+</div>
+<!-- .site-header-social-menu -->
+</div>
+<div class="page_title"> </div>
+<h6 class="section_number">01</h6>
+<div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
+<div class="shoping_cart_icon"> Hi~You have logged in / <a class="my_shop_icon" href="#" title="menbers">Logout</a>　 <a class="my_account_icon" href="reservation_en.html" title="Physician On-site Services"><i class="fa fa-calendar" aria-hidden="true"></i> </a> <a class="my_shop_icon" href="upload_en.html" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 <a class="my_shop_icon" href="profile_en.html" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
+  <select name="select" id="select" class="woocommerce-Input woocommerce-Input--text input-text">
+    <option>中文 Ch</option>
+    <option>英文 Eng</option>
+  </select>
+</div>
+<span class="shop_cart_full"></span>
+</div>
+<div class="menu_holder">
+  <div class="inner_holder">
+    <div class="text-logo">
+      <h3 class="logo_name">2018 HPE Wellness</h3>
+      <p class="logo_description">Every corner is your sport Field.<br>
+        Wellness is waiting for you at every changing starting point. <br>
+        2018，Fighting</p>
+    </div>
+    <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
+      <div class="menu-primary-menu-container">
+        <ul class="primary-menu">
+          <li class="current-menu-item current_page_item"><a href="index2_en.html"><span style="font-family:微軟正黑體; font-size: 16px;">Home</span></a></li>
+          <li><a href="04-1_en.html"><span style="font-family:微軟正黑體; font-size: 16px;">The Work Life Compass</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="reservation_en.html"><span style="font-family:微軟正黑體; font-size: 16px;">Physician On-site Services</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="04-2_en.html"><span style="font-family:微軟正黑體; font-size: 16px;">Defatigation Self-Assessment</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="04-3_en.html"><span style="font-family:微軟正黑體; font-size: 16px;">Food Makes Sense</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Being Healthier By Do Exercise</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Power of Prevention</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Pedal to Health on Your Bike</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Flu vaccination Protective Net</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- .main-navigation -->
+    <div class="menu_footer">
+      <nav aria-label="Footer Menu">
+        <div class="menu-social-menu-container">
+          <ul class="footer-menu">
+            <!-- .
+            <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            -->
+          </ul>
+        </div>
+      </nav>
+      <!-- .social-navigation -->
+      <p style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>
+        This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+  <div class="extra_holder"> </div>
+</div>
+<div class="footer">
+  <p>此活動僅限 HPE 台灣員工，請勿任意轉載<br>
+    This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+</div>
+<div class="overlay"></div>
+<div id="primary" class="content-area">
+<main id="main" class="site-main">
+  <div>
+    <div class="entry-content" id="pagepiling">
+      <div id="home" class="ppslide no-gutters bubbles full-height main-1">
+        <div class="main-1-1"> </div>
+        <div class="main-1-2"><img src="++plone++hpe.content/img/ww_en.png " width="800"/></div>
+      </div>
+      <div id="servicess" class="ppslide light_bg full-height align-items-center d-flex main-1-3">
+        <div class="container">
+          <div class="vc_column-inner">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="oi_custom_heading_holder mb-5">
+                  <div class="oi_vc_heading oi_border_position_center">
+                    <h1 class="oi_icon_titile">2018 HPE Wellness</h1>
+                    <div class="oi_heading_border oi_border_position_center"> <span></span> </div>
+                    <p class="oi_icon_sub_titile" style="font-family:微軟正黑體">Every corner is your sport Field.<br>
+                      Wellness is waiting for you at every changing starting point.<br>
+                      2018，Fighting! </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="serviceSlide" class="owl-carousel" style="font-family:微軟正黑體">
+              <div class="item-service main-1-s3" style="background-image:url(++plone++hpe.content/img/04-3.jpg)">
+                <h2 class="item-serv-title" style="font-family:微軟正黑體; font-size: 24px;">April</h2>
+                <div class="item-serv-descr"> <strong><a href="04-3_en.html">Food makes sense</a></strong></div>
+              </div>
+              <div class="item-service main-1-s1" style="background-image:url(++plone++hpe.content/img/04-1.jpg)">
+                <h2 class="item-serv-title" style="font-family: 微軟正黑體; font-size: 24px;">The Work Life Compass</h2>
+                <div class="item-serv-descr"> <strong><a href="04-1_en.html">Soul Garden - Work & Life</a></strong></div>
+              </div>
+              <div class="item-service main-1-s1" style="background-image:url(++plone++hpe.content/img/04-0.jpg)">
+                <h2 class="item-serv-title" style="font-family:微軟正黑體; font-size: 24px;">Invite you to come along</h2>
+                <div class="item-serv-descr"> <strong><a href="reservation_en.html">Physician On-site services</a></strong></div>
+              </div>
+              <div class="item-service main-1-s2" style="background-image:url(++plone++hpe.content/img/04-00.jpg)">
+                <h2 class="item-serv-title" style="font-family:微軟正黑體; font-size: 24px;">Defatigation Self-Assessmen</h2>
+                <div class="item-serv-descr"> <strong><a href="04-2_en.html">The diagnostic test for fatigue index </a></strong></div>
+              </div>
+              <div class="item-service main-1-s4">
+                <h2 class="item-serv-title" style="font-family:微軟正黑體">May</h2>
+                <div class="item-serv-descr"> <strong><a href="#">Being Healthier By Do Exercise</a></strong></div>
+              </div>
+              <div class="item-service main-1-s4">
+                <h2 class="item-serv-title" style="font-family:微軟正黑體">June</h2>
+                <div class="item-serv-descr"> <strong><a href="#">Power of Prevention</a></strong></div>
+              </div>
+              <div class="item-service main-1-s5">
+                <h2 class="item-serv-title" style="font-family:微軟正黑體">July & August</h2>
+                <div class="item-serv-descr"> <strong><a href="#">Pedal to Health on Your Bike</a></strong></div>
+              </div>
+              <div class="item-service main-1-s5">
+                <h2 class="item-serv-title" style="font-family:微軟正黑體">October</h2>
+                <div class="item-serv-descr"> <strong><a href="#">Flu vaccination Protective Net</a></strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</main>
+<!-- .site-main -->
+
+</div>
+<!-- .content-area --> 
+
+<script src="++plone++hpe.content/js/contact-form.js"></script> 
+<script src="++plone++hpe.content/js/jquery.waitforimages.js"></script> 
+<script src="++plone++hpe.content/js/isotope.pkgd.min.js"></script> 
+<script src="++plone++hpe.content/js/imagesloaded.js"></script> 
+<script src="++plone++hpe.content/js/tipso.min.js"></script> 
+<script src="++plone++hpe.content/js/remodal.min.js"></script> 
+<script src="++plone++hpe.content/js/owl.carousel.min.js"></script> 
+<script src="++plone++hpe.content/lightcase/lightcase.js"></script> 
+<script src="++plone++hpe.content/js/functions.js"></script>
+</body>
+</html>

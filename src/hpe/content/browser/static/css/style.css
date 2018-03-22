@@ -681,7 +681,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hamburger_holder span {
 	font-size: 32px;
-	color: #fff;
+	color: #fff;
 
 }
 .hamburger_holder span:hover {
@@ -926,7 +926,7 @@ body[data-derection='up'] #pagepiling .row {
 	content: '';
 	width: 25px;
 	height: 1px;
-	display: block;
+	display: block;
 	position: absolute;
 	left: -40px;
 	top: 50%;
@@ -1204,7 +1204,7 @@ input, textarea {
 	display: block;
 	margin-bottom: 40px;
 }
-.contact-info li span {
+.contact-info li span {
 	display: block
 }
 .contact-info strong {
@@ -1394,7 +1394,7 @@ input, textarea {
 	color: #fff !important
 }
 .highlighted.blog_article_holder .blogpost_image_holder {
-	opacity: 0.2;
+	opacity: 0.2;
 }
 .highlighted.blog_article_holder a, .highlighted.blog_article_holder h3 {
 	color: #fff
@@ -1510,7 +1510,7 @@ input, textarea {
 	border: 0
 }
 #sidebar-left ul {
-	text-align: center;
+	text-align: center;
 }
 #sidebar-left .menu {
 	margin: 0;
@@ -2279,3 +2279,8 @@ body .bubbles > .particle {
 word-wrap: break-word;}
 
 iframe { max-width: 100%;}
+.hline {
+	width: 100%;
+	height: 1px;
+	background: #bfbfbf
+}

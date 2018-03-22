@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-US" class="no-js">
 <head>
@@ -67,6 +68,7 @@ input[type="checkbox"]:checked + label span {
     from plone import api
     abs_url = api.portal.get().absolute_url()
     is_anonymous = api.user.is_anonymous()
+    user_name = api.user.get_current().getProperty('fullname')
 ?>
 <div class="preload"></div>
 <div class="header">
@@ -94,7 +96,7 @@ input[type="checkbox"]:checked + label span {
   <!-- 未登入 -->
 
   <!-- 已登入 -->
-  <p style="display:inline" tal:condition="not: is_anonymous">Hi~您已登入/</p>
+  <p style="display:inline" tal:condition="not: is_anonymous">Hi~${user_name}/</p>
   <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px" 
     tal:condition="not: is_anonymous">登出</a>
   <!-- 已登入 -->
@@ -121,14 +123,15 @@ input[type="checkbox"]:checked + label span {
     <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
       <div class="menu-primary-menu-container">
         <ul class="primary-menu">
-          <li><a href="${abs_url}/index"><span style="font-family:微軟正黑體">回首頁</span></a></li>
-          <li><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span></a></li>
-          <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">過勞量表</span></a></li>
-          <li class="current-menu-item current_page_item"><a><span style="font-family:微軟正黑體">食在有道理</span></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">肌力動次動</span></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">防癌你我他</span></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">樂活單車騎</span></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">流感防護罩</span></a></li>
+	  <li><a href="${abs_url}"><span style="font-family:微軟正黑體">回首頁</span></a></li>
+          <li><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/reservation"><span style="font-family:微軟正黑體">邀你醫同來</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">該釋壓了嗎</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li class="current-menu-item current_page_item"><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
+          <li><a href="singin"><span style="font-family:微軟正黑體">肌力動次動</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
+          <li><a href="singin"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
+          <li><a href="singin"><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
+          <li><a href="singin"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
         </ul>
       </div>
     </nav>
@@ -178,19 +181,19 @@ input[type="checkbox"]:checked + label span {
                   <p align="center" class="mb-30"><img src="++plone++hpe.content/img/042_p1.png" width="259" height="259"></p>
                   <h3 align="center" class="oi_icon_titile style1" style="font-family: 微軟正黑體; color: #008f45;">晨間綠拿鐵</h3>
                   <br>
-                  <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 40px;">10:00-10:30</p>
+                  <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 40px;">09:00-10:30</p>
                   <!-- <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 40px;">09:30-10:30</p> -->
                   <div class="oi_heading_border oi_border_position_center"><span></span></div>
                   <p class="oi_icon_sub_titile style22" style="font-family: 微軟正黑體; text-align: center;">鳳梨、蘋果、芭樂、核桃、杏仁、腰果、南瓜籽、葵瓜子、葡萄乾、活化好水</p>
                   <div class="oi_heading_border oi_border_position_center"><span></span></div>
                   <br>
                   <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 48px;">
-                    <!-- <input type="checkbox" id="checkbox1" name="2018-04-10 09:30" data-checked="${view/condition_1}"/>
+                    <!-- <input type="checkbox" id="checkbox1" name="2018-04-10 09:00" data-checked="${view/condition_1}"/>
                     <label for="checkbox1"><span></span>4/10</label> -->
                     <input type="checkbox" id="checkbox1" name="2018-03-21 10:00" data-checked="${view/condition_1}"/>
                     <label for="checkbox1"><span></span>3/21</label>
-                    <input type="checkbox" id="checkbox2" name="2018-04-12 09:30" data-checked="${view/condition_2}"/>
-                    <label for="checkbox2"><span></span>4/12</label>
+                    <input type="checkbox" id="checkbox2" name="2018-04-19 09:00" data-checked="${view/condition_2}"/>
+                    <label for="checkbox2"><span></span>4/19</label>
                   </p>
                   <br>
                 </div>

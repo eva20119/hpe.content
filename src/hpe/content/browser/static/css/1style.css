@@ -1510,7 +1510,7 @@ input, textarea {
 	padding: 0;
 	list-style: none;
 }
-#sidebar-left .menu li {
+#sidebar-left .menu li {
 	margin-bottom: 10px;
 	display: block;
 }
@@ -1836,7 +1836,7 @@ input, textarea {
 .comment-meta::after {
 	content: "";
 	display: table;
-	clear: both;
+	clear: both;
 }
 .comment-metadata .edit-link, .pingback .edit-link {
 	display: inline-block;

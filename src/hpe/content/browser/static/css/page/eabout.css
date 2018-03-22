@@ -1,13 +1,12 @@
 h3.logo_name {
-	font-family: Dosis, Helvetica, Arial, sans-serif;
-	font-size: 32px;
+	font-family: "微軟正黑體";
 	font-weight: 900;
 	font-style: normal;
 	letter-spacing: 2px;
 	line-height: 32px;
 	text-align: inherit;
 	text-transform: none;
-	color: #000000;
+	color: #00974E;
 }
 p.logo_description {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;

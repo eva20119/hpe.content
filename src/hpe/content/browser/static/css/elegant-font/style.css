@@ -754,7 +754,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon_phone:before {
 	content: "\e090";
-}
+}
 .icon_upload:before {
 	content: "\e091";
 }

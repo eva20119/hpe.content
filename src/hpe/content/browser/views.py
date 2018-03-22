@@ -15,7 +15,6 @@ import datetime
 class Cover(BrowserView):
     template = ViewPageTemplateFile('template/cover.pt')
     def __call__(self):
-        
         return self.template()
 
 
@@ -215,11 +214,13 @@ class Reservation(BrowserView):
                 startTime = obj.date.strftime('%H:%M')
 
                 timeList = []
-                timeList.append([startTime])  
+                # 填入第一次的開始後結束時間
+                timeList.append([startTime, (obj.date + datetime.timedelta(minutes = 20)).strftime('%H:%M')])  
                 for i in range(1, 6):
                     minutes = i*20
-                    time = obj.date + datetime.timedelta(minutes = minutes)               
-                    timeList.append([time.strftime('%H:%M')])
+                    reservation_start_time = obj.date + datetime.timedelta(minutes = minutes)
+		    reservation_end_time = reservation_start_time + datetime.timedelta(minutes = minutes)
+                    timeList.append([reservation_start_time.strftime('%H:%M'), reservation_end_time.strftime('%H:%M')])
                 peroid1 = obj.peroid1
                 peroid2 = obj.peroid2
                 peroid3 = obj.peroid3
