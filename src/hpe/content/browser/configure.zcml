@@ -193,4 +193,53 @@
       layer='hpe.content.interfaces.IHpeContentLayer'
       permission='zope2.View'
       />
+  <browser:page
+      name='en_mind_gas_station'
+      for='*'
+      class='.english_vies.EnMindGasStation'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='en_publicize_pressure'
+      for='*'
+      class='.english_vies.EnPublicizePressure'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='en_eat_blog'
+      for='*'
+      class='.english_vies.EnEatBlog'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='en_test_pressure'
+      for='*'
+      class='.english_vies.EnTestPressure'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='en_calculate_pressure'
+      for='*'
+      class='.english_vies.EnCalculatePressure'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='en_profile'
+      for='*'
+      class='.english_vies.EnUserProfile'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='en_reservation'
+      for='*'
+      class='.english_vies.EnReservation'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
 </configure>

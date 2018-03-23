@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-US" class="no-js">
 <head>
@@ -20,7 +19,7 @@
 <script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
 <script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
 <!--[if lt IE 9]>
-<script type="text/javascript" src="++plone++hpe.content/js/html5min.js"></script>
+<script type="text/javascript" src="framework/js/html5min.js"></script>
 <![endif]-->
 <style type="text/css">
 <!--
@@ -58,7 +57,6 @@ input[type="checkbox"] + label span {
 input[type="checkbox"]:checked + label span {
     background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
 }
-
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
@@ -68,11 +66,11 @@ input[type="checkbox"]:checked + label span {
     from plone import api
     abs_url = api.portal.get().absolute_url()
     is_anonymous = api.user.is_anonymous()
-    user_name = api.user.get_current().getProperty('fullname')
+    user_name = api.user.get_current().getProperty('en_name','')
 ?>
 <div class="preload"></div>
 <div class="header">
-  <div class="logo_holder"> <a href="${abs_url}/index"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a> </div>
+  <div class="logo_holder"> <a href="${abs_url}/en_cover"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a> </div>
   <!-- .site-header-social-menu --> 
 </div>
 <div class="page_featured">
@@ -81,36 +79,18 @@ input[type="checkbox"]:checked + label span {
     <div class="row">
       <div class="col-md-6 offset-md-3 text-center">
         <div class="page_description">
-          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/043_w.png"></h1>
+          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/043_w_en.png"></h1>
         </div>
       </div>
     </div>
   </div>
 </div>
 <div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
-<div class="shoping_cart_icon">
+<div class="shoping_cart_icon"> Hi~${user_name} have logged in / <a class="my_shop_icon" href="${abs_url}/logout" title="menbers">Logout</a>　 
+<a class="my_account_icon" href="${abs_url}/en_reservation" title="Physician On-site Services"><i class="fa fa-calendar" aria-hidden="true"></i> </a> 
+<a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 
+<a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
 
-  <!-- 未登入 -->
-  <a class="my_shop_icon" href="${abs_url}/user_login" style="margin-right:20px"
-    tal:condition="is_anonymous">會員登入</a>
-  <!-- 未登入 -->
-
-  <!-- 已登入 -->
-  <p style="display:inline" tal:condition="not: is_anonymous">Hi~${user_name}/</p>
-  <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px" 
-    tal:condition="not: is_anonymous">登出</a>
-  <!-- 已登入 -->
-
-  <a class="my_account_icon" href="${abs_url}/reservation" title="預約家庭醫師"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
-  <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
-  <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
-  <!-- 未登入 -->
-  <select name="" id="" tal:condition="is_anonymous">
-    <option value="">中文Ch</option>
-    <option value="">英文En</option>
-  </select>
-  <!-- 未登入 -->
-  <span class="shop_cart_full"></span> 
 </div>
 <div class="menu_holder">
   <div class="inner_holder">
@@ -123,15 +103,18 @@ input[type="checkbox"]:checked + label span {
     <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
       <div class="menu-primary-menu-container">
         <ul class="primary-menu">
-	  <li><a href="${abs_url}"><span style="font-family:微軟正黑體">回首頁</span></a></li>
-          <li><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="${abs_url}/reservation"><span style="font-family:微軟正黑體">邀你醫同來</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">該釋壓了嗎</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li class="current-menu-item current_page_item"><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
-          <li><a href="singin"><span style="font-family:微軟正黑體">肌力動次動</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
-          <li><a href="singin"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
-          <li><a href="singin"><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
-          <li><a href="singin"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
+           <li ><a href="${abs_url}/en_cover"><span style="font-family:微軟正黑體; font-size: 16px;">Home</span></a></li>
+          <li><a href="${abs_url}/en_mind_gas_station"><span style="font-family:微軟正黑體; font-size: 16px;">The Work Life Compass</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/en_reservation"><span style="font-family:微軟正黑體; font-size: 16px;">Physician On-site Services</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/en_publicize_pressure"><span style="font-family:微軟正黑體; font-size: 16px;">Defatigation Self-Assessment</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li class="current-menu-item current_page_item"><a href="${abs_url}/en_eat_blog"><span style="font-family:微軟正黑體; font-size: 16px;">Food Makes Sense</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Being Healthier By Do Exercise</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Power of Prevention</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Pedal to Health on Your Bike</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Flu vaccination Protective Net</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <div class="vc_team_member_image_holder">
+            <div class="oi_team_cont_holder"> </div>
+          </div>
         </ul>
       </div>
     </nav>
@@ -141,11 +124,11 @@ input[type="checkbox"]:checked + label span {
         <div class="menu-social-menu-container">
           <ul class="footer-menu">
             <!-- .
-            <li><a href="${abs_url}/http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            <li><a href="${abs_url}/http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a href="${abs_url}/http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            <li><a href="${abs_url}/https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-            <li><a href="${abs_url}/https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
             -->
           </ul>
         </div>
@@ -154,7 +137,6 @@ input[type="checkbox"]:checked + label span {
       <p style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>
         This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
     </div>
-  <!-- </div> -->
 </div>
 </div>
 <div class="overlay"></div>
@@ -179,22 +161,20 @@ input[type="checkbox"]:checked + label span {
               <div class="oi_custom_heading_holder">
                 <div class="oi_vc_heading oi_border_position_center">
                   <p align="center" class="mb-30"><img src="++plone++hpe.content/img/042_p1.png" width="259" height="259"></p>
-                  <h3 align="center" class="oi_icon_titile style1" style="font-family: 微軟正黑體; color: #008f45;">晨間綠拿鐵</h3>
+                  <h3 align="center" class="oi_icon_titile style1" style="font-family: 微軟正黑體; color: #008f45;">Green latte</h3>
                   <br>
                   <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 40px;">09:00-10:30</p>
-                  <!-- <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 40px;">09:30-10:30</p> -->
                   <div class="oi_heading_border oi_border_position_center"><span></span></div>
-                  <p class="oi_icon_sub_titile style22" style="font-family: 微軟正黑體; text-align: center;">鳳梨、蘋果、芭樂、核桃、杏仁、腰果、南瓜籽、葵瓜子、葡萄乾、活化好水</p>
+                  <p class="oi_icon_sub_titile style22" style="font-family: 微軟正黑體; text-align: center;">Pineapples, apples, guava, pumpkin seeds, sunflower seeds, walnuts, almonds, cashews, raisins,water</p>
                   <div class="oi_heading_border oi_border_position_center"><span></span></div>
                   <br>
                   <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 48px;">
                     <!-- <input type="checkbox" id="checkbox1" name="2018-04-10 09:00" data-checked="${view/condition_1}"/>
                     <label for="checkbox1"><span></span>4/10</label> -->
-                    <input type="checkbox" id="checkbox1" name="2018-03-23 10:00" data-checked="${view/condition_1}"/>
-                    <label for="checkbox1"><span></span>3/23</label>
+                    <input type="checkbox" id="checkbox1" name="2018-03-21 10:00" data-checked="${view/condition_1}"/>
+                    <label for="checkbox1"><span></span>3/21</label>
                     <input type="checkbox" id="checkbox2" name="2018-04-19 09:00" data-checked="${view/condition_2}"/>
                     <label for="checkbox2"><span></span>4/19</label>
-                  </p>
                   <br>
                 </div>
               </div>
@@ -207,11 +187,12 @@ input[type="checkbox"]:checked + label span {
               <div class="oi_custom_heading_holder">
                 <div class="oi_vc_heading oi_border_position_center">
                   <p align="center" class="mb-30"><img src="++plone++hpe.content/img/041_p2.png" width="259" height="259"></p>
-                  <h3 align="center" class="oi_icon_titile style1" style="font-family: 微軟正黑體; color: #008f45;">繽紛水果盒</h3>
+                  <h3 align="center" class="oi_icon_titile style1" style="font-family: 微軟正黑體; color: #008f45;">Fruit boxes</h3>
                   <br>
                   <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 40px;">12:00-13:30</p>
                   <div class="oi_heading_border oi_border_position_center"><span></span></div>
-                  <p class="oi_icon_sub_titile style22" style="font-family: 微軟正黑體; text-align: center;">營養滿分繽紛當季水果，<br>內容將依季節變化適時調整</p>
+                  <p class="oi_icon_sub_titile style22" style="font-family: 微軟正黑體; text-align: center;">packed content are<br>
+                    now in season</p>
                   <div class="oi_heading_border oi_border_position_center"><span></span></div>
                   <br>
                   <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 48px;">
@@ -219,15 +200,14 @@ input[type="checkbox"]:checked + label span {
                     <label for="checkbox3"><span></span>4/12</label>
                     <input type="checkbox" id="checkbox4" name="2018-04-26 12:00" data-checked="${view/condition_4}" />
                     <label for="checkbox4"><span></span>4/26</label>
-                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="oi_heading_border oi_border_position_center"><span></span></div><br>
-
+      <div class="oi_heading_border oi_border_position_center"><span></span></div>
+      <br>
       <div class="row full_team">
         <div class="col-md-4">
           <div class="vc_team_member_holder">
@@ -239,16 +219,16 @@ input[type="checkbox"]:checked + label span {
         <div class="col-md-8">
           <div class="vc_team_member_holder">
             <div class="vc_team_member_image_holder">
-              <div class="text-justify" style="font-family:微軟正黑體; ">營養是健康的根本，食物是營養的來源，除了好的運動習慣，吃的健康也很重要，<br>
-              <br>
-              早晨要靠 拿鐵咖啡 提振精神嗎? 試著改成 綠拿鐵<br>
-              下午茶用 蛋糕餅乾 陪伴時光嗎? 試著改成 水果盒<br>
-              <br>
-              換個飲食方式，讓你有了精神，更贏得健 </div>
+              <div class="text-justify" style="font-family:微軟正黑體; ">Nutrition is the basic of health, food is the source of nutrition.<br>
+                <br>
+                You need to not just have good habits of workout, but also eat healthily.<br>
+                Do you really need a morning latte to wake yourself up? Try the green latte.<br>
+                Do you love cakes and cookies during an afternoon tea break? Try fruit boxes.<br>
+                <br>
+                Changing your eating habits can make you look fresh and get heathy! </div>
             </div>
           </div>
         </div>
-        
       </div>
     </div>
     <div class="footer-line">
@@ -257,20 +237,18 @@ input[type="checkbox"]:checked + label span {
           <div class="col-md-9">
             <div class="oi_custom_heading_holder mb-0">
               <div class="oi_vc_heading oi_border_position_right text-md-right">
-                <h2 class="oi_icon_titile" style="font-family: 微軟正黑體; text-align: left;">活動地點 : HPE Office 2F 樓梯口</h2>
-                <p class="oi_icon_sub_titile" style="font-family: 微軟正黑體; text-align: left;">•活動辦法，於活動期間單次走樓梯從指定起點到終點，即可獲得對應步數及獎勵<br>
-                  •每場次名額有限，活動採事先報名，活動開始後30分鐘若報名者未進行報到，剩餘名額將開放現場報名<br>
-                  •鼓勵同仁多運動，可四場次皆報名參加，為避免資源浪費，請提早至個人資料頁<a href="profile.html"><U>取消報名</U></a><br>
-                  •建議當日著輕便服裝，避免運動傷害驗</p>
+                <h2 class="oi_icon_titile" style="font-family: 微軟正黑體; text-align: left;">Venue : HPE Office 2F staircase</h2>
+                <p class="oi_icon_sub_titile" style="font-family: 微軟正黑體; text-align: left;">• This is a stairs climbing event, every team need to do it from the starting line to the ending line at one single time, and each will get a card with the total steps and prize<br>
+                  • Registration is limited. Please submit your application before the deadline. If the registers are not registered after 30 minutes from the starting time, the remaining amount can be used for on-site registration.<br>
+                  • In order to encourage our staff to work out more, everyone can register for the all 4 sessions of event. And please <a href="${abs_url}/en_profile"><u>contact us</u></a> if you will not be able to come, in order to be respectful of other registers.<br>
+                  • It's advisable to dress casually to avoid sport injuries.</p>
               </div>
             </div>
           </div>
-          <div class="col-md-3 d-flex align-items-center mt-5 mt-md-0" style="font-family:微軟正黑體"> 
+          <div class="col-md-3 d-flex align-items-center mt-5 mt-md-0" style="font-family:微軟正黑體">
             <div align="center">
-              <a class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" 
-                 data-border-c-hover="#e83b23" style="color:white">完成送出</a>
-              
-            </div>
+            <a class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" 
+                 data-border-c-hover="#e83b23" style="color:white">Submit</a> </div>
           </div>
         </div>
         <div class="vc_row-full-width clearfix"></div>
@@ -316,7 +294,7 @@ $jq(document).ready(function(){
       }
     })
     debugger
-    url = location.href.replace('eat_blog', 'update_activity')
+    url = location.href.replace('en_eat_blog', 'update_activity')
     data = {
       'select_date': select_date,
       'event': '食在有道理'
@@ -328,9 +306,11 @@ $jq(document).ready(function(){
       data: data,
       success: function (response) {
         if(response == 'success'){
-           alert(`【報名資料已送出】確認收到您的報名資料
-請到”我的資料”確認聯絡方式無誤，保障您收到活動通知的權益
-每場次名額有限，活動採事先報名，活動開始後30分鐘若報名者未進行報到，剩餘名額將開放現場報名`)
+           alert(`【Your registration form has been sent successfully!】
+* Your registration information has been received.
+*Please check “’Personal Information”, and confirm your contact info to make sure that you don't miss any notifications.
+Registration is limited. Please submit your application before the deadline. If the registers are not registered after 30 minutes from the starting time, the remaining amount can be used for on-site registration.
+In order to encourage our staff to work out more, everyone can register for the all 4 sessions of event. And please contact us via email or phone in advance if you will not be able to come, in order to be respectful of other registers.`)
           location.reload() 
         }
       }

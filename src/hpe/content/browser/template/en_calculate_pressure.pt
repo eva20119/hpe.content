@@ -1,10 +1,5 @@
-<!DOCTYPE html >
-<html lang="en-US" class="no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
-    xmlns:tal="http://xml.zope.org/namespaces/tal"
-    xmlns:metal="http://xml.zope.org/namespaces/metal"
-    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-    lang="en"
-    i18n:domain="hpe.billing">
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
 <head>
 <title>2018 HPE Wellness</title>
 <meta charset="UTF-8">
@@ -27,7 +22,7 @@
 <script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
 <script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
 <!--[if lt IE 9]>
-<script type="text/javascript" src="++plone++hpe.content/js/html5min.js"></script>
+<script type="text/javascript" src="framework/js/html5min.js"></script>
 <![endif]-->
 </head>
 
@@ -36,12 +31,12 @@
     from plone import api
     abs_url = api.portal.get().absolute_url()
     is_anonymous = api.user.is_anonymous()
-    user_name = api.user.get_current().getProperty('fullname')
+    user_name = api.user.get_current().getProperty('en_name','')
 ?>
 <div class="preload"></div>
 <div class="header">
     <div class="logo_holder">
-    	<a href="${abs_url}/index"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" />
+    	<a href="${abs_url}/en_cover"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" />
        	</a>
     </div>
     
@@ -53,55 +48,39 @@
         <div class="row">
             <div class="col-md-6 offset-md-3 text-center">
                 <div class="page_description">
-                    <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/041_w.png"></h1>
+                    <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/041_w_en.png"></h1>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
-<div class="shoping_cart_icon">
+<div class="shoping_cart_icon"> Hi~${user_name} have logged in / <a class="my_shop_icon" href="${abs_url}/logout" title="menbers">Logout</a>　 
+<a class="my_account_icon" href="${abs_url}/en_reservation" title="Physician On-site Services"><i class="fa fa-calendar" aria-hidden="true"></i> </a> 
+<a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 
+<a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
 
-  <!-- 未登入 -->
-  <a class="my_shop_icon" href="${abs_url}/user_login" style="margin-right:20px"
-    tal:condition="is_anonymous">會員登入</a>
-  <!-- 未登入 -->
-
-  <!-- 已登入 -->
-  <p style="display:inline" tal:condition="not: is_anonymous">Hi~${user_name}/</p>
-  <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px" 
-    tal:condition="not: is_anonymous">登出</a>
-  <!-- 已登入 -->
-
-  <a class="my_account_icon" href="${abs_url}/reservation" title="預約家庭醫師"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
-  <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
-  <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
-
-  <span class="shop_cart_full"></span> 
 </div>
 <div class="menu_holder">
   <div class="inner_holder">
     <div class="text-logo">
       <h3 class="logo_name">HPE Wellness</h3>
-      <p class="logo_description">每個角落都是你的運動場，<br>Wellness 在每個改變的起點等你，<br>2018，Fighting</p>
+      <p class="logo_description">Every corner is your sport Field.<br>Wellness is waiting for you at every changing starting point.
+<br>2018，Fighting</p>
     </div>
     
     <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
       <div class="menu-primary-menu-container">
         <ul class="primary-menu">
-	    <li><a href="${abs_url}"><span style="font-family:微軟正黑體">回首頁</span></a></li>
-            <li><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-            <li><a href="${abs_url}/reservation"><span style="font-family:微軟正黑體">邀你醫同來</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-            <li class="current-menu-item current_page_item"><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">該釋壓了嗎</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-            <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
-            <li><a href="singin"><span style="font-family:微軟正黑體">肌力動次動</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
-            <li><a href="singin"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
-            <li><a href="singin"><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
-            <li><a href="singin"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
-            <div class="vc_team_member_image_holder">
-              <div class="oi_team_cont_holder">
-              </div>
-            </div>
+          <li><a href="${abs_url}/en_cover"><span style="font-family:微軟正黑體; font-size: 16px;">Home</span></a></li>
+          <li><a href="${abs_url}/en_mind_gas_station"><span style="font-family:微軟正黑體; font-size: 16px;">The Work Life Compass</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/en_reservation"><span style="font-family:微軟正黑體; font-size: 16px;">Physician On-site Services</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li class="current-menu-item current_page_item"><a href="${abs_url}/en_publicize_pressure"><span style="font-family:微軟正黑體; font-size: 16px;">Defatigation Self-Assessment</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/en_eat_blog"><span style="font-family:微軟正黑體; font-size: 16px;">Food Makes Sense</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Being Healthier By Do Exercise</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Power of Prevention</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Pedal to Health on Your Bike</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Flu vaccination Protective Net</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
         </ul>
       </div>
     </nav>
@@ -114,6 +93,7 @@
             <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
             <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
             <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+
             <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
             <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
             -->
@@ -132,62 +112,62 @@
         <div class="container">
             <div class="entry-content" >
                 <div class="row">
-                    <div class="col-md-6">
-                        <h3 style="font-family:微軟正黑體">您的個人疲勞指數為 ${view/personal_pressure}，工作疲勞指數為 ${view/work_pressure}</h3>
-                        <p style="font-family:微軟正黑體">請對應下表知悉狀況</p>
+                    <div class="col-md-12">
+                        <h3 style="font-family:微軟正黑體">Your fatigue index is  ${view/personal_pressure}, the occupational fatigue index is ${view/work_pressure}.</h3>
+                        <p style="font-family:微軟正黑體">In contrast to the following table, you’ll know more details.</p>
                   </div>
                 </div>
+
                  <div class="row">
                     <div class="col-md-12">
                         <div class="woocommerce">
                             <form class="woocommerce-cart-form" method="post">
                                 <table width="100%" class="shop_table shop_table_responsive cart">
                                   <!--DWLayoutTable-->
-                                    <thead style="font-family:微軟正黑體">
+<thead style="font-family:微軟正黑體">
                                         <tr>
-                                            <th width="20%" height="42" align="center" bgcolor="#FFCCCC" class="product-name">類別 / 指數</th>
-                                            <th width="20%" bgcolor="#FFCCCC" class="product-price">個人疲勞指數</th>
-                                            <th width="20%" bgcolor="#FFCCCC" class="product-quantity">工作疲勞指數</th>
-                                            <th width="50%" valign="top" bgcolor="#FFCCCC" class="product-subtotal">建議方針</th>
-                                        </tr>
+                                            <th width="20%" height="42" align="center" bgcolor="#FFCCCC" class="product-name">Category/Index</th>
+                                          <th width="20%" bgcolor="#FFCCCC" class="product-price">Fatigue Index</th>
+                                          <th width="20%" bgcolor="#FFCCCC" class="product-quantity">Occupational<br>Fatigue Index</th>
+                                          <th width="40%" valign="top" bgcolor="#FFCCCC" class="product-subtotal">Advice</th>
+                    </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體">
-                                          <td height="50" valign="top" class="product-name" data-title="類別 / 指數">低負荷</td>
+                                          <td height="50" valign="top" class="product-name" data-title="類別 / 指數">Low Load</td>
                                           <td valign="top" class="product-price" data-title="個人疲勞指數"><50</td>
                                             <td valign="top" class="product-quantity" data-title="工作疲勞指數"><45</td>
-                                            <td valign="top" class="product-subtotal" data-title="建議方針">不需改變現況</td>
+                                            <td valign="top" class="product-subtotal" data-title="建議方針">Keep the current status</td>
                                       </tr>
                                       <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體">
-                                        <td height="50" valign="top" class="product-name" data-title="類別 / 指數">中負荷</td>
+                                        <td height="50" valign="top" class="product-name" data-title="類別 / 指數">Medium Load</td>
                                           <td valign="top" class="product-price" data-title="個人疲勞指數">50-70</td>
                                             <td valign="top" class="product-quantity" data-title="工作疲勞指數">45-60</td>
-                                            <td valign="top" class="product-subtotal" data-title="建議方針">建議調整工時，每年追蹤一次</td>
+                                            <td valign="top" class="product-subtotal" data-title="建議方針">Adjust your working hours advisedly and get a trace examination once a year</td>
                                       </tr>
                                       <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體">
-                                          <td height="50" valign="top" class="product-name" data-title="類別 / 指數">高負荷</td>
+                                          <td height="50" valign="top" class="product-name" data-title="類別 / 指數">High Load</td>
                                           <td valign="top" class="product-price" data-title="個人疲勞指數">>70</td>
                                             <td valign="top" class="product-quantity" data-title="工作疲勞指數">>60</td>
-                                            <td valign="top" class="product-subtotal" data-title="建議方針">建議調整工時、工作型態，並尋求醫療諮詢，每半年追蹤一次</td>
+                                            <td valign="top" class="product-subtotal" data-title="建議方針">Adjust your working hours and working styles advisedly, seek medical counseling and get a trace examination once half a year.</td>
                                       </tr>
                                     </tbody>
                                 </table>
                           </form>
-                          <div class="row">
-                            <div class="col-md-12">
-                                <div class="woocommerce">
-                                <p style="font-family:微軟正黑體">若您需要專人諮詢，請參考以下方式：<br>
-                                ．詢問 HPE 護理師 Sophie Liu / 02-2652 4003 / <a href="mailto:sophie.liu@hpe.com">sophie.liu@hpe.com</a><br>       
-                                ．<a href="reservation.html">預約醫師諮詢 </a><br>
-                                ．EAP專線諮詢：Local 02-2377 0993 / International +65-6494 0040 / <a href="mailto:wlc@humandynamic.com">wlc@humandynamic.com </a><br>
-				．<a href="https://www.osha.gov.tw/1106/1176/1185/1189/2627/" target="_blank">職業傷病診治中心</a>診治</p>
-                            </div>
-                            </div>
-                        </div>
                         </div>
                     </div>
+                </div>
+<div class="row">
+                    <div class="col-md-12">
+                        <div class="woocommerce">
+                        <p style="font-family:微軟正黑體">If you need to consult the professional, please check out the different ways below.<br>
+．Ask HPE Nurse Sophie Liu / 02-2652 4003 / <a href="mailto:sophie.liu@hpe.com">sophie.liu@hpe.com</a><br>       
+．<a href="${abs_url}/en_reservation">Schedule an appointment for physician counseling</a><br>
+．EAP hotline：Local 02-2377 0993 / International +65-6494 0040 / <a href="mailto:wlc@humandynamic.com">wlc@humandynamic.com </a><br>
+．<a href="https://www.osha.gov.tw/1106/1176/1185/1189/2627/" target="_blank">The treatment in Occupational Disease and Injury Service</a></p>
+                      </div>
+                    </div>
                 </div><BR><BR>
-
           </div>
         </div>
     </main>

@@ -15,6 +15,9 @@ import datetime
 class Cover(BrowserView):
     template = ViewPageTemplateFile('template/cover.pt')
     def __call__(self):
+        is_anonymous = api.user.is_anonymous()
+        if is_anonymous:
+            self.request.response.redirect('%s/user_login' %api.portal.get().absolute_url())
         return self.template()
 
 
@@ -101,14 +104,14 @@ class EatBlog(BrowserView):
         self.condition_4 = False
         for item in result:
             tmp = dict(item)
-            # if tmp['activity_date'] == '2018-04-10 09:30':
+            # if tmp['activity_date'] == '2018-04-10 09:00':
             if tmp['activity_date'] == '2018-03-21 10:00':
                 self.condition_1 = True
-            elif tmp['activity_date'] == '2018-04-12 09:30':
+            elif tmp['activity_date'] == '2018-04-19 09:00':
                 self.condition_2 = True
-            elif tmp['activity_date'] == '2018-04-12 12:30':
+            elif tmp['activity_date'] == '2018-04-12 12:00':
                 self.condition_3 = True
-            elif tmp['activity_date'] == '2018-04-26 12:30':
+            elif tmp['activity_date'] == '2018-04-26 12:00':
                 self.condition_4 = True
         return self.template()
 
@@ -218,6 +221,7 @@ class Reservation(BrowserView):
                 timeList.append([startTime, (obj.date + datetime.timedelta(minutes = 20)).strftime('%H:%M')])  
                 for i in range(1, 6):
                     minutes = i*20
+                    # 此處縮排vscode顯示似乎有問題
                     reservation_start_time = obj.date + datetime.timedelta(minutes = minutes)
 		    reservation_end_time = reservation_start_time + datetime.timedelta(minutes = minutes)
                     timeList.append([reservation_start_time.strftime('%H:%M'), reservation_end_time.strftime('%H:%M')])
@@ -273,7 +277,7 @@ class Reservation(BrowserView):
                     'alternateMsg': alternateMsg
                 })
         else:
-            self.user_reservation_msg = '您以預約%s' %user_reservation_date
+            self.user_reservation_msg = '您已預約%s' %user_reservation_date
             self.already_reservation = True
 
         self.reservationList = reservationList
@@ -477,6 +481,7 @@ class UserProfile(BrowserView):
 class UpdateProfile(BrowserView):
     def __call__(self):
         request = self.request
+        language = request.get('language', '') # 給英文頁面判斷的
         user_ch_name = request.get('user_ch_name')
         user_en_name = request.get('user_en_name')
         user_officephone = request.get('user_officephone')
@@ -491,7 +496,10 @@ class UpdateProfile(BrowserView):
                                             'location': user_location,
                                             'cellphone': user_cellphone,
                                         })
-        request.response.redirect('%s/profile' % api.portal.get().absolute_url())
+        if language == 'en':
+            request.response.redirect('%s/en_profile' % api.portal.get().absolute_url())
+        else:
+            request.response.redirect('%s/profile' % api.portal.get().absolute_url())
         api.portal.show_message('儲存成功'.decode('utf-8'), self.request, 'info')
 
 
@@ -502,11 +510,12 @@ class CancelReservation(BrowserView):
         user_name = user.getProperty('email')
         reservation_date = user.getProperty('reservation_date')[:10]
         peroid = user.getProperty('peroid')
+        language = request.get('language', '') # 英文預約
         brain = api.content.find(context=api.portal.get(),Type='Reservation')
-
         for item in brain:
             obj = item.getObject()
             date = obj.date.strftime('%Y/%m/%d')
+            
             if date == reservation_date:
                 if peroid == 'peroid1':
                     date = obj.date
@@ -549,7 +558,10 @@ class CancelReservation(BrowserView):
         execStr = """INSERT INTO log(user,category,log) VALUES('{}','{}','{}')
             """.format(user_name, '預約', '預約取消')
         execSql.execSql(execStr)
-        request.response.redirect('%s/reservation' % api.portal.get().absolute_url())
+        if language == 'english':
+            request.response.redirect('%s/en_reservation' % api.portal.get().absolute_url())
+        else:
+            request.response.redirect('%s/reservation' % api.portal.get().absolute_url())
 
 
 class UpdateAlternate(BrowserView):

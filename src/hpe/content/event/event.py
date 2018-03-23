@@ -33,7 +33,10 @@ def userLogin(event):
     request = getRequest()
     language = request.get('language')
     abs_url = api.portal.get().absolute_url()
-    request.response.redirect(abs_url)
+    if language == 'chinese':
+        request.response.redirect(abs_url)
+    elif language == 'english':
+        request.response.redirect('%s/en_cover' %abs_url)
 
 
 def userLogout(event):
