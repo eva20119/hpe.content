@@ -1,5 +1,25 @@
 jQuery.noConflict()(function ($) {
 	"use strict";
+
+/* 應該寫在custom.js的，寫在這裏比較快 */
+$(document).ready(function(){
+
+// 主選單，還沒有的連結無效化
+    $("ul.primary-menu li a[href='singin']").attr('href', 'javascript:void(0)')
+
+
+// 上傳照片，還沒開始，連結無效化及alert
+    $(".shoping_cart_icon a.my_shop_icon[href='http://hpe.mingtak.com.tw/upload']").attr('href', 'javascript:void(0)')
+    $('.shoping_cart_icon .my_shop_icon .fa-thumbs-o-up').click(function(){
+        alert('活動尚未開始')
+    })
+
+
+})
+
+
+
+
 	$('body').css('min-height', $(window).outerHeight() + 1);
 	$('section.not-found').css('min-height', $(window).outerHeight() + 1);
 	/*************************************/
@@ -176,7 +196,8 @@ jQuery.noConflict()(function ($) {
 					items: 1
 				},
 				769: {
-					items: 2
+					items: 2
+
 				},
 				1025: {
 					items: 3

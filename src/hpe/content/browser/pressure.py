@@ -91,7 +91,7 @@ class Create(BrowserView):
         portal = api.portal.get()
         alsoProvides(request, IDisableCSRFProtection)
 
-        file = open('/home/henry/aa2.csv', 'r')
+        file = open('/home/henryc/aa.csv', 'r')
         csv_data = csv.reader(file)
         for data in csv_data:
             try:
@@ -117,6 +117,7 @@ class Create(BrowserView):
                     password=user_id,
                     properties=properties,
                 )
+                print ch_name
             except:
                 import pdb;pdb.set_trace()
 
@@ -126,6 +127,10 @@ class DeleteUser(BrowserView):
         request = self.request
         alsoProvides(request, IDisableCSRFProtection)
 
+        users = api.user.get_users()
+        for user in users:
+            api.user.delete(user=user)
+        return
         file = open('/hpe/aa.csv', 'r')
         csv_data = csv.reader(file)
         for data in csv_data:

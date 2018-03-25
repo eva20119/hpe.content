@@ -196,7 +196,7 @@ background: linear-gradient(#8fd3f4,#84eab8);
       </nav>
       
       <!-- .social-navigation -->
-      <p style="font-family:微軟正黑體;color:#777;font-size:16px">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+      <p style="font-family:微軟正黑體;color:#777;font-size:16px">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All rights reserved by HPE Taiwan Wellness.</p>
     </div>
   </div>
 <div class="extra_holder">
@@ -305,7 +305,7 @@ background: linear-gradient(#8fd3f4,#84eab8);
                     <h3>請您注意以下事項:</h3>
                     <ul>
                         <li>若臨時無法出席，請盡早至系統取消預約，避免資源浪費</li>
-                        <li>事前填妥 諮詢紀錄單 當日提供給醫生，避免影響你的諮詢時間</li>
+                        <li>事前填妥 <a target="_blank" href="${abs_url}/20180325.docx">諮詢紀錄單</a> 當日提供給醫生，避免影響你的諮詢時間</li>
                         <li>可視個人意願，攜帶個人健康報告提供給醫生參考</li>
                         <li>若同仁候補成功，系統會自動發信告知</li>
                         <li>預約完成請準時出席，避免影響其他同仁的洽談時間</li>
@@ -352,7 +352,7 @@ background: linear-gradient(#8fd3f4,#84eab8);
 <div class="bottom_line">
   <div class="row">
     <div class="col-md-12">
-      <p align="center">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+      <p align="center">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All rights reserved by HPE Taiwan Wellness.</p>
     </div>
 
   </div>

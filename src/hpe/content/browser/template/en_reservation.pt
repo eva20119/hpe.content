@@ -132,7 +132,7 @@ Hi~${user_name}  have logged in / <a class="my_shop_icon" href="${abs_url}/logou
         </div>
       </nav>
       <!-- .social-navigation -->
-       <p style="font-family: 微軟正黑體; color: #777; font-size: 16px;">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+       <p style="font-family: 微軟正黑體; color: #777; font-size: 16px;">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All rights reserved by HPE Taiwan Wellness.</p>
     </div>
   </div>
 </div>
@@ -286,7 +286,7 @@ Singapore Chung Hwa Medical Institution, Superintendent
 <div class="bottom_line">
   <div class="row">
     <div class="col-md-12">
-      <p align="center">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+      <p align="center">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All rights reserved by HPE Taiwan Wellness.</p>
     </div>
 
   </div>

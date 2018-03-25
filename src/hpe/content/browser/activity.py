@@ -16,6 +16,13 @@ import time
 class UpdateActivity(BrowserView):
     def __call__(self):
         request = self.request
+
+        # 檢查是否已完整填寫員工資料
+        current = api.user.get_current()
+#        import pdb; pdb.set_trace()
+        if not (current.getProperty('en_name') and current.getProperty('officephone') and current.getProperty('cellphone')):
+            return 'loseData'
+
         select_date = request.get('select_date[]')
         if type(select_date) == str:
             select_date = [select_date]
