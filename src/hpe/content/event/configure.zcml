@@ -4,8 +4,8 @@
     i18n_domain="hpe.content">
 
     <subscriber
-        for="Products.PlonePAS.events.IUserInitialLoginInEvent"
-        handler=".event.firstLogin"
+        for="Products.PlonePAS.events.IUserLoggedInEvent"
+        handler=".event.mkqr"
     />
     <subscriber
         for="Products.PlonePAS.events.IUserLoggedInEvent"

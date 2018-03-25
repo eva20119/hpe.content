@@ -9,17 +9,24 @@ from db.connect.browser.views import SqlObj
 from zope.globalrequest import getRequest
 
 
-def firstLogin(event):
+def mkqr(event):
     portal = api.portal.get()
     user = api.user.get_current().getProperty('email')
+
+    execSql = SqlObj()
+    execStr = "select picture_data from user_picture WHERE user = '%s'" % user
+    result = execSql.execSql(execStr)
+    if result:
+        return
+
     abs_url = portal.absolute_url()
-    url = 'http://696d405b.ngrok.io/hpe/event/event_handl?email=%s' %(user)
+#    url = 'http://696d405b.ngrok.io/hpe/event/event_handl?email=%s' %(user)
+    url = '%s/event/event_handl?email=%s' % (abs_url, user)
     qr = qrcode.QRCode()
     qr.add_data(url)
     qr.make_image().save('user.png')
     img = open('user.png', 'rb')
     b64_img = base64.b64encode(img.read())
-    execSql = SqlObj()
     execStr = """INSERT INTO user_picture(user, picture_data) 
             VALUES('{}', '{}')""".format(user, b64_img)
 
