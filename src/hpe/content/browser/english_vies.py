@@ -31,20 +31,21 @@ class EnMindGasStation(BrowserView):
             for item in brain:
                 url = item.getURL()
                 obj = item.getObject()
-                img = '%s/@@images/img/preview' %url
-                file = '%s/@@display-file/file/%s' %(url, obj.file.filename)
-                description = obj.description
-                tmp = description.split('\r')
-                des_content = ''
-                if description:
-                    for text in tmp:
-                        des_content += '. ' + text.strip() + '<br>'
+                if obj.lang == 'English':
+                    img = '%s/@@images/img/preview' %url
+                    file = '%s/@@display-file/file/%s' %(url, obj.file.filename)
+                    description = obj.description
+                    tmp = description.split('\r')
+                    des_content = ''
+                    if description:
+                        for text in tmp:
+                            des_content += '. ' + text.strip() + '<br>'
 
-                data.append({
-                    'img': img,
-                    'file': file,
-                    'text': des_content
-                })
+                    data.append({
+                        'img': img,
+                        'file': file,
+                        'text': des_content
+                    })
             self.data = data
         return self.template()
 
@@ -89,22 +90,9 @@ class EnEatBlog(BrowserView):
 class EnTestPressure(BrowserView):
     template = ViewPageTemplateFile('template/en_test_pressure.pt')
     def __call__(self):
-        roles = api.user.get_current().getRoles()
-        if 'Manager' not in roles:
-            return '您無權限'
-        else:
-            execSql = SqlObj()
-            execStr = """SELECT * FROM `pressure` ORDER BY time"""
-            result = execSql.execSql(execStr)
-            data = []
-            for item in result:
-                tmp = dict(item)
-                user = tmp['user']
-                personal_pressure = tmp['personal_pressure']
-                work_pressure = tmp['work_pressure']
-                time = tmp['time'].strftime('%Y/%m/%d  %H:%M')
-                data.append([user, personal_pressure, work_pressure, time])
-            self.data = data
+        if api.user.is_anonymous():
+            self.request.response.redirect('%s/user_login'%api.portal.get().absolute_url())
+            return 
         return self.template()
 
 

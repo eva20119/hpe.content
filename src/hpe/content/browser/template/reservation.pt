@@ -37,38 +37,69 @@ body {
 -->
 </style>
 <style>
+.style1 {color: #ED1E79}
+
 body {
-  background: -webkit-linear-gradient(#8fd3f4,#84eab8);
-  background: -o-linear-gradient(#8fd3f4,#84eab8);
-  background: -moz-linear-gradient(#8fd3f4,#84eab8);
-  background: linear-gradient(#8fd3f4,#84eab8);
+
+background: -webkit-linear-gradient(#8fd3f4,#84eab8);
+
+background: -o-linear-gradient(#8fd3f4,#84eab8);
+
+background: -moz-linear-gradient(#8fd3f4,#84eab8);
+
+background: linear-gradient(#8fd3f4,#84eab8);
+
 }
-.enable{
-  background-color: #00B388 ;
-  color:white;
-  text-align: center;
+
+.style22 {color: #FFFFFF}
+
+.disabled {
+
+	background-color: #FF8D6D;
+
+	color: white;
+
+	text-align: center;
+
+	font-size: 16px;
+
 }
-.disabled{
-  background-color: #FF8D6D ;
-  color:white;
-  text-align: center;
+
+.enable {
+
+	background-color: #00B388;
+
+	color: white;
+
+	text-align: center;
+
+	font-size: 16px;
+
 }
-.not_open{
-  background-color:grey;
-  color:grey;
-  text-align: center;
+
+.not_open {	background-color: grey;
+
+	color: grey;
+
+	text-align: center;
+
 }
-.table_th{
-  background-color: #614767;
+
+.table_date {
+
+	background-color: #425563;
+
+	color: white;
+
+	font-size: 16px;
+
 }
-.table_th>th{
-  text-align: center;  
-  color: white ;
+
+.table_th {	background-color: #614767;
+
 }
-.table_date{
-  background-color:#425563 ;
-  color: white;
-}
+
+
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
 
@@ -115,7 +146,10 @@ body {
   <a class="my_account_icon" href="${abs_url}/reservation" title="預約家庭醫師"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
   <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
   <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
-
+  <select name="" id="language">
+    <option value="ch">中文Ch</option>
+    <option value="en">英文En</option>
+  </select>
   <span class="shop_cart_full"></span> 
 </div>
 <div class="menu_holder">
@@ -256,7 +290,7 @@ body {
                 若需重選時段，請先取消原先預留名額。</p>
                 <p>諮詢前若有問題歡迎詢問 HPE 護理師<br>
                   Sophie Liu / 02-2652 4003 / <a href="mailto:sophie.liu@hpe.com">sophie.liu@hpe.com</a></p>
-                <span style="background-color:green;color:white;padding:10px 15px;">空缺</span>
+		<span style="background-color: #00B388; color: white; padding: 10px 15px; font-size: 16px;">空缺</span>
                 <span class="disabled" style="padding:10px 15px">額滿</span>
 
 
@@ -331,5 +365,6 @@ body {
 <script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script>
 <script type="text/javascript" src="++plone++hpe.content/js/custom_reservation.js"></script>
+<script src="++plone++hpe.content/js/change_language.js"></script>
 </body>
 </html>

@@ -242,4 +242,11 @@
       layer='hpe.content.interfaces.IHpeContentLayer'
       permission='zope2.View'
       />
+  <browser:page
+      name='delete_user'
+      for='*'
+      class='.pressure.DeleteUser'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
 </configure>

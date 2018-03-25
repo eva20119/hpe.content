@@ -83,7 +83,10 @@ td>select{
 <a class="my_account_icon" href="${abs_url}/en_reservation" title="Physician On-site Services"><i class="fa fa-calendar" aria-hidden="true"></i> </a> 
 <a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 
 <a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
-
+<select name="" id="language">
+    <option value="ch">中文Ch</option>
+    <option value="en">英文En</option>
+  </select>
 </div>
 <div class="menu_holder">
   <div class="inner_holder">
@@ -140,7 +143,7 @@ td>select{
                   </div>
                    <div class="col-md-5">
                         <h3 style="font-family:微軟正黑體">Taiwan Wellness Total Steps ${view/sum_step}</h3>
-                      <p style="font-family:微軟正黑體"><a href="#">>> Global Wellness Challenge Steps Login</a></p>
+                      <p style="font-family:微軟正黑體"><a href="https://app.member.virginpulse.com/welcome.html?userToken=jEWvmVEPIHcx4EfSx%2F0eL%2BIFJjr1Q8CnwWQ6Gp7%2FD3Xy4nufh5RxzPYbyLHaZ6X3hTkljUOcrdHAmjHfBix2kg%3D%3D&sponsorId=3647934&language=en-US">>> Global Wellness Challenge Steps Login</a></p>
                   </div>
                   <div class="col-md-2">
                   <h3 align="CENTER" style="font-family:微軟正黑體">QRCode</h3>
@@ -305,6 +308,8 @@ td>select{
 <script type="text/javascript" src="++plone++hpe.content/js/jquery-ui-touch-punch.min.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/accounting.min.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/price-slider.min.js"></script>
+<script src="++plone++hpe.content/js/change_language.js"></script>
+
 <script>
 var $jq = jQuery.noConflict();
 $jq(function () {

@@ -42,5 +42,4 @@ def userLogin(event):
 def userLogout(event):
     request = getRequest()
     abs_url = api.portal.get().absolute_url()
-
     request.response.redirect(abs_url)

@@ -91,13 +91,12 @@ class Create(BrowserView):
         portal = api.portal.get()
         alsoProvides(request, IDisableCSRFProtection)
 
-        file = open('/home/henry/aa.csv', 'r')
+        file = open('/home/henry/aa2.csv', 'r')
         csv_data = csv.reader(file)
         for data in csv_data:
             try:
-            
-                en_name = data[1]
-                ch_name = data[2]
+                en_name = data[1].split('\xef\xbc\x88')[0]
+                ch_name = data[1].split('\xef\xbc\x88')[1].split('\xef\xbc\x89')[0]
                 user_id = data[0]
                 email = data[3].strip()
                 if data[4] == 'Taipei':
@@ -120,3 +119,17 @@ class Create(BrowserView):
                 )
             except:
                 import pdb;pdb.set_trace()
+
+
+class DeleteUser(BrowserView):
+    def __call__(self):
+        request = self.request
+        alsoProvides(request, IDisableCSRFProtection)
+
+        file = open('/hpe/aa.csv', 'r')
+        csv_data = csv.reader(file)
+        for data in csv_data:
+            try:
+                api.user.delete(username=data[3])
+            except:
+                pass

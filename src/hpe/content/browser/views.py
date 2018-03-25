@@ -129,20 +129,21 @@ class MindGasStation(BrowserView):
             for item in brain:
                 url = item.getURL()
                 obj = item.getObject()
-                img = '%s/@@images/img/preview' %url
-                file = '%s/@@display-file/file/%s' %(url, obj.file.filename)
-                description = obj.description
-                tmp = description.split('\r')
-                des_content = ''
-                if description:
-                    for text in tmp:
-                        des_content += '. ' + text.strip() + '<br>'
+                if obj.lang == 'Chinese':
+                    img = '%s/@@images/img/preview' %url
+                    file = '%s/@@display-file/file/%s' %(url, obj.file.filename)
+                    description = obj.description
+                    tmp = description.split('\r')
+                    des_content = ''
+                    if description:
+                        for text in tmp:
+                            des_content += '. ' + text.strip() + '<br>'
 
-                data.append({
-                    'img': img,
-                    'file': file,
-                    'text': des_content
-                })
+                    data.append({
+                        'img': img,
+                        'file': file,
+                        'text': des_content
+                    })
             self.data = data
         return self.template()
 
@@ -511,7 +512,7 @@ class CancelReservation(BrowserView):
         reservation_date = user.getProperty('reservation_date')[:10]
         peroid = user.getProperty('peroid')
         language = request.get('language', '') # 英文預約
-        brain = api.content.find(context=api.portal.get(),Type='Reservation')
+        brain = api.content.find(portal_type="Reservation",context=api.portal.get())
         for item in brain:
             obj = item.getObject()
             date = obj.date.strftime('%Y/%m/%d')

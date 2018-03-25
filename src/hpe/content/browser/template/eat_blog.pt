@@ -104,12 +104,11 @@ input[type="checkbox"]:checked + label span {
   <a class="my_account_icon" href="${abs_url}/reservation" title="預約家庭醫師"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
   <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
   <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
-  <!-- 未登入 -->
-  <select name="" id="" tal:condition="is_anonymous">
-    <option value="">中文Ch</option>
-    <option value="">英文En</option>
+  <select name="" id="language">
+    <option value="ch">中文Ch</option>
+    <option value="en">英文En</option>
   </select>
-  <!-- 未登入 -->
+
   <span class="shop_cart_full"></span> 
 </div>
 <div class="menu_holder">
@@ -260,15 +259,14 @@ input[type="checkbox"]:checked + label span {
                 <h2 class="oi_icon_titile" style="font-family: 微軟正黑體; text-align: left;">活動地點 : HPE Office 2F 樓梯口</h2>
                 <p class="oi_icon_sub_titile" style="font-family: 微軟正黑體; text-align: left;">•活動辦法，於活動期間單次走樓梯從指定起點到終點，即可獲得對應步數及獎勵<br>
                   •每場次名額有限，活動採事先報名，活動開始後30分鐘若報名者未進行報到，剩餘名額將開放現場報名<br>
-                  •鼓勵同仁多運動，可四場次皆報名參加，為避免資源浪費，請提早至個人資料頁<a href="profile.html"><U>取消報名</U></a><br>
+                  •鼓勵同仁多運動，可四場次皆報名參加，為避免資源浪費，請提早至個人資料頁<a href="${abs_url}/profile"><U>取消報名</U></a><br>
                   •建議當日著輕便服裝，避免運動傷害驗</p>
               </div>
             </div>
           </div>
           <div class="col-md-3 d-flex align-items-center mt-5 mt-md-0" style="font-family:微軟正黑體"> 
             <div align="center">
-              <a class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" 
-                 data-border-c-hover="#e83b23" style="color:white">完成送出</a>
+              <a class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" data-border-c-hover="#e83b23" href="#">完成送出</a>
               
             </div>
           </div>
@@ -299,6 +297,7 @@ input[type="checkbox"]:checked + label span {
 <script type="text/javascript" src="++plone++hpe.content/js/remodal.min.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script>
+<script src="++plone++hpe.content/js/change_language.js"></script>
 <script>
 var $jq = jQuery.noConflict();
 $jq(document).ready(function(){
