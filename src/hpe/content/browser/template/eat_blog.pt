@@ -101,10 +101,11 @@ input[type="checkbox"]:checked + label span {
     tal:condition="not: is_anonymous">登出</a>
   <!-- 已登入 -->
 
-  <a class="my_account_icon" href="${abs_url}/reservation" title="預約家庭醫師"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
+  <a class="my_account_icon" href="${abs_url}/reservation" title="邀你醫同來"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
   <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
   <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
-  <select name="" id="language">
+<select name="" id="language">
+    <option>語言Language</option>
     <option value="ch">中文Ch</option>
     <option value="en">英文En</option>
   </select>
@@ -187,11 +188,12 @@ input[type="checkbox"]:checked + label span {
                   <div class="oi_heading_border oi_border_position_center"><span></span></div>
                   <br>
                   <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 48px;">
-                    <!-- <input type="checkbox" id="checkbox1" name="2018-04-10 09:00" data-checked="${view/condition_1}"/>
-                    <label for="checkbox1"><span></span>4/10</label> -->
-                    <input type="checkbox" id="checkbox1" name="2018-04-10 10:00" data-checked="${view/condition_1}"/>
-                    <label for="checkbox1"><span></span>4/10</label>
-                    <input type="checkbox" id="checkbox2" name="2018-04-19 09:00" data-checked="${view/condition_2}"/>
+                   <!-- <input type="checkbox" id="checkbox1" name="2018-04-10 10:00" data-checked="${view/condition_1}"/>
+                    <label for="checkbox1"><span></span>4/10</label>-->
+                    
+                    <input type="checkbox" id="checkbox1" name="2018-03-26 10:00" data-checked="${view/condition_1}"/>
+                    <label for="checkbox1"><span></span>3/26</label>
+	            <input type="checkbox" id="checkbox2" name="2018-04-19 09:00" data-checked="${view/condition_2}"/>
                     <label for="checkbox2"><span></span>4/19</label>
                   </p>
                   <br>
@@ -318,7 +320,8 @@ $jq(document).ready(function(){
     url = location.href.replace('eat_blog', 'update_activity')
     data = {
       'select_date': select_date,
-      'event': '食在有道理'
+      'event': '食在有道理',
+      'step': 328
     }
 
     $jq.ajax({
@@ -333,7 +336,7 @@ $jq(document).ready(function(){
           location.reload() 
         }
         else if(response == 'loseData'){
-           alert('您的填料尚未填寫，請前後填寫完整員工資料後再報名活動，謝謝。')
+           alert('您的資料料尚未填寫，請前往填寫完整員工資料後再報名活動，謝謝。')
            window.location = '${abs_url}/profile'
         }
       }

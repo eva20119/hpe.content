@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-US" class="no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
     xmlns:tal="http://xml.zope.org/namespaces/tal"
@@ -144,7 +143,7 @@ background: linear-gradient(#8fd3f4,#84eab8);
     tal:condition="not: is_anonymous">登出</a>
   <!-- 已登入 -->
 
-  <a class="my_account_icon" href="${abs_url}/reservation" title="邀你醫同來"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
+  <a class="my_account_icon" href="${abs_url}/reservation" title="預約家庭醫師"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
   <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
   <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
   <select name="" id="language">
@@ -334,7 +333,8 @@ background: linear-gradient(#8fd3f4,#84eab8);
                                 <td tal:attributes="class python:list[2]" style="cursor:pointer"
                                     data-startDate="${python:item['startDate']}">${python:list[0]}~${python:list[1]}</td>
                             </tal:repeat>
-                            <td tal:attributes="class python:item['alternate']" style="cursor:pointer" 
+
+                            <td tal:attributes="class python:item['alternate']" style="cursor:pointer"
                                 data-startDate="${python:item['startDate']}">${python:item['alternateMsg']}</td>
                     </tr>
                 </table>

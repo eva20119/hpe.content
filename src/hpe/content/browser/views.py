@@ -104,8 +104,8 @@ class EatBlog(BrowserView):
         self.condition_4 = False
         for item in result:
             tmp = dict(item)
-            # if tmp['activity_date'] == '2018-04-10 09:00':
-            if tmp['activity_date'] == '2018-03-21 10:00':
+            #if tmp['activity_date'] == '2018-04-10 09:00':
+            if tmp['activity_date'] == '2018-03-26 10:00':
                 self.condition_1 = True
             elif tmp['activity_date'] == '2018-04-19 09:00':
                 self.condition_2 = True
@@ -208,7 +208,7 @@ class Reservation(BrowserView):
         reservationList = []
         user_reservation_date = api.user.get_current().getProperty('reservation_date')
         self.already_reservation = False
-        
+
         # 若以預約就不顯示報名表
         if not user_reservation_date:
             for item in brains:
@@ -219,12 +219,12 @@ class Reservation(BrowserView):
 
                 timeList = []
                 # 填入第一次的開始後結束時間
-                timeList.append([startTime, (obj.date + datetime.timedelta(minutes = 20)).strftime('%H:%M')])  
+                timeList.append([startTime, (obj.date + datetime.timedelta(minutes = 20)).strftime('%H:%M')])
                 for i in range(1, 6):
                     minutes = i*20
                     # 此處縮排vscode顯示似乎有問題
                     reservation_start_time = obj.date + datetime.timedelta(minutes = minutes)
-		    reservation_end_time = reservation_start_time + datetime.timedelta(minutes = minutes)
+		    reservation_end_time = reservation_start_time + datetime.timedelta(minutes = 20)
                     timeList.append([reservation_start_time.strftime('%H:%M'), reservation_end_time.strftime('%H:%M')])
                 peroid1 = obj.peroid1
                 peroid2 = obj.peroid2

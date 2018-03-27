@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<b!DOCTYPE html>
 <html lang="en-US" class="no-js">
 <head>
 <title>2018 HPE Wellness</title>
@@ -84,12 +84,13 @@ background: linear-gradient(#8fd3f4,#84eab8);
   </div>
 </div>
 <div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
-<div class="shoping_cart_icon">
+<div class="shoping_cart_icon" style="display:block">
 Hi~${user_name}  have logged in / <a class="my_shop_icon" href="${abs_url}/logout" title="menbers">Logout</a>　
 <a class="my_account_icon" href="${abs_url}/en_reservation" title="Physician On-site Services"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
 <a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
 <a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
 <select name="" id="language">
+    <option>語言Language</option>
     <option value="ch">中文Ch</option>
     <option value="en">英文En</option>
   </select>
@@ -224,9 +225,9 @@ Singapore Chung Hwa Medical Institution, Superintendent
                     By default, you can book only one appointment at a time, including the wait list.
                     If you need to reschedule your appointment, please cancel the previous one for available quota.</p>
                 </blockquote>
-                <p>Please feel free to ask HPE nurses if you have any problems before the counseling.<br>
+                <p>Please feel free to ask HPE nurses if you have any problems  before the counseling.<br>
                   Sophie Liu / 02-2652 4003 / <a href="mailto:sophie.liu@hpe.com">sophie.liu@hpe.com</a></p>
-            <span style="background-color: #00B388; color: white; padding: 10px 15px; font-size: 16px;">Register</span> <span class="disabled" style="padding:10px 15px">Closed</span>
+            <span style="background-color: #00B388; color: white; padding: 10px 15px; font-size: 16px;cursor:pointer">Register</span> <span class="disabled" style="padding:10px 15px;cursor:pointer">Closed</span>
             <tal:reservation_success condition="view/already_reservation">
                     <?python
                         from plone import api
@@ -239,7 +240,7 @@ Singapore Chung Hwa Medical Institution, Superintendent
                     <ul>
                         <li>If you cannot attend temporarily，
                             Please cancel your appointment as early as possible，To avoid waste of resource</li>
-                        <li>Be prepared beforehand Consultation record provide doctors on the day to avoid affecting your consultation time</li>
+                        <li>Be prepared <a href="http://hpe.mingtak.com.tw/20180325.docx" target="_blank">beforehand Consultation record</a> provide doctors on the day to avoid affecting your consultation time</li>
                         <li>According to personal wishes, personal health report can be provided to doctors</li>
                         <li>If the candidate is successful, the system will automatically send a message</li>
                         <li>Appointment is completed, please attend on time to avoid affecting other colleagues' negotiation time.</li>
@@ -264,10 +265,10 @@ Singapore Chung Hwa Medical Institution, Superintendent
                     <tr tal:repeat="item view/reservationList">
                             <td class="table_date">${python:item['startDate']}</td>
                             <tal:repeat repeat="list python:item['timeList']">
-                                <td tal:attributes="class python:list[2]" 
+                                <td tal:attributes="class python:list[2]" style="cursor:pointer"
                                     data-startDate="${python:item['startDate']}">${python:list[0]}~${python:list[1]}</td>
                             </tal:repeat>
-                            <td tal:attributes="class python:item['alternate']" 
+                            <td tal:attributes="class python:item['alternate']" style="cursor:pointer"
                                 data-startDate="${python:item['startDate']}">${python:item['alternateMsg']}</td>
                     </tr>
                 </table>

@@ -28,12 +28,13 @@ class UpdateActivity(BrowserView):
             select_date = [select_date]
         event = request.get('event')
         user = api.user.get_current().getProperty('email')
+	step = request.get('step')
         execSql = SqlObj()
         for activity in select_date:
-            
+
             # 寫進活動列表
-            execStr = """INSERT INTO activity(user,category,activity_date) VALUES('{}','{}'
-                ,'{}')""".format(user, event, activity)
+            execStr = """INSERT INTO activity(user,category,activity_date,step) VALUES('{}','{}'
+                ,'{}','{}')""".format(user, event, activity,step)
             execSql.execSql(execStr)
             # 寫進log
             log = '參加報名'
@@ -64,6 +65,8 @@ class EventHandl(BrowserView):
                     activity_date='{}'""".format(email, start_date)
                 result = execSql.execSql(execStr)
                 tmp = dict(result[0])
+                if not tmp:
+	            return '您沒報名'
                 if tmp['is_first'] == 0 and tmp['is_end'] == 0 and tmp['check_in_time'] == None:
                     execStr = """UPDATE activity SET is_first = 1,check_in_time='{}' WHERE user='{}' AND 
                         activity_date='{}'""".format(now_time, email, start_date)
@@ -99,6 +102,7 @@ class CancelActivity(BrowserView):
         request = self.request
         activity_date = request.get('activity_date')
         category = request.get('category')
+        lang = request.get('lang')
         user = api.user.get_current().getProperty('email')
         execSql = SqlObj()
 
@@ -109,5 +113,7 @@ class CancelActivity(BrowserView):
         execStr = """INSERT INTO log(user,log,category) VALUES('{}','{}','{}')
             """.format(user, '取消參加活動', category)
         execSql.execSql(execStr)
-
-        request.response.redirect('%s/profile' %api.portal.get().absolute_url())
+        if lang == 'Chinese':
+            request.response.redirect('%s/profile' %api.portal.get().absolute_url())
+        if lang == 'English':
+	    request.response.redirect('%s/en_profile' %api.portal.get().absolute_url())

@@ -91,9 +91,11 @@ input[type="checkbox"]:checked + label span {
 <a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 
 <a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
 <select name="" id="language">
+    <option>語言Language</option>
     <option value="ch">中文Ch</option>
     <option value="en">英文En</option>
   </select>
+
 </div>
 <div class="menu_holder">
   <div class="inner_holder">
@@ -172,10 +174,8 @@ input[type="checkbox"]:checked + label span {
                   <div class="oi_heading_border oi_border_position_center"><span></span></div>
                   <br>
                   <p class="oi_icon_sub_titile style22" style="font-family: '微軟正黑體 Light'; text-align: center; font-size: 48px;">
-                    <!-- <input type="checkbox" id="checkbox1" name="2018-04-10 09:00" data-checked="${view/condition_1}"/>
-                    <label for="checkbox1"><span></span>4/10</label> -->
-                    <input type="checkbox" id="checkbox1" name="2018-03-21 10:00" data-checked="${view/condition_1}"/>
-                    <label for="checkbox1"><span></span>3/21</label>
+                    <input type="checkbox" id="checkbox1" name="2018-04-10 09:00" data-checked="${view/condition_1}"/>
+                    <label for="checkbox1"><span></span>4/10</label>
                     <input type="checkbox" id="checkbox2" name="2018-04-19 09:00" data-checked="${view/condition_2}"/>
                     <label for="checkbox2"><span></span>4/19</label>
                   <br>
@@ -228,7 +228,7 @@ input[type="checkbox"]:checked + label span {
                 Do you really need a morning latte to wake yourself up? Try the green latte.<br>
                 Do you love cakes and cookies during an afternoon tea break? Try fruit boxes.<br>
                 <br>
-                Changing your eating habits can make you look fresh and get heathy! </div>
+                Changing your eating habits can make you look fresh and get heatlhy! </div>
             </div>
           </div>
         </div>
@@ -250,7 +250,7 @@ input[type="checkbox"]:checked + label span {
           </div>
           <div class="col-md-3 d-flex align-items-center mt-5 mt-md-0" style="font-family:微軟正黑體">
             <div align="center">
-            <a class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" data-border-c-hover="#e83b23" style="color: rgb(255, 255, 255); background: rgb(0, 179, 136); border-color: rgb(232, 59, 35);">完成送出</a> </div>
+            <a class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" data-border-c-hover="#e83b23" style="color: rgb(255, 255, 255); background: rgb(0, 179, 136); border-color: rgb(232, 59, 35);cursor:pointer">Submit</a> </div>
           </div>
         </div>
         <div class="vc_row-full-width clearfix"></div>
@@ -301,7 +301,8 @@ $jq(document).ready(function(){
     url = location.href.replace('en_eat_blog', 'update_activity')
     data = {
       'select_date': select_date,
-      'event': '食在有道理'
+      'event': '食在有道理',
+      'step': 328
     }
 
     $jq.ajax({
@@ -316,6 +317,10 @@ $jq(document).ready(function(){
 Registration is limited. Please submit your application before the deadline. If the registers are not registered after 30 minutes from the starting time, the remaining amount can be used for on-site registration.
 In order to encourage our staff to work out more, everyone can register for the all 4 sessions of event. And please contact us via email or phone in advance if you will not be able to come, in order to be respectful of other registers.`)
           location.reload() 
+        }
+        else if(response == 'loseData'){
+           alert('Your profile is empty ，Please fill in the complete employee information before registering for the event，Thank you')
+           window.location = '${abs_url}/en_profile'
         }
       }
     });

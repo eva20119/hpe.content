@@ -98,10 +98,11 @@ td>select{
     tal:condition="not: is_anonymous">登出</a>
   <!-- 已登入 -->
 
-  <a class="my_account_icon" href="${abs_url}/reservation" title="預約家庭醫師"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
+  <a class="my_account_icon" href="${abs_url}/reservation" title="邀你醫同來"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
   <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
   <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
   <select name="" id="language">
+    <option>語言Language</option>
     <option value="ch">中文Ch</option>
     <option value="en">英文En</option>
   </select>
@@ -272,7 +273,7 @@ td>select{
                                                     </span>  　
                                                     <span class="actions">
                                                         <span class="product-quantity">
-                                                            <a href="${abs_url}/cancel_activity?activity_date=${python:data['activity_date']}&category=${python:data['category']}" 
+                                                            <a href="${abs_url}/cancel_activity?activity_date=${python:data['activity_date']}&category=${python:data['category']}&lang=Chinese" 
                                                                onclick="return confirm('確定要取消報名?')">取消報名</a>
                                                         </span>
                                                     </span>

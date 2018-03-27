@@ -62,10 +62,12 @@
 <a class="my_account_icon" href="${abs_url}/en_reservation" title="Physician On-site Services"><i class="fa fa-calendar" aria-hidden="true"></i> </a> 
 <a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 
 <a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
-<select name="" id="language">
+  <select name="" id="language">
+    <option>語言Language</option>
     <option value="ch">中文Ch</option>
     <option value="en">英文En</option>
   </select>
+
 </div>
 <span class="shop_cart_full"></span>
 <div class="menu_holder">
@@ -148,19 +150,19 @@
             <div id="serviceSlide" class="owl-carousel" style="font-family:微軟正黑體">
               <div class="item-service main-1-s3" style="background-image:url(++plone++hpe.content/img/04-3.jpg)">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體; font-size: 24px;">April</h2>
-                <div class="item-serv-descr"> <strong><a href="04-3_en.html">Food makes sense</a></strong></div>
+                <div class="item-serv-descr"> <strong><a href="${abs_url}/en_eat_blog">Food makes sense</a></strong></div>
               </div>
               <div class="item-service main-1-s1" style="background-image:url(++plone++hpe.content/img/04-1.jpg)">
                 <h2 class="item-serv-title" style="font-family: 微軟正黑體; font-size: 24px;">The Work Life Compass</h2>
-                <div class="item-serv-descr"> <strong><a href="04-1_en.html">Soul Garden - Work & Life</a></strong></div>
+                <div class="item-serv-descr"> <strong><a href="${abs_url}/en_mind_gas_station">Soul Garden - Work & Life</a></strong></div>
               </div>
               <div class="item-service main-1-s1" style="background-image:url(++plone++hpe.content/img/04-0.jpg)">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體; font-size: 24px;">Invite you to come along</h2>
-                <div class="item-serv-descr"> <strong><a href="reservation_en.html">Physician On-site services</a></strong></div>
+                <div class="item-serv-descr"> <strong><a href="${abs_url}/en_reservation">Physician On-site services</a></strong></div>
               </div>
               <div class="item-service main-1-s2" style="background-image:url(++plone++hpe.content/img/04-00.jpg)">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體; font-size: 24px;">Defatigation Self-Assessmen</h2>
-                <div class="item-serv-descr"> <strong><a href="04-2_en.html">The diagnostic test for fatigue index </a></strong></div>
+                <div class="item-serv-descr"> <strong><a href="${abs_url}/en_publicize_pressure">The diagnostic test for fatigue index </a></strong></div>
               </div>
               <div class="item-service main-1-s4">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體">May</h2>

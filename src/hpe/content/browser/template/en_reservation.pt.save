@@ -1,11 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en-US" class="no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
-    xmlns:tal="http://xml.zope.org/namespaces/tal"
-    xmlns:metal="http://xml.zope.org/namespaces/metal"
-    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-    lang="en"
-    i18n:domain="hpe.billing">
+<html lang="en-US" class="no-js">
 <head>
 <title>2018 HPE Wellness</title>
 <meta charset="UTF-8">
@@ -26,82 +20,41 @@
 <script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
 <script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
 <!--[if lt IE 9]>
-<script type="text/javascript" src="++plone++hpe.content/js/html5min.js"></script>
+<script type="text/javascript" src="framework/js/html5min.js"></script>
 <![endif]-->
 <style type="text/css">
-<!--
+
 .style1 {color: #ED1E79}
 body {
-	background-color: #48C6EF;
-}
-.style22 {color: #FFFFFF}
--->
-</style>
-<style>
-.style1 {color: #ED1E79}
-
-body {
-
 background: -webkit-linear-gradient(#8fd3f4,#84eab8);
-
 background: -o-linear-gradient(#8fd3f4,#84eab8);
-
 background: -moz-linear-gradient(#8fd3f4,#84eab8);
-
 background: linear-gradient(#8fd3f4,#84eab8);
-
 }
-
 .style22 {color: #FFFFFF}
-
-.disabled {
-
-	background-color: #FF8D6D;
-
+.disabled {	background-color: #FF8D6D;
 	color: white;
-
 	text-align: center;
-
 	font-size: 16px;
-
 }
-
-.enable {
-
-	background-color: #00B388;
-
+.enable {	background-color: #00B388;
 	color: white;
-
 	text-align: center;
-
 	font-size: 16px;
-
 }
-
-.not_open {	background-color: grey;
-
+.not_open {background-color: grey;
 	color: grey;
-
 	text-align: center;
-
 }
-
-.table_date {
-
-	background-color: #425563;
-
+.table_date {	background-color: #425563;
 	color: white;
-
 	font-size: 16px;
-
 }
-
-.table_th {	background-color: #614767;
-
+.table_th {background-color: #614767;
 }
-
 
 </style>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
 
 <body class="woo_active standard_page dark_bg half_screen_fi have_featured_image">
@@ -109,12 +62,12 @@ background: linear-gradient(#8fd3f4,#84eab8);
     from plone import api
     abs_url = api.portal.get().absolute_url()
     is_anonymous = api.user.is_anonymous()
-    user_name = api.user.get_current().getProperty('fullname')
+    user_name = api.user.get_current().getProperty('en_name','')
 ?>
 <div class="preload"></div>
 <div class="header">
   <div class="logo_holder">
-  	<a href="${abs_url}/index"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a>
+  	<a href="${abs_url}/en_cover"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a>
   </div>
   <!-- .site-header-social-menu --> 
 </div>
@@ -124,7 +77,7 @@ background: linear-gradient(#8fd3f4,#84eab8);
     <div class="row">
       <div class="col-md-6 offset-md-3 text-center">
         <div class="page_description">
-          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/reservation.png"></h1>
+          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/reservation_en.png"></h1>
         </div>
       </div>
     </div>
@@ -132,57 +85,40 @@ background: linear-gradient(#8fd3f4,#84eab8);
 </div>
 <div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
 <div class="shoping_cart_icon">
-
-  <!-- 未登入 -->
-  <a class="my_shop_icon" href="${abs_url}/user_login" style="margin-right:20px"
-    tal:condition="is_anonymous">會員登入</a>
-  <!-- 未登入 -->
-
-  <!-- 已登入 -->
-  <p style="display:inline" tal:condition="not: is_anonymous">Hi~${user_name}/</p>
-  <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px" 
-    tal:condition="not: is_anonymous">登出</a>
-  <!-- 已登入 -->
-
-  <a class="my_account_icon" href="${abs_url}/reservation" title="邀你醫同來"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
-  <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
-  <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
-  <select name="" id="language">
+Hi~${user_name}  have logged in / <a class="my_shop_icon" href="${abs_url}/logout" title="menbers">Logout</a>　
+<a class="my_account_icon" href="${abs_url}/en_reservation" title="Physician On-site Services"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
+<a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
+<a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
+<select name="" id="language">
     <option>語言Language</option>
     <option value="ch">中文Ch</option>
     <option value="en">英文En</option>
   </select>
-  <span class="shop_cart_full"></span> 
 </div>
 <div class="menu_holder">
   <div class="inner_holder">
     <div class="text-logo">
       <h3 class="logo_name">2018 HPE Wellness</h3>
-      <p class="logo_description">每個角落都是你的運動場，<br>
-        Wellness 在每個改變的起點等你，<br>
-        2018，Fighting</p>
+      <p class="logo_description">Every corner is your sport Field.<br>Wellness is waiting for you at every changing starting point.
+<br>2018，Fighting</p>
     </div>
     <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
       <div class="menu-primary-menu-container">
         <ul class="primary-menu">
-	    <li><a href="${abs_url}"><span style="font-family:微軟正黑體">回首頁</span></a></li>
-            <li><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-            <li class="current-menu-item current_page_item"><a href="${abs_url}/reservation"><span style="font-family:微軟正黑體;color:#00B388">邀你醫同來</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-            <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">該釋壓了嗎</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-            <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
-            <li><a href="singin"><span style="font-family:微軟正黑體">肌力動次動</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
-            <li><a href="singin"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
-            <li><a href="singin"><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
-            <li><a href="singin"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
-            <div class="vc_team_member_image_holder">
-              <div class="oi_team_cont_holder">
-              </div>
-            </div>
+         <li><a href="${abs_url}/en_cover"><span style="font-family:微軟正黑體; font-size: 16px;">Home</span></a></li>
+          <li ><a href="${abs_url}/en_mind_gas_station"><span style="font-family:微軟正黑體; font-size: 16px;">The Work Life Compass</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li class="current-menu-item current_page_item"><a href="${abs_url}/en_reservation"><span style="font-family:微軟正黑體; font-size: 16px;">Physician On-site Services</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/en_publicize_pressure"><span style="font-family:微軟正黑體; font-size: 16px;">Defatigation Self-Assessment</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/en_eat_blog"><span style="font-family:微軟正黑體; font-size: 16px;">Food Makes Sense</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Being Healthier By Do Exercise</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Power of Prevention</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px; font-style: normal;">Pedal to Health on Your Bike</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Flu vaccination Protective Net</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
         </ul>
       </div>
-    </nav>
+    </nav><br>
     <!-- .main-navigation -->
-   <div class="menu_footer" style="color:#777">
+    <div class="menu_footer">
       <nav aria-label="Footer Menu">
         <div class="menu-social-menu-container">
           <ul class="footer-menu">
@@ -196,18 +132,11 @@ background: linear-gradient(#8fd3f4,#84eab8);
           </ul>
         </div>
       </nav>
-      
       <!-- .social-navigation -->
-      <p style="font-family:微軟正黑體;color:#777;font-size:16px">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All rights reserved by HPE Taiwan Wellness.</p>
-    </div>
-  </div>
-<div class="extra_holder">
-    <div class="inner_holder">
-     
+       <p style="font-family: 微軟正黑體; color: #777; font-size: 16px;">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All rights reserved by HPE Taiwan Wellness.</p>
     </div>
   </div>
 </div>
-
 
 <div class="overlay"></div>
 <div id="primary" class="content-area">
@@ -233,9 +162,11 @@ background: linear-gradient(#8fd3f4,#84eab8);
                   <div class="oi_custom_heading_holder">
                     <div class="oi_vc_heading oi_border_position_center">
                     <p align="center" class="mb-30"><img src="++plone++hpe.content/img/m1.png" width="259" height="259"></p>
-                      <h3 align="center" class="oi_icon_titile style1" style="font-family:微軟正黑體">一人 20 分鐘<br>專屬面談諮詢</h3><br><br>
+                      <h3 align="center" class="oi_icon_titile style1" style="font-family:微軟正黑體">Face-to-face<br>individual counseling and 20 minutes<br>
+                      for each person</h3><br><br>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -245,7 +176,7 @@ background: linear-gradient(#8fd3f4,#84eab8);
                   <div class="oi_custom_heading_holder">
                     <div class="oi_vc_heading oi_border_position_center">
                     <p align="center" class="mb-30"><img src="++plone++hpe.content/img/m2.png" width="259" height="259"></p>
-                      <h3 align="center" class="oi_icon_titile style1" style="font-family:微軟正黑體">醫師擅長內科、<br>家庭醫學科、急診醫學、兒科、職業病科</h3>
+                      <h3 align="center" class="oi_icon_titile style1" style="font-family:微軟正黑體">The physician specializes in internal medicine, pediatrics, family medicine, emergency medicine and occupational medicine.</h3>
                     </div>
                   </div>
                 </div>
@@ -257,7 +188,7 @@ background: linear-gradient(#8fd3f4,#84eab8);
                   <div class="oi_custom_heading_holder">
                     <div class="oi_vc_heading oi_border_position_center">
                     <p align="center" class="mb-30"><img src="++plone++hpe.content/img/m3.png" width="259" height="259"></p>
-                      <h3 align="center" class="oi_icon_titile style1" style="font-family:微軟正黑體">健康問題、<br>健康促進諮詢<br>(生理疾病、失眠、戒菸...)</h3>
+                      <h3 align="center" class="oi_icon_titile style1" style="font-family:微軟正黑體">Health problems and health promotion council (physiological diseases, insomnia, smoking cessation, and so on.)</h3>
                     </div>
                   </div>
                 </div>
@@ -273,8 +204,11 @@ background: linear-gradient(#8fd3f4,#84eab8);
                   	<img width="700" height="900" src="++plone++hpe.content/img/m3.jpg" class="attachment-full img-responsive vc_team_member_image size-full img-responsive vc_team_member_image" alt="" />
                   </div>
                   <div class="oi_team_cont_holder">
-                    <h6 style="font-family:微軟正黑體; "><strong>何驊</strong></h6>
-                    <p align="center" style="font-family:微軟正黑體; font-size:15px">中心綜合醫院健康管理中心專任醫師<br>國防醫學院內兒科臨床副教授<br>三軍總醫院內科部主任級醫師<br>中華醫院院長</p>
+                    <h6 style="font-family:微軟正黑體; "><strong>Ho Hwa MD</strong></h6>
+                    <p align="center" style="font-family:微軟正黑體; font-size:15px">Central Clinic & Hospital<br>National Defense Medical Center, Clinical Associate Professor of Pediatrics
+Tri-Service General spital, Chief Physician of Internal Medicine
+Singapore Chung Hwa Medical Institution, Superintendent
+</p>
                   </div>
                 </div>
               </div>
@@ -282,21 +216,19 @@ background: linear-gradient(#8fd3f4,#84eab8);
             <div class="col-md-8">
               <div class="oi_custom_heading_holder mt-5 mt-md-0">
                 <div class="oi_vc_heading oi_border_position_none">
-                  <h3 class="oi_icon_titile" style="font-family:微軟正黑體; ">預約家庭醫師</h3>
+                  <h3 class="oi_icon_titile" style="font-family:微軟正黑體; ">Appointment</h3>
                 </div>
               </div>
-            <div class="text-justify" style="font-family:微軟正黑體; ">
-                <p>希望資源能平均運用，醫師面談諮詢每名同仁限申請一次，
-                  若有複診的需求，請洽詢 HPE 護理師 Sophie 為您協調。
-                  系統預設每次只能預留一個時段的名額，含候補名額，
-                若需重選時段，請先取消原先預留名額。</p>
-                <p>諮詢前若有問題歡迎詢問 HPE 護理師<br>
+              <div class="text-justify" style="font-family:微軟正黑體; ">
+                <blockquote>
+                  <p>To make the best use of resources, everyone is allowed to make an appointment for the physician counseling once only. If you need to make a return visit, please call the nurse line of HPE for help. 
+                    By default, you can book only one appointment at a time, including the wait list.
+                    If you need to reschedule your appointment, please cancel the previous one for available quota.</p>
+                </blockquote>
+                <p>Please feel free to ask HPE nurses if you have any problems before the counseling.<br>
                   Sophie Liu / 02-2652 4003 / <a href="mailto:sophie.liu@hpe.com">sophie.liu@hpe.com</a></p>
-		<span style="background-color: #00B388; color: white; padding: 10px 15px; font-size: 16px;cursor:pointer">空缺</span>
-                <span class="disabled" style="padding:10px 15px;cursor:pointer">額滿</span>
-
-
-                <tal:reservation_success condition="view/already_reservation">
+            <span style="background-color: #00B388; color: white; padding: 10px 15px; font-size: 16px;">Register</span> <span class="disabled" style="padding:10px 15px">Closed</span>
+            <tal:reservation_success condition="view/already_reservation">
                     <?python
                         from plone import api
                         abs_url = api.portal.get().absolute_url()
@@ -304,16 +236,18 @@ background: linear-gradient(#8fd3f4,#84eab8);
                     <h1 style="margin-top:10px">
                         ${view/user_reservation_msg}
                     </h1>
-                    <h3>請您注意以下事項:</h3>
+                    <h3>Please notice the followings :</h3>
                     <ul>
-                        <li>若臨時無法出席，請盡早至系統取消預約，避免資源浪費</li>
-                        <li>事前填妥 <a target="_blank" href="${abs_url}/20180325.docx">諮詢紀錄單</a> 當日提供給醫生，避免影響你的諮詢時間</li>
-                        <li>可視個人意願，攜帶個人健康報告提供給醫生參考</li>
-                        <li>若同仁候補成功，系統會自動發信告知</li>
-                        <li>預約完成請準時出席，避免影響其他同仁的洽談時間</li>
+                        <li>If you cannot attend temporarily，
+                            Please cancel your appointment as early as possible，To avoid waste of resource</li>
+                        <li>Be prepared beforehand Consultation record provide doctors on the day to avoid affecting your consultation time</li>
+                        <li>According to personal wishes, personal health report can be provided to doctors</li>
+                        <li>If the candidate is successful, the system will automatically send a message</li>
+                        <li>Appointment is completed, please attend on time to avoid affecting other colleagues' negotiation time.</li>
                     </ul>
-                    <form action="${abs_url}/cancel_reservation" method="post" onsubmit="return confirm('確定要取消預約嘛?');">
-                      <input type="submit" value="取消預約" class="button" style="width:200px;font-size:20px"/>
+                    <form action="${abs_url}/cancel_reservation" method="post" onsubmit="return confirm('Sure to cancel appointment??');">
+                      <input type="submit" value="Cancel Appointment" class="button" style="width:200px;font-size:20px"/>
+                      <input type="text" name="language" value="english" style="display:none"/>
                     </form>
                 </tal:reservation_success>
 
@@ -331,19 +265,18 @@ background: linear-gradient(#8fd3f4,#84eab8);
                     <tr tal:repeat="item view/reservationList">
                             <td class="table_date">${python:item['startDate']}</td>
                             <tal:repeat repeat="list python:item['timeList']">
-                                <td tal:attributes="class python:list[2]" style="cursor:pointer"
+                                <td tal:attributes="class python:list[2]" 
                                     data-startDate="${python:item['startDate']}">${python:list[0]}~${python:list[1]}</td>
                             </tal:repeat>
-                            <td tal:attributes="class python:item['alternate']" style="cursor:pointer" 
+                            <td tal:attributes="class python:item['alternate']" 
                                 data-startDate="${python:item['startDate']}">${python:item['alternateMsg']}</td>
                     </tr>
                 </table>
-            </div>
-            </div>
+</div>
         </div>
-          
-        </div>
-       <br>
+      </div>
+    </div>
+    <br>
     <br>
   </main>
   <!-- .site-main --> 
@@ -366,7 +299,8 @@ background: linear-gradient(#8fd3f4,#84eab8);
 <script type="text/javascript" src="++plone++hpe.content/js/remodal.min.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script>
-<script type="text/javascript" src="++plone++hpe.content/js/custom_reservation.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/custom_en_reservation.js"></script>
 <script src="++plone++hpe.content/js/change_language.js"></script>
+
 </body>
 </html>

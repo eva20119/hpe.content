@@ -98,12 +98,12 @@ class Create(BrowserView):
                 en_name = data[1].split('\xef\xbc\x88')[0]
                 ch_name = data[1].split('\xef\xbc\x88')[1].split('\xef\xbc\x89')[0]
                 user_id = data[0]
-                email = data[3].strip()
-                if data[4] == 'Taipei':
+                email = data[2].strip()
+                if data[3] == 'Taipei':
                     location = '台北'
-                elif data[4] == 'Taichung':
+                elif data[3] == 'Taichung':
                     location = '台中'
-                elif data[4] == 'Kaohsiung':
+                elif data[3] == 'Kaohsiung':
                     location = '高雄'
 
                 properties = dict(
