@@ -1,9 +1,12 @@
-<b!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US" class="no-js">
 <head>
 <title>2018 HPE Wellness</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-layout.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" >
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce.css" type="text/css" media="all" />
 <link rel="stylesheet" href="++plone++hpe.content/css/bootstrap.min.css" type="text/css" media="all" />
 <link rel="stylesheet" href="++plone++hpe.content/css/style.css" type="text/css" media="all" />
 <link rel="stylesheet" href="++plone++hpe.content/css/contact-form.css" type="text/css" media="all" />
@@ -15,8 +18,7 @@
 <link rel="stylesheet" href="++plone++hpe.content/css/elegant-font/style.css" type="text/css" media="all" />
 <link rel="stylesheet" href="++plone++hpe.content/css/linecons/style.css" type="text/css" media="all" />
 <link rel="stylesheet" href="++plone++hpe.content/lightcase/lightcase.css" type="text/css" media="all" />
-<link rel="stylesheet" href="++plone++hpe.content/css/page/eabout.css" type="text/css" media="all" />
-<link rel="stylesheet" href="++plone++hpe.content/css/page/2shop.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/33shop.css" type="text/css" media="all" />
 <script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
 <script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
 <!--[if lt IE 9]>
@@ -90,9 +92,8 @@ Hi~${user_name}  have logged in / <a class="my_shop_icon" href="${abs_url}/logou
 <a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
 <a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
 <select name="" id="language">
-    <option>語言Language</option>
     <option value="ch">中文Ch</option>
-    <option value="en">英文En</option>
+    <option value="en" selected>英文En</option>
   </select>
 </div>
 <div class="menu_holder">
@@ -246,7 +247,7 @@ Singapore Chung Hwa Medical Institution, Superintendent
                         <li>Appointment is completed, please attend on time to avoid affecting other colleagues' negotiation time.</li>
                     </ul>
                     <form action="${abs_url}/cancel_reservation" method="post" onsubmit="return confirm('Sure to cancel appointment??');">
-                      <input type="submit" value="Cancel Appointment" class="button" style="width:200px;font-size:20px"/>
+                      <input type="submit" value="Cancel Appointment" class="button" style="font-size:20px"/>
                       <input type="text" name="language" value="english" style="display:none"/>
                     </form>
                 </tal:reservation_success>

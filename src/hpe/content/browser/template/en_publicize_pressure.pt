@@ -70,9 +70,8 @@ body {
 <a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 
 <a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
 <select name="" id="language">
-    <option>語言Language</option>
     <option value="ch">中文Ch</option>
-    <option value="en">英文En</option>
+    <option value="en" selected>英文En</option>
   </select>
 </div>
 <div class="menu_holder">

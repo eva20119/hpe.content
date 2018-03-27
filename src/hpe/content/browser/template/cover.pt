@@ -85,23 +85,18 @@
 <div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
 <div class="shoping_cart_icon">
 
-  <!-- 未登入 -->
-  <a class="my_shop_icon" href="${abs_url}/user_login" style="margin-right:20px"
-    tal:condition="is_anonymous">會員登入</a>
-  <!-- 未登入 -->
-
-  <!-- 已登入 -->
   <p style="display:inline" tal:condition="not: is_anonymous">Hi~${user_name}/</p>
-  <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px" 
+  <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px"
     tal:condition="not: is_anonymous">登出</a>
-  <!-- 已登入 -->
 
-  <a class="my_account_icon" href="${abs_url}/reservation" title="邀你醫同來"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
-  <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
-  <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
+  <a class="my_account_icon" href="${abs_url}/reservation" title="邀你醫同來">
+     <i class="fa fa-calendar"  aria-hidden="true"></i> </a>
+  <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"$
+     <span class="logged-in-username"></span></a>　
+  <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果">
+     <i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
   <select name="" id="language">
-    <option>語言Language</option>
-    <option value="ch">中文Ch</option>
+    <option value="ch" selected>中文Ch</option>
     <option value="en">英文En</option>
   </select>
   <span class="shop_cart_full"></span> 

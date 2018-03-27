@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>2018 HPE Wellness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-layout.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" >
+
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/bootstrap.min.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/style.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/contact-form.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/vc.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/ion.rangeSlider.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/ion.rangeSlider.skinNice.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/wocommerce.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal-default-theme.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/elegant-font/style.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/linecons/style.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/lightcase/lightcase.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="++plone++hpe.content/css/page/1shop.css" type="text/css" media="all" />
+
+<script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
+
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="++plone++hpe.content/js/html5min.js"></script>
+<![endif]-->
+</head>
+
+<body class="woocommerce woocommerce-page woo_active standard_page dark_bg half_screen_fi have_featured_image products_per_row_3">
+<?python
+    from plone import api
+    abs_url = api.portal.get().absolute_url()
+    is_anonymous = api.user.is_anonymous()
+    user_name = api.user.get_current().getProperty('fullname')
+?>
+<div class="preload"></div>
+<div class="header">
+  <div class="logo_holder"> 
+  	<a href="${abs_url}/index">
+        <img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" />
+        <img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a>
+  </div>
+  
+  
+  <!-- .site-header-social-menu --> 
+</div>
+<div class="page_featured">
+    <div class="page_description_over"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <div class="page_description">
+                    <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/0411_w.png"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
+<div class="shoping_cart_icon">
+
+  <p style="display:inline" tal:condition="not: is_anonymous">Hi~${user_name}/</p>
+  <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px" 
+    tal:condition="not: is_anonymous">登出</a>
+
+  <a class="my_account_icon" href="${abs_url}/reservation" title="邀你醫同來">
+     <i class="fa fa-calendar"  aria-hidden="true"></i> </a>
+  <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳">
+    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 
+     <span class="logged-in-username"></span></a>　
+  <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果">
+     <i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
+<select name="" id="language">
+    <option>語言Language</option>
+    <option value="ch">中文Ch</option>
+    <option value="en">英文En</option>
+  </select>
+  <span class="shop_cart_full"></span> 
+</div>
+<div class="menu_holder">
+  <div class="inner_holder">
+     <div class="text-logo">
+
+      <h3 class="logo_name">2018 HPE Wellness</h3>
+
+      <p class="logo_description">每個角落都是你的運動場，<br>
+
+        Wellness 在每個改變的起點等你，<br>
+
+        2018，Fighting</p>
+
+    </div>
+    <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
+      <div class="menu-primary-menu-container">
+        <ul class="primary-menu">
+	        <li>
+              <a href="${abs_url}"><span style="font-family:微軟正黑體">回首頁</span></a>
+          </li>
+          <li class="current-menu-item current_page_item">
+              <a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span>
+              <img src="++plone++hpe.content/img/2018.png"/></a>
+          </li>
+          <li>
+              <a href="${abs_url}/reservation"><span style="font-family:微軟正黑體">邀你醫同來</span>
+              <img src="++plone++hpe.content/img/2018.png"/></a>
+          </li>
+          <li>
+              <a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">該釋壓了嗎</span>
+              <img src="++plone++hpe.content/img/2018.png"/></a>
+          </li>
+	  <li>
+              <a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span>
+              <img src="++plone++hpe.content/img/apr.png"/></a>
+          </li>
+          <li>
+              <a href="#"><span style="font-family:微軟正黑體">肌力動次動</span>
+              <img src="++plone++hpe.content/img/may.png"/></a>
+          </li>
+          <li>
+              <a href="#"><span style="font-family:微軟正黑體">防癌你我他</span>
+              <img src="++plone++hpe.content/img/jun.png"/></a>
+          </li>
+          <li>
+              <a href="#"><span style="font-family:微軟正黑體">樂活單車騎</span>
+              <img src="++plone++hpe.content/img/july.png"/></a></li>
+          <li>
+              <a href="#"><span style="font-family:微軟正黑體">流感防護罩</span>
+              <img src="++plone++hpe.content/img/oct.png"/></a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <!-- .main-navigation -->
+    <div class="menu_footer">
+      <nav aria-label="Footer Menu">
+        <div class="menu-social-menu-container">
+          <ul class="footer-menu">
+          <!-- .
+            <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            -->
+          </ul>
+        </div>
+      </nav>
+      <!-- .social-navigation -->
+      <p style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All rights reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+</div>
+<div class="overlay"></div>
+<div id="primary" class="content-area">
+  <main id="main" class="site-main" role="main">
+    <div class="container">
+      <div id="shop_area">
+        <div class="woo_area" style="width:100%">
+          <div class="row">
+            <div class="col-md-12"><div class="page-description">
+              <div class="col-md-12">
+                <div class="page-description">
+                  <p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="oi_custom_heading_holder">
+                        <div class="oi_vc_heading oi_border_position_none">
+                          <h1 class="oi_icon_titile" style="font-family:微軟正黑體">心靈加油站</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p></p>
+                </div>
+                <ul class="products">
+                  <tal:repeat repeat="data view/data" >
+                  <tal:define define="number repeat/data/number">
+                      <li class="product product_cat-glasses use-star-ratings first instock" 
+                          tal:condition="python:number==1"> 
+                        <a href="${python:data['file']}" target="_blank">
+                        <img src="${python:data['img']}" alt="" border="0" class="img-fluid" />
+                        <h2 class="woocommerce-loop-product__title" style="font-family:微軟正黑體"
+                            tal:content="structure python:data['text']">
+                        </h2>
+                      </li>
+                      <li class="product sale"   
+                          tal:condition="python:number>1">
+                        <a href="${python:data['file']}" target="_blank">
+                        <img src="${python:data['img']}" alt="" border="0" class="img-fluid" />
+                        <h2 class="woocommerce-loop-product__title" style="font-family:微軟正黑體"
+                            tal:content="structure python:data['text']">
+                        </h2>
+                      </li>
+                  </tal:define>
+                  </tal:repeat>
+                </ul>
+		<div class="block_1"></div>
+                <div class="hline"></div><br>
+                <p style="font-family:微軟正黑體">現在就跟您的工作生活教練聯絡!<br>
+                    您的個人資料將受嚴謹保密，請撥打台灣免付費熱線電話: 0800 666263 或 Email: <a href="mailto:wlc@tw.humandynamic.com">wlc@tw.humandynamic.com</a><br>
+                </p>
+                <br>
+                <br>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- .site-main --> 
+</div>
+<!-- .content-area -->
+<div class="bottom_line">
+  <div class="row">
+    <div class="col-md-12">
+      <p align="center" style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All rights reserved by HPE Taiwan Wellness.</p>
+    </div>
+   
+  </div>
+</div>
+<script type="text/javascript" src="++plone++hpe.content/js/popper.min.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/contact-form.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/remodal.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/core.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/widget.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/mouse.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/slider.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/ion.rangeSlider.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-ui-touch-punch.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/accounting.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/price-slider.min.js"></script>
+<script src="++plone++hpe.content/js/change_language.js"></script>
+
+</body>
+</html>

@@ -91,9 +91,8 @@ input[type="checkbox"]:checked + label span {
 <a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 
 <a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
 <select name="" id="language">
-    <option>語言Language</option>
     <option value="ch">中文Ch</option>
-    <option value="en">英文En</option>
+    <option value="en" selected>英文En</option>
   </select>
 
 </div>
@@ -228,7 +227,7 @@ input[type="checkbox"]:checked + label span {
                 Do you really need a morning latte to wake yourself up? Try the green latte.<br>
                 Do you love cakes and cookies during an afternoon tea break? Try fruit boxes.<br>
                 <br>
-                Changing your eating habits can make you look fresh and get heatlhy! </div>
+                Changing your eating habits can make you look fresh and get healthy! </div>
             </div>
           </div>
         </div>

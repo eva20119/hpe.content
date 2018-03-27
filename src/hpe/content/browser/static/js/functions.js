@@ -7,6 +7,8 @@ $(document).ready(function(){
 // 主選單，還沒有的連結無效化
     $("ul.primary-menu li a[href='singin']").attr('href', 'javascript:void(0)')
 
+// 中文ch 改為 中文Tw
+    $("option[value='ch']").text('中文Tw')
 
 // 上傳照片，還沒開始，連結無效化及alert
     $(".shoping_cart_icon a.my_shop_icon[href='http://hpe.mingtak.com.tw/upload']").attr('href', 'javascript:void(0)')

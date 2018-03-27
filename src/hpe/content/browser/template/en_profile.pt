@@ -84,9 +84,8 @@ td>select{
 <a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 
 <a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
 <select name="" id="language">
-    <option>語言Language</option>
     <option value="ch">中文Ch</option>
-    <option value="en">英文En</option>
+    <option value="en" selected>英文En</option>
   </select>
 </div>
 <div class="menu_holder">
@@ -171,25 +170,25 @@ td>select{
                                 </thead>
                                 <tbody>
                                     <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體">
-                                        <td class="product-name" data-title="HPE 員工編號">
+                                        <td class="product-name" data-title="HPE EID">
                                             <div align="center">${view/user_id}</div>
                                         </td>
                                         <td class="product-price" data-title="HPE Email">
                                             <div align="center">${view/user_email}</div>
                                         </td>
-                                        <td class="product-quantity" data-title="中文姓名">
+                                        <td class="product-quantity" data-title="Chinese Name">
                                             <input type="text" name="user_ch_name" value="${view/user_ch_name}"/>
                                         </td>
-                                        <td class="product-subtotal" data-title="英文姓名">
+                                        <td class="product-subtotal" data-title="English Name">
                                             <input type="text" name="user_en_name" value="${view/user_en_name}"/>
                                         </td>
-                                        <td class="product-subtotal" data-title="辦公室電話">
+                                        <td class="product-subtotal" data-title="Office phone">
                                             <input type="text" name="user_officephone" value="${view/user_officephone}"/>
                                         </td>
-                                        <td class="product-subtotal" data-title="聯絡手機">
+                                        <td class="product-subtotal" data-title="Mobile phone">
                                             <input type="text" name="user_cellphone" value="${view/user_cellphone}"/>
                                         </td>
-                                        <td class="product-subtotal" data-title="HPE 工作地點">
+                                        <td class="product-subtotal" data-title="HPE work location">
                                             <select name="user_location" id="user_location" 
                                                     data-location="${view/user_location}">
                                                 <option value="台北">Taipei</option>
@@ -239,16 +238,16 @@ td>select{
                                     <tbody>
                                         <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體"
                                             tal:repeat="data view/data">
-                                            <td height="50" valign="top" class="product-name" data-title="活動日期">
+                                            <td height="50" valign="top" class="product-name" data-title="Date">
                                                 <div align="center">${python:data['activity_date']}</div>
                                             </td>
-                                            <td valign="top" class="product-price" data-title="活動名稱">
+                                            <td valign="top" class="product-price" data-title="Event">
                                                 <div align="center">${python:data['category']}</div>
                                             </td>
-                                            <td valign="top" class="product-quantity" data-title="對應步數">
+                                            <td valign="top" class="product-quantity" data-title="Total Steps">
                                                 <div align="center">${python:data['step']}</div>
                                             </td>
-                                            <td valign="top" class="product-subtotal" data-title="狀　　態">
+                                            <td valign="top" class="product-subtotal" data-title="Status">
                                                 <!-- 活動未開始 -->
                                                 <div align="center" tal:condition="python:data['condition_1']">
                                                     <span class="actions">

@@ -60,9 +60,8 @@
 <a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 
 <a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
 <select name="" id="language">
-    <option>語言Language</option>
     <option value="ch">中文Ch</option>
-    <option value="en">英文En</option>
+    <option value="en" selected>英文En</option>
   </select>
 
 </div>
@@ -139,22 +138,22 @@
                                     </thead>
                                     <tbody>
                                         <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體">
-                                          <td height="50" valign="top" class="product-name" data-title="類別 / 指數">Low Load</td>
-                                          <td valign="top" class="product-price" data-title="個人疲勞指數"><50</td>
-                                            <td valign="top" class="product-quantity" data-title="工作疲勞指數"><45</td>
-                                            <td valign="top" class="product-subtotal" data-title="建議方針">Keep the current status</td>
+                                          <td height="50" valign="top" class="product-name" data-title="Category / Index">Low Load</td>
+                                          <td valign="top" class="product-price" data-title="Fatigue Index"><50</td>
+                                            <td valign="top" class="product-quantity" data-title="Occupational Fatigue Index"><45</td>
+                                            <td valign="top" class="product-subtotal" data-title="Advice">Keep the current status</td>
                                       </tr>
                                       <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體">
-                                        <td height="50" valign="top" class="product-name" data-title="類別 / 指數">Medium Load</td>
-                                          <td valign="top" class="product-price" data-title="個人疲勞指數">50-70</td>
-                                            <td valign="top" class="product-quantity" data-title="工作疲勞指數">45-60</td>
-                                            <td valign="top" class="product-subtotal" data-title="建議方針">Adjust your working hours advisedly and get a trace examination once a year</td>
+                                        <td height="50" valign="top" class="product-name" data-title="Category / Index	">Medium Load</td>
+                                          <td valign="top" class="product-price" data-title="Fatigue Index">50-70</td>
+                                            <td valign="top" class="product-quantity" data-title="Occupational Fatigue Index">45-60</td>
+                                            <td valign="top" class="product-subtotal" data-title="Advice">Adjust your working hours advisedly and get a trace examination once a year</td>
                                       </tr>
                                       <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體">
-                                          <td height="50" valign="top" class="product-name" data-title="類別 / 指數">High Load</td>
-                                          <td valign="top" class="product-price" data-title="個人疲勞指數">>70</td>
-                                            <td valign="top" class="product-quantity" data-title="工作疲勞指數">>60</td>
-                                            <td valign="top" class="product-subtotal" data-title="建議方針">Adjust your working hours and working styles advisedly, seek medical counseling and get a trace examination once half a year.</td>
+                                          <td height="50" valign="top" class="product-name" data-title="Category / Index">High Load</td>
+                                          <td valign="top" class="product-price" data-title="Fatigue Index">>70</td>
+                                            <td valign="top" class="product-quantity" data-title="Occupational Fatigue Index">>60</td>
+                                            <td valign="top" class="product-subtotal" data-title="Advice">Adjust your working hours and working styles advisedly, seek medical counseling and get a trace examination once half a year.</td>
                                       </tr>
                                     </tbody>
                                 </table>
