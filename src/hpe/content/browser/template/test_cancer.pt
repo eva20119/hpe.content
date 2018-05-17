@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>2018 HPE Wellness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-layout.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" >
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/contact-form.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/vc.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/wocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal-default-theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/elegant-font/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/linecons/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/lightcase/lightcase.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/shop_042.css" type="text/css" media="all" />
+<script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="++plone++hpe.content/js/html5min.js"></script>
+<![endif]-->
+<style>
+td{
+    border-right: 0;
+}
+</style>
+
+</head>
+
+<body class="woocommerce-cart woocommerce-page woo_active standard_page dark_bg half_screen_fi have_featured_image products_per_row_3">
+<?python
+    from plone import api
+    abs_url = api.portal.get().absolute_url()
+    is_anonymous = api.user.is_anonymous()
+    user_name = api.user.get_current().getProperty('fullname')
+?>
+
+<div class="preload"></div>
+<div class="header">
+  <div class="logo_holder"> <a href="${abs_url}"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /> </a> </div>
+  
+  <!-- .site-header-social-menu --> 
+</div>
+<div class="page_featured">
+  <div class="page_description_over"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center">
+        <div class="page_description">
+          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/063_w.png"></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
+<div class="shoping_cart_icon"> Hi~您已登入 / <a class="my_shop_icon" href="#" title="menbers">登出</a>　 <a class="my_account_icon" href="reservation.html" title="預約家庭醫師"><i class="fa fa-calendar" aria-hidden="true"></i> </a> <a class="my_shop_icon" href="upload.html" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 <a class="my_shop_icon" href="profile.html" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
+  <select name="" id="language">
+    <option value="ch" selected>中文Ch</option>
+    <option value="en">英文En</option>
+  </select>
+</div>
+<div class="menu_holder">
+  <div class="inner_holder">
+    <div class="text-logo">
+      <h3 class="logo_name">2018 HPE Wellness</h3>
+      <p class="logo_description">每個角落都是你的運動場，<br>
+        Wellness 在每個改變的起點等你，<br>
+        2018，Fighting</p>
+    </div>
+    <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
+      <div class="menu-primary-menu-container">
+        <ul class="primary-menu">
+ 	        <li ><a href="${abs_url}/index"><span style="font-family:微軟正黑體">回首頁</span></a></li>
+	        <li><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+            <li><a href="${abs_url}/reservation"><span style="font-family:微軟正黑體">邀你醫同來</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+            <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">該釋壓了嗎</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+            <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
+            <li><a href="${abs_url}/muscle_activity"><span style="font-family:微軟正黑體">肌力動次動</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
+            <li class="current-menu-item current_page_item"><a href="${abs_url}/anti_cancer_view"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
+            <li><a href="singin"><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
+            <li><a href="singin"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
+            <div class="vc_team_member_image_holder">
+              <div class="oi_team_cont_holder">
+              </div>
+            </div>
+        </ul>
+      </div>
+    </nav>
+    <!-- .main-navigation -->
+    <div class="menu_footer">
+      <nav aria-label="Footer Menu">
+        <div class="menu-social-menu-container">
+          <ul class="footer-menu">
+            <!-- .
+            <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            -->
+          </ul>
+        </div>
+      </nav>
+      <!-- .social-navigation -->
+      <p style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>
+        This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+</div>
+<div class="overlay"></div>
+<div id="primary" class="content-area">
+  <main id="main" class="site-main">
+    <div class="container">
+      <div class="entry-content" >
+        <div class="row">
+          <div class="col-md-6">
+            <br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="woocommerce">
+              <form action="analysis_cancer" method="post">
+                <table width="100%" border="0" cellspacing="2" cellpadding="0">
+                  <tr>
+                    <td height="30" align="center" bgcolor="#00B388" class="p1"><h3 style="font-family: 微軟正黑體; color: #FFFFFF; text-align: center;">自我檢測</h3></td>
+                  </tr>
+                  <tr>
+                    <td height="14" align="center" class="p1">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="p2" style="color: #00B388; font-family: '微軟正黑體';">1. 營養要均衡，您每日攝取多少份蔬菜水果? (蔬菜一份：為煮熟後相當於直徑 15 公分盤；
+                      水果一份約為一個拳頭大小) 總共幾份？<br><br>
+                        <input type="radio" name="q1" value="0" required /><span style="color:#666">0</span> <br/>
+                        <input type="radio" name="q1" value="1" required /><span style="color:#666">1</span><br/>
+                        <input type="radio" name="q1" value="2" required /><span style="color:#666">2</span><br/>
+                        <input type="radio" name="q1" value="3" required /><span style="color:#666">3</span><br/>
+                        <input type="radio" name="q1" value="4" required /><span style="color:#666">4</span><br/>
+                        <input type="radio" name="q1" value="5份以上" required /><span style="color:#666">5份以上</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="14" align="center" class="p1">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="p2" style="color: #00B388">2. 您是否有吸菸的習慣或是長期暴露於二手菸、油煙環境(Eg.廚房)？<br><br>
+                        <input type="radio" name="q2" required  value="不抽菸，也能避免二手菸+油煙環境"/><span style="color:#666">不抽菸，也能避免二手菸+油煙環境</span> <br/>
+                        <input type="radio" name="q2" required  value="不抽菸，不可避免二手菸+油煙環境"/><span style="color:#666">不抽菸，不可避免二手菸+油煙環境</span><br/>
+                        <input type="radio" name="q2" required  value="有抽菸習慣，可避免油煙環境"/><span style="color:#666">有抽菸習慣，可避免油煙環境</span><br/>
+                        <input type="radio" name="q2" required  value="有抽菸習慣，不可避免油煙環境"/><span style="color:#666">有抽菸習慣，不可避免油煙環境</span><br/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="14" align="center" class="p1">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="p2" style="color: #00B388">3. 您的身體質量指數 BMI 介於哪個範圍內？〈BMI計算法：身高(公尺)×身高(公尺)×22〉<br><br>
+                        <input type="radio" name="q3" required  value="體重過輕，BMI ＜18.5"/><span style="color:#666">體重過輕，BMI ＜18.5</span> <br/>
+                        <input type="radio" name="q3" required  value="正常範圍，18.5≦BMI＜24"/><span style="color:#666">正常範圍，18.5≦BMI＜24</span><br/>
+                        <input type="radio" name="q3" required  value="過重，24≦BMI＜27 "/><span style="color:#666">過重，24≦BMI＜27 </span><br/>
+                        <input type="radio" name="q3" required  value="輕度肥胖，27≦BMI＜30"/><span style="color:#666">輕度肥胖，27≦BMI＜30</span><br/>
+                        <input type="radio" name="q3" required  value="中度肥胖，30≦BMI＜35"/><span style="color:#666">中度肥胖，30≦BMI＜35</span><br/>
+                        <input type="radio" name="q3" required  value="重度肥胖，BMI≧35"/><span style="color:#666">重度肥胖，BMI≧35</span>
+                  </tr>
+                  <tr>
+                    <td height="14" align="center" class="p1">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="p2" style="color: #00B388">4. 您每個禮拜運動的次數為何？ (以每次運動30分鐘為一次)<br><br>
+                        <input type="radio" name="q4" required  value="從不"/><span style="color:#666">從不</span> <br/>
+                        <input type="radio" name="q4" required  value="2次以下"/><span style="color:#666">2次以下</span><br/>
+                        <input type="radio" name="q4" required  value="2次-4次"/><span style="color:#666">2次-4次</span><br/>
+                        <input type="radio" name="q4" required  value="4次以上"/><span style="color:#666">4次以上</span><br/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="14" align="center" class="p1">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="p2"><p style="color: #00B388">5. 以下關於工作或生活上的敘述, 有幾項讓您認同？</p>
+                      <p><span style="color: #666">1. 覺得體力透支 <br />
+                        2. 心力交瘁 <br />
+                        3. 覺得近乎崩潰 <br />
+                        4. 感覺快要生病 <br />
+                        5. 無足夠時間陪伴家人 <br />
+                        6. 工作會讓你覺得挫折 <br />
+                        7. 想到又要工作一整天，就覺得無力 <br />
+                        8. 每一刻都很難熬</span><br />
+                      </p></td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="radio" name="q5" required  value="0項"/><span style="color:#666">0項</span>  
+                        <input type="radio" name="q5" required  value="1-2項"/><span style="color:#666">1-2項</span> 
+                        <input type="radio" name="q5" required  value="3-4項"/><span style="color:#666">3-4項</span> 
+                        <input type="radio" name="q5" required  value="5項以上"/><span style="color:#666">5項以上</span> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="14">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><p class="p2" style="color: #00B388">6. 關於政府所推動的四癌篩檢, 您知道幾項？</p>
+                      <p class="p2" style="color: #666">1. 大腸癌：糞便潛血檢查：50 至未滿 75 歲民眾，每 2 年 1 次。 <br />
+                        2. 口腔癌：30 歲以上有嚼檳榔（含已戒檳榔）或吸菸者、18 歲以上有嚼檳榔（含已戒檳榔）原住民，每 2 年 1 次。 <br />
+                        3. 乳房癌： 45-69 歲婦女、40-44 歲二等血親內曾罹患乳癌之婦女，每 2 年 1 次。 <br />
+                        4. 子宮頸癌：30 歲以上婦女，建議每 3 年接受 1 次。 </p></td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="radio" name="q6" required  value="0項"/><span style="color:#666">0項</span>  
+                        <input type="radio" name="q6" required  value="1項"/><span style="color:#666">1項</span> 
+                        <input type="radio" name="q6" required  value="2項"/><span style="color:#666">2項</span> 
+                        <input type="radio" name="q6" required  value="3項"/><span style="color:#666">3項</span> 
+                        <input type="radio" name="q6" required  value="４項"/><span style="color:#666">４項</span> 
+                    </td>
+                  </tr>
+                </table>
+                <div style="text-align:center;margin-bottom:20px">
+                    <input type="submit" class="button" name="update_cart3" value="解析" />
+                </div>               
+              </form>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+  <!-- .site-main --> 
+  
+</div>
+<!-- .content-area -->
+
+<div class="bottom_line">
+  <div class="row">
+    <div class="col-md-12">
+      <p align="center" style="font-family: 微軟正黑體; color: hsla(0,0%,100%,1);">此活動僅限 HPE 台灣員工，請勿任意轉載<br>
+        This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="++plone++hpe.content/js/popper.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/contact-form.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/remodal.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/core.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/widget.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/mouse.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/slider.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-ui-touch-punch.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/accounting.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/price-slider.min.js"></script>
+<script src="++plone++hpe.content/js/change_language.js"></script>
+</body>
+</html>

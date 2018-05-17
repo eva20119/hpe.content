@@ -74,16 +74,31 @@ class TotalPressureResult(BrowserView):
             execStr = """SELECT * FROM `pressure` ORDER BY time"""
             result = execSql.execSql(execStr)
             data = []
+            users = api.user.get_users()
+            all_user = {}
+            for user in users:
+                email = user.getProperty('email')
+                fullname = user.getProperty('fullname')
+                en_name = user.getProperty('en_name')
+                user_id = user.getProperty('user_id')
+                all_user[email] = {
+                    'fullname': fullname,
+                    'en_name': en_name,
+                    'user_id': user_id
+                }
             for item in result:
                 tmp = dict(item)
                 user = tmp['user']
-                personal_pressure = tmp['personal_pressure']
-                work_pressure = tmp['work_pressure']
-                time = tmp['time'].strftime('%Y/%m/%d  %H:%M')
-                data.append([user, personal_pressure, work_pressure, time])
+                if all_user.has_key(user):
+                    fullname = all_user[user]['fullname']
+                    en_name = all_user[user]['en_name']
+                    user_id = all_user[user]['user_id']
+                    personal_pressure = tmp['personal_pressure']
+                    work_pressure = tmp['work_pressure']
+                    time = tmp['time'].strftime('%Y/%m/%d  %H:%M')
+                    data.append([user, personal_pressure, work_pressure, time, fullname, en_name, user_id])
             self.data = data
         return self.template()
-
 
 class Create(BrowserView):
     def __call__(self):
@@ -138,3 +153,29 @@ class DeleteUser(BrowserView):
                 api.user.delete(username=data[3])
             except:
                 pass
+
+
+
+class CheckUsers(BrowserView):
+    def __call__(self):
+        users = api.user.get_users()
+        file = open('/home/henryc/ccc.csv', 'r')
+        user_list = []
+        count = 0
+        for user in users:
+            email = user.getProperty('email')
+            user_list.append(email)
+        for item in csv.reader(file):
+            if item[6] not in user_list:
+                count += 1
+                print item[6]
+                import pdb;pdb.set_trace()
+        if count == 0:
+            print 'all pass~~~~~~~~~~~~'
+
+
+
+class AntiCancerView(BrowserView):
+    template = ViewPageTemplateFile('template/anti_cancer_view.pt')
+    def __call__(self):
+        return self.template()

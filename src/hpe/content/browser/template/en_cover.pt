@@ -85,7 +85,7 @@
           <li><a href="${abs_url}/en_reservation"><span style="font-family:微軟正黑體; font-size: 16px;">Physician On-site Services</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
           <li><a href="${abs_url}/en_publicize_pressure"><span style="font-family:微軟正黑體; font-size: 16px;">Defatigation Self-Assessment</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
           <li><a href="${abs_url}/en_eat_blog"><span style="font-family:微軟正黑體; font-size: 16px;">Food Makes Sense</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Being Healthier By Do Exercise</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/en_muscle_activity"><span style="font-family: 微軟正黑體; font-size: 16px;">Being Healthier By Do Exercise</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
           <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Power of Prevention</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
           <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Pedal to Health on Your Bike</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
           <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Flu vaccination Protective Net</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
@@ -151,6 +151,16 @@
                 <h2 class="item-serv-title" style="font-family:微軟正黑體; font-size: 24px;">April</h2>
                 <div class="item-serv-descr"> <strong><a href="${abs_url}/en_eat_blog">Food makes sense</a></strong></div>
               </div>
+              <div class="item-service main-1-s4" style="background-image:url(++plone++hpe.content/img/movement.jpg);
+                           background-size:cover">
+                <h2 class="item-serv-title" style="font-family:微軟正黑體">May</h2>
+                <div class="item-serv-descr"> <strong><a href="${abs_url}/en_muscle_activity">Being Healthier By Do Exercise</a></strong></div>
+              </div>
+              <div class="item-service main-1-s4" style="background-image:url(++plone++hpe.content/img/06_header.jpg)">
+                <h2 class="item-serv-title" style="font-family:微軟正黑體">June</h2>
+                <div class="item-serv-descr"> <strong><a href="${abs_url}/en_anti_cancer_view">Power of Prevention</a></strong></div>
+              </div>
+
               <div class="item-service main-1-s1" style="background-image:url(++plone++hpe.content/img/04-1.jpg)">
                 <h2 class="item-serv-title" style="font-family: 微軟正黑體; font-size: 24px;">The Work Life Compass</h2>
                 <div class="item-serv-descr"> <strong><a href="${abs_url}/en_mind_gas_station">Soul Garden - Work & Life</a></strong></div>
@@ -162,14 +172,6 @@
               <div class="item-service main-1-s2" style="background-image:url(++plone++hpe.content/img/04-00.jpg)">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體; font-size: 24px;">Defatigation Self-Assessmen</h2>
                 <div class="item-serv-descr"> <strong><a href="${abs_url}/en_publicize_pressure">The diagnostic test for fatigue index </a></strong></div>
-              </div>
-              <div class="item-service main-1-s4">
-                <h2 class="item-serv-title" style="font-family:微軟正黑體">May</h2>
-                <div class="item-serv-descr"> <strong><a href="#">Being Healthier By Do Exercise</a></strong></div>
-              </div>
-              <div class="item-service main-1-s4">
-                <h2 class="item-serv-title" style="font-family:微軟正黑體">June</h2>
-                <div class="item-serv-descr"> <strong><a href="#">Power of Prevention</a></strong></div>
               </div>
               <div class="item-service main-1-s5">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體">July & August</h2>

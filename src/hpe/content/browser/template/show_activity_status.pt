@@ -1,0 +1,85 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="hpe.content">
+<body>
+
+
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core"
+                    tal:define="toc context/table_of_contents|nothing;">
+<style>
+.response_data{
+    margin-top:15px;
+}
+th{
+    text-align: center;
+}
+th,td{
+    padding: 5px 10px;
+}
+</style>
+
+<select name="selected_event" id="selected_event">
+    <option value="食在有道理">食在有道理</option>
+    <option value="肌力動次動">肌力動次動</option>
+</select>
+<select name="selected_date" id="selected_date">
+    <option value="2018-04-19 12:00">2018-04-19 12:00</option>
+    <option value="2018-04-10 09:00">2018-04-10 09:00</option>
+    <option value="2018-04-26 12:00">2018-04-26 12:00</option>
+    <option value="2018-04-12 12:00">2018-04-12 12:00</option>
+</select>
+<button class="btn">查詢</button>
+
+<div class="response_data"></div>
+
+<script>
+$(document).ready(function () {
+    $('#selected_event').change(function(){
+
+        if(this.value == '肌力動次動'){
+            $('#selected_date').html('')
+            $('#selected_date').append("<option value='2018-05-03 10:30'>2018-05-03 10:30</option>")
+            $('#selected_date').append("<option value='2018-05-08 10:30'>2018-05-08 10:30</option>")
+            $('#selected_date').append("<option value='2018-05-10 10:30'>2018-05-10 10:30</option>")
+        }else if(this.value == '食在有道理'){
+            $('#selected_date').html('')
+            $('#selected_date').append("<option value='2018-04-19 12:00'>2018-04-19 12:00</option>")
+            $('#selected_date').append("<option value='2018-04-10 09:00'>2018-04-10 09:00</option>")
+            $('#selected_date').append("<option value='2018-04-26 12:00'>2018-04-26 12:00</option>")
+            $('#selected_date').append("<option value='2018-04-12 12:00'>2018-04-12 12:00</option>")
+        }
+
+        
+    })
+    $('.btn').click(function(){
+        event = $('#selected_event').val()
+        date = $('#selected_date').val()
+        url = location.href.replace('show_activity_status', 'get_event_data')
+        data = {
+            'event': event,
+            'date': date
+        }
+        $.ajax({
+            type: "post",
+            url: url,
+            data: data,
+            success: function (response) {
+                $('.response_data').html(response)
+            }
+        });
+    })
+});
+</script>
+
+</metal:content-core>
+</metal:content-core>
+
+
+</body>
+</html>
+

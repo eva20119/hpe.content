@@ -80,6 +80,7 @@ $(document).ready(function () {
             'start_date': start_date,
             'time': time
         }
+
         url = location.href.replace('reservation_status', 'update_alternate')
         $.ajax({
             type: "post",

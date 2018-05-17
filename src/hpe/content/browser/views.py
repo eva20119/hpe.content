@@ -24,6 +24,7 @@ class Cover(BrowserView):
 class Login(BrowserView):
     template = ViewPageTemplateFile('template/login.pt')
     def __call__(self):
+
         return self.template()
 
 
@@ -104,8 +105,8 @@ class EatBlog(BrowserView):
         self.condition_4 = False
         for item in result:
             tmp = dict(item)
-            #if tmp['activity_date'] == '2018-04-10 09:00':
-            if tmp['activity_date'] == '2018-03-26 10:00':
+            if tmp['activity_date'] == '2018-04-10 09:00':
+            #if tmp['activity_date'] == '2018-03-26 10:00':
                 self.condition_1 = True
             elif tmp['activity_date'] == '2018-04-19 09:00':
                 self.condition_2 = True
@@ -256,7 +257,7 @@ class Reservation(BrowserView):
 
                 for k,v in tmp_peroid.items():
                     index = int(k.split('peroid')[1])
-                    peroid = 'peroid%s' %index
+                    peroid = 'period%s' %index
                     index = index - 1
                     if not v:
                         timeList[index].append('enable %s' %peroid)
@@ -281,13 +282,14 @@ class Reservation(BrowserView):
             self.user_reservation_msg = '您已預約%s' %user_reservation_date
             self.already_reservation = True
 
-        self.reservationList = reservationList
+        self.reservationList = sorted(reservationList, key= lambda x:x['startDate'])
 
         return self.template()
 
 
 class UpdateReservation(BrowserView):
     def __call__(self):
+        # peroid 和period拼錯 
         request = self.request
         peroid = request.get('peroid')
         start_date = request.get('start_date')
@@ -300,30 +302,30 @@ class UpdateReservation(BrowserView):
             obj = item.getObject()
             date = obj.date.strftime('%Y/%m/%d')
             if start_date == date:
-                if peroid == 'peroid1' and not obj.peroid1:
+                if peroid == 'period1' and not obj.peroid1:
                     obj.peroid1 = user
                     flag = True
-                    peroid_flag = 'peroid1'
-                elif peroid == 'peroid2' and not obj.peroid2:
+                    peroid_flag = 'period1'
+                elif peroid == 'period2' and not obj.peroid2:
                     obj.peroid2 = user
                     flag = True
-                    peroid_flag = 'peroid2'
-                elif peroid == 'peroid3' and not obj.peroid3:
+                    peroid_flag = 'period2'
+                elif peroid == 'period3' and not obj.peroid3:
                     obj.peroid3 = user
                     flag = True
-                    peroid_flag = 'peroid3'
-                elif peroid == 'peroid4' and not obj.peroid4:
+                    peroid_flag = 'period3'
+                elif peroid == 'period4' and not obj.peroid4:
                     obj.peroid4 = user
                     flag = True
-                    peroid_flag = 'peroid4'
-                elif peroid == 'peroid5' and not obj.peroid5:
+                    peroid_flag = 'period4'
+                elif peroid == 'period5' and not obj.peroid5:
                     obj.peroid5 = user
                     flag = True
-                    peroid_flag = 'peroid5'
-                elif peroid == 'peroid6' and not obj.peroid6:
+                    peroid_flag = 'period5'
+                elif peroid == 'period6' and not obj.peroid6:
                     obj.peroid6 = user
                     flag = True
-                    peroid_flag = 'peroid6'
+                    peroid_flag = 'period6'
                 elif peroid == 'alternate':
                     if obj.alternate:
                         obj.alternate +=',%s' %user
@@ -331,6 +333,7 @@ class UpdateReservation(BrowserView):
                         obj.alternate = user
                     flag = True
                     peroid_flag = 'alternate'
+    
         ####防止同時預約，導致前者被覆蓋####
         if flag == True:
             execSql =SqlObj()
@@ -518,30 +521,30 @@ class CancelReservation(BrowserView):
             date = obj.date.strftime('%Y/%m/%d')
             
             if date == reservation_date:
-                if peroid == 'peroid1':
+                if peroid == 'period1':
                     date = obj.date
-                    peroid_flag = 'peroid1'
+                    peroid_flag = 'period1'
                     obj.peroid1 = ''
-                elif peroid == 'peroid2':
+                elif peroid == 'period2':
                     date = obj.date + datetime.timedelta(minutes = 20)
-                    peroid_flag = 'peroid2'
+                    peroid_flag = 'period2'
                     obj.peroid2 = ''
-                elif peroid == 'peroid3':
+                elif peroid == 'period3':
                     date = obj.date + datetime.timedelta(minutes = 40)
-                    peroid_flag = 'peroid3'
+                    peroid_flag = 'period3'
                     obj.peroid3 = ''
-                elif peroid == 'peroid4':
+                elif peroid == 'period4':
                     date = obj.date + datetime.timedelta(minutes = 60)
-                    peroid_flag = 'peroid4'
+                    peroid_flag = 'period4'
                     obj.peroid4 = ''                        
-                elif peroid == 'peroid5':
+                elif peroid == 'period5':
                     date = obj.date + datetime.timedelta(minutes = 80)
-                    peroid_flag = 'peroid5'
+                    peroid_flag = 'period5'
                     obj.peroid5 = ''
-                elif peroid == 'peroid6':
+                elif peroid == 'period6':
                     obj.peroid6 = ''
                     date = obj.date + datetime.timedelta(minutes = 100)
-                    peroid_flag = 'peroid6'
+                    peroid_flag = 'period6'
                 elif peroid == 'alternate':
                     alternate_list = obj.alternate.split(',')
                     alternate_list.remove(user_name)
@@ -574,23 +577,30 @@ class UpdateAlternate(BrowserView):
         time = request.get('time')
         user = api.user.get(username=name)
 
-        brain = api.content.find(conext=api.portal.get(), Type="Reservation")
+        brain = api.content.find(conext=api.portal.get(), portal_type="Reservation")
         for item in brain:
             obj = item.getObject()
             date = obj.date.strftime('%Y/%m/%d')
+	    # 拼錯字在這邊更改 peroid -> period
             if date == start_date[:10]:
                 if peroid == 'peroid1':
                     obj.peroid1 = name
+	            change_word = 'period1'
                 elif peroid == 'peroid2':
                     obj.peroid2 = name
+		    change_word = 'period2'
                 elif peroid == 'peroid3':
                     obj.peroid3 = name
+                    change_word = 'period3'
                 elif peroid == 'peroid4':
                     obj.peroid4 = name
+                    change_word = 'period4'
                 elif peroid == 'peroid5':
                     obj.peroid5 = name
+                    change_word = 'period5'
                 elif peroid == 'peroid6':
                     obj.peroid6 = name
+                    change_word = 'period6'
                 alternate_list = obj.alternate.split(',')
                 alternate_list.remove(name)
                 obj.alternate = ''
@@ -599,9 +609,12 @@ class UpdateAlternate(BrowserView):
                         obj.alternate +=',%s' %item
                     else:
                         obj.alternate = item
+	        # formate time  ex:12:00~12:20
+                sec_time = datetime.datetime.strptime(time, '%H:%M') + datetime.timedelta(minutes=20)
+                new_time = '%s~%s' %(time, sec_time.strftime('%H:%M'))
                 user.setMemberProperties(mapping={
-                    'reservation_date': '%s %s' %(start_date[:10], time),
-                    'peroid': peroid
+                    'reservation_date': '%s  %s' %(start_date[:10], new_time),
+                    'peroid': change_word
                 })
         return 'success'
 
@@ -612,7 +625,7 @@ class ManagerCancelReservation(BrowserView):
         peroidList = request.get('peroidList[]', '')
         alternateList = request.get('alternateList[]', '')
         action = request.get('action')
-        brain = api.content.find(conext=api.portal.get(), Type="Reservation")
+        brain = api.content.find(conext=api.portal.get(), portal_type="Reservation")
         if type(peroidList) == str:
             peroidList = [peroidList, 'z,z']
         if type(alternateList) == str:
@@ -679,8 +692,97 @@ class SendMail():
 class Log(BrowserView):
     template = ViewPageTemplateFile('template/log.pt')
     def __call__(self):
+	request = self.request
+        abs_url = api.portal.get().absolute_url()
+        if api.user.is_anonymous():
+            request.response.redirect('%s/user_login' %abs_url)
+            return
+        roles = api.user.get_current().getRoles()
+        if 'Manager' not in roles:
+            request.response.redirect('%s/user_login' %abs_url)
+
         execSql = SqlObj()        
         execStr = """SELECT * FROM log ORDER BY time DESC"""
         self.result = execSql.execSql(execStr)
         
         return self.template()
+
+class MuscleActivity(BrowserView):
+    template = ViewPageTemplateFile('template/muscle_activity.pt')
+    def __call__(self):
+        if api.user.is_anonymous():
+            self.request.response.redirect('%s/user_login'%api.portal.get().absolute_url())
+            return        
+        user = api.user.get_current().getProperty('email')
+        execSql = SqlObj()
+        execStr = 'SELECT * from activity where category="%s" and user="%s"' %('肌力動次動',user)
+        result = execSql.execSql(execStr)
+        self.condition_1 = False
+        self.condition_2 = False
+        self.condition_3 = False
+        self.condition_4 = False
+        for item in result:
+            tmp = dict(item)
+            if tmp['activity_date'] == '2018-05-03 10:30':
+                self.condition_1 = True
+            elif tmp['activity_date'] == '2018-05-10 10:30':
+                self.condition_2 = True
+            elif tmp['activity_date'] == '2018-05-08 10:30':
+                self.condition_3 = True
+        return self.template()
+
+
+class AntiCancerView(BrowserView):
+    template = ViewPageTemplateFile('template/anti_cancer_view.pt')
+    def __call__(self):
+        return self.template()
+
+
+class TestCancer(BrowserView):
+    template = ViewPageTemplateFile('template/test_cancer.pt')
+    def __call__(self):
+        return self.template()
+
+
+class AnalysisCancer(BrowserView):
+    template = ViewPageTemplateFile('template/analysis_cancer.pt')
+    def __call__(self):
+        request = self.request
+        if api.user.is_anonymous():
+            request.response.redirect('%s/user_login'%api.portal.get().absolute_url())
+            return   
+        q1 = request.get('q1')
+        q2 = request.get('q2').replace('\xef\xbc\x8c', ',')
+        q3 = request.get('q3').replace('\xef\xbc\x8c', ',').replace('\xe2\x89\xa6', '<=').replace('\xe2\x89\xa7', '>=').replace('\xef\xbc\x9c', '<')
+        q4 = request.get('q4')
+        q5 = request.get('q5')
+        q6 = request.get('q6')
+        execSql = SqlObj()
+        user = api.user.get_current().getProperty('email')
+        execStr = """INSERT INTO anti_cancer(`user`, `q1`, `q2`, `q3`, `q4`, `q5`, `q6`)
+             VALUES('{}','{}','{}','{}','{}','{}','{}')""".format(user, safe_unicode(q1), safe_unicode(q2), 
+               safe_unicode(q3), safe_unicode(q4), safe_unicode(q5), safe_unicode(q6) )
+        try:
+            execSql.execSql(execStr)
+        except Exception as e:
+            print e
+        self.q1 = q1
+        self.q2 = q2
+        self.q3 = q3
+        self.q4 = q4
+        self.q5 = q5
+        self.q6 = q6
+        return self.template()
+
+
+class ResultAntiCancer(BrowserView):
+    template = ViewPageTemplateFile('template/result_anti_cancer.pt')
+    def __call__(self):
+        roles = api.user.get_current().getRoles()
+        if 'Manager' not in roles:
+            return '您無權限'
+        execSql = SqlObj()
+        execStr = """SELECT * FROM `anti_cancer`"""
+        self.result = execSql.execSql(execStr)
+        return self.template()
+

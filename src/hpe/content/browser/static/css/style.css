@@ -1,16 +1,3 @@
-/*
-Theme Name: Gravity
-Theme URI: https://themeforest.net/user/orangeidea/portfolio?ref=OrangeIdea
-Description: Creative WordPress Portfolio Theme
-Author: OrangeIdea
-Author URI: http://themeforest.net/user/OrangeIdea?ref=OrangeIdea
-Text Domain: gravity
-Version: 1.0.1
-Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-menu, full-width-template, rtl-language-support, sticky-post, theme-options, translation-ready
-License: 
-License URI:
-*/
-
 /**
 * Table of Contents
 *
@@ -98,7 +85,12 @@ del {
 	opacity: 0.8;
 }
 table, th, td {
-	border: 1px solid #d1d1d1;
+	border-bottom-color: #d1d1d1;
+	border-top-color: #d1d1d1;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	border-bottom-width: 1px;
+	border-top-width: 1px;
 }
 table {
 	border-collapse: separate;
@@ -118,10 +110,15 @@ th {
 	font-weight: 700;
 }
 td {
-	border-width: 0 1px 1px 0;
+	border-bottom-width: 1px;
+	border-top-width: 0;
 }
 th, td {
-	padding: 0.4375em;
+	padding-top: 0.4375em;
+	padding-right: 0.4375em;
+	padding-left: 0.4375em;
+	padding-bottom: 0em;
+	font-family: "微軟正黑體";
 }
 .full-height {
 	min-height:100vh;
@@ -586,7 +583,10 @@ body {
 	overflow-x: hidden !important;
 }
 strong, a {
-	color: #000
+	color: #FFFFFF;
+	font-style: normal;
+	font-size: 24px;
+	text-align: center;
 }
 a:hover {
 	color: #00B388;
@@ -681,7 +681,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .hamburger_holder span {
 	font-size: 32px;
-	color: #fff;
+	color: #fff;
+
 
 }
 .hamburger_holder span:hover {
@@ -709,10 +710,13 @@ h1, h2, h3, h4, h5, h6 {
 	top: 52px;
 	z-index: 10;
 	font-size: 15px;
-	color: #fff;
+	color: #bbb;
 	display: none;
 }
-.shoping_cart_icon a{ color:#fff;}
+.shoping_cart_icon>p{
+	color: #bbb;
+}
+.shoping_cart_icon a{ color:#bbb;}
 .woo_active .shoping_cart_icon { display: block; }
 .footer {
 	position: fixed;
@@ -926,7 +930,8 @@ body[data-derection='up'] #pagepiling .row {
 	content: '';
 	width: 25px;
 	height: 1px;
-	display: block;
+	display: block;
+
 	position: absolute;
 	left: -40px;
 	top: 50%;
@@ -1069,7 +1074,7 @@ textarea {
 }
 input[type="text"]:focus, input[type="email"]:focus, textarea:focus, input[type="url"]:focus {
 	border-bottom-color: #000;
-	color: #000
+	color: #000;
 }
 input[type="submit"] {
 	font-size: 16px;
@@ -1204,7 +1209,8 @@ input, textarea {
 	display: block;
 	margin-bottom: 40px;
 }
-.contact-info li span {
+.contact-info li span {
+
 	display: block
 }
 .contact-info strong {
@@ -1394,7 +1400,8 @@ input, textarea {
 	color: #fff !important
 }
 .highlighted.blog_article_holder .blogpost_image_holder {
-	opacity: 0.2;
+	opacity: 0.2;
+
 }
 .highlighted.blog_article_holder a, .highlighted.blog_article_holder h3 {
 	color: #fff
@@ -1510,7 +1517,8 @@ input, textarea {
 	border: 0
 }
 #sidebar-left ul {
-	text-align: center;
+	text-align: center;
+
 }
 #sidebar-left .menu {
 	margin: 0;

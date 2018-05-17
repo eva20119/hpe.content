@@ -126,13 +126,10 @@
               <img src="++plone++hpe.content/img/apr.png"/></a>
           </li>
           <li>
-              <a href="#"><span style="font-family:微軟正黑體">肌力動次動</span>
+              <a href="${abs_url}/muscle_activity"><span style="font-family:微軟正黑體">肌力動次動</span>
               <img src="++plone++hpe.content/img/may.png"/></a>
           </li>
-          <li>
-              <a href="#"><span style="font-family:微軟正黑體">防癌你我他</span>
-              <img src="++plone++hpe.content/img/jun.png"/></a>
-          </li>
+          <li><a href="${abs_url}/anti_cancer_view"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
           <li>
               <a href="#"><span style="font-family:微軟正黑體">樂活單車騎</span>
               <img src="++plone++hpe.content/img/july.png"/></a></li>
@@ -193,7 +190,8 @@
                           tal:condition="python:number==1"> 
                         <a href="${python:data['file']}" target="_blank">
                         <img src="${python:data['img']}" alt="" border="0" class="img-fluid" />
-                        <h2 class="woocommerce-loop-product__title" style="font-family:微軟正黑體"
+                        <h2 class="woocommerce-loop-product__title" 
+                           style="font-family:微軟正黑體;font-size:18px;text-align:left"
                             tal:content="structure python:data['text']">
                         </h2>
                       </li>
@@ -201,7 +199,8 @@
                           tal:condition="python:number>1">
                         <a href="${python:data['file']}" target="_blank">
                         <img src="${python:data['img']}" alt="" border="0" class="img-fluid" />
-                        <h2 class="woocommerce-loop-product__title" style="font-family:微軟正黑體"
+                        <h2 class="woocommerce-loop-product__title" 
+                             style="font-family:微軟正黑體;font-size:18px;text-align:left"
                             tal:content="structure python:data['text']">
                         </h2>
                       </li>

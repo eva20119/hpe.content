@@ -158,6 +158,9 @@ class EnUserProfile(BrowserView):
             tmp = dict(item)
             if tmp['category']  ==  '食在有道理':
 	        category = 'FOOD MAKES SENSE'
+            elif tmp['category'] == '肌力動次動':
+                category = 'Strength training: Move it! move it!'
+
             activity_date = tmp['activity_date']
             is_first = tmp['is_first']
             is_end = tmp['is_end']
@@ -282,3 +285,68 @@ class EnReservation(BrowserView):
         self.reservationList = reservationList
 
         return self.template()
+
+
+class EnMuscleActivity(BrowserView):
+    template = ViewPageTemplateFile('template/en_muscle_activity.pt')
+    def __call__(self):
+        if api.user.is_anonymous():
+            self.request.response.redirect('%s/user_login'%api.portal.get().absolute_url())
+            return        
+        user = api.user.get_current().getProperty('email')
+        execSql = SqlObj()
+        execStr = 'SELECT * from activity where category="%s" and user="%s"' %('肌力動次動',user)
+        result = execSql.execSql(execStr)
+        self.condition_1 = False
+        self.condition_2 = False
+        self.condition_3 = False
+        self.condition_4 = False
+        for item in result:
+            tmp = dict(item)
+            if tmp['activity_date'] == '2018-05-03 10:30':
+                self.condition_1 = True
+            elif tmp['activity_date'] == '2018-05-10 10:30':
+                self.condition_2 = True
+            elif tmp['activity_date'] == '2018-05-08 10:30':
+                self.condition_3 = True
+        return self.template()
+
+
+class EnAntiCancerView(BrowserView):
+    template = ViewPageTemplateFile('template/en_anti_cancer_view.pt')
+    def __call__(self):
+        return self.template()
+
+
+class EnTestCancer(BrowserView):
+    template = ViewPageTemplateFile('template/en_test_cancer.pt')
+    def __call__(self):
+        return self.template()
+
+
+class EnAnalysisCancer(BrowserView):
+    template = ViewPageTemplateFile('template/en_analysis_cancer.pt')
+    def __call__(self):
+        request = self.request
+        if api.user.is_anonymous():
+            request.response.redirect('%s/user_login'%api.portal.get().absolute_url())
+            return   
+        q1 = request.get('q1')
+        q2 = request.get('q2').replace('\xe2\x80\x99', "'")
+        q3 = request.get('q3').replace('\xef\xbc\x8c', ',').replace('\xe2\x89\xa6', '<=').replace('\xe2\x89\xa7', '>=').replace('\xef\xbc\x9c', '<')
+        q4 = request.get('q4')
+        q5 = request.get('q5')
+        q6 = request.get('q6')
+        execSql = SqlObj()
+        user = api.user.get_current().getProperty('email')
+        execStr = """INSERT INTO anti_cancer(`user`, `q1`, `q2`, `q3`, `q4`, `q5`, `q6`)
+            VALUES('{}','{}',"{}",'{}','{}','{}','{}')""".format(user, q1, q2, q3, q4, q5, q6)
+        execSql.execSql(execStr)
+        self.q1 = q1
+        self.q2 = q2
+        self.q3 = q3
+        self.q4 = q4
+        self.q5 = q5
+        self.q6 = q6
+        return self.template()
+

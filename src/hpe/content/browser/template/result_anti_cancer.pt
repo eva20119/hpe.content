@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="hpe.billing">
+<body>
+
+
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core"
+                    tal:define="toc context/table_of_contents|nothing;">
+<style>
+th{
+    padding:5px 10px;
+    text-align:center;
+    font-size:17px;
+}
+td{
+    padding:2px 5px;
+    text-align:center;
+}
+</style>
+<table>
+    <tr>
+        <th>員工信箱</th>
+        <th>第1題</th>
+        <th>第2題</th>
+        <th>第3題</th>
+        <th>第4題</th>
+        <th>第5題</th>
+        <th>第6題</th>
+    </tr>
+    <tr tal:repeat="result view/result">
+     <tal:define define="data python: dict(result)">
+        <td>${python:data['user']}</td>
+        <td>${python:data['q1']}</td>
+        <td>${python:data['q2']}</td>
+        <td>${python:data['q3']}</td>
+        <td>${python:data['q4']}</td>
+        <td>${python:data['q5']}</td>
+        <td>${python:data['q6']}</td>
+     </tal:define>
+    </tr>
+</table>
+</metal:content-core>
+</metal:content-core>
+
+</body>
+</html>
+

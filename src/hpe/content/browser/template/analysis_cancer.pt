@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>2018 HPE Wellness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-layout.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" >
+<link rel="stylesheet" href="++plone++hpe.content/css/woocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/contact-form.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/vc.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/wocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal-default-theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/elegant-font/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/linecons/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/lightcase/lightcase.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/shop_042.css" type="text/css" media="all" />
+<script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="++plone++hpe.content/js/html5min.js"></script>
+<![endif]-->
+<style>
+table, th, td{
+    border-right: 0;
+}
+input{
+    font-size: 18px !important;
+}
+</style>
+</head>
+
+<body class="woocommerce-cart woocommerce-page woo_active standard_page dark_bg half_screen_fi have_featured_image products_per_row_3">
+<?python
+    from plone import api
+    abs_url = api.portal.get().absolute_url()
+    is_anonymous = api.user.is_anonymous()
+    user_name = api.user.get_current().getProperty('fullname')
+?>
+<div class="preload"></div>
+<div class="header">
+  <div class="logo_holder"> <a href="${abs_url}"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /> </a> </div>
+  
+  <!-- .site-header-social-menu --> 
+</div>
+<div class="page_featured">
+  <div class="page_description_over"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center">
+        <div class="page_description">
+          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/063_w.png"></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
+<div class="shoping_cart_icon"> Hi~您已登入 / <a class="my_shop_icon" href="#" title="menbers">登出</a>　 <a class="my_account_icon" href="reservation.html" title="預約家庭醫師"><i class="fa fa-calendar" aria-hidden="true"></i> </a> <a class="my_shop_icon" href="upload.html" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 <a class="my_shop_icon" href="profile.html" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
+  <select name="" id="language">
+    <option value="ch" selected>中文Ch</option>
+    <option value="en">英文En</option>
+  </select>
+</div>
+<div class="menu_holder">
+  <div class="inner_holder">
+    <div class="text-logo">
+      <h3 class="logo_name">2018 HPE Wellness</h3>
+      <p class="logo_description">每個角落都是你的運動場，<br>
+        Wellness 在每個改變的起點等你，<br>
+        2018，Fighting</p>
+    </div>
+    <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
+      <div class="menu-primary-menu-container">
+        <ul class="primary-menu">
+ 	        <li ><a href="${abs_url}/index"><span style="font-family:微軟正黑體">回首頁</span></a></li>
+	        <li><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+            <li><a href="${abs_url}/reservation"><span style="font-family:微軟正黑體">邀你醫同來</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+            <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">該釋壓了嗎</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+            <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
+            <li><a href="${abs_url}/muscle_activity"><span style="font-family:微軟正黑體">肌力動次動</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
+            <li class="current-menu-item current_page_item"><a href="${abs_url}/anti_cancer_view"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
+            <li><a href="singin"><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
+            <li><a href="singin"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
+
+        </ul>
+      </div>
+    </nav>
+    <!-- .main-navigation -->
+    <div class="menu_footer">
+      <nav aria-label="Footer Menu">
+        <div class="menu-social-menu-container">
+          <ul class="footer-menu">
+            <!-- .
+            <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            -->
+          </ul>
+        </div>
+      </nav>
+      <!-- .social-navigation -->
+      <p style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>
+        This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+</div>
+<div class="overlay"></div>
+<div id="primary" class="content-area">
+  <main id="main" class="site-main">
+    <div class="container">
+      <div class="entry-content" >
+        <div class="row">
+          <div class="col-md-6"> <br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="woocommerce">
+              <form class="woocommerce-cart-form" method="post">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF"
+                       style='border-right:0'>
+                <tr>
+                <td width="77%" height="10" colspan="2">
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="2" cellpadding="0">
+                        <tr>
+                          <td height="30" align="center" bgcolor="#00B388" class="p1"><h3 style="font-family: 微軟正黑體; color: #FFFFFF; text-align: center; font-weight: 700;">解析</h3></td>
+                        </tr>
+                        <tr>
+                          <td height="14" align="center" class="p1">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="p2">1. 營養要均衡，您是否每日攝取足夠的蔬菜水果?. <span style="color: #00B388">您的答案: </span>
+                            <input name="textfield" type="text" class="ans" id="textfield" value="${view/q1}"  />
+                            <span class="ans"></span></td>
+                        </tr>
+                        <tr>
+                          <td><p><span class="p3">(1) 新版每日飲食指南：新版的飲食指南項較於舊版的飲食金字塔，將降低心臟血管代謝疾病及癌症風險的飲食原則列入考量，建議以合宜的三大營養素比例（蛋白質 10-20%、脂質 20-30%、醣類（碳水化合物）50-60%），以實證營養學的原則，試算多種飲食組成，最後提出適合多數國人的飲食建議。建議每日：全穀根莖類 10 份 ( 其中 1/3 為未精製 )、豆魚肉蛋類 4 份、低脂乳品類 1.5 杯、蔬菜類 3 份、水果類 2 份、油脂 3 份、堅果種子 1 份。 <br />
+                              (2) 審視自己的飲食內容﹐是否肉吃得太多而蔬菜吃得太少？是否生鮮食物吃得太少﹐而加工食物又吃得太多？是否不自覺的吃下一堆零食和含糖飲料﹐正餐卻常常「隨便亂吃」？是否外食頻率過高﹐家裏開伙的機會太少…？是否對特定食物有偏見﹐或是道聽途說了些所謂的食物禁忌﹐而使自己的營養攝取不均衡？上述情況在現代社會是很普遍的。
+                              解決方法有二：一是調整自己的飲食及生活習慣﹐二是視個人需要適量攝取營養輔助食品。不管採用那種作法﹐都應該以正確的營養常識為基礎。 </span><br />
+                            </p></td>
+                        </tr>
+                        <tr>
+                          <td height="14" align="center" class="p1">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="p2">2. 在生活環境方面，吸菸的習慣或是長期暴露於二手菸、油煙環境，對您的影響. <span style="color: #00B388">您的答案:</span>
+                            <input name="textfield2" type="text" class="ans" id="textfield2" value="${view/q2}"   /></td>
+                        </tr>
+                        <tr>
+                          <td><p><span class="p3">(1)抽菸是肺癌主要危險因子，並與食道癌、胃癌、頭頸癌、攝護腺癌、大腸直腸癌、肝癌、子宮頸癌與乳癌相關。 <br />
+                              (2)無論菸齡多久，只要今天就戒，幾乎都可降低罹癌風險。經常出入二手菸及油煙環境區的族群，可佩戴活性碳口罩，可減少直接吸入尼古丁的危害。 <br />
+                              (3)多吃新鮮的富含維生素A(β-胡蘿蔔素)、C、E的食物，如：木瓜、蕃茄、葡萄、胡蘿蔔、南瓜、鮭魚、綠茶等。因爲此類維生素具有抗氧化的功能，可以延緩體內細胞氧化效果，進而減少氧化造成的細胞損傷。 </span><br />
+                            </p></td>
+                        </tr>
+                        <tr>
+                          <td height="14" align="center" class="p1">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="p2">3. 您的身體質量指數BMI是否介於理想標準範圍內對您的影響. <span style="color: #00B388">您的答案:</span>
+                            <input name="textfield3" type="text" class="ans" id="textfield3" value="${view/q3}" /></td>
+                        </tr>
+                        <tr>
+                          <td><p><span class="p3">(1)脂肪細胞會製造並釋放荷爾蒙，可能促進癌細胞生長。研究已證實體重過重可能提高罹患下列癌症的危險率，如：食道癌、肺癌、胰臟癌、膽囊癌、大腸直腸癌、攝護腺癌、卵巢癌、子宮內膜癌等。 <br />
+                              (2)	體重過輕而不足，體脂肪量也可能不足，很容易引起心臟病、腎衰竭，及敗血症等疾病，且一旦罹患嚴重營養不良卻不積極治療的話，死亡率最高可達5-15%。 </span><br />
+                            </p></td>
+                        </tr>
+                        <tr>
+                          <td height="14" align="center" class="p1">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="p2">4.	您每個禮拜運動的次數為何？(以每次運動30分鐘為一次). <span style="color: #00B388">您的答案:</span>
+                            <input name="textfield4" type="text" class="ans" id="textfield4" value="${view/q4}" /></td>
+                        </tr>
+                        <tr>
+                          <td><p><span class="p3">(1)運動能使癌症遠離你！常運動果真能降低罹癌率風險。根據美國研究記錄，運動與26種癌症之間的關係，發現運動能夠降低13揰癌症的罹患風險。 <br />
+                              (2)運動也能減少肺癌、乳癌、血癌、腎臟癌和子宮內膜癌等重症的罹患機率，減少罹癌率最高至42%，最少也有10%，大致說來，平均的防癌率為20%。
+                              (3)醫師建議一週至少運動3次，一次為30分鐘。 <br />
+                              </span></p></td>
+                        </tr>
+                        <tr>
+                          <td height="14" align="center" class="p1">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="p2">5. 在繁忙的生活上，不論工作或生活上有哪幾項讓您認同，對您的影響. <span style="color: #00B388">您的答案:</span>
+                            <input name="textfield5" type="text" class="ans" id="textfield5" value="${view/q5}" /></td>
+                        </tr>
+                        <tr>
+                          <td><p><span class="p3">(1)現代生活節奏加快，生活壓力跟著加大，導致很多人長期受到慢性疲勞困擾，但長期疲勞會帶來嚴重的健康隱患，甚至誘發癌症，飲食的偏差和累積太多疲勞的生活方式是罹癌關鍵 <br />
+                              (2) <span style="font-weight: bold">疲勞進程第1步：輕度疲勞<br />
+                              </span></span><span class="p3"> 　 應對方案：深呼吸，吃塊糖 <br />
+                              <span style="font-weight: bold"> 　 疲勞進程第2步：渾身乏力</span><br />
+                              應對方案：除了深呼吸之外，此時應該做一些輕度體操，讓僵硬或者沉重的部位獲得伸展，以便　 使血液循　環恢復正常，<br />
+                              時間持續10～20分鐘才有效果。 <br />
+                              <span style="font-weight: bold"> 　 疲勞進程第3步：情緒焦躁<br />
+                              </span>　 應對方案：解除這一進程的疲勞非常重要，是不讓疾病上身的最後屏障。可以想辦法讓身體變暖，如泡個熱水澡，同時<br />
+                              保持充足睡眠，會讓體力逐漸恢復；再加上舒緩的運動促進血液循環，就會慢慢消除疲勞。盡量不要　 經常吃各種止痛藥或<br />
+                              安眠藥，經常性用藥會讓交感神經越來越興奮，疲勞、僵硬或疼痛，容易陷入惡性循環。 <br />
+                              <span style="font-weight: bold"> 　 疲勞進程第4步：內部變異</span><br />
+                              應對方案：切記每天都要有充足的睡眠，使身體暖和，做些和緩輕鬆的體操，這樣的生活達1週左右才可能有用，一步一步<br />
+                              開始重拾生活步調，讓身體恢復原有的健康狀態 </span><br />
+                            </p></td>
+                        </tr>
+                        <tr>
+                          <td height="14" align="center" class="p1">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="p2">6.您是否知道政府所推動的四癌篩檢？. <span style="color: #00B388">您的答案:</span>
+                            <input name="textfield6" type="text" class="ans" id="textfield6" value="${view/q6}" /></td>
+                        </tr>
+                        <tr>
+                          <td><p><span class="p3">(1)全身的健康檢查能夠讓你了解自己的身體的狀況，腫瘤的早發現、早診斷和早治療是減少腫瘤危害行之有效的手段之一。 <br />
+                              (2)若父母罹癌，子女的風險就比一般人高出六倍，建議這些人要特別重視篩檢，「父母罹癌年齡扣掉15歲就是該開始做檢查的年紀了。 </span><br />
+                            </p></td>
+                        </tr>
+                      </table>
+                  <tr>
+                    <td><span class="p1"><span style="color: #00B388;">謝謝您寶貴的時間，希望測驗有幫助到您更加認識自己的健康狀況。</span></span></td>
+                  </tr>
+                    </td>
+                    </tr>
+                </table>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- .site-main --> 
+  
+</div>
+<!-- .content-area -->
+
+<div class="bottom_line">
+  <div class="row">
+    <div class="col-md-12">
+      <p align="center"><span style="color: #FFFFFF">此活動僅限 HPE 台灣員工，請勿任意轉載</span><br>
+        <span style="font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: #FFFFFF;">This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</span></p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="++plone++hpe.content/js/popper.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/contact-form.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/gmap3.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/remodal.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script>
+<script src="++plone++hpe.content/js/change_language.js"></script>
+</body>
+</html>

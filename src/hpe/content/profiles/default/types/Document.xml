@@ -71,6 +71,8 @@
     <element value="en_calculate_pressure"/><!--En壓力測驗結果-->
     <element value="en_profile"/><!--En個人資料-->
     <element value="en_reservation"/><!--預約-->
+    <element value="muscle_activity"/><!--肌力動次動-->
+    <element value="en_muscle_activity"/><!--En肌力動次動-->
   </property>
 
   <!-- Method aliases -->

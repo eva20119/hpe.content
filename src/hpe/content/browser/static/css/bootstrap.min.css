@@ -31,7 +31,8 @@
 --breakpoint-lg:992px;
 --breakpoint-xl:1200px;
 --font-family-sans-serif:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
---font-family-monospace:"SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+--font-family-monospace:"SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+
 
 }
 
@@ -123,7 +124,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 p {
 	margin-top: 0;
-	margin-bottom: 1rem
+	margin-bottom: 1rem;
+	color: #666;
 }
 abbr[data-original-title], abbr[title] {
 	text-decoration: underline;
@@ -1005,7 +1007,8 @@ pre code {
 }
 .offset-md-3 {
 	margin-left: 25%
-}
+}
+
 .offset-md-4 {
 	margin-left: 33.333333%
 }
@@ -1993,7 +1996,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 .btn-success.disabled, .btn-success:disabled {
 	background-color: #28a745;
-	border-color: #28a745
+	border-color: #28a745
+
 }
 .btn-success:not([disabled]):not(.disabled).active, .btn-success:not([disabled]):not(.disabled):active, .show>.btn-success.dropdown-toggle {
 	color: #fff;
@@ -2499,7 +2503,8 @@ tbody.collapse.show {
 	flex-wrap: wrap;
 	-ms-flex-pack: start;
 	justify-content: flex-start
-}
+}
+
 .btn-toolbar .input-group {
 	width: auto
 }
@@ -3062,7 +3067,8 @@ opacity:0
 	flex-basis: auto
 }
 .navbar-expand-sm .navbar-toggler {
-	display: none
+	display: none
+
 }
 .navbar-expand-sm .dropup .dropdown-menu {
 	top: auto;
@@ -4082,7 +4088,8 @@ a.list-group-item-dark, button.list-group-item-dark {
 }
 a.list-group-item-dark:focus, a.list-group-item-dark:hover, button.list-group-item-dark:focus, button.list-group-item-dark:hover {
 	color: #1b1e21;
-	background-color: #b9bbbe
+	background-color: #b9bbbe
+
 }
 a.list-group-item-dark.active, button.list-group-item-dark.active {
 	color: #fff;
@@ -4475,7 +4482,8 @@ right:calc((.8rem - 1px) * -1);
 .popover-header:empty {
 	display: none
 }
-.popover-body {
+.popover-body {
+
 	padding: .5rem .75rem;
 	color: #212529
 }
@@ -5507,7 +5515,8 @@ a.bg-dark:focus, a.bg-dark:hover {
 .flex-xl-wrap-reverse {
 	-ms-flex-wrap: wrap-reverse!important;
 	flex-wrap: wrap-reverse!important
-}
+}
+
 .justify-content-xl-start {
 	-ms-flex-pack: start!important;
 	justify-content: flex-start!important

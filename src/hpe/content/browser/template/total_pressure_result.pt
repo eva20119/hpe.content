@@ -11,14 +11,31 @@
 <metal:content-core fill-slot="content-core">
 <metal:content-core define-macro="content-core"
                     tal:define="toc context/table_of_contents|nothing;">
+<style>
+th{
+    padding:5px 10px;
+    text-align:center;
+    font-size:17px;
+}
+td{
+    padding:2px 5px;
+    text-align:center;
+}
+</style>
 <table>
     <tr>
-        <th>會員</th>
+        <th>員工編號</th>
+        <th>中文姓名</th>
+        <th>英文姓名</th>
+        <th>信箱</th>
         <th>個人疲勞指數</th>
         <th>工作疲勞指數</th>
         <th>測驗時間</th>
     </tr>
     <tr tal:repeat="data view/data">
+        <td>${python:data[6]}</td>
+        <td>${python:data[4]}</td>
+        <td>${python:data[5]}</td>
         <td>${python:data[0]}</td>
         <td>${python:data[1]}</td>
         <td>${python:data[2]}</td>
