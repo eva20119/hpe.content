@@ -91,7 +91,7 @@ body {
           <li class="current-menu-item current_page_item"><a href="${abs_url}/en_publicize_pressure"><span style="font-family:微軟正黑體; font-size: 16px;">Defatigation Self-Assessment</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
           <li><a href="${abs_url}/en_eat_blog"><span style="font-family:微軟正黑體; font-size: 16px;">Food Makes Sense</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
           <li><a href="${abs_url}/en_muscle_activity"><span style="font-family: 微軟正黑體; font-size: 16px;">Being Healthier By Do Exercise</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Power of Prevention</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/en_anti_cancer_view"><span style="font-family: 微軟正黑體; font-size: 16px;">Power of Prevention</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
           <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Pedal to Health on Your Bike</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
           <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Flu vaccination Protective Net</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
         </ul>

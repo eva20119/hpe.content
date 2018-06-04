@@ -198,7 +198,8 @@
                 <h2 class="item-serv-title" style="font-family:微軟正黑體">05月</h2>
                 <div class="item-serv-descr"> <strong><a href="${abs_url}/muscle_activity">肌力動次動</a></strong></div>
               </div>
-              <div class="item-service main-1-s6" style="background-image:url(++plone++hpe.content/img/06_header.jpg)">
+              <div class="item-service main-1-s6" 
+                  style="background-image:url(++plone++hpe.content/img/06_header.jpg);background-size: cover">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體">06月</h2>
                 <div class="item-serv-descr"> <strong><a href="${abs_url}/anti_cancer_view">防癌你我他</a></strong></div>
               </div>
