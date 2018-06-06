@@ -735,6 +735,33 @@ class MuscleActivity(BrowserView):
 class AntiCancerView(BrowserView):
     template = ViewPageTemplateFile('template/anti_cancer_view.pt')
     def __call__(self):
+        if api.user.is_anonymous():
+            self.request.response.redirect('%s/user_login'%api.portal.get().absolute_url())
+            return
+        user = api.user.get_current().getProperty('email')
+        execSql = SqlObj()
+        execStr = 'SELECT * from activity where category="%s" and user="%s"' %('防癌你我他',user)
+        result = execSql.execSql(execStr)
+        self.condition_1 = False
+        self.condition_2 = False
+        self.condition_3 = False
+        self.condition_4 = False
+        for item in result:
+            tmp = dict(item)
+            if tmp['activity_date'] == '2018-06-14 12:00':
+                self.condition_1 = True
+            elif tmp['activity_date'] == '2018-06-21 15:30' or tmp['activity_date'] == '2018-06-21 14:30':
+                self.condition_2 = True
+            elif tmp['activity_date'] == '2018-06-26 12:00':
+                self.condition_3 = True
+            elif tmp['activity_date'] == '2018-06-21 12:15' or tmp['activity_date'] == '2018-06-21 11:00' or tmp['activity_date'] == 0:
+                self.condition_4 = True
+        return self.template()
+
+
+class TestCancerVIew(BrowserView):
+    template = ViewPageTemplateFile('template/test_cancer_view.pt')
+    def __call__(self):
         return self.template()
 
 

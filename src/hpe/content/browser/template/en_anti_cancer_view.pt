@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="++plone++hpe.content/css/linecons/1style.css" type="text/css" media="all" />
 <link rel="stylesheet" href="++plone++hpe.content/lightcase/lightcase.css" type="text/css" media="all" />
 <link rel="stylesheet" href="++plone++hpe.content/css/page/shop.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/about.css" type="text/css" media="all" />
 <script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
 <script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
 <!--[if lt IE 9]>
@@ -27,10 +28,12 @@
 	color: #ED1E79
 }
 body {
-	background: -webkit-linear-gradient(#fffeff, #00c7bc);
-	background: -o-linear-gradient(#fffeff, #00c7bc);
-	background: -moz-linear-gradient(#fffeff, #00c7bc);
-	background: linear-gradient(#fffeff, #00c7bc);
+	background: -webkit-linear-gradient(#00e8d7, #00c7bc);
+	background: -o-linear-gradient(#00e8d7, #00c7bc);
+	background: -moz-linear-gradient(#00e8d7, #00c7bc);
+	background: linear-gradient(#00e8d7, #00c7bc);
+	font-family: "微軟正黑體";
+	font-size: 18px;
 }
 .style22 {
 	color: #FFFFFF
@@ -42,12 +45,15 @@ body {
 
 <body class="woo_active standard_page dark_bg half_screen_fi have_featured_image">
 <?python
-    from plone import api
-    abs_url = api.portal.get().absolute_url()
+from plone import api
+abs_url = api.portal.get().absolute_url()
+is_anonymous = api.user.is_anonymous()
+user_name = api.user.get_current().getProperty('fullname')
 ?>
+
 <div class="preload"></div>
 <div class="header">
-  <div class="logo_holder"> <a href="${abs_url}"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a> </div>
+  <div class="logo_holder"> <a href="${abs_url}/en_cover"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a> </div>
   <!-- .site-header-social-menu --> 
 </div>
 <div class="page_featured">
@@ -56,17 +62,18 @@ body {
     <div class="row">
       <div class="col-md-6 offset-md-3 text-center">
         <div class="page_description">
-          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/06_en.png"></h1>
+          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/06_en.png" width="800"></h1>
         </div>
       </div>
     </div>
   </div>
 </div>
 <div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
-<div class="shoping_cart_icon"> Hi~You have logged in / <a class="my_shop_icon" href="${abs_url}/logout" title="menbers">Logout</a>　 <a class="my_account_icon" href="en_reservation" title="Physician On-site Services"><i class="fa fa-calendar" aria-hidden="true"></i> </a> <a class="my_shop_icon" href="javascript:void(0)" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 <a class="my_shop_icon" href="en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
+<div class="shoping_cart_icon"> Hi~You have logged in / <a class="my_shop_icon" href="${abs_url}/logout" title="menbers">Logout</a>　 <a class="my_account_icon" href="${abs_url}/en_reservation" title="Physician On-site Services"><i class="fa fa-calendar" aria-hidden="true"></i> </a> <a class="my_shop_icon" href="javascript:void(0)" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 <a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
   <select name="" id="language">
+    <option>語言Language</option>
     <option value="ch">中文Ch</option>
-    <option value="en" selected>英文En</option>
+    <option value="en">英文En</option>
   </select>
 </div>
 <div class="menu_holder">
@@ -77,18 +84,18 @@ body {
         Wellness is waiting for you at every changing starting point. <br>
         2018，Fighting</p>
     </div>
-    <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
+        <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
       <div class="menu-primary-menu-container">
         <ul class="primary-menu">
           <li><a href="${abs_url}/en_cover"><span style="font-family:微軟正黑體; font-size: 16px;">Home</span></a></li>
           <li><a href="${abs_url}/en_mind_gas_station"><span style="font-family:微軟正黑體; font-size: 16px;">The Work Life Compass</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
           <li><a href="${abs_url}/en_reservation"><span style="font-family:微軟正黑體; font-size: 16px;">Physician On-site Services</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
           <li><a href="${abs_url}/en_publicize_pressure"><span style="font-family:微軟正黑體; font-size: 16px;">Defatigation Self-Assessment</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="${abs_url}/en_eat_blog"><span style="font-family:微軟正黑體; font-size: 16px;">Food Makes Sense</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="${abs_url}/en_muscle_activity"><span style="font-family: 微軟正黑體; font-size: 16px;">Being Healthier By Do Exercise</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li class="current-menu-item current_page_item"><a href="${abs_url}/en_anti_cancer_view"><span style="font-family: 微軟正黑體; font-size: 16px;">Power of Prevention</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Pedal to Health on Your Bike</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Flu vaccination Protective Net</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/en_eat_blog"><span style="font-family:微軟正黑體; font-size: 16px;">Food Makes Sense</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
+          <li><a href="${abs_url}/en_muscle_activity"><span style="font-family: 微軟正黑體; font-size: 16px;">Being Healthier By Do Exercise</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
+          <li class="current-menu-item current_page_item"><a href="${abs_url}/en_anti_cancer_view"><span style="font-family: 微軟正黑體; font-size: 16px;">Power of Prevention</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Pedal to Health on Your Bike</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Flu vaccination Protective Net</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
         </ul>
       </div>
     </nav>
@@ -115,38 +122,174 @@ body {
 </div>
 <div class="overlay"></div>
 <div id="primary" class="content-area">
-  <main id="main" class="site-main">
-    <div class="container">
-      <div class="row full_team">
-        <div class="col-md-12"><br><br>
-        <img width="100%" height="250" src="++plone++hpe.content/img/06-1_en.png" class="attachment-full img-responsive vc_team_member_image size-full img-responsive vc_team_member_image" alt="" />
-          <div class="vc_team_member_holder"></div>
+<main id="main" class="site-main">
+<div class="container">
+  <div class="row about-1">
+    <div class="col-md-6 offset-md-3">
+      <div class="about-1-1"><br>
+        <h2 class="text-center" style="font-family: '微軟正黑體'; color: #FF5F62; font-size: 40px;">Eat well, Exercise well, Sleep well to Against the Cancer</h2>
+      </div>
+      <div class="oi_custom_heading_holder">
+        <div class="oi_vc_heading oi_border_position_center text-center">
+          <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+          <br>
+          <p class="oi_icon_sub_titile">Eat well, own balanced diet, say no to any kind of unhealthy eatables<br>
+            Exercise well, work out and keepfit with family and friends<br>
+            <span style="font-size: 18px"></span><span style="font-family: 'Open Sans', Helvetica, Arial, sans-serif"></span><span style="font-size: 18px"></span><span style="font-family: 'Open Sans', Helvetica, Arial, sans-serif"></span>Sleep well, go to bed on time regularly, and sleep at least 7 hours</p>
         </div>
       </div>
-</div>
-    <div class="footer-line">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-9">
-            <div class="oi_custom_heading_holder mb-0">
-              <div class="oi_vc_heading oi_border_position_right text-md-right">
-                <h2 class="oi_icon_titile" style="font-family: 微軟正黑體; text-align: left; color: #E40003; font-size: 21px;">Cancers are caused by a series of mutations, and each mutation can affect cells operating.
-</h2>
-                <p class="oi_icon_sub_titile" style="font-family: 微軟正黑體; text-align: left;">• Cancer grows rapidly in Taiwan, the cancer clock  fast forward, one person is diagnosed with cancer every 5 minutes and 6 seconds.<br>
-                  • Worldwide cancer incidence rates are increasing, while the age group keeps on decreasing.<br>
-                  • There are some breakthroughs on cancer treatments, from targeted therapy and immunotherapy to genetic testing and precision medicine, it’s promising, but have you ever tried to understand the medical knowledge?<br></p>
-              </div>
+    </div>
+  </div>
+  <div class="row mb-60 about-3">
+    <div class="col-md-6">
+      <div class="oi_vc_text item_height_x2">
+        <div class="oi_vc_text_span">
+          <div class="oi_custom_heading_holder">
+            <div class="oi_vc_heading oi_border_position_center">
+              <h3 class="oi_icon_titile">20 Ways to Prevent <br>
+                Cancer</h3>
+              <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+              <br>
+              <p class="oi_icon_sub_titile"><strong>Wan Lin Chen</strong> <span style="font-size: 22px">/ International SOS Medical Director</span></p>
             </div>
           </div>
-          <div class="col-md-3 d-flex align-items-center mt-5 mt-md-0" style="font-family:微軟正黑體">
-            <div align="center"><a href="${abs_url}/en_test_cancer" target="_self" class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" data-border-c-hover="#e83b23">Self-Check</a> </div>
-          </div>
+          <p class="mb-30">
+            <input type="checkbox" data-time="2018-06-14 12:00" data-condition="${view/condition_1}">
+            <span style="font-style: normal; font-family: '微軟正黑體'; color: #FFFFFF; font-size: 22px;">6/14 1200 – 1330 9F Eclub<br>
+            <span style="font-size: 18px; padding-bottom: 18px;">Lunch box will be prepared, limited to 60</span></span> <img src="++plone++hpe.content/img/06B_photo1.png" width="548" height="350"> </p>
         </div>
-        <div class="vc_row-full-width clearfix"></div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="oi_vc_text item_height_x2">
+        <div class="oi_vc_text_span">
+          <div class="oi_custom_heading_holder">
+            <div class="oi_vc_heading oi_border_position_center">
+              <h3 class="oi_icon_titile">Easily Abdominal Breathing <br>
+                with Your Chair</h3>
+              <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+              <br>
+              <p class="oi_icon_sub_titile"><strong>Lei Lei Kuo</strong> <span style="font-size: 22px">/ TCC Yoga Teacher </span></p>
+            </div>
+          </div>
+          <p class="mb-30"> <span style="font-style: normal; font-family: '微軟正黑體'; color: #FFFFFF; font-size: 22px; line-height: 10px;">6/21 10N 0405 Meeting Room, limited 60 members each class<br>
+            <span style="font-size: 18px; padding-bottom: 18px; padding-top: 11px;">
+            <input type="radio" name="2018-06-21" data-time="2018-06-21 14:30" data-condition="${view/condition_2}">
+            <span style="font-size: 20px">1430 - 1500</span>　
+            <input type="radio" name="2018-06-21" data-time="2018-06-21 15:30" data-condition="${view/condition_2}">
+            <span style="font-size: 20px">1530 - 1600</span></span></span> <img src="++plone++hpe.content/img/06B_photo2.png" width="548" height="350"> </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="oi_vc_text item_height_x2">
+        <div class="oi_vc_text_span">
+          <div class="oi_custom_heading_holder">
+            <div class="oi_vc_heading oi_border_position_center">
+              <h3 class="oi_icon_titile">Smart Energy Management</h3>
+              <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+              <br>
+              <p class="oi_icon_sub_titile"><strong>Gordon Hsieh</strong> <span style="font-size: 22px">/ HUMAN dynamic Senior Consultant </span></p>
+            </div>
+          </div>
+          <p class="mb-30">
+            <input type="checkbox" data-time="2018-06-26 12:00" data-condition="${view/condition_3}">
+            <span style="font-style: normal; font-family: '微軟正黑體'; color: #FFFFFF; font-size: 22px; line-height: 10px;">6/26 1200-1330 9F Eclub<br>
+            <span style="font-size: 18px; padding-bottom: 18px;">Lunch box will be prepared, limited to 60</span></span> <img src="++plone++hpe.content/img/06B_photo3.png" width="548" height="350"> </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="oi_vc_text item_height_x2">
+        <div class="oi_vc_text_span">
+          <div class="oi_custom_heading_holder">
+            <div class="oi_vc_heading oi_border_position_center">
+              <h3 class="oi_icon_titile">Online mini-survey</h3>
+              <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+              <br>
+              <p class="oi_icon_sub_titile"><span style="font-size: 22px; color: #FFFFFF;">Cancer grows rapidly in Taiwan, worldwide cancer incidence rates are increasing, while the age group keeps on decreasing.Check your lifestyle in 5 minutes, close to healthy or not ?</span></p>
+            </div>
+          </div>
+          <p class="mb-30"> <a href="http://hpe.mingtak.com.tw/en_anti_cancer_view" target="_self"><img src="++plone++hpe.content/img/06B_photo5_en.png" width="548" height="350"></a> </p>
+        </div>
       </div>
     </div>
     <br>
-    <br>
+    <div class="footer-line">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="oi_custom_heading_holder mb-0">
+              <div class="oi_vc_heading oi_border_position_right text-md-right">
+                <h2 class="oi_icon_titile" style="font-family: 微軟正黑體; text-align: left; color: #009F79; font-size: 24px;">Donation</h2>
+                <p> <img><br>
+                  Your donation will make a huge differences whatever you can give, not only help themselves, but also help their family<br><br>
+                  • Where Your Money Goes<br>
+Giving NT$500 or more could help more people <br>to defeat cancers, the donations will be to the<br><a href="https://www.ecancer.org.tw/" target="_blank" style="font-size: 16px; color: #FF0004;">HOPE Society for Cancer Care</a>，the same time, <br>you will get a handmade leather key chain, and <br>monogram your own English name on reverse <br>side by yourself. Each NT$500 will receive one <br>key chain, and limited 2 key chains (NT$1000) <br>for each person.</p><p><br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-center mt-5 mt-md-0" style="font-family:微軟正黑體">
+            <table width="500" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td colspan="2" align="left">• Where and When to Donate<br>
+10N 04 meeting room 11:00-13:30 on June 21<br>
+Please choose the time that you' re available to make the key chains. </td>
+                </tr>
+                <tr>
+                  <td width="274" align="left">
+                    <input type="radio" name="6_4" data-target="select3" data-time="2018-06-21 11:00" 
+                        data-condition="${view/condition_4}">
+                    <span style="font-family: '微軟正黑體'; font-size: 16px; color: #FFFFFF;"><span style="font-size: 16px; font-style: normal;">A. 1100-1215，piece
+                    <select name="select3" id="select3">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                    </select>
+                    </span></td>
+                  <td width="226" rowspan="5" align="right"><img src="++plone++hpe.content/img/06B_photo4.png" width="220"></td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <input type="radio" name="6_4"  data-target="select4" data-time="2018-06-21 12:15" 
+                        data-condition="${view/condition_4}">
+                    <span style="font-family: '微軟正黑體'; font-size: 16px; color: #FFFFFF;"><span style="font-size: 16px; font-style: normal;">B. 1215-1330，piece
+                    <select name="select4" id="select4">
+                      <option value='1'>1</option>
+                      <option value='2'>2</option>
+                    </select>
+                    </span></td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <input type="radio" name="6_4" data-target="msg" data-time="0" 
+                        data-condition="${view/condition_4}">
+                    <span style="font-family: '微軟正黑體'; font-size: 16px; color: #FFFFFF;"><span style="font-family: '微軟正黑體'; font-size: 16px; color: #FFFFFF;">C. I want to join the donation, however I cannot make it on the day. ** Ask for your colleague to donate on your behalf on the day. Tell us the 12 English letters </span></td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <input id="msg" type="text" size="12" maxlength="12" align='center' valign="middle">
+                    <span style="font-family: '微軟正黑體'; font-size: 14px; color: #FFFFFF;">you want to monogram on your key chains; we’ll make it for you.<br>(for example: 2 key chains; david wu, amy chang )</span></td>
+                </tr>
+                <tr>
+                  <td align="left"><span style="font-family: '微軟正黑體'; font-size: 14px; color: #FFFFFF;"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><br>
+        <div class="col-md-12"> <span style="font-size: 16px; text-align: center;">• Please notify your absence<a href="http://hpe.mingtak.com.tw/profile" target="_blank" style="font-size: 16px; color: #F50B0E;"> in advance</a><br>
+          • This donation title will be named in HPE, so we will not provide any receipts.</span><br><br>
+          <div class="col-md-5 d-flex align-items-center mt-5 mt-md-0" style="font-family:微軟正黑體">
+            <div align="center"><a class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" data-border-c-hover="#e83b23" href="#">Submit</a> </div>
+          </div> 
+          </div>    
+          </div>
+      </div>
+      <div class="vc_row-full-width clearfix"></div>
+    </div>
+  </div>
   </main>
   <!-- .site-main --> 
 </div>
@@ -167,7 +310,72 @@ body {
 <script type="text/javascript" src="++plone++hpe.content/js/remodal.min.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script>
-<script src="++plone++hpe.content/js/change_language.js"></script>
+<script>
+var $ = jQuery.noConflict();
+$(function(){
+  $('input').each(function(){
+    if($(this).data('condition') == 'True'){
+      $(this).prop('checked',true)
+      $(this).prop('disabled',true)
+    }
+  })
+
+    $('.oi_vc_button').click(function(){
+        select_date = []
+        special = []
+        $('input:checked').each(function(){
+            if( $(this).prop('disabled') != true){
+                if( this.name == '6_4'){
+                    ta = $(this).data('target')
+                    time = $(this).data('time')
+                    special.push( [time, $('#' + ta).val()] )
+                }else{
+                    select_date.push($(this).data('time'))
+                }
+            }
+        })
+        url = location.href.replace('en_anti_cancer_view', 'update_activity')
+        data = {
+          'select_date': select_date,
+          'special': special,
+          'event': '防癌你我他',
+          'step': 0
+        }
+        $.ajax({
+          type: "post",
+          url: url,
+          data: data,
+          success: function (response) {
+            if(response == 'success'){
+alert(`【Your registration form has been sent successfully!】
+* Your registration information has been received.
+*Please check “’Personal Information”, and confirm your contact info to make sure that you don't miss any
+notifications.
+Registration is limited. Please submit your application before the deadline. If the registers are not registered
+after 30 minutes from the starting time, the remaining amount can be used for on-site registration.
+In order to encourage our staff to work out more, everyone can register for the all 4 sessions of event.
+And please contact us via email or phone in advance if you will not be able to come, in order to be respectful
+of other registers.`)
+               location.reload()
+             }
+             else if(response == 'loseData'){
+                alert(`Your profile is empty ，Please fill in the complete employee information before 
+                    registering for the event，Thank you`)
+               window.location = '${abs_url}/profile'
+             }
+          },
+          error: function (response) {
+            alert('The system did not successfully receive your registration request. Please try again later.' + 
+              'If you repeat this message please contact us，\n' +
+              '\nHPE Taiwan Wellness Team\n' +
+              'Tel: 02-2341-8301#13\n' +
+              'Email: hpewellness@accessus.biz')
+          }
+        });
+    })
+})
+</script>
+
 
 </body>
 </html>

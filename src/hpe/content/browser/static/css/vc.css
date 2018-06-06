@@ -40,11 +40,19 @@
 	margin-top: 0px;
 	margin-bottom: 5px;
 	font-family: "微軟正黑體";
+	color: #009F79;
+	text-align: center;
 }
 .oi_icon_titile.oi_white {color:#fff}
 .oi_icon_sub_titile.oi_grey {color:#e0e0e0}
 .oi_icon_sub_titile.oi_white {color:#f9f9f9}
-.oi_vc_heading .oi_icon_sub_titile { margin-bottom:0px;}
+.oi_vc_heading .oi_icon_sub_titile {
+	margin-bottom: 0px;
+	font-family: "微軟正黑體";
+	font-size: 20px;
+	line-height: normal;
+	text-align: center;
+}
 .oi_custom_heading_holder {
 	margin-bottom: 20px;
 	margin-top: 0px;
@@ -67,8 +75,9 @@
 .oi_heading_border .oi_white {background-color:#fff;}
 .oi_border_position_top { margin-bottom:17px}
 .oi_border_position_center {
-	margin-top: 15px;
+	margin-top: 17px;
 	margin-bottom: 0px;
+	font-size: 24px;
 } 
 .oi_border_position_bottom { margin-top:15px;}
 .oi_border_position_left { padding-left:20px;}

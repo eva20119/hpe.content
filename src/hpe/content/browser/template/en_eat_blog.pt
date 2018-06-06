@@ -312,13 +312,18 @@ $jq(document).ready(function(){
         if(response == 'success'){
            alert(`【Your registration form has been sent successfully!】
 * Your registration information has been received.
-*Please check “’Personal Information”, and confirm your contact info to make sure that you don't miss any notifications.
-Registration is limited. Please submit your application before the deadline. If the registers are not registered after 30 minutes from the starting time, the remaining amount can be used for on-site registration.
-In order to encourage our staff to work out more, everyone can register for the all 4 sessions of event. And please contact us via email or phone in advance if you will not be able to come, in order to be respectful of other registers.`)
+*Please check “’Personal Information”, and confirm your contact info to make sure that you don't miss any 
+notifications.
+Registration is limited. Please submit your application before the deadline. If the registers are not registered 
+after 30 minutes from the starting time, the remaining amount can be used for on-site registration.
+In order to encourage our staff to work out more, everyone can register for the all 4 sessions of event. 
+And please contact us via email or phone in advance if you will not be able to come, in order to be respectful 
+of other registers.`)
           location.reload() 
         }
         else if(response == 'loseData'){
-           alert('Your profile is empty ，Please fill in the complete employee information before registering for the event，Thank you')
+           alert('Your profile is empty ，Please fill in the complete employee information before registering for 
+            the event，Thank you')
            window.location = '${abs_url}/en_profile'
         }
       }

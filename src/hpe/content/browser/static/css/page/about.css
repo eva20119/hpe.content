@@ -110,10 +110,12 @@ h6 {
 	color: #000000;
 }
 .mb-30 {
-	margin-bottom:30px;
+	margin-bottom: 30px;
+	text-align: center;
 }
 .mb-60 {
-	margin-bottom:60px;
+	margin-bottom: 31px;
+	margin-top: 30px;
 }
 .mr-60 {
 	margin-right:60px;
@@ -125,7 +127,7 @@ h6 {
 }
 
 .page_featured {
-	background-image:url(../../img/crew_re.jpg);
+	background-image:url(../../img/06_Bheader.jpg);
 }
 .page_featured .page_description_over {
 	background: #000;
@@ -151,15 +153,15 @@ h6 {
 	border-top:1px dotted #a5a5a5;
 }
 .oi_heading_border span {
-	width:100px;
-	border-top:1px solid #e8e8e8;
+	width: 100px;
+	border-top: 1.3px solid #fff;
 }
 .oi_icon_sub_titile {
 	color:#fff;
 }
 .about-1 {
-	padding-top: 70px;
-	padding-bottom: 70px;
+	padding-top: 50px;
+	padding-bottom: 0px;
 }
 .about-1-1 {
 	margin-bottom: -20px;

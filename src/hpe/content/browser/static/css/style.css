@@ -78,19 +78,16 @@ img {
 	max-width: 100%;
 	/* Adhere to container width. */
 	vertical-align: middle;
-	margin-top: 0px;
-	text-align: center;
+	margin-top: 10px;
+	text-align: left;
+	margin-bottom: 12px;
+	left: 0px;
 }
 del {
 	opacity: 0.8;
 }
 table, th, td {
-	border-bottom-color: #d1d1d1;
-	border-top-color: #d1d1d1;
-	border-bottom-style: solid;
-	border-top-style: solid;
-	border-bottom-width: 1px;
-	border-top-width: 1px;
+
 }
 table {
 	border-collapse: separate;
@@ -110,8 +107,7 @@ th {
 	font-weight: 700;
 }
 td {
-	border-bottom-width: 1px;
-	border-top-width: 0;
+
 }
 th, td {
 	padding-top: 0.4375em;
@@ -583,10 +579,9 @@ body {
 	overflow-x: hidden !important;
 }
 strong, a {
-	color: #FFFFFF;
+	color: #666;
 	font-style: normal;
-	font-size: 24px;
-	text-align: center;
+	font-size: 22px;
 }
 a:hover {
 	color: #00B388;
@@ -712,9 +707,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 15px;
 	color: #bbb;
 	display: none;
-}
-.shoping_cart_icon>p{
-	color: #bbb;
 }
 .shoping_cart_icon a{ color:#bbb;}
 .woo_active .shoping_cart_icon { display: block; }
@@ -1186,7 +1178,7 @@ input, textarea {
 	position:relative;
 }
 .oi_bg_img_shortcode {
-	height:100vh;
+	height: 69vh;
 	background-position: center center !important;
 	background-size: cover !important
 }
@@ -1198,7 +1190,11 @@ input, textarea {
 .oi_vc_text_span {
 	display: table-cell;
 	vertical-align: middle;
-	line-height: 40px;
+	line-height: 24px;
+	margin-top: -3px;
+	padding-top: 0px;
+	top: auto;
+	height: 350px;
 }
 .contact-info {
 	list-style: none;

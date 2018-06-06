@@ -28,16 +28,29 @@ class UpdateActivity(BrowserView):
             select_date = [select_date]
         event = request.get('event')
         user = api.user.get_current().getProperty('email')
-	step = request.get('step')
+        step = request.get('step')
+        special = request.get('special[0][]')
         execSql = SqlObj()
-        for activity in select_date:
+        if select_date:
+            for activity in select_date:
 
-            # 寫進活動列表
-            execStr = """INSERT INTO activity(user,category,activity_date,step) VALUES('{}','{}'
-                ,'{}','{}')""".format(user, event, activity,step)
+                # 寫進活動列表
+                execStr = """INSERT INTO activity(user,category,activity_date,step) VALUES('{}','{}'
+                    ,'{}','{}')""".format(user, event, activity,step)
+                execSql.execSql(execStr)
+                # 寫進log
+                log = '報名%s' %activity
+                execStr = """INSERT INTO log(user,category,log) VALUES('{}','{}','{}')
+                    """.format(user, event, log)
+                execSql.execSql(execStr)
+
+        # 防癌你我他的三選一
+        if special:
+            execStr = """INSERT INTO activity(user,category,activity_date,step, note) VALUES('{}','{}'
+                ,'{}','{}','{}')""".format(user, event, special[0],step, special[1])
             execSql.execSql(execStr)
             # 寫進log
-            log = '報名%s' %activity
+            log = '報名%s' % special[0]
             execStr = """INSERT INTO log(user,category,log) VALUES('{}','{}','{}')
                 """.format(user, event, log)
             execSql.execSql(execStr)

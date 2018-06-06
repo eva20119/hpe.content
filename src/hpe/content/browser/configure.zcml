@@ -300,9 +300,23 @@
       permission='zope2.View'
       />
   <browser:page
+      name='test_cancer_view'
+      for='*'
+      class='.views.TestCancerVIew'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
       name='analysis_cancer'
       for='*'
       class='.views.AnalysisCancer'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='en_test_cancer_view'
+      for='*'
+      class='.english_vies.EnTestCancerView'
       layer='hpe.content.interfaces.IHpeContentLayer'
       permission='zope2.View'
       />

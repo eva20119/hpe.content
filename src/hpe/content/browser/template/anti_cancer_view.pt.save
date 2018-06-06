@@ -158,7 +158,7 @@ user_name = api.user.get_current().getProperty('fullname')
             </div>
           </div>
           <p class="mb-30">
-            <input type="checkbox" data-time="2018-06-14 12:00" data-condition="${view/condition_1}">
+            <input type="checkbox" data-time="2018-06-14 12:00" >
             <span style="font-style: normal; font-family: '微軟正黑體'; color: #FFFFFF; font-size: 22px;">6/14 1200 – 1330 9F Eclub<br>
             <span style="font-size: 18px; padding-bottom: 18px;">講座參與者當日提供元氣餐盒一份，限額 60 位</span></span> <img src="++plone++hpe.content/img/06B_photo1.png" width="548" height="350"> </p>
         </div>
@@ -177,9 +177,9 @@ user_name = api.user.get_current().getProperty('fullname')
           </div>
           <p class="mb-30"> <span style="font-style: normal; font-family: '微軟正黑體'; color: #FFFFFF; font-size: 22px; line-height: 10px;">6/21 10N 0405 會議室，每場次限額 60 位<br>
             <span style="font-size: 18px; padding-bottoxm: 18px; padding-top: 11px;">
-            <input type="radio" name="2018-06-21" data-time="2018-06-21 14:30" data-condition="${view/condition_2}">
+            <input type="radio" name="6_2" data-time="2018-06-21 14:30">
             <span style="font-size: 20px">1430 - 1500</span>　
-            <input type="radio" name="2018-06-21" data-time="2018-06-21 15:30" data-condition="${view/condition_2}">
+            <input type="radio" name="6_2" data-time="2018-06-21 15:30" >
             <span style="font-size: 20px">1530 - 1600</span></span></span> <img src="++plone++hpe.content/img/06B_photo2.png" width="548" height="350"> </p>
         </div>
       </div>
@@ -196,7 +196,7 @@ user_name = api.user.get_current().getProperty('fullname')
             </div>
           </div>
           <p class="mb-30">
-            <input type="checkbox" data-time="2018-06-26 12:00" data-condition="${view/condition_3}">
+            <input type="checkbox" data-time="2018-06-26 12:00">
             <span style="font-style: normal; font-family: '微軟正黑體'; color: #FFFFFF; font-size: 22px; line-height: 10px;">6/26 1200-1330 9F Eclub<br>
             <span style="font-size: 18px; padding-bottom: 18px;">講座參與者當日提供元氣餐盒一份，限額 60 位</span></span> <img src="++plone++hpe.content/img/06B_photo3.png" width="548" height="350"> </p>
         </div>
@@ -210,11 +210,10 @@ user_name = api.user.get_current().getProperty('fullname')
               <h3 class="oi_icon_titile">防癌小檢測</h3>
               <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
               <br>
-              <p class="oi_icon_sub_titile"><span style="font-size: 22px; color: #FFFFFF;">全球癌症發病率呈增長趨勢，年齡層持續下降趨勢，好的生活作息就能防癌，用 5 分鐘測驗檢視你
-的好習慣如何降低罹癌機率</span></p>
+              <p class="oi_icon_sub_titile"><span style="font-size: 22px; color: #FFFFFF;">全球癌症發病率呈增長趨勢，年齡層持續下降趨勢，好的生活作息就能防癌，用 5 分鐘測驗檢視你的好習慣如何降低罹癌機率</span></p>
             </div>
           </div>
-          <p class="mb-30"> <a href="http://hpe.mingtak.com.tw/test_cancer_view" target="_self"><img src="++plone++hpe.content/img/06B_photo5.png" width="548" height="350"></a> </p>
+          <p class="mb-30"> <a href="http://hpe.mingtak.com.tw/anti_cancer_view" target="_self"><img src="++plone++hpe.content/img/06B_photo5.png" width="548" height="350"></a> </p>
         </div>
       </div>
     </div>
@@ -241,37 +240,31 @@ user_name = api.user.get_current().getProperty('fullname')
                   <td colspan="2" align="left"><span style="font-family: '微軟正黑體'; font-size: 17px; color: #FFFFFF;">6/21 11:00-13:30 / 我要報名捐贈</span></td>
                 </tr>
                 <tr>
-                  <td width="274" align="left">
-                    <input type="radio" name="6_4" data-target="select3" data-time="2018-06-21 11:00" 
-                        data-condition="${view/condition_4}">
+                  <td width="274" align="left"><input type="radio" name="6_4" data-time="2018-06-21 11:00">
                     <span style="font-family: '微軟正黑體'; font-size: 16px; color: #FFFFFF;"><span style="font-size: 16px; font-style: normal;">A. 1100-1215，製作份數                      </span>
                     <select name="select3" id="select3">
-                      <option value='1'>1</option>
-                      <option value='2'>2</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
                     </select>
                     </span></td>
                   <td width="226" rowspan="5" align="right"><img src="++plone++hpe.content\img/06B_photo4.png" width="220"></td>
                 </tr>
                 <tr>
-                  <td align="left">
-                    <input type="radio" name="6_4"  data-target="select4" data-time="2018-06-21 12:15" 
-                        data-condition="${view/condition_4}">
+                  <td align="left"><input type="radio" data-time="2018-06-21 12:15" name="6_4">
                     <span style="font-family: '微軟正黑體'; font-size: 16px; color: #FFFFFF;"><span style="font-size: 16px; font-style: normal;">B. 1215-1330，製作份數                      </span>
                     <select name="select4" id="select4">
                       <option value="1">1</option>
-                      <option value="2">2</option>
+                      <option calue="2">2</option>
                     </select>
                     </span></td>
                 </tr>
                 <tr>
-                  <td align="left">
-                    <input type="radio" name="6_4" data-target="msg" data-time="0" 
-                        data-condition="${view/condition_4}">
+                  <td align="left"><input type="radio" name="2018-06-21 11:00">
                     <span style="font-family: '微軟正黑體'; font-size: 16px; color: #FFFFFF;"><span style="font-family: '微軟正黑體'; font-size: 16px; color: #FFFFFF;">C. 由同仁代繳，欲印製的文字為</span></td>
                 </tr>
                 <tr>
                   <td align="left">
-                    <input id="msg" type="text" size="12" maxlength="12" align='center' valign="middle">
+                    <input name="msg" type="text" size="12" maxlength="12" align='center' valign="middle">
                     <span style="font-family: '微軟正黑體'; font-size: 14px; color: #FFFFFF;">(限英文 12 字內)</span></td>
                 </tr>
                 <tr>
@@ -284,7 +277,7 @@ user_name = api.user.get_current().getProperty('fullname')
         <div class="col-md-12"> <span style="font-size: 16px; text-align: center;">• 若無法出席者，請提早至<a href="http://hpe.mingtak.com.tw/profile" target="_blank" style="font-size: 16px; color: #F50B0E;">個人資料頁</a>取消報名<br>
           • 本捐款活動將以公司名義捐款，將不提供個人收據</span><br><br>
           <div class="col-md-5 d-flex align-items-center mt-5 mt-md-0" style="font-family:微軟正黑體">
-            <div align="center"><a class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" data-border-c-hover="#e83b23">完成送出</a> </div>
+            <div align="center"><a class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" data-border-c-hover="#e83b23" href="#">完成送出</a> </div>
           </div> 
           </div>    
           </div>
@@ -313,67 +306,5 @@ user_name = api.user.get_current().getProperty('fullname')
 <script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script>
 <script type="text/javascript" src="++plone++hpe.content/js/change_language.js"></script>
-<script>
-var $ = jQuery.noConflict();
-$(function(){
-  if(navigator.userAgent.toLowerCase().match(/rv:([\d.]+)\) like gecko/)){
-        alert('本網站請以IE Edge、Firefox或Google Chrome瀏覽器瀏覽')
-   }
-  $('input').each(function(){
-    if($(this).data('condition') == 'True'){
-      $(this).prop('checked',true)
-      $(this).prop('disabled',true)
-    }
-  })
-
-    $('.oi_vc_button').click(function(){
-        select_date = []
-        special = []
-        $('input:checked').each(function(){
-            if( $(this).prop('disabled') != true){
-                if( this.name == '6_4'){
-                    ta = $(this).data('target')
-                    time = $(this).data('time')
-                    special.push( [time, $('#' + ta).val()] )
-                }else{
-                    select_date.push($(this).data('time'))
-                }
-            } 
-        })
-        url = location.href.replace('anti_cancer_view', 'update_activity')
-        data = {
-          'select_date': select_date,
-          'special': special,
-          'event': '防癌你我他',
-          'step': 0
-        }
-
-        $.ajax({
-          type: "post",
-          url: url,
-          data: data,
-          success: function (response) {
-            if(response == 'success'){
-               alert('【報名資料已送出】確認收到您的報名資料\n請到”我的資料”確認聯絡方式無誤，保障您收到活動通知的權益\n每場次名額有限，活動採事先報名，活動開始後30分鐘若報名者未進行報到，剩餘名額將開放現場報名')
-               location.reload()
-             }
-             else if(response == 'loseData'){
-               alert('您的資料料尚未填寫，請前往填寫完整員工資料後再報名活動，謝謝。')
-               window.location = '${abs_url}/profile'
-             }
-          },
-          error: function (response) {
-            alert('系統沒有成功收到您的報名要求，請稍候再試，若重覆出現此訊息，\n' +
-              '可能因個人的網路設定導致系統報名程式遭到封鎖，建議改用個人\n' +
-              '手機或其它電腦再次嘗試，如需要專人協助，歡迎與我們聯繫。 \n' +
-              '\nHPE Taiwan Wellness Team\n' +
-              'Tel: 02-2341-8301#13\n' +
-              'Email: hpewellness@accessus.biz')
-          }
-        });
-    })
-})
-</script>
-
 </body>
 </html>
