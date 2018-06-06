@@ -342,9 +342,16 @@
       permission='zope2.View'
       />
   <browser:page
-      name='result_anti_cancer'
+      name='result_anti_cancer_test'
       for='*'
-      class='.views.ResultAntiCancer'
+      class='.views.ResultAntiCancerTest'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='result_anti_cancer_singup'
+      for='*'
+      class='.views.ResultAntiCancerSingup'
       layer='hpe.content.interfaces.IHpeContentLayer'
       permission='zope2.View'
       />

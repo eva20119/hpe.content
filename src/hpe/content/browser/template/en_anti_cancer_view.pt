@@ -210,7 +210,7 @@ user_name = api.user.get_current().getProperty('fullname')
               <p class="oi_icon_sub_titile"><span style="font-size: 22px; color: #FFFFFF;">Cancer grows rapidly in Taiwan, worldwide cancer incidence rates are increasing, while the age group keeps on decreasing.Check your lifestyle in 5 minutes, close to healthy or not ?</span></p>
             </div>
           </div>
-          <p class="mb-30"> <a href="http://hpe.mingtak.com.tw/en_anti_cancer_view" target="_self"><img src="++plone++hpe.content/img/06B_photo5_en.png" width="548" height="350"></a> </p>
+          <p class="mb-30"> <a href="${abs_url}/en_anti_cancer_view" target="_self"><img src="++plone++hpe.content/img/06B_photo5_en.png" width="548" height="350"></a> </p>
         </div>
       </div>
     </div>
@@ -279,7 +279,7 @@ Please choose the time that you' re available to make the key chains. </td>
             </table>
           </div>
         </div><br>
-        <div class="col-md-12"> <span style="font-size: 16px; text-align: center;">• Please notify your absence<a href="http://hpe.mingtak.com.tw/profile" target="_blank" style="font-size: 16px; color: #F50B0E;"> in advance</a><br>
+        <div class="col-md-12"> <span style="font-size: 16px; text-align: center;">• Please notify your absence<a href="${abs_url}/en_profile" target="_blank" style="font-size: 16px; color: #F50B0E;"> in advance</a><br>
           • This donation title will be named in HPE, so we will not provide any receipts.</span><br><br>
           <div class="col-md-5 d-flex align-items-center mt-5 mt-md-0" style="font-family:微軟正黑體">
             <div align="center"><a class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" data-border-c-hover="#e83b23" href="#">Submit</a> </div>

@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="hpe.billing">
+<body>
+
+
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core"
+                    tal:define="toc context/table_of_contents|nothing;">
+<style>
+th{
+    padding:5px 10px;
+    text-align:center;
+    font-size:17px;
+}
+td{
+    padding:2px 5px;
+    text-align:center;
+}
+</style>
+<table>
+    <tr>
+        <th>員工編號</th>
+        <th>中文姓名</th>
+        <th>信箱</th>
+        <th>文字</th>
+    </tr>
+    <tr tal:repeat="data view/data">
+        <td>${python:data[0]}</td>
+        <td>${python:data[1]}</td>
+        <td>${python:data[2]}</td>
+        <td>${python:data[3]}</td>
+    </tr>
+</table>
+</metal:content-core>
+</metal:content-core>
+
+</body>
+</html>
+

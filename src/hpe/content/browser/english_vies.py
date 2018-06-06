@@ -157,9 +157,11 @@ class EnUserProfile(BrowserView):
         for item in result:
             tmp = dict(item)
             if tmp['category']  ==  '食在有道理':
-	        category = 'FOOD MAKES SENSE'
+                category = 'FOOD MAKES SENSE'
             elif tmp['category'] == '肌力動次動':
                 category = 'Strength training: Move it! move it!'
+            elif tmp['category'] == '防癌你我他':
+                category = 'Power Of Prevention'
 
             activity_date = tmp['activity_date']
             is_first = tmp['is_first']

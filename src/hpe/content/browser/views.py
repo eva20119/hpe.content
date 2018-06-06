@@ -754,7 +754,7 @@ class AntiCancerView(BrowserView):
                 self.condition_2 = True
             elif tmp['activity_date'] == '2018-06-26 12:00':
                 self.condition_3 = True
-            elif tmp['activity_date'] == '2018-06-21 12:15' or tmp['activity_date'] == '2018-06-21 11:00' or tmp['activity_date'] == 0:
+            elif tmp['activity_date'] == '2018-06-21 12:15' or tmp['activity_date'] == '2018-06-21 11:00' or tmp['activity_date'] == '0':
                 self.condition_4 = True
         return self.template()
 
@@ -802,8 +802,8 @@ class AnalysisCancer(BrowserView):
         return self.template()
 
 
-class ResultAntiCancer(BrowserView):
-    template = ViewPageTemplateFile('template/result_anti_cancer.pt')
+class ResultAntiCancerTest(BrowserView):
+    template = ViewPageTemplateFile('template/result_anti_cancer_test.pt')
     def __call__(self):
         roles = api.user.get_current().getRoles()
         if 'Manager' not in roles:
@@ -811,5 +811,40 @@ class ResultAntiCancer(BrowserView):
         execSql = SqlObj()
         execStr = """SELECT * FROM `anti_cancer`"""
         self.result = execSql.execSql(execStr)
+        return self.template()
+
+
+class ResultAntiCancerSingup(BrowserView):
+    template = ViewPageTemplateFile('template/result_anti_cancer_singup.pt')
+    def __call__(self):
+        roles = api.user.get_current().getRoles()
+        if 'Manager' not in roles:
+            return '您無權限'
+        execSql = SqlObj()
+        execStr = """SELECT * FROM `activity` WHERE category='防癌你我他'"""
+        result = execSql.execSql(execStr)
+        data = []
+        users = api.user.get_users()
+        all_user = {}
+        for user in users:
+            email = user.getProperty('email')
+            fullname = user.getProperty('fullname')
+            en_name = user.getProperty('en_name')
+            user_id = user.getProperty('user_id')
+            all_user[email] = {
+                'fullname': fullname,
+                'en_name': en_name,
+                'user_id': user_id
+            }
+        for item in result:
+            tmp = dict(item)
+            user = tmp['user']
+            if all_user.has_key(user):
+                fullname = all_user[user]['fullname']
+                en_name = all_user[user]['en_name']
+                user_id = all_user[user]['user_id']
+                note = tmp['note']
+                data.append([ user_id, fullname, user, note])
+        self.data = data
         return self.template()
 
