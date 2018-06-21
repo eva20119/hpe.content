@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>2018 HPE Wellness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="framework/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="framework/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="framework/css/contact-form.css" type="text/css" media="all" />
+<link rel="stylesheet" href="framework/css/vc.css" type="text/css" media="all" />
+<link rel="stylesheet" href="framework/css/remodal.css" type="text/css" media="all" />
+<link rel="stylesheet" href="framework/css/wocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="framework/css/remodal-default-theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="framework/css/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="framework/css/elegant-font/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="framework/css/linecons/1style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="framework/lightcase/lightcase.css" type="text/css" media="all" />
+<link rel="stylesheet" href="framework/css/page/shop.css" type="text/css" media="all" />
+<link rel="stylesheet" href="framework/css/page/about.css" type="text/css" media="all" />
+<script type="text/javascript" src="framework/js/jquery.js"></script>
+<script type="text/javascript" src="framework/js/jquery-migrate.min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="framework/js/html5min.js"></script>
+<![endif]-->
+<style type="text/css">
+<!--
+body {
+	background: -webkit-linear-gradient(#67ce89, #8fd3f4);
+	background: -o-linear-gradient(#67ce89, #8fd3f4);
+	background: -moz-linear-gradient(#67ce89, #8fd3f4);
+	background: linear-gradient(#67ce89, #8fd3f4);
+	color: #FFFFFF;
+}
+.username1 {	background-image: url(images/username.gif);
+	background-position: 1px 1px;
+	background-repeat: no-repeat;
+	padding-left: 5px;
+	height: 25px;
+	border-radius: 8px;
+	FONT-SIZE: 16px;
+}
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body class="woo_active standard_page dark_bg half_screen_fi have_featured_image ">
+<div class="preload"></div>
+<div class="header">
+  <div class="logo_holder"> <a href="index2.html"><img class="logo_for_dark_bg" src="framework/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="framework/img/logo_000.png" alt="Gravity" /></a> </div>
+  <!-- .site-header-social-menu --> 
+</div>
+<div class="page_featured">
+  <div class="page_description_over"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center">
+        <div class="page_description">
+          <h1 style="font-family:微軟正黑體"><img src="framework/img/07b_w.png"></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
+<div class="shoping_cart_icon"> Hi~您已登入 / <a class="my_shop_icon" href="#" title="menbers">登出</a>　 <a class="my_account_icon" href="reservation.html" title="預約家庭醫師"><i class="fa fa-calendar" aria-hidden="true"></i> </a> <a class="my_shop_icon" href="upload.html" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 <a class="my_shop_icon" href="profile.html" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
+  <select name="select" id="select" class="woocommerce-Input woocommerce-Input--text input-text">
+    <option>中文 Ch</option>
+    <option>英文 Eng</option>
+  </select>
+</div>
+<div class="menu_holder">
+  <div class="inner_holder">
+    <div class="text-logo">
+      <h3 class="logo_name">2018 HPE Wellness</h3>
+      <p class="logo_description">每個角落都是你的運動場，<br>
+        Wellness 在每個改變的起點等你，<br>
+        2018，Fighting</p>
+    </div>
+    <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
+      <div class="menu-primary-menu-container">
+        <ul class="primary-menu">
+          <li><a href="index2.html"><span style="font-family:微軟正黑體">回首頁</span></a></li>
+          <li><a href="04-1.html"><span style="font-family:微軟正黑體">心靈加油站</span> <img src="framework/img/2018.png"/></a></li>
+          <li><a href="reservation.html"><span style="font-family:微軟正黑體">邀你醫同來</span> <img src="framework/img/2018.png"/></a></li>
+          <li><a href="04-2.html"><span style="font-family:微軟正黑體">該釋壓了嗎</span> <img src="framework/img/2018.png"/></a></li>
+          <li><a href="04-3.html"><span style="font-family:微軟正黑體">食在有道理</span> <img src="framework/img/apr.png"/></a></li>
+          <li><a href="05.html"><span style="font-family:微軟正黑體">肌力動次動</span> <img src="framework/img/may.png"/></a></li>
+          <li><a href="06_b.html"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="framework/img/jun.png"/></a></li>
+          <li class="current-menu-item current_page_item"><a><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="framework/img/july.png"/></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="framework/img/oct.png"/></a></li>
+          <div class="vc_team_member_image_holder">
+            <div class="oi_team_cont_holder"> </div>
+          </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- .main-navigation -->
+    <div class="menu_footer">
+      <nav aria-label="Footer Menu">
+        <div class="menu-social-menu-container">
+          <ul class="footer-menu">
+            <!-- .
+            <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            -->
+          </ul>
+        </div>
+      </nav>
+      <!-- .social-navigation -->
+      <p style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>
+        This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="overlay"></div>
+<div id="primary" class="content-area">
+  <main id="main" class="site-main">
+    <div class="container">
+      <div class="row about-1">
+        <div class="col-md-6 offset-md-3">
+          <div class="about-1-1"><br>
+          </div>
+          <div class="oi_custom_heading_holder">
+            <div class="oi_vc_heading oi_border_position_center text-center"> <br>
+              <p class="oi_icon_sub_titile"><span style="font-size: 32px">景點上傳 / Accepted</span><br>
+              
+              <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+              <br>
+              <span style="font-size: 16px; font-family: 微軟正黑體; color: rgba(255,255,255,1); line-height: 19px; border-color: #009167;">申請地點
+              <font size="2">
+              <select name="select2" class="username1" style="font-size: 16px; font-family: 微軟正黑體; color: rgba(82,82,82,1.00); line-height: 19px; border-color: #009167; border-width: 1.5px;">
+                <option value="-----請選擇-----">-----請選擇-----</option>
+                <option value="北部">-------北部------</option>
+                <option value="大佳河濱公園">大佳河濱公園</option>
+                <option value="國立台灣大學 ">國立台灣大學 </option>
+                <option value="迪化休閒運動公園">迪化休閒運動公園</option>
+                <option value="成美左岸河濱公園">成美左岸河濱公園</option>
+                <option value="-------中部------">-------中部-------</option>
+                <option value="草悟道園區">草悟道園區</option>
+                <option value="大坑情人橋">大坑情人橋</option>
+                <option value="-------南部------">-------南部-------</option>
+                <option value="歷史博物館">歷史博物館</option>
+                <option value="駁二藝文特區">駁二藝文特區</option>
+              </select>
+              </font> <br>
+              <span style="font-family: '微軟正黑體'; font-size: 18px; color: #FFFFFF;"><span style="font-size: 16px; font-style: normal;"><br>
+              額外申請<font size="2">
+              <select name="select3" class="username1" style="font-size: 16px; font-family: 微軟正黑體; color: rgba(82,82,82,1.00); line-height: 19px; border-color: #009167; border-width: 1.5px;">
+                <option value="無">-------無------</option>
+                <option value="呼朋引伴獎">呼朋引伴獎</option>
+                <option value="腿力滿檔獎">腿力滿檔獎</option>
+                <option value="城市攻略獎">城市攻略獎</option>
+              </select>
+              </font></span> </span><br>
+              </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div align="center"><span class="product-subtotal"><span class="actions" style="font-family:微軟正黑體">
+      <input type="submit" class="button" name="update_cart3" value="選取照片" />
+      <input type="submit" class="button" name="update_cart3" value="申請上傳" />
+      <a href="07_upload.html"></a> </span> 　<span class="actions"> <span class="product-quantity"></span></span></span></div>
+  </div><br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="item-service main-1-s1" style="background-image:url(framework/img/upload.jpg)">
+            <h2 class="item-serv-title">申請項目</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item-service main-1-s2" style="background-image:url(framework/img/upload.jpg)">
+            <h2 class="item-serv-title">申請項目</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item-service main-1-s3" style="background-image:url(framework/img/upload.jpg)">
+            <h2 class="item-serv-title">申請項目</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item-service main-1-s4" style="background-image:url(framework/img/upload.jpg)">
+            <h2 class="item-serv-title">申請項目</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item-service main-1-s5" style="background-image:url(framework/img/upload.jpg)">
+            <h2 class="item-serv-title">申請項目</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item-service main-1-s6" style="background-image:url(framework/img/upload.jpg)">
+            <h2 class="item-serv-title">申請項目</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+<div class="container">
+      <div class="row about-1">
+        <div class="col-md-6 offset-md-3">
+          <div class="about-1-1"><br>
+          </div>
+          <div class="oi_custom_heading_holder">
+            <div class="oi_vc_heading oi_border_position_center text-center"> <br>
+              <p class="oi_icon_sub_titile"><span style="font-size: 32px">審核中 / Auditing flow</span><br>
+              
+              <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+              <br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="item-service main-1-s1" style="background-image:url(framework/img/upload.jpg)">
+            <h2 class="item-serv-title">申請項目</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item-service main-1-s2" style="background-image:url(framework/img/upload.jpg)">
+            <h2 class="item-serv-title">申請項目</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item-service main-1-s3" style="background-image:url(framework/img/upload.jpg)">
+            <h2 class="item-serv-title">申請項目</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item-service main-1-s4" style="background-image:url(framework/img/upload.jpg)">
+            <h2 class="item-serv-title">申請項目</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item-service main-1-s5" style="background-image:url(framework/img/upload.jpg)">
+            <h2 class="item-serv-title">申請項目</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item-service main-1-s6" style="background-image:url(framework/img/upload.jpg)">
+            <h2 class="item-serv-title">申請項目</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+         </div>
+        </div>
+    </div>
+  </main>
+  <!-- .site-main --> 
+  
+</div>
+<!-- .content-area -->
+
+<div class="bottom_line">
+  <div class="row">
+    <div class="col-md-12">
+      <p align="center">此活動僅限 HPE 台灣員工，請勿任意轉載<br>
+        This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="framework/js/popper.min.js"></script> 
+<script type="text/javascript" src="framework/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="framework/js/contact-form.js"></script> 
+<script type="text/javascript" src="framework/js/gmap3.min.js"></script> 
+<script type="text/javascript" src="framework/js/remodal.min.js"></script> 
+<script type="text/javascript" src="framework/lightcase/lightcase.js"></script> 
+<script type="text/javascript" src="framework/js/functions.js"></script>
+</body>
+</html>

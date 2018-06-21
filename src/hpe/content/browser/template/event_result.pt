@@ -1,7 +1,11 @@
+<style>
+td{
+    text-align: center;
+}
+</style>
 <table>
     <thead>
         <tr>
-            <th>活動名稱</th>
             <th>活動時間</th>
             <th>會員ID</th>
 	        <th>信箱</th>
@@ -15,7 +19,6 @@
     </thead>
     <tbody>
         <tr tal:repeat="data view/data">
-            <td>${python:data[0]}</td>
             <td>${python:data[1]}</td>
             <td>${python:data[2]}</td>
             <td>${python:data[3]}</td>

@@ -26,6 +26,7 @@ th,td{
 <select name="selected_event" id="selected_event">
     <option value="食在有道理">食在有道理</option>
     <option value="肌力動次動">肌力動次動</option>
+    <option value="防癌你我他">防癌你我他</option>
 </select>
 <select name="selected_date" id="selected_date">
     <option value="2018-04-19 12:00">2018-04-19 12:00</option>
@@ -52,9 +53,16 @@ $(document).ready(function () {
             $('#selected_date').append("<option value='2018-04-10 09:00'>2018-04-10 09:00</option>")
             $('#selected_date').append("<option value='2018-04-26 12:00'>2018-04-26 12:00</option>")
             $('#selected_date').append("<option value='2018-04-12 12:00'>2018-04-12 12:00</option>")
+        }else if(this.value == '防癌你我他'){
+            $('#selected_date').html('')
+            $('#selected_date').append("<option value='2018-06-14 12:00'>2018-06-14 12:00</option>")
+            $('#selected_date').append("<option value='2018-06-21 11:00'>2018-06-21 11:00</option>")
+            $('#selected_date').append("<option value='2018-06-21 12:15'>2018-06-21 12:15</option>")
+            $('#selected_date').append("<option value='2018-06-21 14:30'>2018-06-21 14:30</option>")
+            $('#selected_date').append("<option value='2018-06-21 15:30'>2018-06-21 15:30</option>")
+            $('#selected_date').append("<option value='2018-06-26 12:00'>2018-06-26 12:00</option>")
+            $('#selected_date').append("<option value='0'>由同仁帶繳</option>")
         }
-
-        
     })
     $('.btn').click(function(){
         event = $('#selected_event').val()

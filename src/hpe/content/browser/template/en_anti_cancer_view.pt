@@ -62,7 +62,7 @@ user_name = api.user.get_current().getProperty('fullname')
     <div class="row">
       <div class="col-md-6 offset-md-3 text-center">
         <div class="page_description">
-          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/06_en.png" width="800"></h1>
+          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/06b_w_en.png" width="800"></h1>
         </div>
       </div>
     </div>
@@ -155,8 +155,16 @@ user_name = api.user.get_current().getProperty('fullname')
           </div>
           <p class="mb-30">
             <input type="checkbox" data-time="2018-06-14 12:00" data-condition="${view/condition_1}">
-            <span style="font-style: normal; font-family: '微軟正黑體'; color: #FFFFFF; font-size: 22px;">6/14 1200 – 1330 9F Eclub<br>
-            <span style="font-size: 18px; padding-bottom: 18px;">Lunch box will be prepared, limited to 60</span></span> <img src="++plone++hpe.content/img/06B_photo1.png" width="548" height="350"> </p>
+            <span style="font-style: normal; font-family: '微軟正黑體'; color: #FFFFFF; font-size: 22px;">6/14 1200 – 1330 9F Eclub</span>
+            <div style="text-align:center">
+                <a href="http://hpe.mingtak.com.tw/health-knowledge-analysis-for-hp_sos_20180614.pdf/@@download/file/Health knowledge analysis for HP_SOS_20180614.pdf"
+                    style="color:white">
+                    Slide Download
+                </a>
+            </div>
+
+            <img src="++plone++hpe.content/img/06B_photo1.png" width="548" height="350">
+          </p>
         </div>
       </div>
     </div>
@@ -210,7 +218,7 @@ user_name = api.user.get_current().getProperty('fullname')
               <p class="oi_icon_sub_titile"><span style="font-size: 22px; color: #FFFFFF;">Cancer grows rapidly in Taiwan, worldwide cancer incidence rates are increasing, while the age group keeps on decreasing.Check your lifestyle in 5 minutes, close to healthy or not ?</span></p>
             </div>
           </div>
-          <p class="mb-30"> <a href="${abs_url}/en_anti_cancer_view" target="_self"><img src="++plone++hpe.content/img/06B_photo5_en.png" width="548" height="350"></a> </p>
+          <p class="mb-30"> <a href="${abs_url}/en_test_cancer_view" target="_self"><img src="++plone++hpe.content/img/06B_photo5_en.png" width="548" height="350"></a> </p>
         </div>
       </div>
     </div>
@@ -220,10 +228,12 @@ user_name = api.user.get_current().getProperty('fullname')
         <div class="row">
           <div class="col-md-6">
             <div class="oi_custom_heading_holder mb-0">
-              <div class="oi_vc_heading oi_border_position_right text-md-right">
+              <div class="oi_vc_heading oi_border_position_right text-md-left">
                 <h2 class="oi_icon_titile" style="font-family: 微軟正黑體; text-align: left; color: #009F79; font-size: 24px;">Donation</h2>
-                <p> <img><br>
-                  Your donation will make a huge differences whatever you can give, not only help themselves, but also help their family<br><br>
+                <img src="++plone++hpe.content/img/hope-LOGO-OP.png">
+                <p style="color:#FFFFFF"> <br>
+                  Your donation will make a huge differences whatever you can give, not only help themselves, but also help their family<br>
+                    <br>
                   • Where Your Money Goes<br>
 Giving NT$500 or more could help more people <br>to defeat cancers, the donations will be to the<br><a href="https://www.ecancer.org.tw/" target="_blank" style="font-size: 16px; color: #FF0004;">HOPE Society for Cancer Care</a>，the same time, <br>you will get a handmade leather key chain, and <br>monogram your own English name on reverse <br>side by yourself. Each NT$500 will receive one <br>key chain, and limited 2 key chains (NT$1000) <br>for each person.</p><p><br>
                 </p>
@@ -269,8 +279,8 @@ Please choose the time that you' re available to make the key chains. </td>
                 </tr>
                 <tr>
                   <td align="left">
-                    <input id="msg" type="text" size="12" maxlength="12" align='center' valign="middle">
-                    <span style="font-family: '微軟正黑體'; font-size: 14px; color: #FFFFFF;">you want to monogram on your key chains; we’ll make it for you.<br>(for example: 2 key chains; david wu, amy chang )</span></td>
+                    <input id="msg" type="text" size="12" maxlength="30" align='center' valign="middle">
+                    <span style="font-family: '微軟正黑體'; font-size: 14px; color: #FFFFFF;">you want to monogram on your key chains; we’ll make it for you.<br>(for example: 2, david wu, amy chang )</span></td>
                 </tr>
                 <tr>
                   <td align="left"><span style="font-family: '微軟正黑體'; font-size: 14px; color: #FFFFFF;"></span></td>
@@ -310,6 +320,7 @@ Please choose the time that you' re available to make the key chains. </td>
 <script type="text/javascript" src="++plone++hpe.content/js/remodal.min.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/change_language.js"></script>
 <script>
 var $ = jQuery.noConflict();
 $(function(){
@@ -347,16 +358,10 @@ $(function(){
           data: data,
           success: function (response) {
             if(response == 'success'){
-alert(`【Your registration form has been sent successfully!】
+                alert(`【Your registration form has been sent successfully!】
 * Your registration information has been received.
-*Please check “’Personal Information”, and confirm your contact info to make sure that you don't miss any
-notifications.
-Registration is limited. Please submit your application before the deadline. If the registers are not registered
-after 30 minutes from the starting time, the remaining amount can be used for on-site registration.
-In order to encourage our staff to work out more, everyone can register for the all 4 sessions of event.
-And please contact us via email or phone in advance if you will not be able to come, in order to be respectful
-of other registers.`)
-               location.reload()
+*Please check “Personal Information”, and confirm your contact info to make sure that you don't miss any notifications.`)
+                location.reload()
              }
              else if(response == 'loseData'){
                 alert(`Your profile is empty ，Please fill in the complete employee information before 

@@ -12,6 +12,18 @@ from db.connect.browser.views import SqlObj
 import datetime
 
 
+class BicycleView(BrowserView):
+    template = ViewPageTemplateFile('template/bicycle_view.pt')
+    def __call__(self):
+        return self.template()
+
+
+class BicycleUploadView(BrowserView):
+    template = ViewPageTemplateFile('template/bicycle_upload_view.pt')
+    def __call__(self):
+        return self.template()
+
+
 class Cover(BrowserView):
     template = ViewPageTemplateFile('template/cover.pt')
     def __call__(self):
@@ -24,67 +36,6 @@ class Cover(BrowserView):
 class Login(BrowserView):
     template = ViewPageTemplateFile('template/login.pt')
     def __call__(self):
-
-        return self.template()
-
-
-class Upload(BrowserView):
-    template = ViewPageTemplateFile('template/upload.pt')
-    def __call__(self):
-        request = self.request
-        # 暫且先轉到首頁
-        abs_url = api.portal.get().absolute_url()
-        request.response.redirect(abs_url)
-        return  
-        
-        if api.user.is_anonymous():
-            request.response.redirect('%s/user_login'%abs_url)
-            return
-        event_brain = api.content.find(portal_type="EventList")
-        place_brain = api.content.find(portal_type="PlaceList")
-        eventList = []
-        placeList = []
-        
-        for brain in event_brain:
-            eventList.append(brain.Title)
-
-        for brain in place_brain:
-            placeList.append(brain.Title)
-
-        self.eventList = eventList
-        self.placeList = placeList
-        
-        user = api.user.get_current().getProperty('email')
-        execSql = SqlObj()
-        execStr = """SELECT * FROM bicycle_picture WHERE user='{}'""".format(user)
-        result = execSql.execSql(execStr)
-        verify_data = []
-        not_verify_data = []
-        
-        for item in result:
-            tmp = dict(item)
-            verify = tmp['verify']
-            place = tmp['place']
-            user = tmp['user']
-            data = tmp['data']
-            event = tmp['event']
-            date = tmp['date']
-            if verify == 0:
-                not_verify_data.append({
-                    'data': data,
-                    'event': event,
-                    'date': date,
-                    'place': place
-                })
-            elif verify == 1:
-                verify_data.append({
-                    'data': data,
-                    'event': event,
-                    'date': date,
-                    'place': place
-                })
-        self.verify_data = verify_data
-        self.not_verify_data = not_verify_data
 
         return self.template()
 
@@ -147,56 +98,6 @@ class MindGasStation(BrowserView):
                     })
             self.data = data
         return self.template()
-
-
-class BicyclePictureView(BrowserView):
-    template = ViewPageTemplateFile("template/BicyclePictureView.pt")
-    def __call__(self):
-        event_brain = api.content.find(portal_type="EventList")
-        place_brain = api.content.find(portal_type="PlaceList")
-        eventList = []
-        placeList = []
-        
-        for brain in event_brain:
-            eventList.append(brain.Title)
-
-        for brain in place_brain:
-            placeList.append(brain.Title)
-
-        self.eventList = eventList
-        self.placeList = placeList
-
-        return self.template()
-
-
-class UploadBicyclePicture(BrowserView):
-    def __call__(self):
-        context = self.context
-        request = self.request
-        portal = api.portal.get()
-        alsoProvides(request, IDisableCSRFProtection)
-        
-        user = api.user.get_current().getProperty('email')
-        event = request.get('event')
-        place = request.get('place')
-        data = request.get('b64_image').split(',')[1]
-        
-        execSql = SqlObj()
-        execStr = """INSERT INTO bicycle_picture(user, event, place, data) VALUES('{}',
-            '{}','{}','{}')""".format(user, event, place, data)
-        execSql.execSql(execStr)
-        # b64_image = request.get('b64_image').split(',')[1]
-        # image_title = request.get('image')
-        # event = request.get('event')
-        # place = request.get('place')
-        # news = api.content.create(
-        #     type='BicyclePicture',
-        #     container=portal,
-        #     title='news1',
-        #     event=event,
-        #     place=place,
-        #     image=namedfile.NamedBlobImage(data=base64.b64decode(b64_image), filename=safe_unicode(image_title))
-        # )
 
 
 class Reservation(BrowserView):
@@ -843,8 +744,9 @@ class ResultAntiCancerSingup(BrowserView):
                 fullname = all_user[user]['fullname']
                 en_name = all_user[user]['en_name']
                 user_id = all_user[user]['user_id']
+                activity_date = tmp['activity_date']
                 note = tmp['note']
-                data.append([ user_id, fullname, user, note])
+                data.append([ user_id, fullname, user, note, activity_date])
         self.data = data
         return self.template()
 

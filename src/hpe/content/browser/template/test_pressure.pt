@@ -40,6 +40,9 @@ label{
 .question{
     border:1px solid rgba(0,0,0,.1)
 }
+td{
+    color: black;
+}
 </style>
 </head>
 

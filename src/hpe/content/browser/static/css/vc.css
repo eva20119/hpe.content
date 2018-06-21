@@ -49,9 +49,13 @@
 .oi_vc_heading .oi_icon_sub_titile {
 	margin-bottom: 0px;
 	font-family: "微軟正黑體";
-	font-size: 20px;
+	font-size: 16px;
 	line-height: normal;
 	text-align: center;
+	font-weight: 400;
+	-webkit-transition: all;
+	-o-transition: all;
+	transition: all;
 }
 .oi_custom_heading_holder {
 	margin-bottom: 20px;

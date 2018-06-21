@@ -256,13 +256,13 @@ td>select{
                                         <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體"
                                             tal:repeat="data view/data">
                                             <td height="50" valign="top" class="product-name" data-title="活動日期">
-                                                <div align="center">${python:data['activity_date']}</div>
+                                                <div align="center" style="color:black">${python:data['activity_date']}</div>
                                             </td>
                                             <td valign="top" class="product-price" data-title="活動名稱">
-                                                <div align="center">${python:data['category']}</div>
+                                                <div align="center" style="color:black">${python:data['category']}</div>
                                             </td>
                                             <td valign="top" class="product-quantity" data-title="對應步數">
-                                                <div align="center">${python:data['step']}</div>
+                                                <div align="center" style="color:black">${python:data['step']}</div>
                                             </td>
                                             <td valign="top" class="product-subtotal" data-title="狀　　態">
                                                 <!-- 活動未開始 -->

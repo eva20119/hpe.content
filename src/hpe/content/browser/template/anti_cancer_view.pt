@@ -39,7 +39,10 @@ body {
 	color: #FFFFFF
 }
 -->
-
+.oi_vc_button{
+    color: white;
+    cursor: pointer;
+}
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
@@ -159,8 +162,15 @@ user_name = api.user.get_current().getProperty('fullname')
           </div>
           <p class="mb-30">
             <input type="checkbox" data-time="2018-06-14 12:00" data-condition="${view/condition_1}">
-            <span style="font-style: normal; font-family: '微軟正黑體'; color: #FFFFFF; font-size: 22px;">6/14 1200 – 1330 9F Eclub<br>
-            <span style="font-size: 18px; padding-bottom: 18px;">講座參與者當日提供元氣餐盒一份，限額 60 位</span></span> <img src="++plone++hpe.content/img/06B_photo1.png" width="548" height="350"> </p>
+            <span style="font-style: normal; font-family: '微軟正黑體'; color: #FFFFFF; font-size: 22px;">6/14 1200-1300 9F Eclub</span> 
+            <div style="text-align:center"> 
+                <a href="http://hpe.mingtak.com.tw/health-knowledge-analysis-for-hp_sos_20180614.pdf/@@download/file/Health knowledge analysis for HP_SOS_20180614.pdf" 
+                     style="color:white">
+                    簡報下載
+                </a>
+            </div>
+            <img src="++plone++hpe.content/img/06B_photo1.png" width="548" height="350"> </p>
+           
         </div>
       </div>
     </div>
@@ -271,11 +281,11 @@ user_name = api.user.get_current().getProperty('fullname')
                 </tr>
                 <tr>
                   <td align="left">
-                    <input id="msg" type="text" size="12" maxlength="12" align='center' valign="middle">
+                    <input id="msg" type="text" size="12" maxlength="30" align='center' valign="middle">
                     <span style="font-family: '微軟正黑體'; font-size: 14px; color: #FFFFFF;">(限英文 12 字內)</span></td>
                 </tr>
                 <tr>
-                  <td align="left"><span style="font-family: '微軟正黑體'; font-size: 14px; color: #FFFFFF;">(填寫範例：2(份),david wu, amy chang)</span></td>
+                  <td align="left"><span style="font-family: '微軟正黑體'; font-size: 14px; color: #FFFFFF;">(填寫範例：2,david wu, amy chang)</span></td>
                 </tr>
               </tbody>
             </table>
@@ -284,7 +294,9 @@ user_name = api.user.get_current().getProperty('fullname')
         <div class="col-md-12"> <span style="font-size: 16px; text-align: center;">• 若無法出席者，請提早至<a href="${abs_url}/profile" target="_blank" style="font-size: 16px; color: #F50B0E;">個人資料頁</a>取消報名<br>
           • 本捐款活動將以公司名義捐款，將不提供個人收據</span><br><br>
           <div class="col-md-5 d-flex align-items-center mt-5 mt-md-0" style="font-family:微軟正黑體">
-            <div align="center"><a class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" data-border-c-hover="#e83b23">完成送出</a> </div>
+            <div align="center">
+            <a class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" 
+                data-border-c-hover="#e83b23" style="color:white">完成送出</a> </div>
           </div> 
           </div>    
           </div>
@@ -354,7 +366,9 @@ $(function(){
           data: data,
           success: function (response) {
             if(response == 'success'){
-               alert('【報名資料已送出】確認收到您的報名資料\n請到”我的資料”確認聯絡方式無誤，保障您收到活動通知的權益\n每場次名額有限，活動採事先報名，活動開始後30分鐘若報名者未進行報到，剩餘名額將開放現場報名')
+               alert(`【報名資料已送出】
+*確認收到您的報名資料
+*請到”我的資料”確認聯絡方式無誤，保障您收到活動通知的權益`)
                location.reload()
              }
              else if(response == 'loseData'){

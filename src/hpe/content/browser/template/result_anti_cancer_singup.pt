@@ -27,13 +27,15 @@ td{
         <th>員工編號</th>
         <th>中文姓名</th>
         <th>信箱</th>
-        <th>文字</th>
+        <th>預刻文字</th>
+        <th>參加時間</th>
     </tr>
     <tr tal:repeat="data view/data">
         <td>${python:data[0]}</td>
         <td>${python:data[1]}</td>
         <td>${python:data[2]}</td>
         <td>${python:data[3]}</td>
+        <td>${python:data[4]}</td>
     </tr>
 </table>
 </metal:content-core>

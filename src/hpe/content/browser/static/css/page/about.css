@@ -75,7 +75,7 @@ h2, .woocommerce-Tabs-panel.woocommerce-Tabs-panel--reviews.panel.entry-content.
 	font-weight: 700;
 	font-style: normal;
 	line-height: 1.3;
-	color: #000000;
+	color: #FFFFFF;
 }
 h3, .woocommerce-lost-password label[for=user_login] {
 	font-family: Dosis, Helvetica, Arial, sans-serif;
@@ -127,7 +127,7 @@ h6 {
 }
 
 .page_featured {
-	background-image:url(../../img/06_Bheader.jpg);
+	background-image: url(../../img/07_header.jpg);
 }
 .page_featured .page_description_over {
 	background: #000;

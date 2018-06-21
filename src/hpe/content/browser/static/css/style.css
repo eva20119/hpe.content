@@ -115,6 +115,7 @@ th, td {
 	padding-left: 0.4375em;
 	padding-bottom: 0em;
 	font-family: "微軟正黑體";
+	color: #fff;
 }
 .full-height {
 	min-height:100vh;
@@ -189,7 +190,7 @@ body {
 	color: #777;
 }
 h1 {
-	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-family: 微軟正黑體, Dosis, Helvetica, Arial, sans-serif;
 	font-size: 34px;
 	font-weight: 700;
 	font-style: normal;
@@ -197,7 +198,7 @@ h1 {
 	color: #000000;
 }
 h2, .woocommerce-Tabs-panel.woocommerce-Tabs-panel--reviews.panel.entry-content.wc-tab .comment-reply-title {
-	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-family: 微軟正黑體, Dosis, Helvetica, Arial, sans-serif;
 	font-size: 28px;
 	font-weight: 700;
 	font-style: normal;
@@ -205,7 +206,7 @@ h2, .woocommerce-Tabs-panel.woocommerce-Tabs-panel--reviews.panel.entry-content.
 	color: #000000;
 }
 h3, .woocommerce-lost-password label[for=user_login] {
-	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-family: 微軟正黑體, Dosis, Helvetica, Arial, sans-serif;
 	font-size: 24px;
 	font-weight: 700;
 	font-style: normal;
@@ -213,7 +214,7 @@ h3, .woocommerce-lost-password label[for=user_login] {
 	color: #000000;
 }
 h4 {
-	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-family: 微軟正黑體, Dosis, Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 700;
 	font-style: normal;
@@ -221,7 +222,7 @@ h4 {
 	color: #000000;
 }
 h5 {
-	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-family: 微軟正黑體, Dosis, Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 700;
 	font-style: normal;
@@ -229,7 +230,7 @@ h5 {
 	color: #000000;
 }
 h6 {
-	font-family: Dosis, Helvetica, Arial, sans-serif;
+	font-family: 微軟正黑體, Dosis, Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 700;
 	font-style: normal;
@@ -243,7 +244,8 @@ h6 {
 	margin-bottom:30px;
 }
 .item-service.main-1-s1 {
-	background-color:#c5d5cb;
+	background-color: #c5d5cb;
+	background-image: url(../img/07_l1.jpg);
 }
 .item-service.main-1-s2 {
 	background-color:#c0dfd9;
@@ -271,22 +273,26 @@ h6 {
     transition: transform .35s,-webkit-transform .35s;
 }
 .item-service .item-serv-title {
-	margin:0;
-	font-size: 36px;
-    line-height: 36px;
-    -webkit-transform: translate3d(0,-50px,0);
-    transform: translate3d(0,-50px,0);
+	margin: 0;
+	font-size: 26px;
+	line-height: 36px;
+	-webkit-transform: translate3d(0,-50px,0);
+	transform: translate3d(0,-50px,0);
+	font-family: "微軟正黑體";
 }
 .item-service .item-serv-descr {
-	font-size:16px;
-	line-height:16px;
+	font-size: 16px;
+	line-height: 16px;
 	padding: 2px 25px;
-    -webkit-transform: translate3d(0,15px,0);
-    transform: translate3d(0,15px,0);
+	-webkit-transform: translate3d(0,15px,0);
+	transform: translate3d(0,15px,0);
+	font-family: "微軟正黑體";
 }
 .item-service:hover .item-serv-title {
-    -webkit-transform: translate3d(0,-60px,0);
-    transform: translate3d(0,-60px,0);
+	-webkit-transform: translate3d(0,-60px,0);
+	transform: translate3d(0,-60px,0);
+	color: #00F0A8;
+	font-size: 26px;
 }
 .item-service:hover .item-serv-descr {
 	-webkit-transform: translate3d(0,25px,0);
@@ -294,15 +300,15 @@ h6 {
 }
 .item-service:after,
 .item-service:before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10%;
-    height: 1px;
-    content: "";
-    transform: translate3d(-50%, -50%, 0px);
-    background:#000;
-    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10%;
+	height: 1.5px;
+	content: "";
+	transform: translate3d(-50%, -50%, 0px);
+	background: #fff;
+	transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
 }
 .item-service:hover:before {
 	opacity: 0.5;
@@ -470,6 +476,8 @@ font-family: Open Sans;
 }
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
 	display: block;
+	font-style: normal;
+	font-family: "微軟正黑體";
 }
 .alignleft {
 	float: left;

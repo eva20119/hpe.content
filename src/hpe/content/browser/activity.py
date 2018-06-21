@@ -158,6 +158,7 @@ class ShowActivityStatus(BrowserView):
 
 class GetEventData(BrowserView):
     template = ViewPageTemplateFile('template/event_result.pt')
+    template1 = ViewPageTemplateFile('template/event_result_for_cancer.pt')
     def __call__(self):
         request = self.request
         date = request.get('date')
@@ -193,12 +194,16 @@ class GetEventData(BrowserView):
             sing_up_time = tmp['sing_up_time']
             user_email = tmp['user']
             category= tmp['category']
+            note = tmp['note']
             if user_data.has_key(user_email):
                 user_list = user_data[user_email]
                 data.append([
                     category ,activity_date, user_list['user_id'], user_email, user_list['fullname']
                     , user_list['en_name'], user_list['officephone'], user_list['cellphone']
-                    , user_list['location'], sing_up_time
+                    , user_list['location'], sing_up_time, note
                 ])
         self.data = data
-        return self.template()
+        if date == '2018-06-21 12:15' or date == '2018-06-21 11:00' or date == '0':
+            return self.template1()
+        else:
+            return self.template()

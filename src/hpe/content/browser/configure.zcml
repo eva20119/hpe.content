@@ -40,20 +40,6 @@
       permission='zope2.View'
       />
   <browser:page
-      name='bicycle_picture_view'
-      for='*'
-      class='.views.BicyclePictureView'
-      layer='hpe.content.interfaces.IHpeContentLayer'
-      permission='zope2.View'
-      />
-  <browser:page
-      name='upload_bicycle_picture'
-      for='*'
-      class='.views.UploadBicyclePicture'
-      layer='hpe.content.interfaces.IHpeContentLayer'
-      permission='zope2.View'
-      />
-  <browser:page
       name='reservation'
       for='*'
       class='.views.Reservation'
@@ -141,13 +127,6 @@
       name='login'
       for='*'
       class='.views.Login'
-      layer='hpe.content.interfaces.IHpeContentLayer'
-      permission='zope2.View'
-      />
-  <browser:page
-      name='upload'
-      for='*'
-      class='.views.Upload'
       layer='hpe.content.interfaces.IHpeContentLayer'
       permission='zope2.View'
       />
@@ -352,6 +331,20 @@
       name='result_anti_cancer_singup'
       for='*'
       class='.views.ResultAntiCancerSingup'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='bicycle_view'
+      for='*'
+      class='.views.BicycleView'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='bicycle_upload_view'
+      for='*'
+      class='.views.BicycleUploadView'
       layer='hpe.content.interfaces.IHpeContentLayer'
       permission='zope2.View'
       />
