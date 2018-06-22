@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#692A7B;}
+</style>
+<rect x="38" y="38" class="st0" width="40" height="40">
+<animate  accumulate="none" additive="replace" attributeName="fill" begin="0s" calcMode="discrete" dur="1s" fill="remove" keyTimes="0;0.125;1" repeatCount="indefinite" restart="always" values="#333333;#e73f43;#e73f43">
+	</animate>
+</rect>
+<rect x="80" y="38" class="st0" width="40" height="40">
+<animate  accumulate="none" additive="replace" attributeName="fill" begin="0.125s" calcMode="discrete" dur="1s" fill="remove" keyTimes="0;0.125;1" repeatCount="indefinite" restart="always" values="#333333;#e73f43;#e73f43">
+	</animate>
+</rect>
+<rect x="122" y="38" class="st0" width="40" height="40">
+<animate  accumulate="none" additive="replace" attributeName="fill" begin="0.25s" calcMode="discrete" dur="1s" fill="remove" keyTimes="0;0.125;1" repeatCount="indefinite" restart="always" values="#333333;#e73f43;#e73f43">
+	</animate>
+</rect>
+<rect x="38" y="80" class="st0" width="40" height="40">
+<animate  accumulate="none" additive="replace" attributeName="fill" begin="0.875s" calcMode="discrete" dur="1s" fill="remove" keyTimes="0;0.125;1" repeatCount="indefinite" restart="always" values="#333333;#e73f43;#e73f43">
+	</animate>
+</rect>
+<rect x="122" y="80" class="st0" width="40" height="40">
+<animate  accumulate="none" additive="replace" attributeName="fill" begin="0.375s" calcMode="discrete" dur="1s" fill="remove" keyTimes="0;0.125;1" repeatCount="indefinite" restart="always" values="#333333;#e73f43;#e73f43">
+	</animate>
+</rect>
+<rect x="38" y="122" class="st0" width="40" height="40">
+<animate  accumulate="none" additive="replace" attributeName="fill" begin="0.75s" calcMode="discrete" dur="1s" fill="remove" keyTimes="0;0.125;1" repeatCount="indefinite" restart="always" values="#333333;#e73f43;#e73f43">
+	</animate>
+</rect>
+<rect x="80" y="122" class="st0" width="40" height="40">
+<animate  accumulate="none" additive="replace" attributeName="fill" begin="0.625s" calcMode="discrete" dur="1s" fill="remove" keyTimes="0;0.125;1" repeatCount="indefinite" restart="always" values="#333333;#e73f43;#e73f43">
+	</animate>
+</rect>
+<rect x="122" y="122" class="st0" width="40" height="40">
+<animate  accumulate="none" additive="replace" attributeName="fill" begin="0.5s" calcMode="discrete" dur="1s" fill="remove" keyTimes="0;0.125;1" repeatCount="indefinite" restart="always" values="#333333;#e73f43;#e73f43">
+	</animate>
+</rect>
+</svg>

@@ -4,23 +4,23 @@
 <title>2018 HPE Wellness</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="framework/css/bootstrap.min.css" type="text/css" media="all" />
-<link rel="stylesheet" href="framework/css/style.css" type="text/css" media="all" />
-<link rel="stylesheet" href="framework/css/contact-form.css" type="text/css" media="all" />
-<link rel="stylesheet" href="framework/css/vc.css" type="text/css" media="all" />
-<link rel="stylesheet" href="framework/css/remodal.css" type="text/css" media="all" />
-<link rel="stylesheet" href="framework/css/wocommerce.css" type="text/css" media="all" />
-<link rel="stylesheet" href="framework/css/remodal-default-theme.css" type="text/css" media="all" />
-<link rel="stylesheet" href="framework/css/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
-<link rel="stylesheet" href="framework/css/elegant-font/style.css" type="text/css" media="all" />
-<link rel="stylesheet" href="framework/css/linecons/1style.css" type="text/css" media="all" />
-<link rel="stylesheet" href="framework/lightcase/lightcase.css" type="text/css" media="all" />
-<link rel="stylesheet" href="framework/css/page/shop.css" type="text/css" media="all" />
-<link rel="stylesheet" href="framework/css/page/about.css" type="text/css" media="all" />
-<script type="text/javascript" src="framework/js/jquery.js"></script>
-<script type="text/javascript" src="framework/js/jquery-migrate.min.js"></script>
+<link rel="stylesheet" href="++plone++hpe.content/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/contact-form.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/vc.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/wocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal-default-theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/elegant-font/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/linecons/1style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/lightcase/lightcase.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/shop.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/about.css" type="text/css" media="all" />
+<script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
 <!--[if lt IE 9]>
-<script type="text/javascript" src="framework/js/html5min.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/html5min.js"></script>
 <![endif]-->
 <style type="text/css">
 <!--
@@ -40,6 +40,27 @@ body {
 	FONT-SIZE: 16px;
 }
 -->
+input[type='file']{
+    font-size: 16px;
+    border: none;
+    background: #636363;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.preloader{
+    position:fixed;
+    left:0px;top:0px;
+    width:100%;height:100%;
+    z-index:999999;
+    background-color:#ffffff;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-image:url(++plone++hpe.content/preloader.svg);
+    background-size:80px;
+}
+
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
@@ -47,7 +68,7 @@ body {
 <body class="woo_active standard_page dark_bg half_screen_fi have_featured_image ">
 <div class="preload"></div>
 <div class="header">
-  <div class="logo_holder"> <a href="index2.html"><img class="logo_for_dark_bg" src="framework/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="framework/img/logo_000.png" alt="Gravity" /></a> </div>
+  <div class="logo_holder"> <a href="index2.html"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a> </div>
   <!-- .site-header-social-menu --> 
 </div>
 <div class="page_featured">
@@ -56,7 +77,7 @@ body {
     <div class="row">
       <div class="col-md-6 offset-md-3 text-center">
         <div class="page_description">
-          <h1 style="font-family:微軟正黑體"><img src="framework/img/07b_w.png"></h1>
+          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/07b_w.png"></h1>
         </div>
       </div>
     </div>
@@ -81,18 +102,17 @@ body {
       <div class="menu-primary-menu-container">
         <ul class="primary-menu">
           <li><a href="index2.html"><span style="font-family:微軟正黑體">回首頁</span></a></li>
-          <li><a href="04-1.html"><span style="font-family:微軟正黑體">心靈加油站</span> <img src="framework/img/2018.png"/></a></li>
-          <li><a href="reservation.html"><span style="font-family:微軟正黑體">邀你醫同來</span> <img src="framework/img/2018.png"/></a></li>
-          <li><a href="04-2.html"><span style="font-family:微軟正黑體">該釋壓了嗎</span> <img src="framework/img/2018.png"/></a></li>
-          <li><a href="04-3.html"><span style="font-family:微軟正黑體">食在有道理</span> <img src="framework/img/apr.png"/></a></li>
-          <li><a href="05.html"><span style="font-family:微軟正黑體">肌力動次動</span> <img src="framework/img/may.png"/></a></li>
-          <li><a href="06_b.html"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="framework/img/jun.png"/></a></li>
-          <li class="current-menu-item current_page_item"><a><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="framework/img/july.png"/></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="framework/img/oct.png"/></a></li>
+          <li><a href="04-1.html"><span style="font-family:微軟正黑體">心靈加油站</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="reservation.html"><span style="font-family:微軟正黑體">邀你醫同來</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="04-2.html"><span style="font-family:微軟正黑體">該釋壓了嗎</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="04-3.html"><span style="font-family:微軟正黑體">食在有道理</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
+          <li><a href="05.html"><span style="font-family:微軟正黑體">肌力動次動</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
+          <li><a href="06_b.html"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
+          <li class="current-menu-item current_page_item"><a><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
           <div class="vc_team_member_image_holder">
             <div class="oi_team_cont_holder"> </div>
           </div>
-          </li>
         </ul>
       </div>
     </nav>
@@ -117,7 +137,6 @@ body {
     </div>
   </div>
 </div>
-</div>
 <div class="overlay"></div>
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
@@ -134,24 +153,24 @@ body {
               <br>
               <span style="font-size: 16px; font-family: 微軟正黑體; color: rgba(255,255,255,1); line-height: 19px; border-color: #009167;">申請地點
               <font size="2">
-              <select name="select2" class="username1" style="font-size: 16px; font-family: 微軟正黑體; color: rgba(82,82,82,1.00); line-height: 19px; border-color: #009167; border-width: 1.5px;">
-                <option value="-----請選擇-----">-----請選擇-----</option>
+              <select class="username1 select1" style="font-size: 16px; font-family: 微軟正黑體; color: rgba(82,82,82,1.00); line-height: 19px; border-color: #009167; border-width: 1.5px;">
+                <option value="無">-----請選擇-----</option>
                 <option value="北部">-------北部------</option>
                 <option value="大佳河濱公園">大佳河濱公園</option>
                 <option value="國立台灣大學 ">國立台灣大學 </option>
                 <option value="迪化休閒運動公園">迪化休閒運動公園</option>
                 <option value="成美左岸河濱公園">成美左岸河濱公園</option>
-                <option value="-------中部------">-------中部-------</option>
+                <option value="中部">-------中部-------</option>
                 <option value="草悟道園區">草悟道園區</option>
                 <option value="大坑情人橋">大坑情人橋</option>
-                <option value="-------南部------">-------南部-------</option>
+                <option value="南部">-------南部-------</option>
                 <option value="歷史博物館">歷史博物館</option>
                 <option value="駁二藝文特區">駁二藝文特區</option>
               </select>
               </font> <br>
               <span style="font-family: '微軟正黑體'; font-size: 18px; color: #FFFFFF;"><span style="font-size: 16px; font-style: normal;"><br>
               額外申請<font size="2">
-              <select name="select3" class="username1" style="font-size: 16px; font-family: 微軟正黑體; color: rgba(82,82,82,1.00); line-height: 19px; border-color: #009167; border-width: 1.5px;">
+              <select class="username1 select2" style="font-size: 16px; font-family: 微軟正黑體; color: rgba(82,82,82,1.00); line-height: 19px; border-color: #009167; border-width: 1.5px;">
                 <option value="無">-------無------</option>
                 <option value="呼朋引伴獎">呼朋引伴獎</option>
                 <option value="腿力滿檔獎">腿力滿檔獎</option>
@@ -166,52 +185,59 @@ body {
       </div>
     </div>
         <div align="center"><span class="product-subtotal"><span class="actions" style="font-family:微軟正黑體">
-      <input type="submit" class="button" name="update_cart3" value="選取照片" />
-      <input type="submit" class="button" name="update_cart3" value="申請上傳" />
-      <a href="07_upload.html"></a> </span> 　<span class="actions"> <span class="product-quantity"></span></span></span></div>
+      <input type="file" class="button" id='image' name="update_cart3" value="選取照片" />
+      <input type="submit" class="button" id='upload_btn' name="update_cart3" value="申請上傳" />
+       </span> 　<span class="actions"> <span class="product-quantity"></span></span></span></div>
   </div><br><br>
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <div class="item-service main-1-s1" style="background-image:url(framework/img/upload.jpg)">
-            <h2 class="item-serv-title">申請項目</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          <div class="item-service main-1-s1 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
+            <h2 class="item-serv-title ">申請項目</h2>
+            <div class="item-serv-descr"><strong class="upload1_location" style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <input class='upload_input' type='hidden'>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="item-service main-1-s2" style="background-image:url(framework/img/upload.jpg)">
+          <div class="item-service main-1-s2 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
             <h2 class="item-serv-title">申請項目</h2>
           <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <input class='upload_input' type='hidden'>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="item-service main-1-s3" style="background-image:url(framework/img/upload.jpg)">
+          <div class="item-service main-1-s3 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
             <h2 class="item-serv-title">申請項目</h2>
           <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <input class='upload_input' type='hidden'>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="item-service main-1-s4" style="background-image:url(framework/img/upload.jpg)">
+          <div class="item-service main-1-s4 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
             <h2 class="item-serv-title">申請項目</h2>
           <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <input class='upload_input' type='hidden'>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="item-service main-1-s5" style="background-image:url(framework/img/upload.jpg)">
+          <div class="item-service main-1-s5 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
             <h2 class="item-serv-title">申請項目</h2>
           <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <input class='upload_input' type='hidden'>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="item-service main-1-s6" style="background-image:url(framework/img/upload.jpg)">
+          <div class="item-service main-1-s6 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg);
+                background:antiquewhite">
             <h2 class="item-serv-title">申請項目</h2>
           <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <input class='upload_input' type='hidden'>
           </div>
         </div>
         <br>
         <br>
         <br>
-<div class="container">
+    <div class="container">
       <div class="row about-1">
         <div class="col-md-6 offset-md-3">
           <div class="about-1-1"><br>
@@ -228,40 +254,17 @@ body {
         </div>
       </div>
     </div>
-        <div class="container">
+     <div class="container" tal:define="leng python: len(view.audit_data)">
       <div class="row">
-        <div class="col-md-4">
-          <div class="item-service main-1-s1" style="background-image:url(framework/img/upload.jpg)">
-            <h2 class="item-serv-title">申請項目</h2>
+        <div class="col-md-4" tal:repeat="item view/audit_data">
+          <div class="item-service main-1-s1" 
+            style="background-image:url(${python: 'data:image/png;base64,%s' %item[4]})">
+            <h2 class="item-serv-title">${python: item[2]}</h2>
           <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="item-service main-1-s2" style="background-image:url(framework/img/upload.jpg)">
-            <h2 class="item-serv-title">申請項目</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="item-service main-1-s3" style="background-image:url(framework/img/upload.jpg)">
-            <h2 class="item-serv-title">申請項目</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="item-service main-1-s4" style="background-image:url(framework/img/upload.jpg)">
-            <h2 class="item-serv-title">申請項目</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="item-service main-1-s5" style="background-image:url(framework/img/upload.jpg)">
-            <h2 class="item-serv-title">申請項目</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="item-service main-1-s6" style="background-image:url(framework/img/upload.jpg)">
+        <div class="col-md-4" tal:repeat="num python: range(0, 6-leng)">
+          <div class="item-service main-1-s2" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
             <h2 class="item-serv-title">申請項目</h2>
           <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
           </div>
@@ -274,26 +277,141 @@ body {
          </div>
         </div>
     </div>
-  </main>
-  <!-- .site-main --> 
-  
+  <!-- .site-main -->
+
+    <div class="container">
+      <div class="row about-1">
+        <div class="col-md-6 offset-md-3">
+          <div class="about-1-1"><br>
+          </div>
+          <div class="oi_custom_heading_holder">
+            <div class="oi_vc_heading oi_border_position_center text-center"> <br>
+              <p class="oi_icon_sub_titile"><span style="font-size: 32px">審核通過 / Examination passed</span><br>
+
+              <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+              <br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+   <div class="container" tal:define="leng python: len(view.complete_data)">
+      <div class="row">
+        <div class="col-md-4" tal:repeat="item view/complete_data">
+          <div class="item-service main-1-s1" 
+            style="background-image:url(${python: 'data:image/png;base64,%s' %item[4]})">
+            <h2 class="item-serv-title">${python: item[2]}</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <div class="col-md-4" tal:repeat="num python: range(0, 9-leng)">
+          <div class="item-service main-1-s2" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
+            <h2 class="item-serv-title">申請項目</h2>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
 </div>
 <!-- .content-area -->
 
 <div class="bottom_line">
   <div class="row">
     <div class="col-md-12">
-      <p align="center">此活動僅限 HPE 台灣員工，請勿任意轉載<br>
+      <p align="center" style='text-align:left;color:white'>此活動僅限 HPE 台灣員工，請勿任意轉載<br>
         This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
     </div>
   </div>
 </div>
-<script type="text/javascript" src="framework/js/popper.min.js"></script> 
-<script type="text/javascript" src="framework/js/bootstrap.min.js"></script> 
-<script type="text/javascript" src="framework/js/contact-form.js"></script> 
-<script type="text/javascript" src="framework/js/gmap3.min.js"></script> 
-<script type="text/javascript" src="framework/js/remodal.min.js"></script> 
-<script type="text/javascript" src="framework/lightcase/lightcase.js"></script> 
-<script type="text/javascript" src="framework/js/functions.js"></script>
+<div class="preloader" style='display:none'>
+<script type="text/javascript" src="++plone++hpe.content/js/popper.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/contact-form.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/gmap3.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/remodal.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/notify.min.js"></script>
+<script>
+var jq = jQuery.noConflict(true);
+jq(function(){
+    var img_data = []
+    jq('#image').change(function (e) {
+        if(jq('.select1').val() == '無' || jq('.select1').val() == '北部' || jq('.select1').val() == '中部' || jq('.select1').val() == '南部'){
+            jq.notify('您尚未選擇地點,或地點錯誤', 'error')
+            jq('#image').val('')
+            return false
+        }
+        if (this.files && this.files[0]) {
+            var FR = new FileReader();
+
+            FR.addEventListener("load", function(e) {
+                count = 0
+                jq('.upload').each(function(){
+                    if(! jq(this).hasClass('full')){
+                        count ++
+                        jq(this).css('backgroundImage', 'url(' + e.target.result + ')' )
+                        jq(this).css('background-position', 'center' )
+                        jq(this).css('background-repeat', 'no-repeat')
+                        jq(this).addClass('full')
+                        select1 = jq('.select1').val()
+                        if(jq('.select2').val() == '無'){
+                            select2 = ''
+                        }else{
+                            select2 = jq('.select2').val()
+                        }
+
+                        data = [select1, select2, e.target.result]
+                        jq(this).find('input').val(data)
+                        jq(this).find('.item-serv-title').text(select1)
+                        jq(this).find('.item-serv-descr').text(select2)
+
+                        jq('.select2').val('無')
+                        jq('.select1').val('無')
+                        jq('#image').val('')
+
+                        return false
+                    }
+                })
+                if(count == 0){
+                    jq.notify('上傳空間以滿(6張)', 'error')
+                }
+            });
+            FR.readAsDataURL( this.files[0] );
+        }
+    });
+    jq('#upload_btn').click(function(){
+        jq('.upload_input').each(function(){
+            if(jq(this).val()){
+                data = {
+                    'img_data': jq(this).val()
+                }
+                url = location.href.replace('bicycle_upload_view', 'upload_bicycle_image')
+                jq.ajax({
+                    type: "post",
+                    url: url,
+                    data: data,
+                    success: function (rep) {
+                        if(rep == 'error'){
+                            jq.notify('上傳失敗', 'error')
+                        }else{
+                            jq.notify('上傳成功', 'success')
+                        }
+                    }
+                });   
+            }
+        setTimeout(function(){
+            location.reload()
+        }, 1500)
+        })
+    })
+})
+</script>
+
 </body>
 </html>
