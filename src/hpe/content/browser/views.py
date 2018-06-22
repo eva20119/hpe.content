@@ -12,10 +12,27 @@ from db.connect.browser.views import SqlObj
 import datetime
 
 
+class UpdateBicyclePicture(BrowserView):
+    def __call__(self):
+        request = self.request
+        id_list = request.get('id_list[]')
+        if type(id_list) is str:
+            id_list = [id_list, 'zzz']
+
+        execSql = SqlObj()
+        try:
+            for item in  id_list:
+                execStr = """UPDATE bicycle_picture SET is_check = 1 WHERE id = {}""".format(item)
+                execSql.execSql(execStr)
+            return 'success'
+        except Exception as e:
+            return 'error'
+
+
 class BicycleView(BrowserView):
     template = ViewPageTemplateFile('template/bicycle_view.pt')
     def __call__(self):
-        if api.user.is_anonymous():
+        if api. user.is_anonymous():
             self.request.response.redirect('%s/user_login'%api.portal.get().absolute_url())
             return
         return self.template()

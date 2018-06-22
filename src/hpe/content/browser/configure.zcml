@@ -355,6 +355,13 @@
       layer='hpe.content.interfaces.IHpeContentLayer'
       permission='zope2.View'
       />
+  <browser:page
+      name='update_bicycle_picture'
+      for='*'
+      class='.views.UpdateBicyclePicture'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
 
 
 </configure>

@@ -27,6 +27,7 @@ th,td{
     <option value="食在有道理">食在有道理</option>
     <option value="肌力動次動">肌力動次動</option>
     <option value="防癌你我他">防癌你我他</option>
+    <option value="樂活騎單車">樂活騎單車</option>
 </select>
 <select name="selected_date" id="selected_date">
     <option value="2018-04-19 12:00">2018-04-19 12:00</option>
@@ -62,6 +63,11 @@ $(document).ready(function () {
             $('#selected_date').append("<option value='2018-06-21 15:30'>2018-06-21 15:30</option>")
             $('#selected_date').append("<option value='2018-06-26 12:00'>2018-06-26 12:00</option>")
             $('#selected_date').append("<option value='0'>由同仁帶繳</option>")
+        }else if(this.value == '樂活騎單車'){
+            $('#selected_date').html('')
+            $('#selected_date').append("<option value='all'>ALL</option>")
+            $('#selected_date').append("<option value='audit'>審核</option>")
+            $('#selected_date').append("<option value='complete'>通過</option>")
         }
     })
     $('.btn').click(function(){

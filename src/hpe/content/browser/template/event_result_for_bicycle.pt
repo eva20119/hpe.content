@@ -1,0 +1,76 @@
+<style>
+td{
+    text-align: center;
+    vertical-align: middle !important;
+}
+th{
+    vertical-align: middle !important;
+}
+</style>
+<button style="float:right;margin-bottom:25px;width:100px;font-size:18px" id="complete">審核通過</button>
+<table>
+    <tr>
+        <th style="width:50px">上傳順序</th>
+        <th style="width:95px;">會員ID</th>
+        <th style="width:95px;">信箱</th>
+        <th style="width:95px;">中文姓名</th>
+        <th style="width:100px;">手機號碼</th>
+        <th style="width:100px;">上傳日期</th>
+        <th style="width:100px">地點</th>
+        <th style="width:95px;">額外申請</th>
+        <th>圖片</th>
+        <th style="width:80px"></th>
+    </tr>
+        <tr tal:repeat="data view/data">
+            <td>${python:data[12]}</td>
+            <td>${python:data[0]}</td>
+            <td>${python:data[1]}</td>
+            <td>${python:data[2]}</td>
+            <td>${python:data[5]}</td>
+            <td>${python:data[10]}</td>
+            <td>${python:data[7]}</td>
+            <td>${python:data[8]}</td>
+            <td style="background-image:url(${python: 'data:image/png;base64,%s' %data[9]});
+                       background-position:center;
+                       height:400px;width:450px;
+                       background-repeat: no-repeat;background-size:100% 100%">
+                <a href="${python: 'data:image/png;base64,%s' %data[9]}">
+            </td>
+            <td>
+                <input type='checkbox' data-id="${python: data[12]}" 
+                    style="width:20px;height:20px" tal:condition="python: data[11] == 0">
+                <p style="color:green" tal:condition="python: data[11] == 1">通過</p>
+            </td>
+        </tr>
+
+</table>
+
+<script>
+$(function(){
+    $('#complete').click(function(){
+        id_list = []
+        $("input[type='checkbox']:checked").each(function(){
+            id_list.push($(this).data('id'))
+        })
+        url = location.href.replace('show_activity_status', 'update_bicycle_picture')
+
+        data = {
+            'id_list': id_list
+        }
+        $.ajax({
+            type: "post",
+            url: url,
+            data: data,
+            success: function (rep) {
+                if(rep == 'success'){
+                    alert('更新成功')
+                    location.reload()
+                }else{
+                    alert('更新失敗')
+                }
+            }
+        });
+    })
+})
+
+</script>

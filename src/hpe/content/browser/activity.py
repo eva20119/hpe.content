@@ -159,6 +159,7 @@ class ShowActivityStatus(BrowserView):
 class GetEventData(BrowserView):
     template = ViewPageTemplateFile('template/event_result.pt')
     template1 = ViewPageTemplateFile('template/event_result_for_cancer.pt')
+    template2 = ViewPageTemplateFile('template/event_result_for_bicycle.pt')
     def __call__(self):
         request = self.request
         date = request.get('date')
@@ -183,27 +184,56 @@ class GetEventData(BrowserView):
                 'officephone':officephone,
                 'fullname': fullname
             }
-
-        execStr = """SELECT * FROM activity WHERE category = '{}' AND activity_date = '{}'
-            ORDER BY sing_up_time""".format(event, date)
+        if event == '樂活騎單車':
+            if date == 'all':
+                execStr = """SELECT * FROM bicycle_picture"""
+            elif date == 'audit':
+                execStr = """SELECT * FROM bicycle_picture WHERE is_check = 0"""
+            elif date == 'complete':
+                execStr = """SELECT * FROM bicycle_picture WHERE is_check = 1"""
+        else:
+            execStr = """SELECT * FROM activity WHERE category = '{}' AND activity_date = '{}'
+                ORDER BY sing_up_time""".format(event, date)
         result = execSql.execSql(execStr)
         data = []
-        for item in result:
-            tmp = dict(item)
-            activity_date = tmp['activity_date']
-            sing_up_time = tmp['sing_up_time']
-            user_email = tmp['user']
-            category= tmp['category']
-            note = tmp['note']
-            if user_data.has_key(user_email):
-                user_list = user_data[user_email]
-                data.append([
-                    category ,activity_date, user_list['user_id'], user_email, user_list['fullname']
-                    , user_list['en_name'], user_list['officephone'], user_list['cellphone']
-                    , user_list['location'], sing_up_time, note
-                ])
+        if event == '樂活騎單車':
+            for item in result:
+                tmp = dict(item)
+                user_email = tmp['user']
+                location = tmp['location']
+                price = tmp['price']
+                img = tmp['img']
+                time = tmp['time']
+                is_check = tmp['is_check']
+                id = tmp['id']
+                if user_data.has_key(user_email):
+                    user_list = user_data[user_email]
+                    data.append([
+                        user_list['user_id'], user_email, user_list['fullname']
+                        , user_list['en_name'], user_list['officephone'], user_list['cellphone']
+                        , user_list['location'], location, price, img, time, is_check, id
+                    ])
+        else:
+            for item in result:
+                tmp = dict(item)
+                activity_date = tmp['activity_date']
+                sing_up_time = tmp['sing_up_time']
+                user_email = tmp['user']
+                category= tmp['category']
+                note = tmp['note']
+                if user_data.has_key(user_email):
+                    user_list = user_data[user_email]
+                    data.append([
+                        category ,activity_date, user_list['user_id'], user_email, user_list['fullname']
+                        , user_list['en_name'], user_list['officephone'], user_list['cellphone']
+                        , user_list['location'], sing_up_time, note
+                    ])
         self.data = data
+
+
         if date == '2018-06-21 12:15' or date == '2018-06-21 11:00' or date == '0':
             return self.template1()
+        elif event == '樂活騎單車':
+            return self.template2()
         else:
             return self.template()
