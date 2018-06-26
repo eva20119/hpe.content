@@ -185,12 +185,14 @@ class GetEventData(BrowserView):
                 'fullname': fullname
             }
         if event == '樂活騎單車':
-            if date == 'all':
-                execStr = """SELECT * FROM bicycle_picture"""
+            if date == 'foot_power':
+                execStr = """SELECT * FROM bicycle_picture WHERE is_check = 1 AND get_award = 'foot_power'"""
             elif date == 'audit':
                 execStr = """SELECT * FROM bicycle_picture WHERE is_check = 0"""
+            elif date == 'city':
+                execStr = """SELECT * FROM bicycle_picture WHERE is_check = 1 AND get_award = 'city'"""
             elif date == 'complete':
-                execStr = """SELECT * FROM bicycle_picture WHERE is_check = 1"""
+                execStr = """SELECT * FROM bicycle_picture WHERE is_check = 1 AND get_award = ''"""
         else:
             execStr = """SELECT * FROM activity WHERE category = '{}' AND activity_date = '{}'
                 ORDER BY sing_up_time""".format(event, date)
@@ -201,7 +203,7 @@ class GetEventData(BrowserView):
                 tmp = dict(item)
                 user_email = tmp['user']
                 location = tmp['location']
-                price = tmp['price']
+                want_award = tmp['want_award']
                 img = tmp['img']
                 time = tmp['time']
                 is_check = tmp['is_check']
@@ -211,7 +213,7 @@ class GetEventData(BrowserView):
                     data.append([
                         user_list['user_id'], user_email, user_list['fullname']
                         , user_list['en_name'], user_list['officephone'], user_list['cellphone']
-                        , user_list['location'], location, price, img, time, is_check, id
+                        , user_list['location'], location, want_award, img, time, is_check, id
                     ])
         else:
             for item in result:

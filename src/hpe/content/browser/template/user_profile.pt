@@ -198,10 +198,10 @@ td>select{
                                     <tbody>
                                         <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體">
                                             <td class="product-name" data-title="HPE 員工編號">
-                                                <div align="center">${view/user_id}</div>
+                                                <div align="center" style="color:black">${view/user_id}</div>
                                             </td>
                                             <td class="product-price" data-title="HPE Email">
-                                                <div align="center">${view/user_email}</div>
+                                                <div align="center" style="color:black">${view/user_email}</div>
                                             </td>
                                             <td class="product-quantity" data-title="中文姓名">
                                                 <input type="text" name="user_ch_name" value="${view/user_ch_name}"/>

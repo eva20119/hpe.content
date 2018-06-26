@@ -65,9 +65,10 @@ $(document).ready(function () {
             $('#selected_date').append("<option value='0'>由同仁帶繳</option>")
         }else if(this.value == '樂活騎單車'){
             $('#selected_date').html('')
-            $('#selected_date').append("<option value='all'>ALL</option>")
-            $('#selected_date').append("<option value='audit'>審核</option>")
+            $('#selected_date').append("<option value='audit'>審核中</option>")
             $('#selected_date').append("<option value='complete'>通過</option>")
+            $('#selected_date').append("<option value='foot_power'>腿力滿檔獎</option>")
+            $('#selected_date').append("<option value='city'>城市攻略獎</option>")
         }
     })
     $('.btn').click(function(){

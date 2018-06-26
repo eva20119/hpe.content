@@ -16,16 +16,21 @@ class UpdateBicyclePicture(BrowserView):
     def __call__(self):
         request = self.request
         id_list = request.get('id_list[]')
+        award = request.get('award')
         if type(id_list) is str:
             id_list = [id_list, 'zzz']
 
         execSql = SqlObj()
         try:
+            now_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             for item in  id_list:
-                execStr = """UPDATE bicycle_picture SET is_check = 1 WHERE id = {}""".format(item)
-                execSql.execSql(execStr)
+                if item != 'zzz':
+                    execStr = """UPDATE bicycle_picture SET is_check = 1, complete_time = '{}',
+                        get_award = '{}' WHERE id = {}""".format(now_time, award,item)
+                    execSql.execSql(execStr)
             return 'success'
         except Exception as e:
+            import pdb;pdb.set_trace()
             return 'error'
 
 
@@ -62,13 +67,13 @@ class UploadBicycleImage(BrowserView):
             request = self.request
             img_data = request.get('img_data')
             location = img_data.split(',')[0]
-            price = img_data.split(',')[1]
+            want_award = img_data.split(',')[1]
             img = img_data.split(',')[3]
             user = api.user.get_current().getProperty('email')
 
             execSql = SqlObj()
-            execStr = """INSERT INTO `bicycle_picture`(`user`, `location`, `price`, `img`) VALUES ('{}', '{}', '{}',
-                     '{}')""".format(user, location, price, img)
+            execStr = """INSERT INTO `bicycle_picture`(`user`, `location`, `want_award`, `img`) VALUES ('{}', '{}', '{}',
+                     '{}')""".format(user, location, want_award, img)
             execSql.execSql(execStr)
             return 'success'
 

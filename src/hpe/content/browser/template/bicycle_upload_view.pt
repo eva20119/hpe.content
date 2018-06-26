@@ -60,7 +60,10 @@ input[type='file']{
     background-image:url(++plone++hpe.content/preloader.svg);
     background-size:80px;
 }
-
+.item-service{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
@@ -254,6 +257,7 @@ input[type='file']{
         </div>
       </div>
     </div>
+     <p style="display:none" id="len_audit_data">${python: len(view.audit_data)}</p>
      <div class="container" tal:define="leng python: len(view.audit_data)">
       <div class="row">
         <div class="col-md-4" tal:repeat="item view/audit_data">
@@ -342,8 +346,14 @@ var jq = jQuery.noConflict(true);
 jq(function(){
     var img_data = []
     jq('#image').change(function (e) {
+        len_audit_data = jq('#len_audit_data').text()
         if(jq('.select1').val() == '無' || jq('.select1').val() == '北部' || jq('.select1').val() == '中部' || jq('.select1').val() == '南部'){
             jq.notify('您尚未選擇地點,或地點錯誤', 'error')
+            jq('#image').val('')
+            return false
+        }
+        if(len_audit_data >= 6){
+            jq.notify('審查圖片以滿,請勿再上傳', 'error')
             jq('#image').val('')
             return false
         }
@@ -374,7 +384,8 @@ jq(function(){
                         jq('.select2').val('無')
                         jq('.select1').val('無')
                         jq('#image').val('')
-
+                        
+                        jq('#len_audit_data').text(parseInt(len_audit_data) + 1)
                         return false
                     }
                 })
