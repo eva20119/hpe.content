@@ -86,17 +86,6 @@ input[type="checkbox"]:checked + label span {
     background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
 }
 
-.cross{
-    background: red;
-    padding: 4px 10px;
-    position: absolute;
-    right: 0;
-    border-radius: 50%;
-    cursor: pointer;
-    top: -15px;
-    display: none;
-    font-weight: bold;
-}
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
@@ -204,19 +193,8 @@ input[type="checkbox"]:checked + label span {
                 <option value="駁二藝文特區">駁二藝文特區</option>
               </select>
               </font> <br>
-
-              <input type="checkbox" id="運動補助金" name="運動補助金" checked disabled="disabled"/>
-              <label for="運動補助金"><span></span>運動補助金</label>
-
-              <input type="checkbox" id="呼朋引伴獎" name="呼朋引伴獎"/>
-              <label for="呼朋引伴獎"><span></span>呼朋引伴獎</label>
-
-              <input type="checkbox" id="腿力滿檔獎" name="腿力滿檔獎"/>
-              <label for="腿力滿檔獎"><span></span>腿力滿檔獎</label>
-
-              <input type="checkbox" id="城市攻略獎" name="城市攻略獎"/>
-              <label for="城市攻略獎"><span></span>城市攻略獎</label>
-
+              <input type="checkbox" value=''
+                
               </span>
               </p>
             </div>
@@ -232,15 +210,13 @@ input[type="checkbox"]:checked + label span {
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <span class="cross">X</span>
           <div class="item-service main-1-s1 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
             <h2 class="item-serv-title ">申請項目</h2>
             <div class="item-serv-descr"><strong class="upload1_location" style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
             <input class='upload_input' type='hidden'>
           </div>
         </div>
-        <div class="col-md-4" style="position:relative">
-          <span class="cross">X</span>
+        <div class="col-md-4">
           <div class="item-service main-1-s2 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
             <h2 class="item-serv-title">申請項目</h2>
           <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
@@ -248,7 +224,6 @@ input[type="checkbox"]:checked + label span {
           </div>
         </div>
         <div class="col-md-4">
-          <span class="cross">X</span>
           <div class="item-service main-1-s3 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
             <h2 class="item-serv-title">申請項目</h2>
           <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
@@ -256,7 +231,6 @@ input[type="checkbox"]:checked + label span {
           </div>
         </div>
         <div class="col-md-4">
-          <span class="cross">X</span>
           <div class="item-service main-1-s4 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
             <h2 class="item-serv-title">申請項目</h2>
           <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
@@ -264,7 +238,6 @@ input[type="checkbox"]:checked + label span {
           </div>
         </div>
         <div class="col-md-4">
-          <span class="cross">X</span>
           <div class="item-service main-1-s5 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
             <h2 class="item-serv-title">申請項目</h2>
           <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
@@ -272,7 +245,6 @@ input[type="checkbox"]:checked + label span {
           </div>
         </div>
         <div class="col-md-4">
-          <span class="cross">X</span>
           <div class="item-service main-1-s6 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg);
                 background:antiquewhite">
             <h2 class="item-serv-title">申請項目</h2>
@@ -305,9 +277,9 @@ input[type="checkbox"]:checked + label span {
       <div class="row">
         <div class="col-md-4" tal:repeat="item view/audit_data">
           <div class="item-service main-1-s1" 
-            style="background-image:url(${python: 'data:image/png;base64,%s' %item[5]})">
+            style="background-image:url(${python: 'data:image/png;base64,%s' %item[4]})">
             <h2 class="item-serv-title">${python: item[2]}</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">${python: item[3]}</div>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
           </div>
         </div>
         <div class="col-md-4" tal:repeat="num python: range(0, 6-leng)">
@@ -347,9 +319,9 @@ input[type="checkbox"]:checked + label span {
       <div class="row">
         <div class="col-md-4" tal:repeat="item view/complete_data">
           <div class="item-service main-1-s1" 
-            style="background-image:url(${python: 'data:image/png;base64,%s' %item[5]})">
+            style="background-image:url(${python: 'data:image/png;base64,%s' %item[4]})">
             <h2 class="item-serv-title">${python: item[2]}</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">${python: item[3]}</div>
+          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
           </div>
         </div>
         <div class="col-md-4" tal:repeat="num python: range(0, 9-leng)">
@@ -370,7 +342,7 @@ input[type="checkbox"]:checked + label span {
 <div class="bottom_line">
   <div class="row">
     <div class="col-md-12">
-      <p align="center" style='color:white'>此活動僅限 HPE 台灣員工，請勿任意轉載<br>
+      <p align="center" style='text-align:left;color:white'>此活動僅限 HPE 台灣員工，請勿任意轉載<br>
         This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
     </div>
   </div>
@@ -413,12 +385,11 @@ jq(function(){
                         jq(this).css('background-repeat', 'no-repeat')
                         jq(this).addClass('full')
                         select1 = jq('.select1').val()
-
-                        select2 = []
-                        jq("input[type=checkbox]:checked").each(function(){
-                            select2.push(this.id)
-                        })
-                        select2 = select2.join('/')
+                        if(jq('.select2').val() == '無'){
+                            select2 = ''
+                        }else{
+                            select2 = jq('.select2').val()
+                        }
 
                         data = [select1, select2, e.target.result]
                         jq(this).find('input').val(data)
@@ -428,10 +399,8 @@ jq(function(){
                         jq('.select2').val('無')
                         jq('.select1').val('無')
                         jq('#image').val('')
-
-                        jq(this).siblings().show()
+                        
                         jq('#len_audit_data').text(parseInt(len_audit_data) + 1)
-
                         return false
                     }
                 })
@@ -466,16 +435,6 @@ jq(function(){
             location.reload()
         }, 1500)
         })
-    })
-    jq('.cross').click(function(){
-        jq(this).siblings().css('backgroundImage', 'url(++plone++hpe.content/img/upload.jpg)')
-        jq(this).siblings().find('.item-serv-title').text('申請項目')
-        jq(this).siblings().find('.item-serv-descr').text('地點 / 日期')
-        jq(this).siblings().find('.upload_input').val('')
-        jq(this).css('display', 'none')
-        jq(this).siblings().removeClass('full')
-        new_len_audit_data = jq('#len_audit_data').text() - 1
-        jq('#len_audit_data').text(new_len_audit_data)
     })
 })
 </script>

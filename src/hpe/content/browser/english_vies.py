@@ -12,6 +12,15 @@ from db.connect.browser.views import SqlObj
 import datetime
 
 
+class EnBicycleView(BrowserView):
+    template = ViewPageTemplateFile("template/en_bicycle_view.pt")
+    def __call__(self):
+        if api. user.is_anonymous():
+            self.request.response.redirect('%s/user_login'%api.portal.get().absolute_url())
+            return
+        return self.template()
+
+
 class EnCover(BrowserView):
     template = ViewPageTemplateFile("template/en_cover.pt")
     def __call__(self):

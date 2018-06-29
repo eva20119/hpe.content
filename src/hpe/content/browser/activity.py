@@ -149,7 +149,7 @@ class ShowActivityStatus(BrowserView):
     def __call__(self):
         request = self.request
         abs_url = api.portal.get().absolute_url()
-        roles = api.user.get_current().getRoles()        
+        roles = api.user.get_current().getRoles()
         if api.user.is_anonymous() or 'Manager' not in roles:
 	        request.response.redirect('%s/user_login' %abs_url)
 	        return
@@ -160,6 +160,7 @@ class GetEventData(BrowserView):
     template = ViewPageTemplateFile('template/event_result.pt')
     template1 = ViewPageTemplateFile('template/event_result_for_cancer.pt')
     template2 = ViewPageTemplateFile('template/event_result_for_bicycle.pt')
+    img_preview = ViewPageTemplateFile('template/img_preview.pt')
     def __call__(self):
         request = self.request
         date = request.get('date')
@@ -185,14 +186,10 @@ class GetEventData(BrowserView):
                 'fullname': fullname
             }
         if event == '樂活騎單車':
-            if date == 'foot_power':
-                execStr = """SELECT * FROM bicycle_picture WHERE is_check = 1 AND get_award = 'foot_power'"""
-            elif date == 'audit':
+            if date == 'audit':
                 execStr = """SELECT * FROM bicycle_picture WHERE is_check = 0"""
-            elif date == 'city':
-                execStr = """SELECT * FROM bicycle_picture WHERE is_check = 1 AND get_award = 'city'"""
-            elif date == 'complete':
-                execStr = """SELECT * FROM bicycle_picture WHERE is_check = 1 AND get_award = ''"""
+            elif date == 'complete' or date == 'img_preview':
+                execStr = """SELECT * FROM bicycle_picture WHERE is_check = 1  ORDER BY complete_time ASC"""
         else:
             execStr = """SELECT * FROM activity WHERE category = '{}' AND activity_date = '{}'
                 ORDER BY sing_up_time""".format(event, date)
@@ -205,15 +202,16 @@ class GetEventData(BrowserView):
                 location = tmp['location']
                 want_award = tmp['want_award']
                 img = tmp['img']
-                time = tmp['time']
+                image_title = tmp['image_title']
                 is_check = tmp['is_check']
                 id = tmp['id']
+                upload_time = tmp['upload_time']
                 if user_data.has_key(user_email):
                     user_list = user_data[user_email]
                     data.append([
                         user_list['user_id'], user_email, user_list['fullname']
                         , user_list['en_name'], user_list['officephone'], user_list['cellphone']
-                        , user_list['location'], location, want_award, img, time, is_check, id
+                        , user_list['location'], location, want_award, img, image_title, is_check, id, upload_time
                     ])
         else:
             for item in result:
@@ -235,6 +233,8 @@ class GetEventData(BrowserView):
 
         if date == '2018-06-21 12:15' or date == '2018-06-21 11:00' or date == '0':
             return self.template1()
+        elif date == 'img_preview':
+            return self.img_preview()
         elif event == '樂活騎單車':
             return self.template2()
         else:

@@ -598,7 +598,7 @@ abs_url = api.portal.get().absolute_url()
 
                     <span style="font-size: 18px; font-style: normal; color: #7F7F7F;">
 
-                      <strong style="font-family: '微軟正黑體'; color: #FF4F51; font-size: 20px;">KOR NAVA SPORT 水瓶</strong>
+                      <strong style="font-family: '微軟正黑體'; color: #FF4F51; font-size: 20px;">KOR NAVA SPORT 濾水瓶</strong>
 
                     </span>
 
@@ -858,7 +858,7 @@ abs_url = api.portal.get().absolute_url()
 
                     <span class="actions" style="font-family:微軟正黑體">
 
-                      <a href="${abs_url}/bicycle_upload_view" class="custom_up_btn">申請上傳</a>
+                      <a href="${abs_url}/bicycle_upload_view" class="custom_up_btn">上傳圖片</a>
 
                     </span> 
 
@@ -894,7 +894,7 @@ abs_url = api.portal.get().absolute_url()
 
         <div class="col-md-12">
 
-          <p align="center" style="text-align:left;color:white">此活動僅限 HPE 台灣員工，請勿任意轉載
+          <p align="center" style="color:white">此活動僅限 HPE 台灣員工，請勿任意轉載
 
             <br> This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
 

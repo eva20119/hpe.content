@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>2018 HPE Wellness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="++plone++hpe.content/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/contact-form.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/vc.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/wocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal-default-theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/elegant-font/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/linecons/1style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/lightcase/lightcase.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/shop.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/about.css" type="text/css" media="all" />
+<script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="framework/js/html5min.js"></script>
+<![endif]-->
+<style type="text/css">
+<!--
+.style1 {
+	color: #ED1E79
+}
+body {
+	background: -webkit-linear-gradient(#67ce89, #8fd3f4);
+	background: -o-linear-gradient(#67ce89, #8fd3f4);
+	background: -moz-linear-gradient(#67ce89, #8fd3f4);
+	background: linear-gradient(#67ce89, #8fd3f4);
+	color: #FFFFFF;
+	font-size: 16px;
+}
+.style22 {
+	color: #FFFFFF
+}
+-->
+.custom_up_btn{
+    padding: 14px 16px;
+    font-size: 16px;
+    background: #636363;
+    border-radius: 5px;
+    color: white;
+}
+.custom_up_btn:hover{
+    background: #007bff;
+    color: white;
+}
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body class="woo_active standard_page dark_bg half_screen_fi have_featured_image ">
+<?python
+from plone import api
+abs_url = api.portal.get().absolute_url()
+?>
+
+<div class="preload"></div>
+<div class="header">
+  <div class="logo_holder"> <a href="../index2.html"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a> </div>
+  <!-- .site-header-social-menu --> 
+</div>
+<div class="page_featured">
+  <div class="page_description_over"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center">
+        <div class="page_description">
+          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/07b_w_en.png"></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
+<div class="shoping_cart_icon"> Hi~You have logged in / <a class="my_shop_icon" href="#" title="menbers">Logout</a>　 <a class="my_account_icon" href="../reservation_en.html" title="Physician On-site Services"><i class="fa fa-calendar" aria-hidden="true"></i> </a> <a class="my_shop_icon" href="../upload_en.html" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 <a class="my_shop_icon" href="../profile_en.html" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
+  <select name="select" id="select" class="woocommerce-Input woocommerce-Input--text input-text">
+    <option>中文 Ch</option>
+    <option>英文 Eng</option>
+  </select>
+</div>
+<div class="menu_holder">
+  <div class="inner_holder">
+    <div class="text-logo">
+      <h3 class="logo_name">2018 HPE Wellness</h3>
+      <p class="logo_description">Every corner is your sport Field.<br>
+        Wellness is waiting for you at every changing starting point. <br>
+        2018，Fighting</p>
+    </div>
+        <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
+      <div class="menu-primary-menu-container">
+        <ul class="primary-menu">
+          <li><a href="../index2_en.html"><span style="font-family:微軟正黑體; font-size: 16px;">Home</span></a></li>
+          <li><a href="../04-1_en.html"><span style="font-family:微軟正黑體; font-size: 16px;">The Work Life Compass</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="../reservation_en.html"><span style="font-family:微軟正黑體; font-size: 16px;">Physician On-site Services</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="../04-2_en.html"><span style="font-family:微軟正黑體; font-size: 16px;">Defatigation Self-Assessment</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="../04-3_en.html"><span style="font-family:微軟正黑體; font-size: 16px;">Food Makes Sense</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
+          <li><a href="../05_en.html"><span style="font-family: 微軟正黑體; font-size: 16px;">Being Healthier By Do Exercise</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
+          <li><a href="../06_en.html"><span style="font-family: 微軟正黑體; font-size: 16px;">Power of Prevention</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
+          <li class="current-menu-item current_page_item"><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Pedal to Health on Your Bike</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
+          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Flu vaccination Protective Net</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- .main-navigation -->
+    <div class="menu_footer">
+      <nav aria-label="Footer Menu">
+        <div class="menu-social-menu-container">
+          <ul class="footer-menu">
+            <!-- .
+            <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            -->
+          </ul>
+        </div>
+      </nav>
+      <!-- .social-navigation -->
+      <p style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>
+        This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+</div>
+<div class="overlay"></div>
+<div id="primary" class="content-area">
+<main id="main" class="site-main">
+<div class="container">
+  <div class="row about-1">
+    <div class="col-md-6 offset-md-3">
+      <div class="about-1-1"><br>
+      </div>
+      <div class="oi_custom_heading_holder">
+        <div class="oi_vc_heading oi_border_position_center text-center">
+          <p class="oi_icon_sub_titile"><span style="font-size: 20px; font-style: normal;">When we ride together, something I can feel:<br>
+            Freedom, seems like we are riding on the great wind, <br>
+            No any annoyance, no any worries,<br>
+            We all enjoy our journey when we are riding together, <br>
+            It' s one of best things ever in the world. </span><br>
+          </p>
+          <p class="oi_icon_sub_titile"><div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-line">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="oi_custom_heading_holder mb-0">
+          <div class="oi_vc_heading oi_border_position_right text-md-right">
+            <h2 class="oi_icon_titile" style="font-family: 微軟正黑體; text-align: left; font-size: 22px;">Date:<br>From July 2 10:00 (Mon) to August 31 17:00 (Fri)</h2>
+            <br>
+            <p class="oi_icon_sub_titile" style="font-family: 微軟正黑體; text-align: left; font-size: 18px;">• For HPE employees only. Take a photo at designated spots, with you on a bicycle and wearing a sports headband. Entries passed review will be awarded  <span style="color: #FF4F51">NT$500</span>。 <br>
+              <br>
+              • After any personnel changes, the incentive and the wages will be sent into your bank account in September<br>
+              <br>
+              • For colleagues whoehave yet to collect the headerband, please Collect from HR Ze-ting(HPE 11F North side, Tel: 2652-4138)
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex align-items-center mt-5 mt-md-0" style="font-family:微軟正黑體"> <img src="++plone++hpe.content/img/07_1_en.png"> </div>
+    </div>
+    <div class="vc_row-full-width clearfix"></div>
+  </div>
+</div>
+<div class="oi_custom_heading_holder" style="margin-bottom:0">
+  <div class="oi_vc_heading oi_border_position_center text-center">
+    <p class="oi_icon_sub_titile"><span style="font-size: 32px; font-style: normal; font-family: '微軟正黑體'; border-collapse: separate; border-spacing: 14px 18px;">Premium</span><br>
+    <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+    </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="oi_custom_heading_holder">
+            <div class="oi_vc_heading oi_border_position_center">
+              <h3 class="oi_icon_titile" style="font-size: 20px; color: #FFFFFF;">Exercise Subsidy</h3>
+              <div class="oi_heading_border oi_border_position_center text-center"><span></span></div><br>
+<span style="font-size: 18px; font-style: normal; color: #7F7F7F;"><strong style="font-family: '微軟正黑體'; color: #FF4F51; font-size: 20px;">NT.500</strong></span>
+              <br>
+            </div>
+            <span style="font-size: 18px; padding-bottom: 18px;">take phone with your bike, in 1 of 8 designated spots and upload.</span><br><br>
+<br>
+            <br>
+            <img src="++plone++hpe.content/img/07_reward1.png" width="250" height="250"> </div>
+        </div>
+                <div class="col-md-3">
+          <div class="oi_custom_heading_holder">
+            <div class="oi_vc_heading oi_border_position_center">
+              <h3 class="oi_icon_titile" style="font-size: 20px; color: #FFFFFF;">Ride with Friends</h3>
+              <div class="oi_heading_border oi_border_position_center text-center"><span></span></div><br>
+<span style="font-size: 18px; font-style: normal; color: #7F7F7F;"><strong style="font-family: '微軟正黑體'; color: #FF4F51; font-size: 20px;">HPE drawstring pouch</strong></span>
+              <br>
+            </div>
+            <span style="font-size: 18px; padding-bottom: 18px;">In first 200 applicants who take phone with your bike, your HPE badge, and your co-workers at 1 of 8 designated spots</span><br>
+            <br>
+            <img src="++plone++hpe.content/img/07_reward2.png" width="250" height="250"> </div>
+        </div>
+                <div class="col-md-3">
+          <div class="oi_custom_heading_holder">
+            <div class="oi_vc_heading oi_border_position_center">
+              <h3 class="oi_icon_titile" style="font-size: 20px; color: #FFFFFF;">Cyclist Bravo</h3>
+              <div class="oi_heading_border oi_border_position_center text-center"><span></span></div><br>
+<span style="font-size: 18px; font-style: normal; color: #7F7F7F;"><strong style="font-family: '微軟正黑體'; color: #FF4F51; font-size: 20px;">Kor Nava Filter
+</strong></span>
+              <br>
+            </div>
+            <span style="font-size: 18px; padding-bottom: 18px;">In first 100 applicants who collect 3 or over 3 designated spots</span><br><br><br>
+            <br>
+            <img src="++plone++hpe.content/img/07_reward3.png" width="250" height="250"> </div>
+        </div>
+                <div class="col-md-3">
+          <div class="oi_custom_heading_holder">
+            <div class="oi_vc_heading oi_border_position_center">
+              <h3 class="oi_icon_titile" style="font-size: 20px; color: #FFFFFF;">Cyclist Forte</h3>
+              <div class="oi_heading_border oi_border_position_center text-center"><span></span></div><br>
+<span style="font-size: 18px; font-style: normal; color: #7F7F7F;"><strong style="font-family: '微軟正黑體'; color: #FF4F51; font-size: 20px;">Body massage voucher</strong></span>
+              <br>
+            </div>
+            <span style="font-size: 18px; padding-bottom: 18px;">In first 50 applicants who collect 3 designated spots (include north, center and south)</span><br><br>
+            <br>
+            <img src="++plone++hpe.content/img/07_reward4.png" width="250" height="250"> </div>
+        </div>
+      </div>
+    </div>
+    <div class="oi_custom_heading_holder">
+  <div class="oi_vc_heading oi_border_position_center text-center">
+    <p class="oi_icon_sub_titile"><span style="font-size: 32px; font-style: normal;">The 8 designated spots</span><br>
+    <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+    </p><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="item-service main-1-s1" style="background-image:url(++plone++hpe.content/img/07_l1.jpg)">
+            <h2 class="item-serv-title">Taipei</h2>
+            <div class="item-serv-descr"><strong style="color: #FFFFFF"><a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f05317_59274f736cb36ff1516c5712.pdf/@@display-file/file/2018_HPE Wellness_台北_大佳河濱公園.pdf" style="color: #FFFFFF; font-size: 20px;">Dajia Riverside Park</a></strong></div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item-service main-1-s2" style="background-image:url(++plone++hpe.content/img/07_l2.jpg)">
+            <h2 class="item-serv-title">Taipei</h2>
+            <div class="item-serv-descr"><strong style="color: #FFFFFF"><a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f05317_53f0592768215712.pdf/@@display-file/file/2018_HPE Wellness_台北_台大校園.pdf" style="color: #FFFFFF; font-size: 20px;">National Taiwan University</a></strong></div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item-service main-1-s3" style="background-image:url(++plone++hpe.content/img/07_l3.jpg)">
+            <h2 class="item-serv-title">Taipei</h2>
+            <div class="item-serv-descr"><strong style="color: #FFFFFF"><a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f05317_8fea53164f119592904b52d5516c5712.pdf/@@display-file/file/2018_HPE Wellness_台北_迪化休閒運動公園.pdf" style="color: #FFFFFF; font-size: 20px;">Dihua Leisure Sports Park</a></strong></div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item-service main-1-s4" style="background-image:url(++plone++hpe.content/img/07_l4.jpg)">
+            <h2 class="item-serv-title">Taipei</h2>
+            <div class="item-serv-descr"><strong style="color: #FFFFFF"><a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f05317_5f6986796a4b.pdf/@@display-file/file/2018_HPE Wellness_台北_彩虹橋.pdf" style="color: #FFFFFF; font-size: 20px;">Rainbow Bridge</a></strong></div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item-service main-1-s5" style="background-image:url(++plone++hpe.content/img/07_l5.jpg)">
+            <h2 class="item-serv-title">Taichung</h2>
+            <div class="item-serv-descr"><strong style="color: #FFFFFF"><a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f04e2d_8349609f905357125340.pdf/@@display-file/file/2018_HPE Wellness_台中_草悟道園區.pdf" style="color: #FFFFFF; font-size: 20px;">Kuang Wudao Park</a></strong></div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item-service main-1-s6" style="background-image:url(++plone++hpe.content/img/07_l6.jpg)">
+            <h2 class="item-serv-title">Taichung</h2>
+            <div class="item-serv-descr"><strong style="color: #FFFFFF"><a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f04e2d_5927575160c54eba6a4b.pdf/@@display-file/file/2018_HPE Wellness_台中_大坑情人橋.pdf" style="color: #FFFFFF">Tai Hang Lover Bridge</a></strong></div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item-service main-1-s7" style="background-image:url(++plone++hpe.content/img/07_l7.jpg)">
+            <h2 class="item-serv-title">Kaohsiung</h2>
+            <div class="item-serv-descr"><strong style="color: #FFFFFF"><a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_9ad896c4_535a4e8c85dd885372795340.pdf/@@display-file/file/2018_HPE Wellness_高雄_博二藝術特區.pdf" style="color: #FFFFFF; font-size: 20px;">Pier-2 Art Center</a></strong></div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item-service main-1-s8" style="background-image:url(++plone++hpe.content/img/07_l8.jpg)">
+            <h2 class="item-serv-title">Kaohsiung</h2>
+            <div class="item-serv-descr"><strong style="color: #FFFFFF"><a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_9ad896c4_535a72699928.pdf/@@display-file/file/2018_HPE Wellness_高雄_博物館.pdf" style="color: #FFFFFF; font-size: 20px;">Museum of History</a></strong></div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div align="center"><span class="product-subtotal">
+        <span class="actions" style="font-family:微軟正黑體">
+            <a href="${abs_url}/bicycle_upload_view" class="custom_up_btn">Submit Your Photo</a>
+        </span> 　
+        <span class="actions"> <span class="product-quantity"></span></span></span></div>
+    </div>
+    <br>
+  </div>
+  </main>
+  <!-- .site-main --> 
+</div>
+<!-- .content-area -->
+
+<div class="bottom_line">
+  <div class="row">
+    <div class="col-md-12">
+      <p align="center" style="color:white">此活動僅限 HPE 台灣員工，請勿任意轉載<br>
+        This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="++plone++hpe.content/js/popper.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/contact-form.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/gmap3.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/remodal.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script>
+</body>
+</html>

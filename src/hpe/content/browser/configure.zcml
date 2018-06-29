@@ -362,6 +362,13 @@
       layer='hpe.content.interfaces.IHpeContentLayer'
       permission='zope2.View'
       />
+  <browser:page
+      name='en_bicycle_view'
+      for='*'
+      class='.english_vies.EnBicycleView'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
 
 
 </configure>

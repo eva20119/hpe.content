@@ -56,7 +56,7 @@ user_name = api.user.get_current().getProperty('fullname')
   <div class="logo_holder"> <a href="${abs_url}/en_cover"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a> </div>
   <!-- .site-header-social-menu --> 
 </div>
-<div class="page_featured">
+<div class="page_featured" style="background-image: url(++plone++hpe.content/img/06_Bheader.jpg)">
   <div class="page_description_over"></div>
   <div class="container">
     <div class="row">

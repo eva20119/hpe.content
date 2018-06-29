@@ -62,7 +62,7 @@ user_name = api.user.get_current().getProperty('fullname')
   <div class="logo_holder"> <a href="${abs_url}"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a> </div>
   <!-- .site-header-social-menu --> 
 </div>
-<div class="page_featured">
+<div class="page_featured" style="background-image: url(++plone++hpe.content/img/06_Bheader.jpg)"> 
   <div class="page_description_over"></div>
   <div class="container">
     <div class="row">
@@ -208,7 +208,11 @@ user_name = api.user.get_current().getProperty('fullname')
           <p class="mb-30">
             <input type="checkbox" data-time="2018-06-26 12:00" data-condition="${view/condition_3}">
             <span style="font-style: normal; font-family: '微軟正黑體'; color: #FFFFFF; font-size: 22px; line-height: 10px;">6/26 1200-1330 9F Eclub<br>
-            <span style="font-size: 18px; padding-bottom: 18px;">講座參與者當日提供元氣餐盒一份，限額 60 位</span></span> <img src="++plone++hpe.content/img/06B_photo3.png" width="548" height="350"> </p>
+            <span style="font-size: 18px; padding-bottom: 18px;">講座參與者當日提供元氣餐盒一份，限額 60 位</span></span>
+            <br><br>
+            <a href="http://45.33.109.242:9902/hpe/0626_9ad865488eab9ad480fd91cf7ba17406-8ab27a0b59277db1.pdf/@@download/file/
+                0626_高效身體能量管理-課程大綱.pdf" style="color: white">簡報下載</a>
+            <img src="++plone++hpe.content/img/06B_photo3.png" width="548" height="350"> </p>
         </div>
       </div>
     </div>

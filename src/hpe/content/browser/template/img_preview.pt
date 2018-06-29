@@ -1,0 +1,27 @@
+<style>
+td{
+    text-align: center;
+    vertical-align: middle !important;
+}
+th{
+    vertical-align: middle !important;
+}
+</style>
+<button style="float:right;margin-bottom:25px;font-size:18px" class="award" id="complete">審核通過</button>
+
+<table>
+    <tr>
+        <th style='width:150px'>圖片明稱</th>
+        <th style="width:400px">圖片</th>
+    </tr>
+        <tr tal:repeat="data view/data">
+            <td>${python: data[10]}</td>
+            <td>
+                <a href="${python: 'data:image/png;base64,%s' %data[9]}" target="_blank">
+                    <img src="${python: 'data:image/png;base64,%s' %data[9]}" style="height:100%;width:100%">
+                </a>
+            </td>
+        </tr>
+
+</table>
+

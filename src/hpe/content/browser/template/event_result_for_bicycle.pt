@@ -8,9 +8,6 @@ th{
 }
 </style>
 <button style="float:right;margin-bottom:25px;font-size:18px" class="award" id="complete">審核通過</button>
-<button style="float:right;margin-bottom:25px;font-size:18px;margin-right:20px" class="award" id="foot_power">腿力滿檔獎</button>
-<button style="float:right;margin-bottom:25px;font-size:18px;margin-right:20px" class="award" id="city">城市攻略獎</button>
-
 <table>
     <tr>
         <th style="width:50px">上傳順序</th>
@@ -21,8 +18,9 @@ th{
         <th style="width:100px;">上傳日期</th>
         <th style="width:100px">地點</th>
         <th style="width:95px;">額外申請</th>
+        <th>圖片明稱</th>
         <th style="width:300px">圖片</th>
-        <th style="width:80px"></th>
+        <th style="width:80px" tal:condition="python: view.data[0][11] == 0"></th>
     </tr>
         <tr tal:repeat="data view/data">
             <td tal:content="repeat/data/number"></td>
@@ -30,18 +28,20 @@ th{
             <td>${python:data[1]}</td>
             <td>${python:data[2]}</td>
             <td>${python:data[5]}</td>
-            <td>${python:data[10]}</td>
+            <td>${python:data[13]}</td>
             <td>${python:data[7]}</td>
-            <td>${python:data[8]}</td>
+            <td>
+                <p tal:repeat="world python:data[8].split('/')"> ${world}</p>
+            </td>
+            <td>${python: data[10]}</td>
             <td>
                 <a href="${python: 'data:image/png;base64,%s' %data[9]}" target="_blank">
                     <img src="${python: 'data:image/png;base64,%s' %data[9]}" style="height:350px;width:350px">
                 </a>
             </td>
-            <td>
+            <td tal:condition="python: data[11] == 0">
                 <input type='checkbox' data-id="${python: data[12]}" 
-                    style="width:20px;height:20px" tal:condition="python: data[11] == 0">
-                <p style="color:green" tal:condition="python: data[11] == 1">通過</p>
+                    style="width:20px;height:20px" >
             </td>
         </tr>
 
@@ -51,14 +51,12 @@ th{
 $(function(){
     $('.award').click(function(){
         id_list = []
+        url = location.href.replace('show_activity_status', 'update_bicycle_picture')
         $("input[type='checkbox']:checked").each(function(){
             id_list.push($(this).data('id'))
         })
-        url = location.href.replace('show_activity_status', 'update_bicycle_picture')
-
         data = {
             'id_list': id_list,
-            'award': this.id
         }
         $.ajax({
             type: "post",
