@@ -73,7 +73,7 @@ input[type="checkbox"]:checked + label span {
   <div class="logo_holder"> <a href="${abs_url}/index"><img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" /><img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" /></a> </div>
   <!-- .site-header-social-menu --> 
 </div>
-<div class="page_featured">
+<div class="page_featured" style="background-image: url(++plone++hpe.content/img/movement.jpg)">
   <div class="page_description_over"></div>
   <div class="container">
     <div class="row">
@@ -100,7 +100,7 @@ input[type="checkbox"]:checked + label span {
   <!-- 已登入 -->
 
   <a class="my_account_icon" href="${abs_url}/reservation" title="邀你醫同來"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
-  <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
+  <a class="my_shop_icon" href="${abs_url}/bicycle_view" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
   <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
   <select name="" id="language">
     <option>語言Language</option>

@@ -10,12 +10,6 @@ $(document).ready(function(){
 // 中文ch 改為 中文Tw
     $("option[value='ch'], option[value='chinese']").text('中文Tw')
 
-// 上傳照片，還沒開始，連結無效化及alert
-    $(".shoping_cart_icon a.my_shop_icon[href='http://hpe.mingtak.com.tw/upload']").attr('href', 'javascript:void(0)')
-    $('.shoping_cart_icon .my_shop_icon .fa-thumbs-o-up').click(function(){
-        alert('活動尚未開始')
-    })
-
 
 })
 

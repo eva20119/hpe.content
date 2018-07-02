@@ -99,7 +99,7 @@ td>select{
   <!-- 已登入 -->
 
   <a class="my_account_icon" href="${abs_url}/reservation" title="邀你醫同來"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
-  <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
+  <a class="my_shop_icon" href="${abs_url}/bicycle_view" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
   <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
   <select name="" id="language">
     <option value="ch" selected>中文Ch</option>
@@ -124,7 +124,7 @@ td>select{
             <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
             <li><a href="${abs_url}/muscle_activity"><span style="font-family:微軟正黑體">肌力動次動</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
             <li><a href="${abs_url}/anti_cancer_view"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
-            <li><a href="singin"><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
+            <li><a href="${abs_url}/bicycle_view"><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
             <li><a href="singin"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
             <div class="vc_team_member_image_holder">
               <div class="oi_team_cont_holder">

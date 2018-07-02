@@ -41,6 +41,9 @@
     margin-top: -70px;
     margin-bottom: 0px;
 }
+strong a{
+    color: black;
+}
 </style>
 </head>
 
@@ -84,14 +87,12 @@
 <h6 class="section_number">01</h6>
 <div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
 <div class="shoping_cart_icon">
-
   <p style="display:inline" tal:condition="not: is_anonymous">Hi~${user_name}/</p>
   <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px"
     tal:condition="not: is_anonymous">登出</a>
-
   <a class="my_account_icon" href="${abs_url}/reservation" title="邀你醫同來">
      <i class="fa fa-calendar"  aria-hidden="true"></i> </a>
-  <a class="my_shop_icon" href="${abs_url}/upload" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true"$
+  <a class="my_shop_icon" href="${abs_url}/bicycle_view" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true">
      <span class="logged-in-username"></span></a>　
   <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果">
      <i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
@@ -117,14 +118,21 @@
     <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
       <div class="menu-primary-menu-container">
         <ul class="primary-menu">
-          <li class="current-menu-item current_page_item"><a href="${abs_url}"><span style="font-family:微軟正黑體">回首頁</span></a></li>
-          <li><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="${abs_url}/reservation"><span style="font-family:微軟正黑體">邀你醫同來</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">該釋壓了嗎</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span> <img src="++plone++hpe.content/img/apr.png"/></a></li>
-          <li><a href="${abs_url}/muscle_activity"><span style="font-family:微軟正黑體">肌力動次動</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
-          <li><a href="${abs_url}/anti_cancer_view"><span style="font-family:微軟正黑體">防癌你我他</span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
+          <li class="current-menu-item current_page_item"><a href="${abs_url}"><span style="font-family:微軟正黑體">回首頁</span></a>
+            </li>
+          <li><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span> 
+            <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/reservation"><span style="font-family:微軟正黑體">邀你醫同來</span> 
+            <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">該釋壓了嗎</span> 
+            <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span> 
+            <img src="++plone++hpe.content/img/apr.png"/></a></li>
+          <li><a href="${abs_url}/muscle_activity"><span style="font-family:微軟正黑體">肌力動次動</span> 
+            <img src="++plone++hpe.content/img/may.png"/></a></li>
+          <li><a href="${abs_url}/anti_cancer_view"><span style="font-family:微軟正黑體">防癌你我他</span> 
+            <img src="++plone++hpe.content/img/jun.png"/></a></li>
+          <li><a href="${abs_url}/bicycle_view"><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
           <li><a href="#"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
         </ul>
       </div>
@@ -189,6 +197,10 @@
                 </div>
               </div>
 	    <div id="serviceSlide" class="owl-carousel" style="font-family:微軟正黑體">
+              <div class="item-service main-1-s7" style="background-image:url(++plone++hpe.content/img/07_header.jpg)">
+                <h2 class="item-serv-title" style="font-family:微軟正黑體">07.08月</h2>
+                <div class="item-serv-descr"> <strong><a href="${abs_url}/bicycle_view">樂活騎單車</a></strong></div>
+              </div>
               <div class="item-service main-1-s1" style="background-image:url(++plone++hpe.content/img/04-3.jpg)">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體">04月</h2>
                 <div class="item-serv-descr"> <strong><a href="/hpe/eat_blog">食在有道理</a></strong></div>
@@ -214,10 +226,6 @@
               <div class="item-service main-1-s5" style="background-image:url(++plone++hpe.content/img/04-00.jpg)">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體">該釋壓了嗎</h2>
                 <div class="item-serv-descr"> <strong><a href="/hpe/publicize_pressure">疲勞指數評估測驗</a></strong></div>
-              </div>
-              <div class="item-service main-1-s7">
-                <h2 class="item-serv-title" style="font-family:微軟正黑體">07.08月</h2>
-                <div class="item-serv-descr"> <strong><a href="#">樂活騎單車</a></strong></div>
               </div>
               <div class="item-service main-1-s7">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體">10月</h2>

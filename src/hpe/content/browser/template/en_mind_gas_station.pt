@@ -57,7 +57,7 @@
 <div class="shoping_cart_icon">
 Hi~${user_name} have logged in / <a class="my_shop_icon" href="${abs_url}/logout" title="menbers">Logout</a>　
 <a class="my_account_icon" href="${abs_url}/en_reservation" title="Physician On-site Services"><i class="fa fa-calendar" aria-hidden="true"></i> </a>
-<a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
+<a class="my_shop_icon" href="${abs_url}/en_bicycle_view" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　
 <a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
 <select name="" id="language">
     <option value="ch">中文Ch</option>

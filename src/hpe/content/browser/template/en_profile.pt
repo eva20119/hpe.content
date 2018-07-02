@@ -81,7 +81,7 @@ td>select{
 <div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
 <div class="shoping_cart_icon"> Hi~${user_name} have logged in / <a class="my_shop_icon" href="${abs_url}/logout" title="menbers">Logout</a>　 
 <a class="my_account_icon" href="${abs_url}/en_reservation" title="Physician On-site Services"><i class="fa fa-calendar" aria-hidden="true"></i> </a> 
-<a class="my_shop_icon" href="${abs_url}/en_upload" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 
+<a class="my_shop_icon" href="${abs_url}/en_bicycle_view" title="Photo Upload"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <span class="logged-in-username"></span></a>　 
 <a class="my_shop_icon" href="${abs_url}/en_profile" title="Profile / Event List"><i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
 <select name="" id="language">
     <option value="ch">中文Ch</option>
@@ -107,7 +107,7 @@ td>select{
           <li><a href="${abs_url}/en_anti_cancer_view">
             <span style="font-family: 微軟正黑體; font-size: 16px;">Power of Prevention</span> 
                <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Pedal to Health on Your Bike</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/en_bicycle_view"><span style="font-family: 微軟正黑體; font-size: 16px;">Pedal to Health on Your Bike</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
           <li><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Flu vaccination Protective Net</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
         </ul>
       </div>
