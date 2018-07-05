@@ -195,8 +195,18 @@
                             tal:content="structure python:data['text']">
                         </h2>
                       </li>
-                      <li class="product sale"   
-                          tal:condition="python:number>1">
+                      <li class="product sale"
+                          tal:condition="repeat/data/end" style='width:30%'>
+                        <a href="${python:data['file']}" target="_blank">
+                        <img src="${python:data['img']}" alt="" border="0" class="img-fluid" />
+                        <h2 class="woocommerce-loop-product__title"
+                             style="font-family:微軟正黑體;font-size:18px;text-align:left"
+                            tal:content="structure python:data['text']">
+                        </h2>
+                      </li>
+                      <li class="product sale"
+                          tal:define="is_end repeat/data/end"
+                          tal:condition="python: number > 1 and not is_end">
                         <a href="${python:data['file']}" target="_blank">
                         <img src="${python:data['img']}" alt="" border="0" class="img-fluid" />
                         <h2 class="woocommerce-loop-product__title" 

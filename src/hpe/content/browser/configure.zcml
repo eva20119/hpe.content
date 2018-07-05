@@ -369,6 +369,13 @@
       layer='hpe.content.interfaces.IHpeContentLayer'
       permission='zope2.View'
       />
+  <browser:page
+      name='en_bicycle_upload_view'
+      for='*'
+      class='.english_vies.EnBicycleUploadView'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
 
 
 </configure>

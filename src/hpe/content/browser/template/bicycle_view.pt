@@ -617,7 +617,7 @@ user_name = api.user.get_current().getProperty('fullname')
 
                         <strong style="color: #FFFFFF">
 
-                          <a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f05317_59274f736cb36ff1516c5712.pdf/@@display-file/file/2018_HPE Wellness_台北_大佳河濱公園.pdf" style="color: #FFFFFF; font-size: 20px;">大佳河濱公園</a>
+                          <a href="${abs_url}/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f05317_59274f736cb36ff1516c5712.pdf/@@display-file/file/2018_HPE Wellness_台北_大佳河濱公園.pdf" style="color: #FFFFFF; font-size: 20px;">大佳河濱公園</a>
 
                         </strong>
 
@@ -637,7 +637,7 @@ user_name = api.user.get_current().getProperty('fullname')
 
                         <strong style="color: #FFFFFF">
 
-                          <a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f05317_53f0592768215712.pdf/@@display-file/file/2018_HPE Wellness_台北_台大校園.pdf" style="color: #FFFFFF; font-size: 20px;">國立台灣大學</a>
+                          <a href="${abs_url}/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f05317_53f0592768215712.pdf/@@display-file/file/2018_HPE Wellness_台北_台大校園.pdf" style="color: #FFFFFF; font-size: 20px;">國立台灣大學</a>
 
                         </strong>
 
@@ -657,7 +657,7 @@ user_name = api.user.get_current().getProperty('fullname')
 
                         <strong style="color: #FFFFFF">
 
-                          <a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f05317_8fea53164f119592904b52d5516c5712.pdf/@@display-file/file/2018_HPE Wellness_台北_迪化休閒運動公園.pdf" style="color: #FFFFFF; font-size: 20px;">迪化休閒運動公園</a>
+                          <a href="${abs_url}/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f05317_8fea53164f119592904b52d5516c5712.pdf/@@display-file/file/2018_HPE Wellness_台北_迪化休閒運動公園.pdf" style="color: #FFFFFF; font-size: 20px;">迪化休閒運動公園</a>
 
                         </strong>
 
@@ -677,7 +677,7 @@ user_name = api.user.get_current().getProperty('fullname')
 
                         <strong style="color: #FFFFFF">
 
-                          <a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f05317_5f6986796a4b.pdf/@@display-file/file/2018_HPE Wellness_台北_彩虹橋.pdf" style="color: #FFFFFF; font-size: 20px;">成美左岸河濱公園</a>
+                          <a href="${abs_url}/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f05317_5f6986796a4b.pdf/@@display-file/file/2018_HPE Wellness_台北_彩虹橋.pdf" style="color: #FFFFFF; font-size: 20px;">成美左岸河濱公園</a>
 
                         </strong>
 
@@ -697,7 +697,7 @@ user_name = api.user.get_current().getProperty('fullname')
 
                         <strong style="color: #FFFFFF">
 
-                          <a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f04e2d_8349609f905357125340.pdf/@@display-file/file/2018_HPE Wellness_台中_草悟道園區.pdf" style="color: #FFFFFF; font-size: 20px;">草悟道園區園</a>
+                          <a href="${abs_url}/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f04e2d_8349609f905357125340.pdf/@@display-file/file/2018_HPE Wellness_台中_草悟道園區.pdf" style="color: #FFFFFF; font-size: 20px;">草悟道園區園</a>
 
                         </strong>
 
@@ -717,7 +717,7 @@ user_name = api.user.get_current().getProperty('fullname')
 
                         <strong style="color: #FFFFFF">
 
-                          <a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f04e2d_5927575160c54eba6a4b.pdf/@@display-file/file/2018_HPE Wellness_台中_大坑情人橋.pdf" style="color: #FFFFFF">大坑情人橋</a>
+                          <a href="${abs_url}/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_53f04e2d_5927575160c54eba6a4b.pdf/@@display-file/file/2018_HPE Wellness_台中_大坑情人橋.pdf" style="color: #FFFFFF">大坑情人橋</a>
 
                         </strong>
 
@@ -737,7 +737,7 @@ user_name = api.user.get_current().getProperty('fullname')
 
                         <strong style="color: #FFFFFF">
 
-                          <a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_9ad896c4_535a4e8c85dd885372795340.pdf/@@display-file/file/2018_HPE Wellness_高雄_博二藝術特區.pdf" style="color: #FFFFFF; font-size: 20px;">駁二藝文特區</a>
+                          <a href="${abs_url}/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_9ad896c4_535a4e8c85dd885372795340.pdf/@@display-file/file/2018_HPE Wellness_高雄_博二藝術特區.pdf" style="color: #FFFFFF; font-size: 20px;">駁二藝文特區</a>
 
                         </strong>
 
@@ -757,7 +757,7 @@ user_name = api.user.get_current().getProperty('fullname')
 
                         <strong style="color: #FFFFFF">
 
-                          <a href="http://45.33.109.242:9902/hpe/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_9ad896c4_535a72699928.pdf/@@display-file/file/2018_HPE Wellness_高雄_博物館.pdf" style="color: #FFFFFF; font-size: 20px;">歷史博物館</a>
+                          <a href="${abs_url}/6a026d3b9a0e55ae8eca-6a946848/2018_hpe-wellness_9ad896c4_535a72699928.pdf/@@display-file/file/2018_HPE Wellness_高雄_博物館.pdf" style="color: #FFFFFF; font-size: 20px;">歷史博物館</a>
 
                         </strong>
 
@@ -840,7 +840,22 @@ user_name = api.user.get_current().getProperty('fullname')
     <script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script>
 
     <script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script>
-<script type="text/javascript" src="++plone++hpe.content/js/change_language.js"></script>
+    <script>
+var $jq = jQuery.noConflict();
+
+$jq(document).ready(function () {
+    $jq('#language').change(function (e) { 
+        e.preventDefault();
+        val = $jq(this).val()
+        if(val == 'en'){
+            location.href = 'http://hpe.mingtak.com.tw/en_bicycle_view'
+        }else if(val == 'ch'){
+            location.href = 'http://hpe.mingtak.com.tw/bicycle_view'
+        }
+    });
+});
+
+</script>
 
 </body>
 

@@ -16,6 +16,7 @@ class UpdateBicyclePicture(BrowserView):
     def __call__(self):
         request = self.request
         id_list = request.get('id_list[]')
+        action = request.get('action')
         if type(id_list) is str:
             id_list = [id_list, 'zzz']
 
@@ -24,7 +25,11 @@ class UpdateBicyclePicture(BrowserView):
             now_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             for item in  id_list:
                 if item != 'zzz':
-                    execStr = """UPDATE bicycle_picture SET is_check = 1, complete_time = '{}' WHERE id = {}""".format(now_time, item)
+                    if action == 'pass':
+                        execStr = """UPDATE bicycle_picture SET is_check = 1, complete_time = '{}' WHERE id = {}
+                            """.format(now_time, item)
+                    elif action == 'del':
+                        execStr = """DELETE FROM bicycle_picture WHERE id = {}""".format(item)
                     execSql.execSql(execStr)
             return 'success'
         except Exception as e:
@@ -77,6 +82,7 @@ class UploadBicycleImage(BrowserView):
             return 'success'
 
         except Exception as e:
+            import pdb;pdb.set_trace()
             return 'error'
 
 

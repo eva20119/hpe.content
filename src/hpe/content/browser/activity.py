@@ -187,7 +187,7 @@ class GetEventData(BrowserView):
             }
         if event == '樂活騎單車':
             if date == 'audit':
-                execStr = """SELECT * FROM bicycle_picture WHERE is_check = 0"""
+                execStr = """SELECT * FROM bicycle_picture WHERE is_check = 0 Limit 15 """
             elif date == 'complete' or date == 'img_preview':
                 execStr = """SELECT * FROM bicycle_picture WHERE is_check = 1  ORDER BY complete_time ASC"""
         else:

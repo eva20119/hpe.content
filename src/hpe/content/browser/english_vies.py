@@ -12,6 +12,24 @@ from db.connect.browser.views import SqlObj
 import datetime
 
 
+class EnBicycleUploadView(BrowserView):
+    template = ViewPageTemplateFile("template/en_bicycle_upload_view.pt")
+    def __call__(self):
+        if api.user.is_anonymous():
+            self.request.response.redirect('%s/user_login'%api.portal.get().absolute_url())
+            return
+        user = api.user.get_current().getProperty('email')
+
+        execSql = SqlObj()
+        execStr = """SELECT * FROM bicycle_picture WHERE user = '{}' AND is_check = 0""".format(user)
+        self.audit_data = execSql.execSql(execStr)
+
+        execStr = """SELECT * FROM bicycle_picture where user = '{}' AND is_check = 1""".format(user)
+        self.complete_data = execSql.execSql(execStr)
+
+        return self.template()
+
+
 class EnBicycleView(BrowserView):
     template = ViewPageTemplateFile("template/en_bicycle_view.pt")
     def __call__(self):

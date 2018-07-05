@@ -31,7 +31,7 @@ body {
     background: linear-gradient(#67ce89, #8fd3f4);
     color: #FFFFFF;
 }
-.username1 {   
+.username1 {    background-image: url(images/username.gif);
     background-position: 1px 1px;
     background-repeat: no-repeat;
     padding-left: 5px;
@@ -124,7 +124,7 @@ input[type="checkbox"]:checked + label span {
     <div class="row">
       <div class="col-md-6 offset-md-3 text-center">
         <div class="page_description">
-          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/07b_w.png"></h1>
+          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/07b_w_en.png"></h1>
         </div>
       </div>
     </div>
@@ -134,7 +134,7 @@ input[type="checkbox"]:checked + label span {
 <div class="shoping_cart_icon">
   <p style="display:inline" tal:condition="not: is_anonymous">Hi~${user_name}/</p>
   <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px"
-    tal:condition="not: is_anonymous">登出</a>
+    tal:condition="not: is_anonymous">Logout</a>
   <a class="my_account_icon" href="${abs_url}/reservation" title="邀你醫同來">
      <i class="fa fa-calendar"  aria-hidden="true"></i> </a>
   <a class="my_shop_icon" href="${abs_url}/bicycle_view" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true">
@@ -142,8 +142,8 @@ input[type="checkbox"]:checked + label span {
   <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果">
      <i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
   <select name="" id="language">
-    <option value="ch" selected>中文Ch</option>
-    <option value="en">英文En</option>
+    <option value="ch" >中文Ch</option>
+    <option value="en" selected>英文En</option>
   </select>
   <span class="shop_cart_full"></span>
 </div>
@@ -151,29 +151,28 @@ input[type="checkbox"]:checked + label span {
   <div class="inner_holder">
     <div class="text-logo">
       <h3 class="logo_name">2018 HPE Wellness</h3>
-      <p class="logo_description">每個角落都是你的運動場，<br>
-        Wellness 在每個改變的起點等你，<br>
-        2018，Fighting</p>
+      <p class="logo_description">Every corner is your sport Field.<br>Wellness is waiting for you at every changing starting point.
+<br>2018，Fighting</p>
     </div>
     <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
       <div class="menu-primary-menu-container">
         <ul class="primary-menu">
-          <li><a href="${abs_url}"><span style="font-family:微軟正黑體">回首頁</span></a>
+          <li><a href="${abs_url}/en_cover"><span style="font-family:微軟正黑體; font-size: 16px">Home</span></a>
             </li>
-          <li><a href="${abs_url}/mind_gas_station"><span style="font-family:微軟正黑體">心靈加油站</span>
+          <li><a href="${abs_url}/en_mind_gas_station"><span style="font-family:微軟正黑體; font-size: 16px">The Work Life Compass</span>
             <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="${abs_url}/reservation"><span style="font-family:微軟正黑體">邀你醫同來</span>
+          <li><a href="${abs_url}/en_reservation"><span style="font-family:微軟正黑體; font-size: 16px">Physician On-site Service</span>
             <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="${abs_url}/publicize_pressure"><span style="font-family:微軟正黑體">該釋壓了嗎</span>
+          <li><a href="${abs_url}/en_publicize_pressure"><span style="font-family:微軟正黑體; font-size: 16px">Defatigation Self-Assessment</span>
             <img src="++plone++hpe.content/img/2018.png"/></a></li>
-          <li><a href="${abs_url}/eat_blog"><span style="font-family:微軟正黑體">食在有道理</span>
+          <li><a href="${abs_url}/en_eat_blog"><span style="font-family:微軟正黑體; font-size: 16px">Food Makes Sense</span>
             <img src="++plone++hpe.content/img/apr.png"/></a></li>
-          <li><a href="${abs_url}/muscle_activity"><span style="font-family:微軟正黑體">肌力動次動</span>
+          <li><a href="${abs_url}/en_muscle_activity"><span style="font-family:微軟正黑體; font-size: 16px">Being Healthier By Do Exercise</span>
             <img src="++plone++hpe.content/img/may.png"/></a></li>
-          <li><a href="${abs_url}/anti_cancer_view"><span style="font-family:微軟正黑體">防癌你我他</span>
+          <li><a href="${abs_url}/en_anti_cancer_view"><span style="font-family:微軟正黑體; font-size: 16px">Power of Prevention</span>
             <img src="++plone++hpe.content/img/jun.png"/></a></li>
-          <li  class="current-menu-item current_page_item"><a href="${abs_url}/bicycle_view"><span style="font-family:微軟正黑體">樂活單車騎</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
-          <li><a href="#"><span style="font-family:微軟正黑體">流感防護罩</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
+          <li  class="current-menu-item current_page_item"><a href="${abs_url}/bicycle_view"><span style="font-family:微軟正黑體; font-size: 16px">Pedal to Health on Your Bike</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
+          <li><a href="#"><span style="font-family:微軟正黑體; font-size: 16px">Flu vaccination Protective Net</span> <img src="++plone++hpe.content/img/oct.png"/></a></li>
           <div class="vc_team_member_image_holder">
             <div class="oi_team_cont_holder"> </div>
           </div>
@@ -215,35 +214,35 @@ input[type="checkbox"]:checked + label span {
               
               <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
               <br>
-              <span style="font-size: 16px; font-family: 微軟正黑體; color: rgba(255,255,255,1); line-height: 19px; border-color: #009167;">申請地點
+              <span style="font-size: 16px; font-family: 微軟正黑體; color: rgba(255,255,255,1); line-height: 19px; border-color: #009167;">Designated Spots
               <font size="2">
               <select class="username1 select1" style="font-size: 16px; font-family: 微軟正黑體; color: rgba(82,82,82,1.00); line-height: 19px; border-color: #009167; border-width: 1.5px;">
-                <option value="無">-----請選擇-----</option>
-                <option value="北部">-------北部------</option>
-                <option value="大佳河濱公園">大佳河濱公園</option>
-                <option value="國立台灣大學 ">國立台灣大學 </option>
-                <option value="迪化休閒運動公園">迪化休閒運動公園</option>
-                <option value="成美左岸河濱公園">成美左岸河濱公園</option>
-                <option value="中部">-------中部-------</option>
-                <option value="草悟道園區">草悟道園區</option>
-                <option value="大坑情人橋">大坑情人橋</option>
-                <option value="南部">-------南部-------</option>
-                <option value="歷史博物館">歷史博物館</option>
-                <option value="駁二藝文特區">駁二藝文特區</option>
+                <option value="無">-----Choice-----</option>
+                <option value="北部">-------Taipei------</option>
+                <option value="Dajia Rierside Park">Dajia Rierside Park</option>
+                <option value="Taiwan University">Taiwan University</option>
+                <option value="Dihua leisure Sports Park">Dihua leisure Sports Park</option>
+                <option value="Rainbox Bridge">Rainbox Bridge</option>
+                <option value="中部">-------Taichung-------</option>
+                <option value="Kuang Wudao Park">Kuang Wudao Park</option>
+                <option value="Tai Hang Lover Bridge">Tai Hang Lover Bridge</option>
+                <option value="南部">-------Kaohsiung-------</option>
+                <option value="Museum of History">Museum of History</option>
+                <option value="Pier-2 Art Center">Pier-2 Art Center</option>
               </select>
               </font> <br>
 
-              <input type="checkbox" id="運動補助金" name="運動補助金" checked disabled="disabled"/>
-              <label for="運動補助金"><span></span>運動補助金</label>
+              <input type="checkbox" id="Excrcise Subsidy" name="Excrcise Subsidy" checked disabled="disabled"/>
+              <label for="Excrcise Subsidy"><span></span>Excrcise Subsidy</label>
 
-              <input type="checkbox" id="呼朋引伴獎" name="呼朋引伴獎"/>
-              <label for="呼朋引伴獎"><span></span>呼朋引伴獎</label>
+              <input type="checkbox" id="Ride with Friends" name="Ride with Friends"/>
+              <label for="Ride with Friends"><span></span>Ride with Friends</label>
 
-              <input type="checkbox" id="腿力滿檔獎" name="腿力滿檔獎"/>
-              <label for="腿力滿檔獎"><span></span>腿力滿檔獎</label>
+              <input type="checkbox" id="Cyclist Bravo" name="Cyclist Bravo"/>
+              <label for="Cyclist Bravo"><span></span>Cyclist Bravo</label>
 
-              <input type="checkbox" id="城市攻略獎" name="城市攻略獎"/>
-              <label for="城市攻略獎"><span></span>城市攻略獎</label>
+              <input type="checkbox" id="Cyclist Forte" name="Cyclist Forte"/>
+              <label for="Cyclist Forte"><span></span>Cyclist Forte</label>
 
               </span>
               </p>
@@ -254,7 +253,7 @@ input[type="checkbox"]:checked + label span {
     </div>
         <div align="center"><span class="product-subtotal"><span class="actions" style="font-family:微軟正黑體">
       <input type="file" class="button" id='image' name="update_cart3" value="選取照片" />
-      <input type="submit" class="button" id='upload_btn' name="update_cart3" value="申請上傳" />
+      <input type="submit" class="button" id='upload_btn' name="update_cart3" value="Upload Image" />
        </span> 　<span class="actions"> <span class="product-quantity"></span></span></span></div>
   </div><br><br>
     <div class="container">
@@ -262,40 +261,40 @@ input[type="checkbox"]:checked + label span {
         <div class="col-md-4">
           <span class="cross">X</span>
           <div class="item-service main-1-s1 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
-            <h2 class="item-serv-title ">申請項目</h2>
-            <div class="item-serv-descr"><strong class="upload1_location" style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <h2 class="item-serv-title ">Designated spots</h2>
+            <div class="item-serv-descr">Item</div>
             <input class='upload_input' type='hidden'>
           </div>
         </div>
         <div class="col-md-4" style="position:relative">
           <span class="cross">X</span>
           <div class="item-service main-1-s2 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
-            <h2 class="item-serv-title">申請項目</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <h2 class="item-serv-title">Designated spots</h2>
+          <div class="item-serv-descr">Item</div>
             <input class='upload_input' type='hidden'>
           </div>
         </div>
         <div class="col-md-4">
           <span class="cross">X</span>
           <div class="item-service main-1-s3 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
-            <h2 class="item-serv-title">申請項目</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <h2 class="item-serv-title">Designated spots</h2>
+          <div class="item-serv-descr">Item</div>
             <input class='upload_input' type='hidden'>
           </div>
         </div>
         <div class="col-md-4">
           <span class="cross">X</span>
           <div class="item-service main-1-s4 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
-            <h2 class="item-serv-title">申請項目</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <h2 class="item-serv-title">Designated spots</h2>
+          <div class="item-serv-descr">Item</div>
             <input class='upload_input' type='hidden'>
           </div>
         </div>
         <div class="col-md-4">
           <span class="cross">X</span>
           <div class="item-service main-1-s5 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
-            <h2 class="item-serv-title">申請項目</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <h2 class="item-serv-title">Designated spots</h2>
+          <div class="item-serv-descr">Item</div>
             <input class='upload_input' type='hidden'>
           </div>
         </div>
@@ -303,8 +302,8 @@ input[type="checkbox"]:checked + label span {
           <span class="cross">X</span>
           <div class="item-service main-1-s6 upload" style="background-image:url(++plone++hpe.content/img/upload.jpg);
                 background:antiquewhite">
-            <h2 class="item-serv-title">申請項目</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <h2 class="item-serv-title">Designated spots</h2>
+          <div class="item-serv-descr">Item</div>
             <input class='upload_input' type='hidden'>
           </div>
         </div>
@@ -340,8 +339,8 @@ input[type="checkbox"]:checked + label span {
         </div>
         <div class="col-md-4" tal:repeat="num python: range(0, 6-leng)">
           <div class="item-service main-1-s2" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
-            <h2 class="item-serv-title">申請項目</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <h2 class="item-serv-title">Designated spots</h2>
+          <div class="item-serv-descr">Item</div>
           </div>
         </div>
         <br>
@@ -382,8 +381,8 @@ input[type="checkbox"]:checked + label span {
         </div>
         <div class="col-md-4" tal:repeat="num python: range(0, 9-leng)">
           <div class="item-service main-1-s2" style="background-image:url(++plone++hpe.content/img/upload.jpg)">
-            <h2 class="item-serv-title">申請項目</h2>
-          <div class="item-serv-descr"><strong style="color: #FFFFFF; font-size: 16px;">地點 / </strong>日期</div>
+            <h2 class="item-serv-title">Designated spots</h2>
+          <div class="item-serv-descr">Item</div>
           </div>
         </div>
         <br>
@@ -403,7 +402,6 @@ input[type="checkbox"]:checked + label span {
     </div>
   </div>
 </div>
-<p id='base64Img'></p>
 <div class="preloader" style='display:none'>
 <script type="text/javascript" src="++plone++hpe.content/js/popper.min.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/bootstrap.min.js"></script> 
@@ -413,7 +411,6 @@ input[type="checkbox"]:checked + label span {
 <script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script>
 <script type="text/javascript" src="++plone++hpe.content/js/notify.min.js"></script>
-<script type="text/javascript" src="++plone++hpe.content/js/change_language.js"></script>
 
 <script>
 var jq = jQuery.noConflict(true);
@@ -422,38 +419,25 @@ jq(function(){
     jq('#image').change(function (e) {
         len_audit_data = jq('#len_audit_data').text()
         if(jq('.select1').val() == '無' || jq('.select1').val() == '北部' || jq('.select1').val() == '中部' || jq('.select1').val() == '南部'){
-            jq.notify('您尚未選擇地點,或地點錯誤', 'error')
+            jq.notify('You have not selected a location, or the location is wrong', 'error')
             jq('#image').val('')
             return false
         }
         if(len_audit_data >= 6){
-            jq.notify('審查圖片以滿,請勿再上傳', 'error')
+            jq.notify('Review picture to full, do not upload again', 'error')
             jq('#image').val('')
             return false
         }
         if (this.files && this.files[0]) {
             var FR = new FileReader();
+
             FR.addEventListener("load", function(e) {
-                var img = new Image();
-                img.src = e.target.result;
-                img.onload = function(){
-                    var w = img.width,
-                        h = img.height;
-                    var quality = 0.6; // 默认图片质量为0.7
-
-                    var canvas = document.createElement('canvas');
-                    var ctx = canvas.getContext('2d');
-
-                    canvas.setAttribute("width", w);
-                    canvas.setAttribute("height", h);
-                    ctx.drawImage(img, 0, 0, w, h);
-                    base64 = canvas.toDataURL('image/jpeg', quality);
-                    count = 0
-                    jq('.upload').each(function(){
-                        if(! jq(this).hasClass('full')){
-                            count ++
-                            jq(this).css('backgroundImage', 'url(' + base64 + ')' )
-                            jq(this).css('background-position', 'center' )
+                count = 0
+                jq('.upload').each(function(){
+                    if(! jq(this).hasClass('full')){
+                        count ++
+                        jq(this).css('backgroundImage', 'url(' + e.target.result + ')' )
+                        jq(this).css('background-position', 'center' )
                         jq(this).css('background-repeat', 'no-repeat')
                         jq(this).addClass('full')
                         select1 = jq('.select1').val()
@@ -464,7 +448,7 @@ jq(function(){
                         })
                         select2 = select2.join('/')
 
-                        data = [select1, select2, base64]
+                        data = [select1, select2, e.target.result]
                         jq(this).find('input').val(data)
                         jq(this).find('.item-serv-title').text(select1)
                         jq(this).find('.item-serv-descr').text(select2)
@@ -475,12 +459,12 @@ jq(function(){
 
                         jq(this).siblings().show()
                         jq('#len_audit_data').text(parseInt(len_audit_data) + 1)
-                            return false
-                        }
-                    })
-                    if(count == 0){
-                        jq.notify('上傳空間以滿(6張)', 'error')
+
+                        return false
                     }
+                })
+                if(count == 0){
+                    jq.notify('Upload space is full', 'error')
                 }
             });
             FR.readAsDataURL( this.files[0] );
@@ -492,36 +476,36 @@ jq(function(){
                 data = {
                     'img_data': jq(this).val()
                 }
-                url = location.href.replace('bicycle_upload_view', 'upload_bicycle_image')
+                url = location.href.replace('en_bicycle_upload_view', 'upload_bicycle_image')
                 jq.ajax({
                     type: "post",
                     url: url,
                     data: data,
                     success: function (rep) {
                         if(rep == 'error'){
-                            jq.notify('上傳失敗', 'error')
+                            jq.notify('Update Error', 'error')
                         }else{
-                            jq.notify('上傳成功', 'success')
+                            jq.notify('Update Success', 'success')
                         }
-                        setTimeout(function(){
-                            location.reload()
-                        }, 1500)
-                    },
+                    }
                 });   
             }
+        setTimeout(function(){
+            location.reload()
+        }, 1500)
         })
     })
     jq('.cross').click(function(){
         jq(this).siblings().css('backgroundImage', 'url(++plone++hpe.content/img/upload.jpg)')
-        jq(this).siblings().find('.item-serv-title').text('申請項目')
-        jq(this).siblings().find('.item-serv-descr').text('地點 / 日期')
+        jq(this).siblings().find('.item-serv-title').text('Designated spots')
+        jq(this).siblings().find('.item-serv-descr').text('Item')
         jq(this).siblings().find('.upload_input').val('')
         jq(this).css('display', 'none')
         jq(this).siblings().removeClass('full')
         new_len_audit_data = jq('#len_audit_data').text() - 1
         jq('#len_audit_data').text(new_len_audit_data)
     })
-    jq('#language').change(function (e) {
+    jq('#language').change(function (e) { 
         e.preventDefault();
         val = jq(this).val()
         if(val == 'en'){
@@ -530,6 +514,7 @@ jq(function(){
             location.href = 'http://hpe.mingtak.com.tw/bicycle_upload_view'
         }
     });
+
 })
 </script>
 

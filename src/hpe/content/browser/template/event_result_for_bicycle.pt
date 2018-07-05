@@ -6,8 +6,22 @@ td{
 th{
     vertical-align: middle !important;
 }
+.danger{
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.success{
+    margin-right: 10px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
 </style>
-<button style="float:right;margin-bottom:25px;font-size:18px" class="award" id="complete">審核通過</button>
+<button style="float:right;margin-bottom:25px;font-size:18px" data-action='del' class="award danger" >刪除</button>
+<button style="float:right;margin-bottom:25px;font-size:18px" class="award success" data-action='pass'>審核通過</button>
 <table>
     <tr>
         <th style="width:50px">上傳順序</th>
@@ -35,28 +49,28 @@ th{
             </td>
             <td>${python: data[10]}</td>
             <td>
-                <a href="${python: 'data:image/png;base64,%s' %data[9]}" target="_blank">
-                    <img src="${python: 'data:image/png;base64,%s' %data[9]}" style="height:350px;width:350px">
-                </a>
+                <img  style="height:350px;width:350px" class="lazyload"  data-src="${python: 'data:image/jpeg;base64,%s' %data[9]}">
             </td>
             <td tal:condition="python: data[11] == 0">
                 <input type='checkbox' data-id="${python: data[12]}" 
                     style="width:20px;height:20px" >
             </td>
         </tr>
-
 </table>
 
 <script>
 $(function(){
     $('.award').click(function(){
+        if(confirm('確定要執行？')){
         id_list = []
+        $('.preloader').show()
         url = location.href.replace('show_activity_status', 'update_bicycle_picture')
         $("input[type='checkbox']:checked").each(function(){
             id_list.push($(this).data('id'))
         })
         data = {
             'id_list': id_list,
+            'action': $(this).data('action')
         }
         $.ajax({
             type: "post",
@@ -64,7 +78,6 @@ $(function(){
             data: data,
             success: function (rep) {
                 if(rep == 'success'){
-                    alert('更新成功,畫面正在更新')
                     url = location.href.replace('show_activity_status', 'get_event_data')
                     $.ajax({
                         type: 'post',
@@ -72,6 +85,10 @@ $(function(){
                         data: {'event': '樂活騎單車', 'date': 'audit'},
                         success: function(response){
                             $('.response_data').html(response)
+                            $("img.lazyload").lazyload({
+                                effect : "fadeIn"
+                            });
+                            $('.preloader').hide()
                         }
                     })
                 }else{
@@ -79,6 +96,7 @@ $(function(){
                 }
             }
         });
+        }
     })
 })
 

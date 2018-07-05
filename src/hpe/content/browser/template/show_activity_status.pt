@@ -21,8 +21,12 @@ th{
 th,td{
     padding: 5px 10px;
 }
-</style>
+.preloader{ position:fixed; left:0px; top:0px; width:100%; height:100%; z-index:999999; background-color:#ffffff; 
+background-position:center center; background-repeat:no-repeat; background-image:url(++plone++hpe.content/img/preloader.svg); 
+background-size:80px;}
 
+</style>
+<div class='preloader' style="display:none"></div>
 <select name="selected_event" id="selected_event">
     <option value="食在有道理">食在有道理</option>
     <option value="肌力動次動">肌力動次動</option>
@@ -39,6 +43,8 @@ th,td{
 
 <div class="response_data"></div>
 
+
+<script src="++plone++hpe.content/js/lazyload.js"></script>
 <script>
 $(document).ready(function () {
     $('#selected_event').change(function(){
@@ -71,6 +77,7 @@ $(document).ready(function () {
         }
     })
     $('.btn').click(function(){
+        $('.preloader').show()
         event = $('#selected_event').val()
         date = $('#selected_date').val()
         url = location.href.replace('show_activity_status', 'get_event_data')
@@ -84,6 +91,10 @@ $(document).ready(function () {
             data: data,
             success: function (response) {
                 $('.response_data').html(response)
+                $("img.lazyload").lazyload({
+                  effect : "fadeIn"
+                });
+                $('.preloader').hide()
             }
         });
     })
