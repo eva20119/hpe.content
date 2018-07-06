@@ -25,7 +25,11 @@
 <script type="text/javascript" src="framework/js/html5min.js"></script>
 <![endif]-->
 </head>
-
+<style>
+td{
+    color: black;
+}
+</style>
 <body class="woocommerce-cart woocommerce-page woo_active standard_page dark_bg half_screen_fi have_featured_image products_per_row_3">
 <?python
     from plone import api

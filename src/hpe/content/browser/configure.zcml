@@ -376,6 +376,13 @@
       layer='hpe.content.interfaces.IHpeContentLayer'
       permission='zope2.View'
       />
+  <browser:page
+      name='download_images'
+      for='*'
+      class='.views.DownloadImages'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
 
 
 </configure>

@@ -28,6 +28,9 @@
 input{
     font-size: 18px !important;
 }
+td{
+    color: black;
+}
 </style>
 </head>
 

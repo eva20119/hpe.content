@@ -45,7 +45,7 @@ th{
             <td>${python:data[13]}</td>
             <td>${python:data[7]}</td>
             <td>
-                <p tal:repeat="world python:data[8].split('/')"> ${world}</p>
+                <p> ${python: data[8]}</p>
             </td>
             <td>${python: data[10]}</td>
             <td>

@@ -30,7 +30,6 @@
 <script type="text/javascript" src="++plone++hpe.content/js/html5min.js"></script>
 <![endif]-->
 </head>
-
 <body class="woocommerce-cart woocommerce-page woo_active standard_page dark_bg half_screen_fi have_featured_image products_per_row_3">
 <?python
     from plone import api
@@ -38,6 +37,11 @@
     is_anonymous = api.user.is_anonymous()
     user_name = api.user.get_current().getProperty('fullname')
 ?>
+<style>
+td{
+    color: black;
+}
+</style>
 <div class="preload"></div>
 <div class="header">
     <div class="logo_holder">
@@ -156,7 +160,7 @@
                                     </thead>
                                     <tbody>
                                         <tr class="woocommerce-cart-form__cart-item cart_item" style="font-family:微軟正黑體">
-                                          <td height="50" valign="top" class="product-name" data-title="類別 / 指數">低負荷</td>
+                                          <td height="50" valign="top" class="product-name" data-title="類別 / 指數" >低負荷</td>
                                           <td valign="top" class="product-price" data-title="個人疲勞指數"><50</td>
                                             <td valign="top" class="product-quantity" data-title="工作疲勞指數"><45</td>
                                             <td valign="top" class="product-subtotal" data-title="建議方針">不需改變現況</td>

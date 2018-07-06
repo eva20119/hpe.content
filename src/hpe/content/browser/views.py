@@ -10,6 +10,41 @@ from Products.CMFPlone.utils import safe_unicode
 import base64
 from db.connect.browser.views import SqlObj
 import datetime
+import os
+import shutil
+import zipfile
+
+
+class DownloadImages(BrowserView):
+    def __call__(self):
+        try:
+            os.makedirs('/tmp/images')
+        except:
+            shutil.rmtree('/tmp/images')
+            os.remove('/tmp/images.zip')
+            os.makedirs('/tmp/images')
+
+        execStr = """SELECT img,image_title FROM bicycle_picture WHERE is_check = 1"""
+        execSql = SqlObj()
+        result = execSql.execSql(execStr)
+        for item in result:
+            path = '/tmp/images/%s.jpeg' %item[1]
+            with open(path, 'wb') as f:
+                f.write(item[0].decode('base64'))
+
+        zf = zipfile.ZipFile('/tmp/images.zip', mode='w')
+        os.chdir('/tmp/images')
+        for root, folders, files in os.walk("./"):
+            for sfile in files:
+                aFile = os.path.join(root, sfile)
+                zf.write(aFile)
+        zf.close()
+        self.request.response.setHeader('Content-Type', 'application/zip')
+        self.request.response.setHeader(
+            'Content-Disposition',
+            'attachment; filename="images.zip"')
+        with open('/tmp/images.zip') as thezip:
+            return thezip.read()
 
 
 class UpdateBicyclePicture(BrowserView):
