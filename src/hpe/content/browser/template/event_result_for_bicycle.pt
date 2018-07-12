@@ -21,7 +21,8 @@ th{
 }
 </style>
 <button style="float:right;margin-bottom:25px;font-size:18px" data-action='del' class="award danger" >刪除</button>
-<button style="float:right;margin-bottom:25px;font-size:18px" class="award success" data-action='pass'>審核通過</button>
+<button style="float:right;margin-bottom:25px;font-size:18px" class="award success" data-action='pass' 
+    tal:condition="python: view.data[0][11] == 0">審核通過</button>
 <table>
     <tr>
         <th style="width:50px">上傳順序</th>
@@ -34,7 +35,7 @@ th{
         <th style="width:95px;">額外申請</th>
         <th>圖片明稱</th>
         <th style="width:300px">圖片</th>
-        <th style="width:80px" tal:condition="python: view.data[0][11] == 0"></th>
+        <th style="width:80px"></th>
     </tr>
         <tr tal:repeat="data view/data">
             <td tal:content="repeat/data/number"></td>
@@ -51,7 +52,7 @@ th{
             <td>
                 <img  style="height:350px;width:350px" class="lazyload"  data-src="${python: 'data:image/jpeg;base64,%s' %data[9]}">
             </td>
-            <td tal:condition="python: data[11] == 0">
+            <td>
                 <input type='checkbox' data-id="${python: data[12]}" 
                     style="width:20px;height:20px" >
             </td>
@@ -68,9 +69,10 @@ $(function(){
         $("input[type='checkbox']:checked").each(function(){
             id_list.push($(this).data('id'))
         })
+        action = $(this).data('action')
         data = {
             'id_list': id_list,
-            'action': $(this).data('action')
+            'action': action
         }
         $.ajax({
             type: "post",
@@ -78,19 +80,10 @@ $(function(){
             data: data,
             success: function (rep) {
                 if(rep == 'success'){
-                    url = location.href.replace('show_activity_status', 'get_event_data')
-                    $.ajax({
-                        type: 'post',
-                        url: url,
-                        data: {'event': '樂活騎單車', 'date': 'audit'},
-                        success: function(response){
-                            $('.response_data').html(response)
-                            $("img.lazyload").lazyload({
-                                effect : "fadeIn"
-                            });
-                            $('.preloader').hide()
-                        }
+                    $('input:checked').each(function(){
+                        $(this).parent().parent().remove()
                     })
+                    $('.preloader').hide()
                 }else{
                     alert('更新失敗')
                 }
