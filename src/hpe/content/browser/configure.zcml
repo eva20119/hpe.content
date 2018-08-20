@@ -383,6 +383,18 @@
       layer='hpe.content.interfaces.IHpeContentLayer'
       permission='zope2.View'
       />
-
-
+  <browser:page
+      name='shield_flu'
+      for='*'
+      class='.views.ShieldFlu'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
+  <browser:page
+      name='en_shield_flu'
+      for='*'
+      class='.english_vies.EnShieldFlu'
+      layer='hpe.content.interfaces.IHpeContentLayer'
+      permission='zope2.View'
+      />
 </configure>

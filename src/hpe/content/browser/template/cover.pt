@@ -197,6 +197,11 @@ strong a{
                 </div>
               </div>
 	    <div id="serviceSlide" class="owl-carousel" style="font-family:微軟正黑體">
+              <div class="item-service main-1-s7"  style="background-image:url(++plone++hpe.content/img/08_header.jpg)">
+                <h2 class="item-serv-title" style="font-family:微軟正黑體">10月</h2>
+                <div class="item-serv-descr"> <strong><a href="${abs_url}/shield_flu">流感防護罩</a></strong></div>
+              </div>
+
               <div class="item-service main-1-s7" style="background-image:url(++plone++hpe.content/img/07_header.jpg)">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體">07.08月</h2>
                 <div class="item-serv-descr"> <strong><a href="${abs_url}/bicycle_view">樂活騎單車</a></strong></div>
@@ -226,10 +231,6 @@ strong a{
               <div class="item-service main-1-s5" style="background-image:url(++plone++hpe.content/img/04-00.jpg)">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體">該釋壓了嗎</h2>
                 <div class="item-serv-descr"> <strong><a href="/hpe/publicize_pressure">疲勞指數評估測驗</a></strong></div>
-              </div>
-              <div class="item-service main-1-s7">
-                <h2 class="item-serv-title" style="font-family:微軟正黑體">10月</h2>
-                <div class="item-serv-descr"> <strong><a href="#">流感防護罩</a></strong></div>
               </div>
             </div>              </div>
           </div>

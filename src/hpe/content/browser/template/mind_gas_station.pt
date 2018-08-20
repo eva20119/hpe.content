@@ -44,6 +44,11 @@
 <!--[if lt IE 9]>
 <script type="text/javascript" src="++plone++hpe.content/js/html5min.js"></script>
 <![endif]-->
+<style>
+.product.sale:nth-child(7){
+    clear:both;
+}
+</style>
 </head>
 
 <body class="woocommerce woocommerce-page woo_active standard_page dark_bg half_screen_fi have_featured_image products_per_row_3">
@@ -196,7 +201,7 @@
                         </h2>
                       </li>
                       <li class="product sale"
-                          tal:condition="repeat/data/end" style='width:30%'>
+                          tal:condition="repeat/data/end"   >
                         <a href="${python:data['file']}" target="_blank">
                         <img src="${python:data['img']}" alt="" border="0" class="img-fluid" />
                         <h2 class="woocommerce-loop-product__title"

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>2018 HPE Wellness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="++plone++hpe.content/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/contact-form.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/vc.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/wocommerce.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/remodal-default-theme.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/font-awesome/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/elegant-font/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/linecons/1style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/lightcase/lightcase.css" type="text/css" media="all" />
+<link rel="stylesheet" href="++plone++hpe.content/css/page/shop_042.css" type="text/css" media="all" />
+<script type="text/javascript" src="++plone++hpe.content/js/jquery.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/jquery-migrate.min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="framework/js/html5min.js"></script>
+<![endif]-->
+<style type="text/css">
+<!--
+.style1 {color: #ED1E79}
+body {
+background: -webkit-linear-gradient(#92d4f5,#4facfe);
+background: -o-linear-gradient(#92d4f5,#4facfe);
+background: -moz-linear-gradient(#92d4f5,#4facfe);
+background: linear-gradient(#92d4f5,#4facfe);
+}
+.style22 {color: #FFFFFF}
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<?python
+from plone import api
+abs_url = api.portal.get().absolute_url()
+is_anonymous = api.user.is_anonymous()
+user_name = api.user.get_current().getProperty('fullname')
+?>
+
+<body class="woo_active standard_page dark_bg half_screen_fi have_featured_image">
+<div class="preload"></div>
+<div class="header">
+    <div class="logo_holder">
+      <a href="${abs_url}/en_cover">
+        <img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" />
+        <img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" />
+      </a>
+    </div>
+
+  <!-- .site-header-social-menu --> 
+</div>
+<div class="page_featured" style='background-image:url(++plone++hpe.content/img/08_header.jpg)'>
+  <div class="page_description_over"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center">
+        <div class="page_description">
+          <h1 style="font-family:微軟正黑體"><img src="++plone++hpe.content/img/08_w_en.png"></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hamburger_holder"> <span class="icon_menu" aria-hidden="true"></span> </div>
+
+<div class="shoping_cart_icon">
+   <p style="display:inline;color: #bbb" tal:condition="not: is_anonymous">Hi~${user_name}/</p>
+  <a class="my_shop_icon" href="${abs_url}/logout" style="margin-right:20px"
+    tal:condition="not: is_anonymous">登出</a>
+  <a class="my_account_icon" href="${abs_url}/reservation" title="邀你醫同來">
+     <i class="fa fa-calendar"  aria-hidden="true"></i> </a>
+  <a class="my_shop_icon" href="${abs_url}/bicycle_view" title="單車照上傳"><i class="fa fa-thumbs-o-up" aria-hidden="true">
+     <span class="logged-in-username"></span></a>　
+  <a class="my_shop_icon" href="${abs_url}/profile" title="我的資料/紀錄結果">
+     <i class="fa fa-address-card-o" aria-hidden="true"></i> </a>　
+  <select name="" id="language">
+    <option value="ch" selected>中文Ch</option>
+    <option value="en">英文En</option>
+  </select>
+</div>
+
+<div class="menu_holder">
+  <div class="inner_holder">
+    <div class="text-logo">
+      <h3 class="logo_name">2018 HPE Wellness</h3>
+      <p class="logo_description">Every corner is your sport Field.<br>
+        Wellness is waiting for you at every changing starting point. <br>
+        2018，Fighting</p>
+    </div>
+        <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
+      <div class="menu-primary-menu-container">
+        <ul class="primary-menu">
+          <li><a href="${abs_url}/en_cover"><span style="font-family:微軟正黑體; font-size: 16px;">Home</span></a></li>
+          <li><a href="${abs_url}/en_mind_gas_station"><span style="font-family:微軟正黑體; font-size: 16px;">The Work Life Compass
+                </span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/en_reservation"><span style="font-family:微軟正黑體; font-size: 16px;">Physician On-site Services
+                </span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/en_publicize_pressure"><span style="font-family:微軟正黑體; font-size: 16px;">Defatigation Self-
+                Assessment</span> <img src="++plone++hpe.content/img/2018.png"/></a></li>
+          <li><a href="${abs_url}/en_eat_blog"><span style="font-family:微軟正黑體; font-size: 16px;">Food Makes Sense</span>
+                <img src="++plone++hpe.content/img/apr.png"/></a></li>
+          <li><a href="${abs_url}/en_muscle_activity"><span style="font-family: 微軟正黑體; font-size: 16px;">Being Healthier By Do
+                Exercise</span> <img src="++plone++hpe.content/img/may.png"/></a></li>
+          <li><a href="${abs_url}/en_anti_cancer_view"><span style="font-family: 微軟正黑體; font-size: 16px;">Power of Prevention
+                </span> <img src="++plone++hpe.content/img/jun.png"/></a></li>
+          <li><a href="${abs_url}/en_bicycle_view"><span style="font-family: 微軟正黑體;
+                font-size: 16px;">Pedal to Health on Your Bike</span> <img src="++plone++hpe.content/img/july.png"/></a></li>
+          <li class="current-menu-item current_page_item"><a href="#"><span style="font-family: 微軟正黑體; font-size: 16px;">Flu vaccination Protective Net</span> <img
+                src="++plone++hpe.content/img/oct.png"/></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- .main-navigation -->
+    <div class="menu_footer">
+      <nav aria-label="Footer Menu">
+        <div class="menu-social-menu-container">
+          <ul class="footer-menu">
+          <!-- .
+            <li><a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="http://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.behance.net/"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+            <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            -->
+          </ul>
+        </div>
+      </nav>
+      <!-- .social-navigation -->
+      <p style="font-family:微軟正黑體">此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+  </div>
+</div>
+
+<div class="overlay"></div>
+<div id="primary" class="content-area">
+  <main id="main" class="site-main">
+      <div class="container">
+          <div class="row full_team">
+            <div class="col-md-4">
+              <div class="vc_team_member_holder"></div>
+            </div>
+            <div class="col-md-4">
+              <div class="vc_team_member_holder"></div>
+            </div>
+            <div class="col-md-4">
+              <div class="vc_team_member_holder"></div>
+            </div>
+          </div>
+          <div class="row mb-60 about-3">
+            <div class="col-md-6">
+              <div class="oi_vc_text item_height_x2">
+                <div class="oi_vc_text_span">
+                  <div class="oi_custom_heading_holder">
+                    <div class="oi_vc_heading oi_border_position_center">
+                    <p align="center" class="mb-30"><img src="++plone++hpe.content/img/08_p1.png" width="259" height="259"></p>
+                      <h3 align="center" class="oi_icon_titile style1" style="font-family: 微軟正黑體; color: #00FFC2; font-size: 36px;">Physical Protection</h3>
+                      <div class="oi_heading_border oi_border_position_center"><span></span></div><br>
+                      <p class="oi_icon_sub_titile style22" style="font-family: 微軟正黑體; font-style: normal;">The variant speed of flu virus is higher than we can afford, accepting flu vaccination every year is the best prevention method nowadays
+Fortunately we’ve imported “VaxigripTetra” made from France this year, and ready to help you against the flu, now book the period when you are free in advance!
+
+</p>
+     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="oi_vc_text item_height_x2">
+                <div class="oi_vc_text_span">
+                  <div class="oi_custom_heading_holder">
+                    <div class="oi_vc_heading oi_border_position_center">
+                    <p align="center" class="mb-30"><img src="++plone++hpe.content/img/08_p2.png" width="259" height="259"></p>
+                      <h3 align="center" class="oi_icon_titile style1" style="font-family: 微軟正黑體; color: #00FFC2; font-size: 36px;">Inspiration Lectures</h3>
+                      <div class="oi_heading_border oi_border_position_center"><span></span></div><br>
+                      <p class="oi_icon_sub_titile style22" style="font-family:微軟正黑體">The variant speed of flu virus is higher than we can afford, accepting flu vaccination every year is the best prevention method nowadays Fortunately we’ve imported a kind of Influenza Vaccine called “VaxigripTetra” this year, and ready to help you against the flu, now book the period when you are free in advance! 
+
+</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+      <div class="oi_vc_text item_height_x2">
+        <div class="oi_vc_text_span">
+          <div class="oi_custom_heading_holder">
+            <div class="oi_vc_heading oi_border_position_center">
+              <h3 class="oi_icon_titile" style="color: #00FFC2; font-style: normal;">Be a cheerful and adaptable parent</h3>
+              <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+              <br>
+              <p class="oi_icon_sub_titile" style='color: white'><strong>Emmy Pai</strong> <span style="font-size: 22px">Human Dynamic – Senior Consultant / Consulting Psychologist License</span><br><br>
+                <span style="font-size: 24px"><strong>Summery</strong></span><br><br>Do you know finding out yourself is as significant as understanding your children? It might be the important key that comprehend distinguishes between kids and yourself to resolve a conflict the parent-child relationship. Learning how to participate in their growth with happy and flexible.</p>
+            </div>
+          </div>
+          <p class="mb-30" style='text-align: center'>
+            <input type="checkbox" name="2018-09-05 12:00" data-checked="${view/condition_1}">
+            <span style="font-style: normal; font-family: '微軟正黑體'; color: #FFFFFF; font-size: 22px; line-height: 10px;">9/5 1200 – 1330 9F Eclub<br>
+            <span style="font-size: 18px; padding-bottom: 18px;">Lunch box will be prepared, limited to 60</span></span> <img src="++plone++hpe.content/img/08_photo3.png" width="548" height="350"> </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="oi_vc_text item_height_x2">
+        <div class="oi_vc_text_span">
+          <div class="oi_custom_heading_holder">
+            <div class="oi_vc_heading oi_border_position_center">
+              <h3 class="oi_icon_titile" style="color: #00FFC2; font-style: normal;">Sandwich Generation</h3>
+              <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+              <br>
+              <p class="oi_icon_sub_titile" style='color: white'><strong>Yu Yi Liu</strong> <span style="font-size: 22px">MSc HRM & HRD, Sheffield Hallam University, UK</span><br><br>
+                <span style="font-size: 24px"><strong>Summery</strong></span><br><br>We are “The Sandwich Generation” right now, because of we spend lots of time and money to take care our elders and children. However, most of time, we always forget to take care of ourselves. Through the experiences sharing, conversations, and DIY de-stress sundries course in this lecture, to let our mind rest and re-view our family relationship.</p>
+            </div>
+          </div>
+          <p class="mb-30" style='text-align: center'>
+            <input type="checkbox" name="2018-10-02 12:00" data-checked="${view/condition_2}">
+            <span style="font-style: normal; font-family: '微軟正黑體'; color: #FFFFFF; font-size: 22px; line-height: 10px;">10/02 1200-1330 9F Eclub<br>
+            <span style="font-size: 18px; padding-bottom: 18px;">Lunch box will be prepared, limited to 60</span></span> <img src="++plone++hpe.content/img/08_photo4.png" width="548" height="350"> </p>
+        </div>
+      </div>
+    </div>
+          </div>
+        </div>
+       <div class="footer-line">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="oi_custom_heading_holder mb-0">
+              <div class="oi_vc_heading oi_border_position_right text-md-right">
+                <h2 class="oi_icon_titile" style="font-family: 微軟正黑體; text-align: left; color: #00FFC2;">2018 Flu vaccination registration</h2>
+                <p class="oi_icon_sub_titile" style="font-family: 微軟正黑體; text-align: left;">Choose Flu vaccination date
+ <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+                <p class="oi_icon_sub_titile" style="font-family: 微軟正黑體; text-align: left;"><br>
+                <input type="radio"> TBC / Taichung	/ 1:30pm~2:30pm	/ Location : Taichung office<br>
+                <input type="radio"> TBC / Kaohsiung / 1:30pm~2:30pm / Location : 182<br>
+                <input type="radio"> TBC / NanGang/ 2:00pm~4:00pm / Location : 11F N eClub<br></p>
+                 <div class="oi_heading_border oi_border_position_center text-center"><span></span></div><br>
+                <h2 class="oi_icon_titile" style="font-family: 微軟正黑體; text-align: left; color: #00FFC2;">Data download</h2>
+ <div class="oi_heading_border oi_border_position_center text-center"><span></span></div>
+                <p class="oi_icon_sub_titile" style="font-family: 微軟正黑體; text-align: left;"><br>
+                <span style="font-size: 18px">Vaccine Introduction / Need to Know About the vaccine / FAQ / Consent for Flu Vaccination
+</span> </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex align-items-center mt-5 mt-md-0" style="font-family:微軟正黑體">
+            <div align="center"><a class="oi_vc_button" data-title-color-hover="#ffffff" data-bg-color-hover="#425563" data-border-c-hover="#e83b23" style='color: white'>Submit</a> </div>
+          </div>
+        </div>
+          <div class="vc_row-full-width clearfix"></div>
+      	</div>
+      </div><br><br>
+  </main>
+  <!-- .site-main --> 
+  
+</div>
+<!-- .content-area -->
+
+<div class="bottom_line">
+  <div class="row">
+    <div class="col-md-12">
+      <p align="center" style='color: white'>此活動僅限 HPE 台灣員工，請勿任意轉載<br>This event is limited to HPE Taiwan employees / All right reserved by HPE Taiwan Wellness.</p>
+    </div>
+
+  </div>
+</div>
+<script type="text/javascript" src="++plone++hpe.content/js/popper.min.js"></script>
+<script type="text/javascript" src="++plone++hpe.content/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/contact-form.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/gmap3.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/remodal.min.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/lightcase/lightcase.js"></script> 
+<script type="text/javascript" src="++plone++hpe.content/js/functions.js"></script>
+<script src="++plone++hpe.content/js/change_language.js"></script>
+<script>
+var $jq = jQuery.noConflict();
+$jq(document).ready(function(){
+  $jq('input').each(function(){
+    if($jq(this).data('checked') == 'True'){
+      $jq(this).prop('checked',true)
+      $jq(this).prop('disabled',true)
+    }
+  })
+  $jq('.oi_vc_button').click(function(){
+    select_date = []
+    $jq('input:checked').each(function(){
+      if($jq(this).prop('disabled') != true){
+        select_date.push(this.name)
+      }
+    })
+    url = location.href.replace('en_shield_flu', 'update_activity')
+    data = {
+      'select_date': select_date,
+      'event': '流感防護罩',
+      'step': 0
+    }
+
+    $jq.ajax({
+      type: "post",
+      url: url,
+      data: data,
+      success: function (response) {
+        if(response == 'success'){
+           alert(`【Your registration form has been sent successfully!】
+* Your registration information has been received.
+*Please check “’Personal Information”, and confirm your contact info to make sure that you don't miss any notifications.
+Registration is limited. Please submit your application before the deadline. If the registers are not registered after 10 minutes 
+from the starting time, the remaining amount can be used for on-site registration.
+`)
+
+          location.reload()
+        }
+        else if(response == 'loseData'){
+           alert('您的資料料尚未填寫，請前往填寫完整員工資料後再報名活動，謝謝。')
+           window.location = '${abs_url}/profile'
+        }
+      }
+    });
+  })
+})
+</script>
+
+</body>
+</html>

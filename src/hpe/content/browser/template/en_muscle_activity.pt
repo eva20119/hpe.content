@@ -328,7 +328,8 @@ $jq(document).ready(function(){
            alert(`【Your registration form has been sent successfully!】
 * Your registration information has been received.
 *Please check “’Personal Information”, and confirm your contact info to make sure that you don't miss any notifications.
-Registration is limited. Please submit your application before the deadline. If the registers are not registered after 10 minutes from the starting time, the remaining amount can be used for on-site registration.
+Registration is limited. Please submit your application before the deadline. If the registers are not registered after 10 minutes 
+from the starting time, the remaining amount can be used for on-site registration.
 `)
           location.reload() 
         }

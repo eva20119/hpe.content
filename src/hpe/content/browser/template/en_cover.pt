@@ -152,6 +152,11 @@ strong a{
               </div>
             </div>
             <div id="serviceSlide" class="owl-carousel" style="font-family:微軟正黑體">
+              <div class="item-service main-1-s5" style="background-image:url(++plone++hpe.content/img/08_header.jpg)">
+                <h2 class="item-serv-title" style="font-family:微軟正黑體">October</h2>
+                <div class="item-serv-descr"> <strong><a href="${abs_url}/en_shield_flu">Flu vaccination Protective Net</a></strong></div>
+              </div>
+
               <div class="item-service main-1-s5" style="background-image:url(++plone++hpe.content/img/07_header.jpg)">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體">July & August</h2>
                 <div class="item-serv-descr"> <strong><a href="${abs_url}/en_bicycle_view">Pedal to Health on Your Bike</a></strong></div>
@@ -182,10 +187,6 @@ strong a{
               <div class="item-service main-1-s2" style="background-image:url(++plone++hpe.content/img/04-00.jpg)">
                 <h2 class="item-serv-title" style="font-family:微軟正黑體; font-size: 24px;">Defatigation Self-Assessmen</h2>
                 <div class="item-serv-descr"> <strong><a href="${abs_url}/en_publicize_pressure">The diagnostic test for fatigue index </a></strong></div>
-              </div>
-              <div class="item-service main-1-s5">
-                <h2 class="item-serv-title" style="font-family:微軟正黑體">October</h2>
-                <div class="item-serv-descr"> <strong><a href="#">Flu vaccination Protective Net</a></strong></div>
               </div>
             </div>
           </div>

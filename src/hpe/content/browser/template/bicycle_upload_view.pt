@@ -404,7 +404,7 @@ input[type="checkbox"]:checked + label span {
   </div>
 </div>
 <p id='base64Img'></p>
-<div class="preloader" style='display:none'>
+<div class="preloader" style='display:none'></div>
 <script type="text/javascript" src="++plone++hpe.content/js/popper.min.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/contact-form.js"></script> 
@@ -460,12 +460,13 @@ jq(function(){
 
                         select2 = []
                         jq("input[type=checkbox]:checked").each(function(){
+                            if(this.id != "運動補助金" || this.id != "呼朋引伴獎" || this.id != "腿力滿檔獎" || this.id != "城市攻略獎")
                             select2.push(this.id)
                         })
                         select2 = select2.join('/')
 
                         data = [select1, select2, base64]
-                        jq(this).find('input').val(data)
+                        jq(this).find('input').val(data.join(','))
                         jq(this).find('.item-serv-title').text(select1)
                         jq(this).find('.item-serv-descr').text(select2)
 
@@ -487,7 +488,8 @@ jq(function(){
         }
     });
     jq('#upload_btn').click(function(){
-        jq('.upload_input').each(function(){
+        jq('.preloader').show()
+       jq('.upload_input').each(function(){
             if(jq(this).val()){
                 data = {
                     'img_data': jq(this).val()
@@ -498,16 +500,17 @@ jq(function(){
                     url: url,
                     data: data,
                     success: function (rep) {
-                        if(rep == 'error'){
-                            jq.notify('上傳失敗', 'error')
-                        }else{
-                            jq.notify('上傳成功', 'success')
-                        }
-                        setTimeout(function(){
-                            location.reload()
-                        }, 1500)
-                    },
-                });   
+                    }
+                }).done(function(rep){
+                    jq('.preloader').hide()
+                    if(rep == 'error'){
+                        jq.notify('上傳失敗', 'error')
+                    }else{
+                        jq.notify('上傳成功', 'success')
+                    }
+                    setTimeout(function(){ location.reload()}, 1500);
+                })
+
             }
         })
     })

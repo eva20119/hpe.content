@@ -15,6 +15,32 @@ import shutil
 import zipfile
 
 
+class ShieldFlu(BrowserView):
+    template = ViewPageTemplateFile('template/shield_flu.pt')
+    def __call__(self):
+        if api.user.is_anonymous():
+            self.request.response.redirect('%s/user_login'%api.portal.get().absolute_url())
+            return        
+        user = api.user.get_current().getProperty('email')
+        execSql = SqlObj()
+        execStr = 'SELECT * from activity where category="%s" and user="%s"' %('流感防護罩',user)
+        result = execSql.execSql(execStr)
+        self.condition_1 = False
+        self.condition_2 = False
+        #self.condition_3 = False
+        #self.condition_4 = False
+        for item in result:
+            tmp = dict(item)
+            if tmp['activity_date'] == '2018-09-05 12:00':
+                self.condition_1 = True
+            elif tmp['activity_date'] == '2018-10-02 12:00':
+                self.condition_2 = True
+            #elif tmp['activity_date'] == '2018-05-08 10:30':
+             #   self.condition_3 = True
+
+        return self.template()
+
+
 class DownloadImages(BrowserView):
     def __call__(self):
         try:

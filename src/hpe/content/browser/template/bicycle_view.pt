@@ -111,59 +111,32 @@ user_name = api.user.get_current().getProperty('fullname')
 
 
 <body class="woo_active standard_page dark_bg half_screen_fi have_featured_image ">
-
   <div class="preload"></div>
-
   <div class="header">
-
     <div class="logo_holder">
-
       <a href="${abs_url}/index">
-
         <img class="logo_for_dark_bg" src="++plone++hpe.content/img/logo_fff.png" alt="Gravity" />
-
         <img class="logo_for_light_bg" src="++plone++hpe.content/img/logo_000.png" alt="Gravity" />
-
       </a>
-
     </div>
-
     <!-- .site-header-social-menu -->
-
   </div>
-
   <div class="page_featured">
-
     <div class="page_description_over"></div>
-
     <div class="container">
-
       <div class="row">
-
         <div class="col-md-6 offset-md-3 text-center">
-
           <div class="page_description">
-
             <h1 style="font-family:微軟正黑體">
-
               <img src="++plone++hpe.content/img/07b_w.png">
-
             </h1>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
-
   <div class="hamburger_holder">
-
     <span class="icon_menu" aria-hidden="true"></span>
-
   </div>
 
   <div class="shoping_cart_icon"> Hi~您已登入 /
@@ -201,7 +174,6 @@ user_name = api.user.get_current().getProperty('fullname')
       </div>
 
       <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
-
         <div class="menu-primary-menu-container">
           <ul class="primary-menu">
             <li>

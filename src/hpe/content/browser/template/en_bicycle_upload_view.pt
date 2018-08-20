@@ -402,7 +402,7 @@ input[type="checkbox"]:checked + label span {
     </div>
   </div>
 </div>
-<div class="preloader" style='display:none'>
+<div class="preloader" style='display:none'></div>
 <script type="text/javascript" src="++plone++hpe.content/js/popper.min.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="++plone++hpe.content/js/contact-form.js"></script> 
@@ -471,6 +471,7 @@ jq(function(){
         }
     });
     jq('#upload_btn').click(function(){
+        jq('.preloader').show()
         jq('.upload_input').each(function(){
             if(jq(this).val()){
                 data = {
@@ -482,17 +483,18 @@ jq(function(){
                     url: url,
                     data: data,
                     success: function (rep) {
-                        if(rep == 'error'){
-                            jq.notify('Update Error', 'error')
-                        }else{
-                            jq.notify('Update Success', 'success')
-                        }
                     }
-                });   
+                }).done(function(rep){
+                    jq('.preloader').hide()
+                    if(rep == 'error'){
+                        jq.notify('上傳失敗', 'error')
+                    }else{
+                        jq.notify('上傳成功', 'success')
+                    }
+                    setTimeout(function(){ location.reload()}, 2000);
+                })                        
+
             }
-        setTimeout(function(){
-            location.reload()
-        }, 1500)
         })
     })
     jq('.cross').click(function(){
